@@ -27,13 +27,21 @@ project(${PROJECT_NAME})
 #   message("Doxygen need to be installed to generate the doxygen documentation")
 # endif (DOXYGEN_FOUND)
 
-set(SOURCE_FILES
+set(HEADERS
+    server.h
+    session.h
+)
+
+set(SOURCES
     main.cpp
     server.cpp
     session.cpp
 )
 
-add_executable(msgr_server ${SOURCE_FILES})
+add_executable(msgr_server
+    ${SOURCES}
+    ${HEADERS}
+)
 
 # add_executable(test_ICommand 
 #     src/_tests/test_ICommand.cpp 

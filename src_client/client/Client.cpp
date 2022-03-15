@@ -48,15 +48,14 @@ void Client::readHandler(const boost::system::error_code &ec, std::size_t bytes)
 
     _socket.async_read_some(boost::asio::buffer(_buffer), [&](const boost::system::error_code &ec, std::size_t bytes)
     {
-        std::cout << "# READ " << std::string(_buffer, bytes);
-        emit signal_getMsgFromServer(QString(_buffer));
+//        std::cout << "# READ " << std::string(_buffer, bytes);
+        emit signal_getFromServer(QString::fromStdString(std::string(_buffer, bytes)));
         readHandler(ec, bytes);
     });
 }
 
-void Client::slot_sendMsgToServer(QString msg)
-{
-    std::cout << "# slot_sendMsgToServer " << msg.toStdString() << std::endl;
+void Client::slot_sendToServer(const QString &msg)
+{    
     writeHandler(msg.toStdString() + "\n");
 }
 

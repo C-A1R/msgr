@@ -39,16 +39,32 @@ set(CMAKE_CXX_STANDARD_REQUIRED ON)
 find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
 find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
 
-set(SOURCE_FILES
+set(HEADERS
+    main_window/MainWindow.h
+    main_window/RegistrationWidget.h
+    main_window/AuthorizationWidget.h
+    main_window/ChatWidget.h
+    main_window/MainWidgets.h
+    client/Client.h
+    client/ClientThread.h
+    message_processor/IMsgProcessor.h
+    message_processor/MsgProcessor.h
+)
+
+set(SOURCES
     main.cpp
-    MainWindow.cpp
-    mainwindow.ui
+    main_window/MainWindow.cpp
+    main_window/RegistrationWidget.cpp
+    main_window/AuthorizationWidget.cpp
+    main_window/ChatWidget.cpp
     client/Client.cpp
     client/ClientThread.cpp
+    message_processor/MsgProcessor.cpp
 )
 
 add_executable(msgr_client
-    ${SOURCE_FILES}
+    ${SOURCES}
+    ${HEADERS}
 )
 
 set_target_properties(msgr_client PROPERTIES

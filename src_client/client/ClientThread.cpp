@@ -3,8 +3,8 @@
 ClientThread::ClientThread()
 {
     _client = std::make_unique<Client>(_io_context);
-    connect(this, &ClientThread::signal_sendMsgToThread, _client.get(), &Client::slot_sendMsgToServer);
-    connect(_client.get(), &Client::signal_getMsgFromServer, this, &ClientThread::signal_getMsgFromThread);
+    connect(this, &ClientThread::signal_sendToClient, _client.get(), &Client::slot_sendToServer);
+    connect(_client.get(), &Client::signal_getFromServer, this, &ClientThread::signal_getFromThread);
 }
 
 ClientThread::~ClientThread()
