@@ -15,12 +15,12 @@ public:
     ~ClientProcessor();
 
     void start() override;
-    void sendMsg(const QString &msg) override;
+    void sendMsg(const std::string &msg) override;
 
     void signUp_request(const QString &login, const QString &password) override;
 
 private slots:
-    void slot_getMsg(const QString &msg);
+    void slot_getResponse(const std::string &response) override;
 };
 
 #endif // CLIENTPROCESSOR_H

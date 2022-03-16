@@ -1,9 +1,9 @@
 #ifndef DATABASE_H
 #define DATABASE_H
 
+#include "IDatabase.h"
 #include "sqlite/sqlite3.h"
 
-#include <string>
 #include <vector>
 #include <mutex>
 #include <functional>
@@ -11,51 +11,54 @@
 /**
  * @brief через этот класс происходит работа с базой
  */
-class Database
+class Database : public IDatabase
 {
     const char *_dbName {nullptr};
     sqlite3 *_handler {nullptr};
     std::mutex _mtx;
+
 public:
-    const std::string _ok {"OK\n"};
 
     Database(const char *dbName);
     ~Database();
 
-    int invalidId() const {return -1;}
+    std::string ok() const override {return "OK\n";}
 
     /**
      * @brief создать таблицы
      */
-    bool create();
+    bool create() override;
 
     /**
-     * @brief открыть базу и создать пустые таблицы
+     * @brief открыть базу
      */
-    bool open();
+    bool open() override;
+
+    int invalidId() const override {return -1;}
 
     /**
      * @brief добавить пользователя в таблицу
+     * @return id нового пользователя
      */
-    int insertUser(const std::string &login, const std::string &password);
+    int insertUser(const std::string &login, const std::string &password) override;
 
 
 
 
-    /**
-     * @brief очистить таблицу
-     */
-    std::string truncate(const std::string &table);
+//    /**
+//     * @brief очистить таблицу
+//     */
+//    std::string truncate(const std::string &table);
 
-    /**
-     * @brief пересечение таблиц А и В
-     */
-    std::string intersection();
+//    /**
+//     * @brief пересечение таблиц А и В
+//     */
+//    std::string intersection();
 
-    /**
-     * @brief симметричная разница таблиц А и В
-     */
-    std::string symmetricDifference();
+//    /**
+//     * @brief симметричная разница таблиц А и В
+//     */
+//    std::string symmetricDifference();
 
 private:
     /**

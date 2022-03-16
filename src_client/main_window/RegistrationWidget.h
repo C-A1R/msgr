@@ -19,7 +19,8 @@ private:
 
 private slots:
     void slot_sign_pBtn_clicked() override;
-    void slot_SignUp();
+    void slot_SignUpRequest();
+    void slot_SignUpResponse(const std::string &status);
 };
 
 #endif // REGISTRATIONWINDOW_H

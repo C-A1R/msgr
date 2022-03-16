@@ -24,4 +24,7 @@ private:
 private slots:
     void slot_changeSign(MainWidgets wgt);
 };
+
+Q_DECLARE_METATYPE(std::string)
+
 #endif // MAINWINDOW_H

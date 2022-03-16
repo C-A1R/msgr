@@ -12,8 +12,9 @@ project(${PROJECT_NAME})
 set(HEADERS
     Server.h
     Session.h
-    sqlite/sqlite3.h
-    Database.h
+    database/sqlite/sqlite3.h
+    database/IDatabase.h
+    database/Database.h
     server_processor/IServerProcessor.h
     server_processor/ServerProcessor.h
 )
@@ -22,8 +23,8 @@ set(SOURCES
     main.cpp
     Server.cpp
     Session.cpp
-    sqlite/sqlite3.c
-    Database.cpp
+    database/sqlite/sqlite3.c
+    database/Database.cpp
     server_processor/ServerProcessor.cpp
 )
 

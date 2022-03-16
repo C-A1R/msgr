@@ -5,7 +5,8 @@
 #include <QPushButton>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
-#include <QtDebug>
+
+#include <iostream>
 
 ChatWidget::ChatWidget(const std::shared_ptr<IClientProcessor> &processor, QWidget *parent)
     : QWidget{parent}, _processor{processor}
@@ -36,17 +37,17 @@ void ChatWidget::initUi()
 
 void ChatWidget::slot_sendMsg()
 {
-    _processor->sendMsg(msg_lEdit->text());
+    _processor->sendMsg(msg_lEdit->text().toStdString());
 }
 
-void ChatWidget::slot_getMsg(const QString &msg)
+void ChatWidget::slot_getMsg(const std::string &msg)
 {
-    if (msg == QStringLiteral("pong\n"))
+    std::cout << msg << std::endl;
+    if (msg == "pong\n")
     {
-        qDebug() << "pong";
         return;
     }
 
-    chat_tEdit->setText(chat_tEdit->toPlainText() + msg);
+    chat_tEdit->setText(chat_tEdit->toPlainText() + QString::fromStdString(msg));
     msg_lEdit->clear();
 }

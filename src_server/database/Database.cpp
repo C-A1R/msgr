@@ -18,7 +18,7 @@ bool Database::create()
     if (exec("CREATE TABLE IF NOT EXISTS users ("
              "id INTEGER PRIMARY KEY AUTOINCREMENT, "
              "login VARCHAR(255), "
-             "password VARCHAR(255));") != _ok)
+             "password VARCHAR(255));") != ok())
     {
         result = false;
     }
@@ -45,63 +45,63 @@ int Database::insertUser(const std::string &login, const std::string &password)
     std::string query = "INSERT INTO users (login, password) VALUES (\""
                  + login + "\", \"" + password + "\");";
     auto a = exec(query);
-    std::cout << query << std::endl;
-    std::cout << a << std::endl;
-    if (a != _ok)
+//    std::cout << query << std::endl;
+//    std::cout << a << std::endl;
+    if (a != ok())
     {
         return invalidId();
     }
     return maxId("users");
 }
 
-std::string Database::truncate(const std::string &table)
-{
-    if (table.empty())
-    {
-        return "DB_ERR: invalid query\n";
-    }
-    std::string query = "DELETE FROM " + table + ";";
-    return exec(query);
-}
+//std::string Database::truncate(const std::string &table)
+//{
+//    if (table.empty())
+//    {
+//        return "DB_ERR: invalid query\n";
+//    }
+//    std::string query = "DELETE FROM " + table + ";";
+//    return exec(query);
+//}
 
-std::string Database::intersection()
-{
-    std::string query = "SELECT A.id, A.name, B.name FROM A INNER JOIN B ON A.id = B.id;";
-    std::string *context_str = new std::string();
-    auto result = exec(query, &callback, context_str);
-    std::string response;
-    if (result == _ok)
-    {
-        response = (*context_str) + _ok;
-    }
-    else
-    {
-        response = result;
-    }
-    delete context_str;
-    return response;
-}
+//std::string Database::intersection()
+//{
+//    std::string query = "SELECT A.id, A.name, B.name FROM A INNER JOIN B ON A.id = B.id;";
+//    std::string *context_str = new std::string();
+//    auto result = exec(query, &callback, context_str);
+//    std::string response;
+//    if (result == _ok)
+//    {
+//        response = (*context_str) + _ok;
+//    }
+//    else
+//    {
+//        response = result;
+//    }
+//    delete context_str;
+//    return response;
+//}
 
-std::string Database::symmetricDifference()
-{
-    std::string query = "SELECT A.*, B.name FROM A LEFT JOIN B ON A.id = B.id WHERE B.id IS NULL "
-                        "UNION "
-                        "SELECT B.id, A.name, B.name FROM B LEFT JOIN A ON B.id = A.id WHERE A.id IS NULL;";
+//std::string Database::symmetricDifference()
+//{
+//    std::string query = "SELECT A.*, B.name FROM A LEFT JOIN B ON A.id = B.id WHERE B.id IS NULL "
+//                        "UNION "
+//                        "SELECT B.id, A.name, B.name FROM B LEFT JOIN A ON B.id = A.id WHERE A.id IS NULL;";
 
-    std::string *context_str = new std::string();
-    auto result = exec(query, &callback, context_str);
-    std::string response;
-    if (result == _ok)
-    {
-        response = (*context_str) + _ok;
-    }
-    else
-    {
-        response = result;
-    }
-    delete context_str;
-    return response;
-}
+//    std::string *context_str = new std::string();
+//    auto result = exec(query, &callback, context_str);
+//    std::string response;
+//    if (result == _ok)
+//    {
+//        response = (*context_str) + _ok;
+//    }
+//    else
+//    {
+//        response = result;
+//    }
+//    delete context_str;
+//    return response;
+//}
 
 std::string Database::exec(const std::string &query, sqlite3_callback callback, void *context)
 {
@@ -122,7 +122,7 @@ std::string Database::exec(const std::string &query, sqlite3_callback callback, 
         sqlite3_free(errMsg);
         return result;
     }
-    return _ok;
+    return ok();
 }
 
 int Database::callback(void *context, int columns, char **data, char **)
@@ -153,9 +153,9 @@ int Database::maxId(const std::string &table, const std::string &id)
     std::string query = "SELECT MAX(" + id+ ") FROM " + table + ";";
     auto result = exec(query, &callback, context_str);
     std::string response;
-    if (result == _ok)
+    if (result == ok())
     {
-        response = (*context_str) + _ok;
+        response = (*context_str) + ok();
     }
     else
     {

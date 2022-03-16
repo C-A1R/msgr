@@ -45,18 +45,16 @@ void Client::readHandler(const boost::system::error_code &ec, std::size_t bytes)
     {
         return;
     }
-
     _socket.async_read_some(boost::asio::buffer(_buffer), [&](const boost::system::error_code &ec, std::size_t bytes)
     {
-//        std::cout << "# READ " << std::string(_buffer, bytes);
-        emit signal_getFromServer(QString::fromStdString(std::string(_buffer, bytes)));
+        emit signal_getFromServer(std::string(_buffer, bytes));
         readHandler(ec, bytes);
     });
 }
 
-void Client::slot_sendToServer(const QString &msg)
+void Client::slot_sendToServer(const std::string &request)
 {    
-    writeHandler(msg.toStdString() + "\n");
+    writeHandler(request);
 }
 
 void Client::writeHandler(const std::string &msg)
@@ -65,10 +63,11 @@ void Client::writeHandler(const std::string &msg)
     {
         return;
     }
-    //    std::cout << "# WRITE " << msg;
     _socket.async_write_some(boost::asio::buffer(msg), [&](const boost::system::error_code &ec, std::size_t bytes)
     {
         if (!ec)
+        {
             readHandler(ec, bytes);
+        }
     });
 }
