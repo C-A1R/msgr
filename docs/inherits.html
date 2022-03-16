@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.9</span>
+   &#160;<span id="projectnumber">0.0.10</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -81,9 +81,9 @@ $(function() {
 <tr><td><img src="inherit_graph_1.png" border="0" usemap="#Client" alt=""/>
 <map name="Client" id="Client">
 <area shape="rect" title=" " alt="" coords="5,31,80,57"/>
-<area shape="rect" href="classClient.html" title=" " alt="" coords="156,5,216,32"/>
-<area shape="rect" href="classIMsgProcessor.html" title=" " alt="" coords="128,56,244,83"/>
-<area shape="rect" href="classMsgProcessor.html" title=" " alt="" coords="292,56,404,83"/>
+<area shape="rect" href="classClient.html" title=" " alt="" coords="161,5,221,32"/>
+<area shape="rect" href="classIClientProcessor.html" title=" " alt="" coords="128,56,255,83"/>
+<area shape="rect" href="classClientProcessor.html" title=" " alt="" coords="303,56,425,83"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_2.png" border="0" usemap="#ClientThread" alt=""/>
@@ -92,53 +92,29 @@ $(function() {
 <area shape="rect" href="classClientThread.html" title=" " alt="" coords="131,5,236,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_3.png" border="0" usemap="#MainWindow" alt=""/>
+<tr><td><img src="inherit_graph_3.png" border="0" usemap="#Database" alt=""/>
+<map name="Database" id="Database">
+<area shape="rect" href="classDatabase.html" title="через этот класс происходит работа с базой" alt="" coords="5,5,89,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_4.png" border="0" usemap="#IServerProcessor" alt=""/>
+<map name="IServerProcessor" id="IServerProcessor">
+<area shape="rect" href="classIServerProcessor.html" title=" " alt="" coords="5,5,136,32"/>
+<area shape="rect" href="classServerProcessor.html" title=" " alt="" coords="184,5,311,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_5.png" border="0" usemap="#MainWindow" alt=""/>
 <map name="MainWindow" id="MainWindow">
 <area shape="rect" title=" " alt="" coords="5,5,121,32"/>
 <area shape="rect" href="classMainWindow.html" title=" " alt="" coords="169,5,276,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_4.png" border="0" usemap="#qt__meta__stringdata__AuthorizationWidget__t" alt=""/>
-<map name="qt__meta__stringdata__AuthorizationWidget__t" id="qt__meta__stringdata__AuthorizationWidget__t">
-<area shape="rect" href="structqt__meta__stringdata__AuthorizationWidget__t.html" title=" " alt="" coords="5,5,180,47"/>
-</map>
-</td></tr>
-<tr><td><img src="inherit_graph_5.png" border="0" usemap="#qt__meta__stringdata__ChatWidget__t" alt=""/>
-<map name="qt__meta__stringdata__ChatWidget__t" id="qt__meta__stringdata__ChatWidget__t">
-<area shape="rect" href="structqt__meta__stringdata__ChatWidget__t.html" title=" " alt="" coords="5,5,155,47"/>
-</map>
-</td></tr>
-<tr><td><img src="inherit_graph_6.png" border="0" usemap="#qt__meta__stringdata__Client__t" alt=""/>
-<map name="qt__meta__stringdata__Client__t" id="qt__meta__stringdata__Client__t">
-<area shape="rect" href="structqt__meta__stringdata__Client__t.html" title=" " alt="" coords="5,5,155,47"/>
-</map>
-</td></tr>
-<tr><td><img src="inherit_graph_7.png" border="0" usemap="#qt__meta__stringdata__ClientThread__t" alt=""/>
-<map name="qt__meta__stringdata__ClientThread__t" id="qt__meta__stringdata__ClientThread__t">
-<area shape="rect" href="structqt__meta__stringdata__ClientThread__t.html" title=" " alt="" coords="5,5,155,47"/>
-</map>
-</td></tr>
-<tr><td><img src="inherit_graph_8.png" border="0" usemap="#qt__meta__stringdata__IMsgProcessor__t" alt=""/>
-<map name="qt__meta__stringdata__IMsgProcessor__t" id="qt__meta__stringdata__IMsgProcessor__t">
-<area shape="rect" href="structqt__meta__stringdata__IMsgProcessor__t.html" title=" " alt="" coords="5,5,155,47"/>
-</map>
-</td></tr>
-<tr><td><img src="inherit_graph_9.png" border="0" usemap="#qt__meta__stringdata__MainWindow__t" alt=""/>
-<map name="qt__meta__stringdata__MainWindow__t" id="qt__meta__stringdata__MainWindow__t">
-<area shape="rect" href="structqt__meta__stringdata__MainWindow__t.html" title=" " alt="" coords="5,5,155,47"/>
-</map>
-</td></tr>
-<tr><td><img src="inherit_graph_10.png" border="0" usemap="#qt__meta__stringdata__RegistrationWidget__t" alt=""/>
-<map name="qt__meta__stringdata__RegistrationWidget__t" id="qt__meta__stringdata__RegistrationWidget__t">
-<area shape="rect" href="structqt__meta__stringdata__RegistrationWidget__t.html" title=" " alt="" coords="5,5,172,47"/>
-</map>
-</td></tr>
-<tr><td><img src="inherit_graph_11.png" border="0" usemap="#Server" alt=""/>
+<tr><td><img src="inherit_graph_6.png" border="0" usemap="#Server" alt=""/>
 <map name="Server" id="Server">
 <area shape="rect" href="classServer.html" title=" " alt="" coords="5,5,69,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_12.png" border="0" usemap="#Session" alt=""/>
+<tr><td><img src="inherit_graph_7.png" border="0" usemap="#Session" alt=""/>
 <map name="Session" id="Session">
 <area shape="rect" title=" " alt="" coords="5,5,192,32"/>
 <area shape="rect" href="classSession.html" title=" " alt="" coords="240,5,312,32"/>

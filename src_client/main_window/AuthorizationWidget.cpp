@@ -8,8 +8,8 @@
 
 #include <QDebug>
 
-AuthorizationWidget::AuthorizationWidget(const std::shared_ptr<IMsgProcessor> &msgProcessor, QWidget *parent)
-    : QWidget{parent}, _msgProcessor{msgProcessor}
+AuthorizationWidget::AuthorizationWidget(const std::shared_ptr<IClientProcessor> &processor, QWidget *parent)
+    : QWidget{parent}, _processor{processor}
 {
 }
 

@@ -57,10 +57,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/runner/work/otus_project/otus_project
+CMAKE_SOURCE_DIR = /home/runner/work/msgr/msgr
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/runner/work/otus_project/otus_project
+CMAKE_BINARY_DIR = /home/runner/work/msgr/msgr
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/runner/work/otus_project/otus_project
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/runner/work/otus_project/otus_project && /usr/local/bin/cpack --config ./CPackConfig.cmake
+	cd /home/runner/work/msgr/msgr && /usr/local/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/runner/work/otus_project/otus_project && /usr/local/bin/cpack --config ./CPackSourceConfig.cmake /home/runner/work/otus_project/otus_project/CPackSourceConfig.cmake
+	cd /home/runner/work/msgr/msgr && /usr/local/bin/cpack --config ./CPackSourceConfig.cmake /home/runner/work/msgr/msgr/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -152,14 +152,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/runner/work/otus_project/otus_project && $(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/otus_project/otus_project/CMakeFiles /home/runner/work/otus_project/otus_project/src_client//CMakeFiles/progress.marks
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src_client/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/otus_project/otus_project/CMakeFiles 0
+	cd /home/runner/work/msgr/msgr && $(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/msgr/msgr/CMakeFiles /home/runner/work/msgr/msgr/src_client//CMakeFiles/progress.marks
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src_client/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/msgr/msgr/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src_client/clean
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src_client/clean
 .PHONY : clean
 
 # The main clean target
@@ -168,22 +168,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src_client/preinstall
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src_client/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src_client/preinstall
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src_client/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/runner/work/otus_project/otus_project && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/runner/work/msgr/msgr && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src_client/CMakeFiles/msgr_client.dir/rule:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src_client/CMakeFiles/msgr_client.dir/rule
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src_client/CMakeFiles/msgr_client.dir/rule
 .PHONY : src_client/CMakeFiles/msgr_client.dir/rule
 
 # Convenience name for target.
@@ -192,12 +192,12 @@ msgr_client: src_client/CMakeFiles/msgr_client.dir/rule
 
 # fast build rule for target.
 msgr_client/fast:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/build
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/build
 .PHONY : msgr_client/fast
 
 # Convenience name for target.
 src_client/CMakeFiles/msgr_client_autogen.dir/rule:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src_client/CMakeFiles/msgr_client_autogen.dir/rule
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src_client/CMakeFiles/msgr_client_autogen.dir/rule
 .PHONY : src_client/CMakeFiles/msgr_client_autogen.dir/rule
 
 # Convenience name for target.
@@ -206,7 +206,7 @@ msgr_client_autogen: src_client/CMakeFiles/msgr_client_autogen.dir/rule
 
 # fast build rule for target.
 msgr_client_autogen/fast:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client_autogen.dir/build.make src_client/CMakeFiles/msgr_client_autogen.dir/build
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client_autogen.dir/build.make src_client/CMakeFiles/msgr_client_autogen.dir/build
 .PHONY : msgr_client_autogen/fast
 
 client/Client.o: client/Client.cpp.o
@@ -214,7 +214,7 @@ client/Client.o: client/Client.cpp.o
 
 # target to build an object file
 client/Client.cpp.o:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/client/Client.cpp.o
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/client/Client.cpp.o
 .PHONY : client/Client.cpp.o
 
 client/Client.i: client/Client.cpp.i
@@ -222,7 +222,7 @@ client/Client.i: client/Client.cpp.i
 
 # target to preprocess a source file
 client/Client.cpp.i:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/client/Client.cpp.i
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/client/Client.cpp.i
 .PHONY : client/Client.cpp.i
 
 client/Client.s: client/Client.cpp.s
@@ -230,7 +230,7 @@ client/Client.s: client/Client.cpp.s
 
 # target to generate assembly for a file
 client/Client.cpp.s:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/client/Client.cpp.s
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/client/Client.cpp.s
 .PHONY : client/Client.cpp.s
 
 client/ClientThread.o: client/ClientThread.cpp.o
@@ -238,7 +238,7 @@ client/ClientThread.o: client/ClientThread.cpp.o
 
 # target to build an object file
 client/ClientThread.cpp.o:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/client/ClientThread.cpp.o
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/client/ClientThread.cpp.o
 .PHONY : client/ClientThread.cpp.o
 
 client/ClientThread.i: client/ClientThread.cpp.i
@@ -246,7 +246,7 @@ client/ClientThread.i: client/ClientThread.cpp.i
 
 # target to preprocess a source file
 client/ClientThread.cpp.i:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/client/ClientThread.cpp.i
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/client/ClientThread.cpp.i
 .PHONY : client/ClientThread.cpp.i
 
 client/ClientThread.s: client/ClientThread.cpp.s
@@ -254,15 +254,39 @@ client/ClientThread.s: client/ClientThread.cpp.s
 
 # target to generate assembly for a file
 client/ClientThread.cpp.s:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/client/ClientThread.cpp.s
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/client/ClientThread.cpp.s
 .PHONY : client/ClientThread.cpp.s
+
+client_processor/ClientProcessor.o: client_processor/ClientProcessor.cpp.o
+.PHONY : client_processor/ClientProcessor.o
+
+# target to build an object file
+client_processor/ClientProcessor.cpp.o:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/client_processor/ClientProcessor.cpp.o
+.PHONY : client_processor/ClientProcessor.cpp.o
+
+client_processor/ClientProcessor.i: client_processor/ClientProcessor.cpp.i
+.PHONY : client_processor/ClientProcessor.i
+
+# target to preprocess a source file
+client_processor/ClientProcessor.cpp.i:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/client_processor/ClientProcessor.cpp.i
+.PHONY : client_processor/ClientProcessor.cpp.i
+
+client_processor/ClientProcessor.s: client_processor/ClientProcessor.cpp.s
+.PHONY : client_processor/ClientProcessor.s
+
+# target to generate assembly for a file
+client_processor/ClientProcessor.cpp.s:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/client_processor/ClientProcessor.cpp.s
+.PHONY : client_processor/ClientProcessor.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main.cpp.o
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -270,7 +294,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main.cpp.i
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -278,7 +302,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main.cpp.s
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 main_window/AuthorizationWidget.o: main_window/AuthorizationWidget.cpp.o
@@ -286,7 +310,7 @@ main_window/AuthorizationWidget.o: main_window/AuthorizationWidget.cpp.o
 
 # target to build an object file
 main_window/AuthorizationWidget.cpp.o:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/AuthorizationWidget.cpp.o
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/AuthorizationWidget.cpp.o
 .PHONY : main_window/AuthorizationWidget.cpp.o
 
 main_window/AuthorizationWidget.i: main_window/AuthorizationWidget.cpp.i
@@ -294,7 +318,7 @@ main_window/AuthorizationWidget.i: main_window/AuthorizationWidget.cpp.i
 
 # target to preprocess a source file
 main_window/AuthorizationWidget.cpp.i:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/AuthorizationWidget.cpp.i
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/AuthorizationWidget.cpp.i
 .PHONY : main_window/AuthorizationWidget.cpp.i
 
 main_window/AuthorizationWidget.s: main_window/AuthorizationWidget.cpp.s
@@ -302,7 +326,7 @@ main_window/AuthorizationWidget.s: main_window/AuthorizationWidget.cpp.s
 
 # target to generate assembly for a file
 main_window/AuthorizationWidget.cpp.s:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/AuthorizationWidget.cpp.s
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/AuthorizationWidget.cpp.s
 .PHONY : main_window/AuthorizationWidget.cpp.s
 
 main_window/ChatWidget.o: main_window/ChatWidget.cpp.o
@@ -310,7 +334,7 @@ main_window/ChatWidget.o: main_window/ChatWidget.cpp.o
 
 # target to build an object file
 main_window/ChatWidget.cpp.o:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.o
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.o
 .PHONY : main_window/ChatWidget.cpp.o
 
 main_window/ChatWidget.i: main_window/ChatWidget.cpp.i
@@ -318,7 +342,7 @@ main_window/ChatWidget.i: main_window/ChatWidget.cpp.i
 
 # target to preprocess a source file
 main_window/ChatWidget.cpp.i:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.i
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.i
 .PHONY : main_window/ChatWidget.cpp.i
 
 main_window/ChatWidget.s: main_window/ChatWidget.cpp.s
@@ -326,7 +350,7 @@ main_window/ChatWidget.s: main_window/ChatWidget.cpp.s
 
 # target to generate assembly for a file
 main_window/ChatWidget.cpp.s:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.s
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.s
 .PHONY : main_window/ChatWidget.cpp.s
 
 main_window/MainWindow.o: main_window/MainWindow.cpp.o
@@ -334,7 +358,7 @@ main_window/MainWindow.o: main_window/MainWindow.cpp.o
 
 # target to build an object file
 main_window/MainWindow.cpp.o:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/MainWindow.cpp.o
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/MainWindow.cpp.o
 .PHONY : main_window/MainWindow.cpp.o
 
 main_window/MainWindow.i: main_window/MainWindow.cpp.i
@@ -342,7 +366,7 @@ main_window/MainWindow.i: main_window/MainWindow.cpp.i
 
 # target to preprocess a source file
 main_window/MainWindow.cpp.i:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/MainWindow.cpp.i
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/MainWindow.cpp.i
 .PHONY : main_window/MainWindow.cpp.i
 
 main_window/MainWindow.s: main_window/MainWindow.cpp.s
@@ -350,7 +374,7 @@ main_window/MainWindow.s: main_window/MainWindow.cpp.s
 
 # target to generate assembly for a file
 main_window/MainWindow.cpp.s:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/MainWindow.cpp.s
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/MainWindow.cpp.s
 .PHONY : main_window/MainWindow.cpp.s
 
 main_window/RegistrationWidget.o: main_window/RegistrationWidget.cpp.o
@@ -358,7 +382,7 @@ main_window/RegistrationWidget.o: main_window/RegistrationWidget.cpp.o
 
 # target to build an object file
 main_window/RegistrationWidget.cpp.o:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/RegistrationWidget.cpp.o
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/RegistrationWidget.cpp.o
 .PHONY : main_window/RegistrationWidget.cpp.o
 
 main_window/RegistrationWidget.i: main_window/RegistrationWidget.cpp.i
@@ -366,7 +390,7 @@ main_window/RegistrationWidget.i: main_window/RegistrationWidget.cpp.i
 
 # target to preprocess a source file
 main_window/RegistrationWidget.cpp.i:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/RegistrationWidget.cpp.i
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/RegistrationWidget.cpp.i
 .PHONY : main_window/RegistrationWidget.cpp.i
 
 main_window/RegistrationWidget.s: main_window/RegistrationWidget.cpp.s
@@ -374,39 +398,15 @@ main_window/RegistrationWidget.s: main_window/RegistrationWidget.cpp.s
 
 # target to generate assembly for a file
 main_window/RegistrationWidget.cpp.s:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/RegistrationWidget.cpp.s
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/RegistrationWidget.cpp.s
 .PHONY : main_window/RegistrationWidget.cpp.s
-
-message_processor/MsgProcessor.o: message_processor/MsgProcessor.cpp.o
-.PHONY : message_processor/MsgProcessor.o
-
-# target to build an object file
-message_processor/MsgProcessor.cpp.o:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/message_processor/MsgProcessor.cpp.o
-.PHONY : message_processor/MsgProcessor.cpp.o
-
-message_processor/MsgProcessor.i: message_processor/MsgProcessor.cpp.i
-.PHONY : message_processor/MsgProcessor.i
-
-# target to preprocess a source file
-message_processor/MsgProcessor.cpp.i:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/message_processor/MsgProcessor.cpp.i
-.PHONY : message_processor/MsgProcessor.cpp.i
-
-message_processor/MsgProcessor.s: message_processor/MsgProcessor.cpp.s
-.PHONY : message_processor/MsgProcessor.s
-
-# target to generate assembly for a file
-message_processor/MsgProcessor.cpp.s:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/message_processor/MsgProcessor.cpp.s
-.PHONY : message_processor/MsgProcessor.cpp.s
 
 msgr_client_autogen/mocs_compilation.o: msgr_client_autogen/mocs_compilation.cpp.o
 .PHONY : msgr_client_autogen/mocs_compilation.o
 
 # target to build an object file
 msgr_client_autogen/mocs_compilation.cpp.o:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/msgr_client_autogen/mocs_compilation.cpp.o
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/msgr_client_autogen/mocs_compilation.cpp.o
 .PHONY : msgr_client_autogen/mocs_compilation.cpp.o
 
 msgr_client_autogen/mocs_compilation.i: msgr_client_autogen/mocs_compilation.cpp.i
@@ -414,7 +414,7 @@ msgr_client_autogen/mocs_compilation.i: msgr_client_autogen/mocs_compilation.cpp
 
 # target to preprocess a source file
 msgr_client_autogen/mocs_compilation.cpp.i:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/msgr_client_autogen/mocs_compilation.cpp.i
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/msgr_client_autogen/mocs_compilation.cpp.i
 .PHONY : msgr_client_autogen/mocs_compilation.cpp.i
 
 msgr_client_autogen/mocs_compilation.s: msgr_client_autogen/mocs_compilation.cpp.s
@@ -422,7 +422,7 @@ msgr_client_autogen/mocs_compilation.s: msgr_client_autogen/mocs_compilation.cpp
 
 # target to generate assembly for a file
 msgr_client_autogen/mocs_compilation.cpp.s:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/msgr_client_autogen/mocs_compilation.cpp.s
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/msgr_client_autogen/mocs_compilation.cpp.s
 .PHONY : msgr_client_autogen/mocs_compilation.cpp.s
 
 # Help Target
@@ -447,6 +447,9 @@ help:
 	@echo "... client/ClientThread.o"
 	@echo "... client/ClientThread.i"
 	@echo "... client/ClientThread.s"
+	@echo "... client_processor/ClientProcessor.o"
+	@echo "... client_processor/ClientProcessor.i"
+	@echo "... client_processor/ClientProcessor.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -462,9 +465,6 @@ help:
 	@echo "... main_window/RegistrationWidget.o"
 	@echo "... main_window/RegistrationWidget.i"
 	@echo "... main_window/RegistrationWidget.s"
-	@echo "... message_processor/MsgProcessor.o"
-	@echo "... message_processor/MsgProcessor.i"
-	@echo "... message_processor/MsgProcessor.s"
 	@echo "... msgr_client_autogen/mocs_compilation.o"
 	@echo "... msgr_client_autogen/mocs_compilation.i"
 	@echo "... msgr_client_autogen/mocs_compilation.s"
@@ -479,6 +479,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/runner/work/otus_project/otus_project && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/runner/work/msgr/msgr && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

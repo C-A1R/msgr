@@ -1,1 +1,1 @@
-/usr/bin/c++  -pthread -rdynamic CMakeFiles/msgr_server.dir/main.cpp.o CMakeFiles/msgr_server.dir/server.cpp.o CMakeFiles/msgr_server.dir/session.cpp.o -o msgr_server 
+/usr/bin/c++  -pthread -rdynamic CMakeFiles/msgr_server.dir/main.cpp.o CMakeFiles/msgr_server.dir/Server.cpp.o CMakeFiles/msgr_server.dir/Session.cpp.o CMakeFiles/msgr_server.dir/sqlite/sqlite3.c.o CMakeFiles/msgr_server.dir/Database.cpp.o CMakeFiles/msgr_server.dir/server_processor/ServerProcessor.cpp.o -o msgr_server  -ldl 

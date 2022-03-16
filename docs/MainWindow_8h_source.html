@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.9</span>
+   &#160;<span id="projectnumber">0.0.10</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -81,7 +81,7 @@ $(function() {
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="MainWidgets_8h.html">MainWidgets.h</a>&quot;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">class </span>QStackedWidget;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">class </span><a class="code" href="classIMsgProcessor.html">IMsgProcessor</a>;</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">class </span><a class="code" href="classIClientProcessor.html">IClientProcessor</a>;</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
 <div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classMainWindow.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classMainWindow.html">MainWindow</a> : <span class="keyword">public</span> QMainWindow</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
@@ -92,7 +92,7 @@ $(function() {
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <a class="code" href="classMainWindow.html#a996c5a2b6f77944776856f08ec30858d">MainWindow</a>(QWidget *parent = <span class="keyword">nullptr</span>);</div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMainWindow.html#aa1e70e152622fbf35b26db45d6bc18bf">setupUi</a>(<span class="keyword">const</span> std::shared_ptr&lt;IMsgProcessor&gt; &amp;msgProcessor);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMainWindow.html#aa10f1b9752793cc8431a5d5fd0a62955">setupUi</a>(<span class="keyword">const</span> std::shared_ptr&lt;IClientProcessor&gt; &amp;msgProcessor);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span> slots:</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMainWindow.html#a8a97ec8374b073cf3a31f9e88f4fcb64">slot_changeSign</a>(<a class="code" href="MainWidgets_8h.html#adcd5eb519932c561d0b8dd950adde10a">MainWidgets</a> wgt);</div>
@@ -104,9 +104,9 @@ $(function() {
 <div class="ttc" id="aclassMainWindow_html_a4c37b8281e29b946992c30ddd23633ea"><div class="ttname"><a href="classMainWindow.html#a4c37b8281e29b946992c30ddd23633ea">MainWindow::main_widget</a></div><div class="ttdeci">QStackedWidget * main_widget</div><div class="ttdef"><b>Definition:</b> MainWindow.h:16</div></div>
 <div class="ttc" id="aclassMainWindow_html"><div class="ttname"><a href="classMainWindow.html">MainWindow</a></div><div class="ttdef"><b>Definition:</b> MainWindow.h:13</div></div>
 <div class="ttc" id="aclassMainWindow_html_a996c5a2b6f77944776856f08ec30858d"><div class="ttname"><a href="classMainWindow.html#a996c5a2b6f77944776856f08ec30858d">MainWindow::MainWindow</a></div><div class="ttdeci">MainWindow(QWidget *parent=nullptr)</div><div class="ttdef"><b>Definition:</b> MainWindow.cpp:11</div></div>
-<div class="ttc" id="aclassMainWindow_html_aa1e70e152622fbf35b26db45d6bc18bf"><div class="ttname"><a href="classMainWindow.html#aa1e70e152622fbf35b26db45d6bc18bf">MainWindow::setupUi</a></div><div class="ttdeci">void setupUi(const std::shared_ptr&lt; IMsgProcessor &gt; &amp;msgProcessor)</div><div class="ttdef"><b>Definition:</b> MainWindow.cpp:22</div></div>
+<div class="ttc" id="aclassIClientProcessor_html"><div class="ttname"><a href="classIClientProcessor.html">IClientProcessor</a></div><div class="ttdef"><b>Definition:</b> IClientProcessor.h:6</div></div>
 <div class="ttc" id="aMainWidgets_8h_html_adcd5eb519932c561d0b8dd950adde10a"><div class="ttname"><a href="MainWidgets_8h.html#adcd5eb519932c561d0b8dd950adde10a">MainWidgets</a></div><div class="ttdeci">MainWidgets</div><div class="ttdef"><b>Definition:</b> MainWidgets.h:6</div></div>
-<div class="ttc" id="aclassIMsgProcessor_html"><div class="ttname"><a href="classIMsgProcessor.html">IMsgProcessor</a></div><div class="ttdef"><b>Definition:</b> IMsgProcessor.h:6</div></div>
+<div class="ttc" id="aclassMainWindow_html_aa10f1b9752793cc8431a5d5fd0a62955"><div class="ttname"><a href="classMainWindow.html#aa10f1b9752793cc8431a5d5fd0a62955">MainWindow::setupUi</a></div><div class="ttdeci">void setupUi(const std::shared_ptr&lt; IClientProcessor &gt; &amp;msgProcessor)</div><div class="ttdef"><b>Definition:</b> MainWindow.cpp:22</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

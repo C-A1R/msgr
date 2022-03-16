@@ -14,12 +14,12 @@ MainWindow::MainWindow(QWidget *parent)
     std::locale::global(std::locale(""));
     qRegisterMetaType<MainWidgets>();
 
-    auto msgProcessor = std::make_shared<MsgProcessor>();
-    setupUi(msgProcessor);
-    msgProcessor->start();
+    auto processor = std::make_shared<ClientProcessor>();
+    setupUi(processor);
+    processor->start();
 }
 
-void MainWindow::setupUi(const std::shared_ptr<IMsgProcessor> &msgProcessor)
+void MainWindow::setupUi(const std::shared_ptr<IClientProcessor> &msgProcessor)
 {
     resize(600, 400);
     setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);

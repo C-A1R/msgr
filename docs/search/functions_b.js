@@ -1,0 +1,27 @@
+var searchData=
+[
+  ['sendmsg_258',['sendMsg',['../classClientProcessor.html#af1289eb205d6da06ae5e3709b137bfe0',1,'ClientProcessor::sendMsg()'],['../classIClientProcessor.html#a2dba44766291057c5265f97599f03abb',1,'IClientProcessor::sendMsg()']]],
+  ['server_259',['Server',['../classServer.html#a486a04867d8f44f04763c2c8f6064aa3',1,'Server']]],
+  ['serverprocessor_260',['ServerProcessor',['../classServerProcessor.html#ade3abcfd90a9a4e72d80c567caea2d9b',1,'ServerProcessor']]],
+  ['session_261',['Session',['../classSession.html#a9fdb2c4cfb08ee541d1181929f8d56e0',1,'Session']]],
+  ['set_262',['set',['../CMakeLists_8txt.html#a776e7765bd88f8f59dd9972728b87ecd',1,'set(PROJECT_NAME msgr VERSION ${PROJECT_VESRION}) project($:&#160;CMakeLists.txt'],['../CMakeLists_8txt.html#a8cafc3e9a0b96df45f0ae20918f733a1',1,'set(DOXYGEN_OUT ${CMAKE_CURRENT_BINARY_DIR}/Doxyfile) configure_file($:&#160;CMakeLists.txt'],['../src__client_2CMakeLists_8txt.html#a6236affe2e48874b037bcdfe36acc8d7',1,'set(PROJECT_NAME msgr_client VERSION ${PROJECT_VESRION} LANGUAGES CXX) set(CMAKE_CXX_FLAGS &quot;$:&#160;CMakeLists.txt'],['../src__client_2CMakeLists_8txt.html#a48fe36303ef3b631432270fccdf17e05',1,'set(HEADERS main_window/MainWindow.h main_window/RegistrationWidget.h main_window/AuthorizationWidget.h main_window/ChatWidget.h main_window/MainWidgets.h client/Client.h client/ClientThread.h client_processor/IClientProcessor.h client_processor/ClientProcessor.h) set(SOURCES main.cpp main_window/MainWindow.cpp main_window/RegistrationWidget.cpp main_window/AuthorizationWidget.cpp main_window/ChatWidget.cpp client/Client.cpp client/ClientThread.cpp client_processor/ClientProcessor.cpp) add_executable(msgr_client $:&#160;CMakeLists.txt'],['../src__server_2CMakeLists_8txt.html#a91f59a660c8f793914e201dcf84596d4',1,'set(PROJECT_NAME msgr_server VERSION ${PROJECT_VESRION} LANGUAGES CXX) set(CMAKE_CXX_FLAGS &quot;$:&#160;CMakeLists.txt']]],
+  ['setupui_263',['setupUi',['../classAuthorizationWidget.html#a2ebc435097730c03e87473c76e9e710c',1,'AuthorizationWidget::setupUi()'],['../classMainWindow.html#aa10f1b9752793cc8431a5d5fd0a62955',1,'MainWindow::setupUi()']]],
+  ['signal_5fchangesign_264',['signal_changeSign',['../classAuthorizationWidget.html#a01f709cfd6d0c1f8fcdc9e66a4196362',1,'AuthorizationWidget']]],
+  ['signal_5fgetfromserver_265',['signal_getFromServer',['../classClient.html#aaa76b5a363e37dd8cb7ebca92aa33068',1,'Client']]],
+  ['signal_5fgetfromthread_266',['signal_getFromThread',['../classClientThread.html#a7466cfd31211c53c45d09459a554c031',1,'ClientThread']]],
+  ['signal_5fsendrequest_267',['signal_sendRequest',['../classIClientProcessor.html#a2c3e7b00f61695f80a3a64ba2e267d8a',1,'IClientProcessor']]],
+  ['signal_5fsendtoclient_268',['signal_sendToClient',['../classClientThread.html#afad66f597ec0af1a9da793f188c5885c',1,'ClientThread']]],
+  ['signal_5fsendtoclientthread_269',['signal_sendToClientThread',['../classIClientProcessor.html#a29b83638d0726b27139bc9dafa2cb0a3',1,'IClientProcessor']]],
+  ['signal_5fsendtogui_270',['signal_sendToGui',['../classIClientProcessor.html#a4439178654383b4115e71f74561980eb',1,'IClientProcessor']]],
+  ['signal_5fstopclient_271',['signal_stopClient',['../classIClientProcessor.html#a6683b6f1d081a815fc27334cd2f6b95b',1,'IClientProcessor']]],
+  ['signup_5frequest_272',['signUp_request',['../classClientProcessor.html#ab1e2acd6e43c1dc5e88ede8095e31d93',1,'ClientProcessor::signUp_request()'],['../classIClientProcessor.html#ab53f39c0b24105051bd2869a26e7a999',1,'IClientProcessor::signUp_request()']]],
+  ['slot_5fchangesign_273',['slot_changeSign',['../classMainWindow.html#a8a97ec8374b073cf3a31f9e88f4fcb64',1,'MainWindow']]],
+  ['slot_5fgetmsg_274',['slot_getMsg',['../classClientProcessor.html#a6bc9fb27727540c5c77218dd12a1fa2e',1,'ClientProcessor::slot_getMsg()'],['../classChatWidget.html#a723e43d42c2ff07c0d1a374d75860f30',1,'ChatWidget::slot_getMsg()']]],
+  ['slot_5fsendmsg_275',['slot_sendMsg',['../classChatWidget.html#ac2cc36bf5647d526e83c8088a8ed1e4a',1,'ChatWidget']]],
+  ['slot_5fsendtoserver_276',['slot_sendToServer',['../classClient.html#a211bf02c729f573479f622034c516947',1,'Client']]],
+  ['slot_5fsign_5fpbtn_5fclicked_277',['slot_sign_pBtn_clicked',['../classAuthorizationWidget.html#a712c95c59f73f5da3a6a2ffcea091ef7',1,'AuthorizationWidget::slot_sign_pBtn_clicked()'],['../classRegistrationWidget.html#ac98570a9da83844bfe0299ced86f1ea3',1,'RegistrationWidget::slot_sign_pBtn_clicked()']]],
+  ['slot_5fsignup_278',['slot_SignUp',['../classRegistrationWidget.html#a317a5c550391652e84cfb0297c9cba71',1,'RegistrationWidget']]],
+  ['slot_5fstopclient_279',['slot_stopClient',['../classClientThread.html#a640fe38541ddf4a510ed9e4100a3da3b',1,'ClientThread']]],
+  ['start_280',['start',['../classClient.html#a97cc70503b3e7b504afc77d797cf2f2c',1,'Client::start()'],['../classClientProcessor.html#a3b7ad54d4251aaec91b9179115f38829',1,'ClientProcessor::start()'],['../classIClientProcessor.html#a581251a6eb7c1ea30fce7f5cebd14ee8',1,'IClientProcessor::start()'],['../classSession.html#a47baf956cead0046fcbac45c572c70d3',1,'Session::start()']]],
+  ['symmetricdifference_281',['symmetricDifference',['../classDatabase.html#a632a2f4a3c5d173bdf282cf3a99d4fdf',1,'Database']]]
+];

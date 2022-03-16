@@ -57,10 +57,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/runner/work/otus_project/otus_project
+CMAKE_SOURCE_DIR = /home/runner/work/msgr/msgr
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/runner/work/otus_project/otus_project
+CMAKE_BINARY_DIR = /home/runner/work/msgr/msgr
 
 #=============================================================================
 # Targets provided globally by CMake.
@@ -68,7 +68,7 @@ CMAKE_BINARY_DIR = /home/runner/work/otus_project/otus_project
 # Special rule for the target package
 package: preinstall
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool..."
-	cd /home/runner/work/otus_project/otus_project && /usr/local/bin/cpack --config ./CPackConfig.cmake
+	cd /home/runner/work/msgr/msgr && /usr/local/bin/cpack --config ./CPackConfig.cmake
 .PHONY : package
 
 # Special rule for the target package
@@ -78,7 +78,7 @@ package/fast: package
 # Special rule for the target package_source
 package_source:
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --cyan "Run CPack packaging tool for source..."
-	cd /home/runner/work/otus_project/otus_project && /usr/local/bin/cpack --config ./CPackSourceConfig.cmake /home/runner/work/otus_project/otus_project/CPackSourceConfig.cmake
+	cd /home/runner/work/msgr/msgr && /usr/local/bin/cpack --config ./CPackSourceConfig.cmake /home/runner/work/msgr/msgr/CPackSourceConfig.cmake
 .PHONY : package_source
 
 # Special rule for the target package_source
@@ -152,14 +152,14 @@ install/strip/fast: preinstall/fast
 
 # The main all target
 all: cmake_check_build_system
-	cd /home/runner/work/otus_project/otus_project && $(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/otus_project/otus_project/CMakeFiles /home/runner/work/otus_project/otus_project/src_server//CMakeFiles/progress.marks
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src_server/all
-	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/otus_project/otus_project/CMakeFiles 0
+	cd /home/runner/work/msgr/msgr && $(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/msgr/msgr/CMakeFiles /home/runner/work/msgr/msgr/src_server//CMakeFiles/progress.marks
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src_server/all
+	$(CMAKE_COMMAND) -E cmake_progress_start /home/runner/work/msgr/msgr/CMakeFiles 0
 .PHONY : all
 
 # The main clean target
 clean:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src_server/clean
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src_server/clean
 .PHONY : clean
 
 # The main clean target
@@ -168,22 +168,22 @@ clean/fast: clean
 
 # Prepare targets for installation.
 preinstall: all
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src_server/preinstall
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src_server/preinstall
 .PHONY : preinstall
 
 # Prepare targets for installation.
 preinstall/fast:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src_server/preinstall
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src_server/preinstall
 .PHONY : preinstall/fast
 
 # clear depends
 depend:
-	cd /home/runner/work/otus_project/otus_project && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
+	cd /home/runner/work/msgr/msgr && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 1
 .PHONY : depend
 
 # Convenience name for target.
 src_server/CMakeFiles/msgr_server.dir/rule:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src_server/CMakeFiles/msgr_server.dir/rule
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src_server/CMakeFiles/msgr_server.dir/rule
 .PHONY : src_server/CMakeFiles/msgr_server.dir/rule
 
 # Convenience name for target.
@@ -192,15 +192,87 @@ msgr_server: src_server/CMakeFiles/msgr_server.dir/rule
 
 # fast build rule for target.
 msgr_server/fast:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/build
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/build
 .PHONY : msgr_server/fast
+
+Database.o: Database.cpp.o
+.PHONY : Database.o
+
+# target to build an object file
+Database.cpp.o:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/Database.cpp.o
+.PHONY : Database.cpp.o
+
+Database.i: Database.cpp.i
+.PHONY : Database.i
+
+# target to preprocess a source file
+Database.cpp.i:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/Database.cpp.i
+.PHONY : Database.cpp.i
+
+Database.s: Database.cpp.s
+.PHONY : Database.s
+
+# target to generate assembly for a file
+Database.cpp.s:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/Database.cpp.s
+.PHONY : Database.cpp.s
+
+Server.o: Server.cpp.o
+.PHONY : Server.o
+
+# target to build an object file
+Server.cpp.o:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/Server.cpp.o
+.PHONY : Server.cpp.o
+
+Server.i: Server.cpp.i
+.PHONY : Server.i
+
+# target to preprocess a source file
+Server.cpp.i:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/Server.cpp.i
+.PHONY : Server.cpp.i
+
+Server.s: Server.cpp.s
+.PHONY : Server.s
+
+# target to generate assembly for a file
+Server.cpp.s:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/Server.cpp.s
+.PHONY : Server.cpp.s
+
+Session.o: Session.cpp.o
+.PHONY : Session.o
+
+# target to build an object file
+Session.cpp.o:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/Session.cpp.o
+.PHONY : Session.cpp.o
+
+Session.i: Session.cpp.i
+.PHONY : Session.i
+
+# target to preprocess a source file
+Session.cpp.i:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/Session.cpp.i
+.PHONY : Session.cpp.i
+
+Session.s: Session.cpp.s
+.PHONY : Session.s
+
+# target to generate assembly for a file
+Session.cpp.s:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/Session.cpp.s
+.PHONY : Session.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
 
 # target to build an object file
 main.cpp.o:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/main.cpp.o
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/main.cpp.o
 .PHONY : main.cpp.o
 
 main.i: main.cpp.i
@@ -208,7 +280,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/main.cpp.i
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -216,56 +288,56 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/main.cpp.s
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/main.cpp.s
 .PHONY : main.cpp.s
 
-server.o: server.cpp.o
-.PHONY : server.o
+server_processor/ServerProcessor.o: server_processor/ServerProcessor.cpp.o
+.PHONY : server_processor/ServerProcessor.o
 
 # target to build an object file
-server.cpp.o:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/server.cpp.o
-.PHONY : server.cpp.o
+server_processor/ServerProcessor.cpp.o:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/server_processor/ServerProcessor.cpp.o
+.PHONY : server_processor/ServerProcessor.cpp.o
 
-server.i: server.cpp.i
-.PHONY : server.i
+server_processor/ServerProcessor.i: server_processor/ServerProcessor.cpp.i
+.PHONY : server_processor/ServerProcessor.i
 
 # target to preprocess a source file
-server.cpp.i:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/server.cpp.i
-.PHONY : server.cpp.i
+server_processor/ServerProcessor.cpp.i:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/server_processor/ServerProcessor.cpp.i
+.PHONY : server_processor/ServerProcessor.cpp.i
 
-server.s: server.cpp.s
-.PHONY : server.s
+server_processor/ServerProcessor.s: server_processor/ServerProcessor.cpp.s
+.PHONY : server_processor/ServerProcessor.s
 
 # target to generate assembly for a file
-server.cpp.s:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/server.cpp.s
-.PHONY : server.cpp.s
+server_processor/ServerProcessor.cpp.s:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/server_processor/ServerProcessor.cpp.s
+.PHONY : server_processor/ServerProcessor.cpp.s
 
-session.o: session.cpp.o
-.PHONY : session.o
+sqlite/sqlite3.o: sqlite/sqlite3.c.o
+.PHONY : sqlite/sqlite3.o
 
 # target to build an object file
-session.cpp.o:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/session.cpp.o
-.PHONY : session.cpp.o
+sqlite/sqlite3.c.o:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/sqlite/sqlite3.c.o
+.PHONY : sqlite/sqlite3.c.o
 
-session.i: session.cpp.i
-.PHONY : session.i
+sqlite/sqlite3.i: sqlite/sqlite3.c.i
+.PHONY : sqlite/sqlite3.i
 
 # target to preprocess a source file
-session.cpp.i:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/session.cpp.i
-.PHONY : session.cpp.i
+sqlite/sqlite3.c.i:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/sqlite/sqlite3.c.i
+.PHONY : sqlite/sqlite3.c.i
 
-session.s: session.cpp.s
-.PHONY : session.s
+sqlite/sqlite3.s: sqlite/sqlite3.c.s
+.PHONY : sqlite/sqlite3.s
 
 # target to generate assembly for a file
-session.cpp.s:
-	cd /home/runner/work/otus_project/otus_project && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/session.cpp.s
-.PHONY : session.cpp.s
+sqlite/sqlite3.c.s:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/sqlite/sqlite3.c.s
+.PHONY : sqlite/sqlite3.c.s
 
 # Help Target
 help:
@@ -282,15 +354,24 @@ help:
 	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... msgr_server"
+	@echo "... Database.o"
+	@echo "... Database.i"
+	@echo "... Database.s"
+	@echo "... Server.o"
+	@echo "... Server.i"
+	@echo "... Server.s"
+	@echo "... Session.o"
+	@echo "... Session.i"
+	@echo "... Session.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
-	@echo "... server.o"
-	@echo "... server.i"
-	@echo "... server.s"
-	@echo "... session.o"
-	@echo "... session.i"
-	@echo "... session.s"
+	@echo "... server_processor/ServerProcessor.o"
+	@echo "... server_processor/ServerProcessor.i"
+	@echo "... server_processor/ServerProcessor.s"
+	@echo "... sqlite/sqlite3.o"
+	@echo "... sqlite/sqlite3.i"
+	@echo "... sqlite/sqlite3.s"
 .PHONY : help
 
 
@@ -302,6 +383,6 @@ help:
 # No rule that depends on this can have commands that come from listfiles
 # because they might be regenerated.
 cmake_check_build_system:
-	cd /home/runner/work/otus_project/otus_project && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
+	cd /home/runner/work/msgr/msgr && $(CMAKE_COMMAND) -S$(CMAKE_SOURCE_DIR) -B$(CMAKE_BINARY_DIR) --check-build-system CMakeFiles/Makefile.cmake 0
 .PHONY : cmake_check_build_system
 

@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/runner/work/otus_project/otus_project
+CMAKE_SOURCE_DIR = /home/runner/work/msgr/msgr
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/runner/work/otus_project/otus_project
+CMAKE_BINARY_DIR = /home/runner/work/msgr/msgr
 
 # Utility rule file for doc_doxygen.
 
@@ -67,8 +67,8 @@ include CMakeFiles/doc_doxygen.dir/compiler_depend.make
 include CMakeFiles/doc_doxygen.dir/progress.make
 
 CMakeFiles/doc_doxygen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/runner/work/otus_project/otus_project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating API documentation with Doxygen"
-	/usr/bin/doxygen /home/runner/work/otus_project/otus_project/Doxyfile
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/runner/work/msgr/msgr/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Generating API documentation with Doxygen"
+	/usr/bin/doxygen /home/runner/work/msgr/msgr/Doxyfile
 
 doc_doxygen: CMakeFiles/doc_doxygen
 doc_doxygen: CMakeFiles/doc_doxygen.dir/build.make
@@ -83,6 +83,6 @@ CMakeFiles/doc_doxygen.dir/clean:
 .PHONY : CMakeFiles/doc_doxygen.dir/clean
 
 CMakeFiles/doc_doxygen.dir/depend:
-	cd /home/runner/work/otus_project/otus_project && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/runner/work/otus_project/otus_project /home/runner/work/otus_project/otus_project /home/runner/work/otus_project/otus_project /home/runner/work/otus_project/otus_project /home/runner/work/otus_project/otus_project/CMakeFiles/doc_doxygen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/runner/work/msgr/msgr && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/runner/work/msgr/msgr /home/runner/work/msgr/msgr /home/runner/work/msgr/msgr /home/runner/work/msgr/msgr /home/runner/work/msgr/msgr/CMakeFiles/doc_doxygen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : CMakeFiles/doc_doxygen.dir/depend
 

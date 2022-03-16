@@ -1,15 +1,17 @@
 var searchData=
 [
-  ['qt_5fcore_5flib_481',['QT_CORE_LIB',['../moc__predefs_8h.html#a3fdaeff4a929898125f060b951479a85',1,'moc_predefs.h']]],
-  ['qt_5fgui_5flib_482',['QT_GUI_LIB',['../moc__predefs_8h.html#a20aa38ff6d76d6980b3c6365892110f1',1,'moc_predefs.h']]],
-  ['qt_5fmeta_5fstringdata_5fauthorizationwidget_5ft_483',['qt_meta_stringdata_AuthorizationWidget_t',['../structqt__meta__stringdata__AuthorizationWidget__t.html',1,'']]],
-  ['qt_5fmeta_5fstringdata_5fchatwidget_5ft_484',['qt_meta_stringdata_ChatWidget_t',['../structqt__meta__stringdata__ChatWidget__t.html',1,'']]],
-  ['qt_5fmeta_5fstringdata_5fclient_5ft_485',['qt_meta_stringdata_Client_t',['../structqt__meta__stringdata__Client__t.html',1,'']]],
-  ['qt_5fmeta_5fstringdata_5fclientthread_5ft_486',['qt_meta_stringdata_ClientThread_t',['../structqt__meta__stringdata__ClientThread__t.html',1,'']]],
-  ['qt_5fmeta_5fstringdata_5fimsgprocessor_5ft_487',['qt_meta_stringdata_IMsgProcessor_t',['../structqt__meta__stringdata__IMsgProcessor__t.html',1,'']]],
-  ['qt_5fmeta_5fstringdata_5fmainwindow_5ft_488',['qt_meta_stringdata_MainWindow_t',['../structqt__meta__stringdata__MainWindow__t.html',1,'']]],
-  ['qt_5fmeta_5fstringdata_5fregistrationwidget_5ft_489',['qt_meta_stringdata_RegistrationWidget_t',['../structqt__meta__stringdata__RegistrationWidget__t.html',1,'']]],
-  ['qt_5fmoc_5fliteral_490',['QT_MOC_LITERAL',['../moc__Client_8cpp.html#a75bb9482d242cde0a06c9dbdc6b83abe',1,'QT_MOC_LITERAL():&#160;moc_Client.cpp'],['../moc__ClientThread_8cpp.html#a75bb9482d242cde0a06c9dbdc6b83abe',1,'QT_MOC_LITERAL():&#160;moc_ClientThread.cpp'],['../moc__IMsgProcessor_8cpp.html#a75bb9482d242cde0a06c9dbdc6b83abe',1,'QT_MOC_LITERAL():&#160;moc_IMsgProcessor.cpp'],['../moc__AuthorizationWidget_8cpp.html#a75bb9482d242cde0a06c9dbdc6b83abe',1,'QT_MOC_LITERAL():&#160;moc_AuthorizationWidget.cpp'],['../moc__ChatWidget_8cpp.html#a75bb9482d242cde0a06c9dbdc6b83abe',1,'QT_MOC_LITERAL():&#160;moc_ChatWidget.cpp'],['../moc__MainWindow_8cpp.html#a75bb9482d242cde0a06c9dbdc6b83abe',1,'QT_MOC_LITERAL():&#160;moc_MainWindow.cpp'],['../moc__RegistrationWidget_8cpp.html#a75bb9482d242cde0a06c9dbdc6b83abe',1,'QT_MOC_LITERAL():&#160;moc_RegistrationWidget.cpp']]],
-  ['qt_5fno_5fdebug_491',['QT_NO_DEBUG',['../moc__predefs_8h.html#adf4502fefc73baefd4000330c54a52fa',1,'moc_predefs.h']]],
-  ['qt_5fwidgets_5flib_492',['QT_WIDGETS_LIB',['../moc__predefs_8h.html#a3764f041b8bf4c5ebd0bf19c071f416c',1,'moc_predefs.h']]]
+  ['main_85',['main',['../CMakeCCompilerId_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCXXCompilerId.cpp'],['../src__client_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../src__server_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp']]],
+  ['main_2ecpp_86',['main.cpp',['../src__client_2main_8cpp.html',1,'(Global Namespace)'],['../src__server_2main_8cpp.html',1,'(Global Namespace)']]],
+  ['main_2ecpp_2eo_2ed_87',['main.cpp.o.d',['../src__client_2CMakeFiles_2msgr__client_8dir_2main_8cpp_8o_8d.html',1,'(Global Namespace)'],['../src__server_2CMakeFiles_2msgr__server_8dir_2main_8cpp_8o_8d.html',1,'(Global Namespace)']]],
+  ['main_5fwidget_88',['main_widget',['../classMainWindow.html#a4c37b8281e29b946992c30ddd23633ea',1,'MainWindow']]],
+  ['mainwidgets_89',['MainWidgets',['../MainWidgets_8h.html#adcd5eb519932c561d0b8dd950adde10a',1,'MainWidgets.h']]],
+  ['mainwidgets_2eh_90',['MainWidgets.h',['../MainWidgets_8h.html',1,'']]],
+  ['mainwindow_91',['MainWindow',['../classMainWindow.html',1,'MainWindow'],['../classMainWindow.html#a996c5a2b6f77944776856f08ec30858d',1,'MainWindow::MainWindow()']]],
+  ['mainwindow_2ecpp_92',['MainWindow.cpp',['../MainWindow_8cpp.html',1,'']]],
+  ['mainwindow_2ecpp_2eo_2ed_93',['MainWindow.cpp.o.d',['../MainWindow_8cpp_8o_8d.html',1,'']]],
+  ['mainwindow_2eh_94',['MainWindow.h',['../MainWindow_8h.html',1,'']]],
+  ['max_5flength_95',['max_length',['../classSession.html#a9251d35017dc98d7e0531db8ce4eadfba91789f09a8674b8daa03927e3ceb7df4',1,'Session']]],
+  ['maxid_96',['maxId',['../classDatabase.html#ad719bd21bf8252b73c1da1b50d7ca4ec',1,'Database']]],
+  ['mocs_5fcompilation_2ecpp_2eo_2ed_97',['mocs_compilation.cpp.o.d',['../mocs__compilation_8cpp_8o_8d.html',1,'']]],
+  ['msg_5fledit_98',['msg_lEdit',['../classChatWidget.html#aa33a1d50ca344d55313d180c23b1b420',1,'ChatWidget']]]
 ];

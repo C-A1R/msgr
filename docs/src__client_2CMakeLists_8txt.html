@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.9</span>
+   &#160;<span id="projectnumber">0.0.10</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -78,8 +78,8 @@ Functions</h2></td></tr>
 <tr class="separator:a6236affe2e48874b037bcdfe36acc8d7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a6b95563f9336629ab5cab3b1a645ce1e"><td class="memItemLeft" align="right" valign="top">pthread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src__client_2CMakeLists_8txt.html#a6b95563f9336629ab5cab3b1a645ce1e">project</a> (${PROJECT_NAME}) <a class="el" href="src__server_2CMakeLists_8txt.html#a91f59a660c8f793914e201dcf84596d4">set</a>(CMAKE_INCLUDE_CURRENT_DIR ON) <a class="el" href="src__server_2CMakeLists_8txt.html#a91f59a660c8f793914e201dcf84596d4">set</a>(CMAKE_AUTOUIC ON) <a class="el" href="src__server_2CMakeLists_8txt.html#a91f59a660c8f793914e201dcf84596d4">set</a>(CMAKE_AUTOMOC ON) <a class="el" href="src__server_2CMakeLists_8txt.html#a91f59a660c8f793914e201dcf84596d4">set</a>(CMAKE_AUTORCC ON) <a class="el" href="src__server_2CMakeLists_8txt.html#a91f59a660c8f793914e201dcf84596d4">set</a>(CMAKE_CXX_STANDARD 11) <a class="el" href="src__server_2CMakeLists_8txt.html#a91f59a660c8f793914e201dcf84596d4">set</a>(CMAKE_CXX_STANDARD_REQUIRED ON) <a class="el" href="CMakeLists_8txt.html#afccb80a58855dd20fb3f9481b374b4d2">find_package</a>(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED) <a class="el" href="CMakeLists_8txt.html#afccb80a58855dd20fb3f9481b374b4d2">find_package</a>(Qt$</td></tr>
 <tr class="separator:a6b95563f9336629ab5cab3b1a645ce1e"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a7d9eaec0d51cbd1b9ecd522389390349"><td class="memItemLeft" align="right" valign="top">COMPONENTS Widgets REQUIRED&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src__client_2CMakeLists_8txt.html#a7d9eaec0d51cbd1b9ecd522389390349">set</a> (HEADERS main_window/MainWindow.h main_window/RegistrationWidget.h main_window/AuthorizationWidget.h main_window/ChatWidget.h main_window/MainWidgets.h client/Client.h client/ClientThread.h message_processor/IMsgProcessor.h message_processor/MsgProcessor.h) set(SOURCES main.cpp main_window/MainWindow.cpp main_window/RegistrationWidget.cpp main_window/AuthorizationWidget.cpp main_window/ChatWidget.cpp client/Client.cpp client/ClientThread.cpp message_processor/MsgProcessor.cpp) add_executable(msgr_client $</td></tr>
-<tr class="separator:a7d9eaec0d51cbd1b9ecd522389390349"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48fe36303ef3b631432270fccdf17e05"><td class="memItemLeft" align="right" valign="top">COMPONENTS Widgets REQUIRED&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src__client_2CMakeLists_8txt.html#a48fe36303ef3b631432270fccdf17e05">set</a> (HEADERS main_window/MainWindow.h main_window/RegistrationWidget.h main_window/AuthorizationWidget.h main_window/ChatWidget.h main_window/MainWidgets.h client/Client.h client/ClientThread.h client_processor/IClientProcessor.h client_processor/ClientProcessor.h) set(SOURCES main.cpp main_window/MainWindow.cpp main_window/RegistrationWidget.cpp main_window/AuthorizationWidget.cpp main_window/ChatWidget.cpp client/Client.cpp client/ClientThread.cpp client_processor/ClientProcessor.cpp) add_executable(msgr_client $</td></tr>
+<tr class="separator:a48fe36303ef3b631432270fccdf17e05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a8ffb36274f785a4d0a2fd51cb9945730"></a>
@@ -118,8 +118,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a7d9eaec0d51cbd1b9ecd522389390349"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a7d9eaec0d51cbd1b9ecd522389390349">&#9670;&nbsp;</a></span>set() <span class="overload">[1/2]</span></h2>
+<a id="a48fe36303ef3b631432270fccdf17e05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48fe36303ef3b631432270fccdf17e05">&#9670;&nbsp;</a></span>set() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -127,7 +127,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">COMPONENTS Widgets REQUIRED set </td>
           <td>(</td>
-          <td class="paramtype">HEADERS main_window/MainWindow.h main_window/RegistrationWidget.h main_window/AuthorizationWidget.h main_window/ChatWidget.h main_window/MainWidgets.h client/Client.h client/ClientThread.h message_processor/IMsgProcessor.h message_processor/MsgProcessor.&#160;</td>
+          <td class="paramtype">HEADERS main_window/MainWindow.h main_window/RegistrationWidget.h main_window/AuthorizationWidget.h main_window/ChatWidget.h main_window/MainWidgets.h client/Client.h client/ClientThread.h client_processor/IClientProcessor.h client_processor/ClientProcessor.&#160;</td>
           <td class="paramname"><em>h</em></td><td>)</td>
           <td></td>
         </tr>

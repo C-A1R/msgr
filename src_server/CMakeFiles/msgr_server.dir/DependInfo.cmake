@@ -8,9 +8,12 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/runner/work/otus_project/otus_project/src_server/main.cpp" "src_server/CMakeFiles/msgr_server.dir/main.cpp.o" "gcc" "src_server/CMakeFiles/msgr_server.dir/main.cpp.o.d"
-  "/home/runner/work/otus_project/otus_project/src_server/server.cpp" "src_server/CMakeFiles/msgr_server.dir/server.cpp.o" "gcc" "src_server/CMakeFiles/msgr_server.dir/server.cpp.o.d"
-  "/home/runner/work/otus_project/otus_project/src_server/session.cpp" "src_server/CMakeFiles/msgr_server.dir/session.cpp.o" "gcc" "src_server/CMakeFiles/msgr_server.dir/session.cpp.o.d"
+  "/home/runner/work/msgr/msgr/src_server/sqlite/sqlite3.c" "src_server/CMakeFiles/msgr_server.dir/sqlite/sqlite3.c.o" "gcc" "src_server/CMakeFiles/msgr_server.dir/sqlite/sqlite3.c.o.d"
+  "/home/runner/work/msgr/msgr/src_server/Database.cpp" "src_server/CMakeFiles/msgr_server.dir/Database.cpp.o" "gcc" "src_server/CMakeFiles/msgr_server.dir/Database.cpp.o.d"
+  "/home/runner/work/msgr/msgr/src_server/Server.cpp" "src_server/CMakeFiles/msgr_server.dir/Server.cpp.o" "gcc" "src_server/CMakeFiles/msgr_server.dir/Server.cpp.o.d"
+  "/home/runner/work/msgr/msgr/src_server/Session.cpp" "src_server/CMakeFiles/msgr_server.dir/Session.cpp.o" "gcc" "src_server/CMakeFiles/msgr_server.dir/Session.cpp.o.d"
+  "/home/runner/work/msgr/msgr/src_server/main.cpp" "src_server/CMakeFiles/msgr_server.dir/main.cpp.o" "gcc" "src_server/CMakeFiles/msgr_server.dir/main.cpp.o.d"
+  "/home/runner/work/msgr/msgr/src_server/server_processor/ServerProcessor.cpp" "src_server/CMakeFiles/msgr_server.dir/server_processor/ServerProcessor.cpp.o" "gcc" "src_server/CMakeFiles/msgr_server.dir/server_processor/ServerProcessor.cpp.o.d"
   )
 
 # Targets to which this target links.

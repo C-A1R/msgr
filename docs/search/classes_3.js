@@ -1,5 +1,5 @@
 var searchData=
 [
-  ['mainwindow_548',['MainWindow',['../classMainWindow.html',1,'']]],
-  ['msgprocessor_549',['MsgProcessor',['../classMsgProcessor.html',1,'']]]
+  ['iclientprocessor_166',['IClientProcessor',['../classIClientProcessor.html',1,'']]],
+  ['iserverprocessor_167',['IServerProcessor',['../classIServerProcessor.html',1,'']]]
 ];

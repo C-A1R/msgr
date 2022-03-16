@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['login_5fledit_679',['login_lEdit',['../classAuthorizationWidget.html#a2464597c709c0d437f5263cd61853e83',1,'AuthorizationWidget']]]
+  ['main_5fwidget_312',['main_widget',['../classMainWindow.html#a4c37b8281e29b946992c30ddd23633ea',1,'MainWindow']]],
+  ['msg_5fledit_313',['msg_lEdit',['../classChatWidget.html#aa33a1d50ca344d55313d180c23b1b420',1,'ChatWidget']]]
 ];

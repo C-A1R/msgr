@@ -1,9 +1,11 @@
-OUTPUT_DIRECTORY       = /home/runner/work/otus_project/otus_project/
-INPUT                  = /home/runner/work/otus_project/otus_project/ 
+OUTPUT_DIRECTORY       = /home/runner/work/msgr/msgr/
+INPUT                  = /home/runner/work/msgr/msgr/
+EXCLUDE                = /home/runner/work/msgr/msgr/src_server/sqlite/ \
+                         /home/runner/work/msgr/msgr/src_client/msgr_client_autogen
 
 DOXYFILE_ENCODING      = UTF-8
 PROJECT_NAME           = msgr
-PROJECT_NUMBER         = 0.0.9
+PROJECT_NUMBER         = 0.0.10
 PROJECT_BRIEF          = "сервер + клиент"
 
 GENERATE_HTML          = YES

@@ -1,4 +1,10 @@
 var searchData=
 [
-  ['project_630',['project',['../src__client_2CMakeLists_8txt.html#a6b95563f9336629ab5cab3b1a645ce1e',1,'project(${PROJECT_NAME}) set(CMAKE_INCLUDE_CURRENT_DIR ON) set(CMAKE_AUTOUIC ON) set(CMAKE_AUTOMOC ON) set(CMAKE_AUTORCC ON) set(CMAKE_CXX_STANDARD 11) set(CMAKE_CXX_STANDARD_REQUIRED ON) find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED) find_package(Qt$:&#160;CMakeLists.txt'],['../src__server_2CMakeLists_8txt.html#a64e7cf0935cd0846d179b1414245f23a',1,'project(${PROJECT_NAME}) set(HEADERS server.h session.h) set(SOURCES main.cpp server.cpp session.cpp) add_executable(msgr_server $:&#160;CMakeLists.txt']]]
+  ['iclientprocessor_242',['IClientProcessor',['../classIClientProcessor.html#a45ff21f6cba1504ef84fb512db532bb0',1,'IClientProcessor']]],
+  ['init_243',['init',['../classAuthorizationWidget.html#adf4dfd31bbfce1c39d64c90fa06c3687',1,'AuthorizationWidget::init()'],['../classRegistrationWidget.html#a091a86faa27625319e7d7b46a8f81b81',1,'RegistrationWidget::init()']]],
+  ['initui_244',['initUi',['../classChatWidget.html#a707ded9289b2266b8103f28d2225d202',1,'ChatWidget']]],
+  ['insertuser_245',['insertUser',['../classDatabase.html#ab6ae69cf284231ae57287005293a566f',1,'Database']]],
+  ['intersection_246',['intersection',['../classDatabase.html#a678c2efb52cacdafd246ffbc17047a9f',1,'Database']]],
+  ['invalidid_247',['invalidId',['../classDatabase.html#a9543d1e3a14ce8021df22d35ebd261f8',1,'Database']]],
+  ['iserverprocessor_248',['IServerProcessor',['../classIServerProcessor.html#aee941c856cdeaf5ac7fa4808fc7e8dfe',1,'IServerProcessor']]]
 ];

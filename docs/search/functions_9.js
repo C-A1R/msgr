@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['writehandler_657',['writeHandler',['../classClient.html#a3cbb9ed253c9c3668eeedc4b1b39e2f3',1,'Client']]]
+  ['project_253',['project',['../src__client_2CMakeLists_8txt.html#a6b95563f9336629ab5cab3b1a645ce1e',1,'project(${PROJECT_NAME}) set(CMAKE_INCLUDE_CURRENT_DIR ON) set(CMAKE_AUTOUIC ON) set(CMAKE_AUTOMOC ON) set(CMAKE_AUTORCC ON) set(CMAKE_CXX_STANDARD 11) set(CMAKE_CXX_STANDARD_REQUIRED ON) find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED) find_package(Qt$:&#160;CMakeLists.txt'],['../src__server_2CMakeLists_8txt.html#aff3a6a4550f04fa193486a1e1ec18d45',1,'project(${PROJECT_NAME}) set(HEADERS Server.h Session.h sqlite/sqlite3.h Database.h server_processor/IServerProcessor.h server_processor/ServerProcessor.h) set(SOURCES main.cpp Server.cpp Session.cpp sqlite/sqlite3.c Database.cpp server_processor/ServerProcessor.cpp) add_executable(msgr_server $:&#160;CMakeLists.txt']]]
 ];

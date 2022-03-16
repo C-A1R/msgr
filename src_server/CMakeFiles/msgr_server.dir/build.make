@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/runner/work/otus_project/otus_project
+CMAKE_SOURCE_DIR = /home/runner/work/msgr/msgr
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/runner/work/otus_project/otus_project
+CMAKE_BINARY_DIR = /home/runner/work/msgr/msgr
 
 # Include any dependencies generated for this target.
 include src_server/CMakeFiles/msgr_server.dir/depend.make
@@ -72,71 +72,119 @@ include src_server/CMakeFiles/msgr_server.dir/flags.make
 src_server/CMakeFiles/msgr_server.dir/main.cpp.o: src_server/CMakeFiles/msgr_server.dir/flags.make
 src_server/CMakeFiles/msgr_server.dir/main.cpp.o: src_server/main.cpp
 src_server/CMakeFiles/msgr_server.dir/main.cpp.o: src_server/CMakeFiles/msgr_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/otus_project/otus_project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src_server/CMakeFiles/msgr_server.dir/main.cpp.o"
-	cd /home/runner/work/otus_project/otus_project/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src_server/CMakeFiles/msgr_server.dir/main.cpp.o -MF CMakeFiles/msgr_server.dir/main.cpp.o.d -o CMakeFiles/msgr_server.dir/main.cpp.o -c /home/runner/work/otus_project/otus_project/src_server/main.cpp
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/msgr/msgr/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Building CXX object src_server/CMakeFiles/msgr_server.dir/main.cpp.o"
+	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src_server/CMakeFiles/msgr_server.dir/main.cpp.o -MF CMakeFiles/msgr_server.dir/main.cpp.o.d -o CMakeFiles/msgr_server.dir/main.cpp.o -c /home/runner/work/msgr/msgr/src_server/main.cpp
 
 src_server/CMakeFiles/msgr_server.dir/main.cpp.i: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/msgr_server.dir/main.cpp.i"
-	cd /home/runner/work/otus_project/otus_project/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/otus_project/otus_project/src_server/main.cpp > CMakeFiles/msgr_server.dir/main.cpp.i
+	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/msgr/msgr/src_server/main.cpp > CMakeFiles/msgr_server.dir/main.cpp.i
 
 src_server/CMakeFiles/msgr_server.dir/main.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/msgr_server.dir/main.cpp.s"
-	cd /home/runner/work/otus_project/otus_project/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/otus_project/otus_project/src_server/main.cpp -o CMakeFiles/msgr_server.dir/main.cpp.s
+	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/msgr/msgr/src_server/main.cpp -o CMakeFiles/msgr_server.dir/main.cpp.s
 
-src_server/CMakeFiles/msgr_server.dir/server.cpp.o: src_server/CMakeFiles/msgr_server.dir/flags.make
-src_server/CMakeFiles/msgr_server.dir/server.cpp.o: src_server/server.cpp
-src_server/CMakeFiles/msgr_server.dir/server.cpp.o: src_server/CMakeFiles/msgr_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/otus_project/otus_project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src_server/CMakeFiles/msgr_server.dir/server.cpp.o"
-	cd /home/runner/work/otus_project/otus_project/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src_server/CMakeFiles/msgr_server.dir/server.cpp.o -MF CMakeFiles/msgr_server.dir/server.cpp.o.d -o CMakeFiles/msgr_server.dir/server.cpp.o -c /home/runner/work/otus_project/otus_project/src_server/server.cpp
+src_server/CMakeFiles/msgr_server.dir/Server.cpp.o: src_server/CMakeFiles/msgr_server.dir/flags.make
+src_server/CMakeFiles/msgr_server.dir/Server.cpp.o: src_server/Server.cpp
+src_server/CMakeFiles/msgr_server.dir/Server.cpp.o: src_server/CMakeFiles/msgr_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/msgr/msgr/CMakeFiles --progress-num=$(CMAKE_PROGRESS_2) "Building CXX object src_server/CMakeFiles/msgr_server.dir/Server.cpp.o"
+	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src_server/CMakeFiles/msgr_server.dir/Server.cpp.o -MF CMakeFiles/msgr_server.dir/Server.cpp.o.d -o CMakeFiles/msgr_server.dir/Server.cpp.o -c /home/runner/work/msgr/msgr/src_server/Server.cpp
 
-src_server/CMakeFiles/msgr_server.dir/server.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/msgr_server.dir/server.cpp.i"
-	cd /home/runner/work/otus_project/otus_project/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/otus_project/otus_project/src_server/server.cpp > CMakeFiles/msgr_server.dir/server.cpp.i
+src_server/CMakeFiles/msgr_server.dir/Server.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/msgr_server.dir/Server.cpp.i"
+	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/msgr/msgr/src_server/Server.cpp > CMakeFiles/msgr_server.dir/Server.cpp.i
 
-src_server/CMakeFiles/msgr_server.dir/server.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/msgr_server.dir/server.cpp.s"
-	cd /home/runner/work/otus_project/otus_project/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/otus_project/otus_project/src_server/server.cpp -o CMakeFiles/msgr_server.dir/server.cpp.s
+src_server/CMakeFiles/msgr_server.dir/Server.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/msgr_server.dir/Server.cpp.s"
+	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/msgr/msgr/src_server/Server.cpp -o CMakeFiles/msgr_server.dir/Server.cpp.s
 
-src_server/CMakeFiles/msgr_server.dir/session.cpp.o: src_server/CMakeFiles/msgr_server.dir/flags.make
-src_server/CMakeFiles/msgr_server.dir/session.cpp.o: src_server/session.cpp
-src_server/CMakeFiles/msgr_server.dir/session.cpp.o: src_server/CMakeFiles/msgr_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/otus_project/otus_project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src_server/CMakeFiles/msgr_server.dir/session.cpp.o"
-	cd /home/runner/work/otus_project/otus_project/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src_server/CMakeFiles/msgr_server.dir/session.cpp.o -MF CMakeFiles/msgr_server.dir/session.cpp.o.d -o CMakeFiles/msgr_server.dir/session.cpp.o -c /home/runner/work/otus_project/otus_project/src_server/session.cpp
+src_server/CMakeFiles/msgr_server.dir/Session.cpp.o: src_server/CMakeFiles/msgr_server.dir/flags.make
+src_server/CMakeFiles/msgr_server.dir/Session.cpp.o: src_server/Session.cpp
+src_server/CMakeFiles/msgr_server.dir/Session.cpp.o: src_server/CMakeFiles/msgr_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/msgr/msgr/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src_server/CMakeFiles/msgr_server.dir/Session.cpp.o"
+	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src_server/CMakeFiles/msgr_server.dir/Session.cpp.o -MF CMakeFiles/msgr_server.dir/Session.cpp.o.d -o CMakeFiles/msgr_server.dir/Session.cpp.o -c /home/runner/work/msgr/msgr/src_server/Session.cpp
 
-src_server/CMakeFiles/msgr_server.dir/session.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/msgr_server.dir/session.cpp.i"
-	cd /home/runner/work/otus_project/otus_project/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/otus_project/otus_project/src_server/session.cpp > CMakeFiles/msgr_server.dir/session.cpp.i
+src_server/CMakeFiles/msgr_server.dir/Session.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/msgr_server.dir/Session.cpp.i"
+	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/msgr/msgr/src_server/Session.cpp > CMakeFiles/msgr_server.dir/Session.cpp.i
 
-src_server/CMakeFiles/msgr_server.dir/session.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/msgr_server.dir/session.cpp.s"
-	cd /home/runner/work/otus_project/otus_project/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/otus_project/otus_project/src_server/session.cpp -o CMakeFiles/msgr_server.dir/session.cpp.s
+src_server/CMakeFiles/msgr_server.dir/Session.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/msgr_server.dir/Session.cpp.s"
+	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/msgr/msgr/src_server/Session.cpp -o CMakeFiles/msgr_server.dir/Session.cpp.s
+
+src_server/CMakeFiles/msgr_server.dir/sqlite/sqlite3.c.o: src_server/CMakeFiles/msgr_server.dir/flags.make
+src_server/CMakeFiles/msgr_server.dir/sqlite/sqlite3.c.o: src_server/sqlite/sqlite3.c
+src_server/CMakeFiles/msgr_server.dir/sqlite/sqlite3.c.o: src_server/CMakeFiles/msgr_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/msgr/msgr/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building C object src_server/CMakeFiles/msgr_server.dir/sqlite/sqlite3.c.o"
+	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -MD -MT src_server/CMakeFiles/msgr_server.dir/sqlite/sqlite3.c.o -MF CMakeFiles/msgr_server.dir/sqlite/sqlite3.c.o.d -o CMakeFiles/msgr_server.dir/sqlite/sqlite3.c.o -c /home/runner/work/msgr/msgr/src_server/sqlite/sqlite3.c
+
+src_server/CMakeFiles/msgr_server.dir/sqlite/sqlite3.c.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing C source to CMakeFiles/msgr_server.dir/sqlite/sqlite3.c.i"
+	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -E /home/runner/work/msgr/msgr/src_server/sqlite/sqlite3.c > CMakeFiles/msgr_server.dir/sqlite/sqlite3.c.i
+
+src_server/CMakeFiles/msgr_server.dir/sqlite/sqlite3.c.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/msgr_server.dir/sqlite/sqlite3.c.s"
+	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/runner/work/msgr/msgr/src_server/sqlite/sqlite3.c -o CMakeFiles/msgr_server.dir/sqlite/sqlite3.c.s
+
+src_server/CMakeFiles/msgr_server.dir/Database.cpp.o: src_server/CMakeFiles/msgr_server.dir/flags.make
+src_server/CMakeFiles/msgr_server.dir/Database.cpp.o: src_server/Database.cpp
+src_server/CMakeFiles/msgr_server.dir/Database.cpp.o: src_server/CMakeFiles/msgr_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/msgr/msgr/CMakeFiles --progress-num=$(CMAKE_PROGRESS_5) "Building CXX object src_server/CMakeFiles/msgr_server.dir/Database.cpp.o"
+	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src_server/CMakeFiles/msgr_server.dir/Database.cpp.o -MF CMakeFiles/msgr_server.dir/Database.cpp.o.d -o CMakeFiles/msgr_server.dir/Database.cpp.o -c /home/runner/work/msgr/msgr/src_server/Database.cpp
+
+src_server/CMakeFiles/msgr_server.dir/Database.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/msgr_server.dir/Database.cpp.i"
+	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/msgr/msgr/src_server/Database.cpp > CMakeFiles/msgr_server.dir/Database.cpp.i
+
+src_server/CMakeFiles/msgr_server.dir/Database.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/msgr_server.dir/Database.cpp.s"
+	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/msgr/msgr/src_server/Database.cpp -o CMakeFiles/msgr_server.dir/Database.cpp.s
+
+src_server/CMakeFiles/msgr_server.dir/server_processor/ServerProcessor.cpp.o: src_server/CMakeFiles/msgr_server.dir/flags.make
+src_server/CMakeFiles/msgr_server.dir/server_processor/ServerProcessor.cpp.o: src_server/server_processor/ServerProcessor.cpp
+src_server/CMakeFiles/msgr_server.dir/server_processor/ServerProcessor.cpp.o: src_server/CMakeFiles/msgr_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/msgr/msgr/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src_server/CMakeFiles/msgr_server.dir/server_processor/ServerProcessor.cpp.o"
+	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src_server/CMakeFiles/msgr_server.dir/server_processor/ServerProcessor.cpp.o -MF CMakeFiles/msgr_server.dir/server_processor/ServerProcessor.cpp.o.d -o CMakeFiles/msgr_server.dir/server_processor/ServerProcessor.cpp.o -c /home/runner/work/msgr/msgr/src_server/server_processor/ServerProcessor.cpp
+
+src_server/CMakeFiles/msgr_server.dir/server_processor/ServerProcessor.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/msgr_server.dir/server_processor/ServerProcessor.cpp.i"
+	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/msgr/msgr/src_server/server_processor/ServerProcessor.cpp > CMakeFiles/msgr_server.dir/server_processor/ServerProcessor.cpp.i
+
+src_server/CMakeFiles/msgr_server.dir/server_processor/ServerProcessor.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/msgr_server.dir/server_processor/ServerProcessor.cpp.s"
+	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/msgr/msgr/src_server/server_processor/ServerProcessor.cpp -o CMakeFiles/msgr_server.dir/server_processor/ServerProcessor.cpp.s
 
 # Object files for target msgr_server
 msgr_server_OBJECTS = \
 "CMakeFiles/msgr_server.dir/main.cpp.o" \
-"CMakeFiles/msgr_server.dir/server.cpp.o" \
-"CMakeFiles/msgr_server.dir/session.cpp.o"
+"CMakeFiles/msgr_server.dir/Server.cpp.o" \
+"CMakeFiles/msgr_server.dir/Session.cpp.o" \
+"CMakeFiles/msgr_server.dir/sqlite/sqlite3.c.o" \
+"CMakeFiles/msgr_server.dir/Database.cpp.o" \
+"CMakeFiles/msgr_server.dir/server_processor/ServerProcessor.cpp.o"
 
 # External object files for target msgr_server
 msgr_server_EXTERNAL_OBJECTS =
 
 src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/main.cpp.o
-src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/server.cpp.o
-src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/session.cpp.o
+src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/Server.cpp.o
+src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/Session.cpp.o
+src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/sqlite/sqlite3.c.o
+src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/Database.cpp.o
+src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/server_processor/ServerProcessor.cpp.o
 src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/build.make
 src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/runner/work/otus_project/otus_project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Linking CXX executable msgr_server"
-	cd /home/runner/work/otus_project/otus_project/src_server && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/msgr_server.dir/link.txt --verbose=$(VERBOSE)
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/runner/work/msgr/msgr/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Linking CXX executable msgr_server"
+	cd /home/runner/work/msgr/msgr/src_server && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/msgr_server.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.
 src_server/CMakeFiles/msgr_server.dir/build: src_server/msgr_server
 .PHONY : src_server/CMakeFiles/msgr_server.dir/build
 
 src_server/CMakeFiles/msgr_server.dir/clean:
-	cd /home/runner/work/otus_project/otus_project/src_server && $(CMAKE_COMMAND) -P CMakeFiles/msgr_server.dir/cmake_clean.cmake
+	cd /home/runner/work/msgr/msgr/src_server && $(CMAKE_COMMAND) -P CMakeFiles/msgr_server.dir/cmake_clean.cmake
 .PHONY : src_server/CMakeFiles/msgr_server.dir/clean
 
 src_server/CMakeFiles/msgr_server.dir/depend:
-	cd /home/runner/work/otus_project/otus_project && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/runner/work/otus_project/otus_project /home/runner/work/otus_project/otus_project/src_server /home/runner/work/otus_project/otus_project /home/runner/work/otus_project/otus_project/src_server /home/runner/work/otus_project/otus_project/src_server/CMakeFiles/msgr_server.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/runner/work/msgr/msgr && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/runner/work/msgr/msgr /home/runner/work/msgr/msgr/src_server /home/runner/work/msgr/msgr /home/runner/work/msgr/msgr/src_server /home/runner/work/msgr/msgr/src_server/CMakeFiles/msgr_server.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src_server/CMakeFiles/msgr_server.dir/depend
 

@@ -53,10 +53,10 @@ RM = /usr/local/bin/cmake -E rm -f
 EQUALS = =
 
 # The top-level source directory on which CMake was run.
-CMAKE_SOURCE_DIR = /home/runner/work/otus_project/otus_project
+CMAKE_SOURCE_DIR = /home/runner/work/msgr/msgr
 
 # The top-level build directory on which CMake was run.
-CMAKE_BINARY_DIR = /home/runner/work/otus_project/otus_project
+CMAKE_BINARY_DIR = /home/runner/work/msgr/msgr
 
 # Utility rule file for msgr_client_autogen.
 
@@ -67,8 +67,8 @@ include src_client/CMakeFiles/msgr_client_autogen.dir/compiler_depend.make
 include src_client/CMakeFiles/msgr_client_autogen.dir/progress.make
 
 src_client/CMakeFiles/msgr_client_autogen:
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/runner/work/otus_project/otus_project/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target msgr_client"
-	cd /home/runner/work/otus_project/otus_project/src_client && /usr/local/bin/cmake -E cmake_autogen /home/runner/work/otus_project/otus_project/src_client/CMakeFiles/msgr_client_autogen.dir/AutogenInfo.json ""
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --blue --bold --progress-dir=/home/runner/work/msgr/msgr/CMakeFiles --progress-num=$(CMAKE_PROGRESS_1) "Automatic MOC and UIC for target msgr_client"
+	cd /home/runner/work/msgr/msgr/src_client && /usr/local/bin/cmake -E cmake_autogen /home/runner/work/msgr/msgr/src_client/CMakeFiles/msgr_client_autogen.dir/AutogenInfo.json ""
 
 msgr_client_autogen: src_client/CMakeFiles/msgr_client_autogen
 msgr_client_autogen: src_client/CMakeFiles/msgr_client_autogen.dir/build.make
@@ -79,10 +79,10 @@ src_client/CMakeFiles/msgr_client_autogen.dir/build: msgr_client_autogen
 .PHONY : src_client/CMakeFiles/msgr_client_autogen.dir/build
 
 src_client/CMakeFiles/msgr_client_autogen.dir/clean:
-	cd /home/runner/work/otus_project/otus_project/src_client && $(CMAKE_COMMAND) -P CMakeFiles/msgr_client_autogen.dir/cmake_clean.cmake
+	cd /home/runner/work/msgr/msgr/src_client && $(CMAKE_COMMAND) -P CMakeFiles/msgr_client_autogen.dir/cmake_clean.cmake
 .PHONY : src_client/CMakeFiles/msgr_client_autogen.dir/clean
 
 src_client/CMakeFiles/msgr_client_autogen.dir/depend:
-	cd /home/runner/work/otus_project/otus_project && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/runner/work/otus_project/otus_project /home/runner/work/otus_project/otus_project/src_client /home/runner/work/otus_project/otus_project /home/runner/work/otus_project/otus_project/src_client /home/runner/work/otus_project/otus_project/src_client/CMakeFiles/msgr_client_autogen.dir/DependInfo.cmake --color=$(COLOR)
+	cd /home/runner/work/msgr/msgr && $(CMAKE_COMMAND) -E cmake_depends "Unix Makefiles" /home/runner/work/msgr/msgr /home/runner/work/msgr/msgr/src_client /home/runner/work/msgr/msgr /home/runner/work/msgr/msgr/src_client /home/runner/work/msgr/msgr/src_client/CMakeFiles/msgr_client_autogen.dir/DependInfo.cmake --color=$(COLOR)
 .PHONY : src_client/CMakeFiles/msgr_client_autogen.dir/depend
 

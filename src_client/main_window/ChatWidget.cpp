@@ -7,13 +7,13 @@
 #include <QVBoxLayout>
 #include <QtDebug>
 
-ChatWidget::ChatWidget(const std::shared_ptr<IMsgProcessor> &msgProcessor, QWidget *parent)
-    : QWidget{parent}, _msgProcessor{msgProcessor}
+ChatWidget::ChatWidget(const std::shared_ptr<IClientProcessor> &processor, QWidget *parent)
+    : QWidget{parent}, _processor{processor}
 {
     initUi();
     connect(send_pBtn, &QPushButton::clicked, this, &ChatWidget::slot_sendMsg);
 
-    connect(_msgProcessor.get(), &IMsgProcessor::signal_sendToGui, this, &ChatWidget::slot_getMsg);
+    connect(_processor.get(), &IClientProcessor::signal_sendToGui, this, &ChatWidget::slot_getMsg);
 }
 
 void ChatWidget::initUi()
@@ -36,7 +36,7 @@ void ChatWidget::initUi()
 
 void ChatWidget::slot_sendMsg()
 {
-    _msgProcessor->sendMsg(msg_lEdit->text());
+    _processor->sendMsg(msg_lEdit->text());
 }
 
 void ChatWidget::slot_getMsg(const QString &msg)

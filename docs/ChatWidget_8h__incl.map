@@ -1,8 +1,8 @@
 <map id="src_client/main_window/ChatWidget.h" name="src_client/main_window/ChatWidget.h">
-<area shape="rect" id="node1" title=" " alt="" coords="51,5,230,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="47,5,226,47"/>
 <area shape="rect" id="node2" title=" " alt="" coords="5,95,84,121"/>
-<area shape="rect" id="node3" href="$MsgProcessor_8h.html" title=" " alt="" coords="109,95,365,121"/>
-<area shape="rect" id="node4" href="$IMsgProcessor_8h.html" title=" " alt="" coords="109,169,236,196"/>
-<area shape="rect" id="node6" title=" " alt="" coords="261,169,338,196"/>
-<area shape="rect" id="node5" title=" " alt="" coords="135,244,210,271"/>
+<area shape="rect" id="node3" href="$ClientProcessor_8h.html" title=" " alt="" coords="108,95,352,121"/>
+<area shape="rect" id="node4" href="$IClientProcessor_8h.html" title=" " alt="" coords="94,169,233,196"/>
+<area shape="rect" id="node6" title=" " alt="" coords="257,169,334,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="126,244,201,271"/>
 </map>

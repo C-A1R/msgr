@@ -11,7 +11,7 @@ protected:
     QLineEdit *confirmPassword_lEdit{nullptr};
 
 public:
-    explicit RegistrationWidget(const std::shared_ptr<IMsgProcessor> &msgProcessor, QWidget *parent = nullptr);
+    explicit RegistrationWidget(const std::shared_ptr<IClientProcessor> &processor, QWidget *parent = nullptr);
     void init() override;
 
 private:

@@ -3,7 +3,7 @@
 
 #include <QWidget>
 
-#include "message_processor/MsgProcessor.h"
+#include "client_processor/ClientProcessor.h"
 #include "MainWidgets.h"
 
 class QLineEdit;
@@ -20,10 +20,10 @@ protected:
     QPushButton *sign_pBtn{nullptr};
     QPushButton *changeSign_pBtn{nullptr};
 
-    std::shared_ptr<IMsgProcessor> _msgProcessor;
+    std::shared_ptr<IClientProcessor> _processor;
 
 public:
-    explicit AuthorizationWidget(const std::shared_ptr<IMsgProcessor> &msgProcessor, QWidget *parent = nullptr);
+    explicit AuthorizationWidget(const std::shared_ptr<IClientProcessor> &processor, QWidget *parent = nullptr);
     virtual void init();
 
 private:

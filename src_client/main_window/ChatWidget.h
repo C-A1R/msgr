@@ -3,7 +3,7 @@
 
 #include <QWidget>
 
-#include "message_processor/MsgProcessor.h"
+#include "client_processor/ClientProcessor.h"
 
 class QTextEdit;
 class QLineEdit;
@@ -17,10 +17,10 @@ class ChatWidget : public QWidget
     QLineEdit *msg_lEdit{nullptr};
     QPushButton *send_pBtn{nullptr};
 
-    std::shared_ptr<IMsgProcessor> _msgProcessor;
+    std::shared_ptr<IClientProcessor> _processor;
 
 public:
-    explicit ChatWidget(const std::shared_ptr<IMsgProcessor> &msgProcessor, QWidget *parent = nullptr);
+    explicit ChatWidget(const std::shared_ptr<IClientProcessor> &processor, QWidget *parent = nullptr);
 
 private:
     void initUi();
