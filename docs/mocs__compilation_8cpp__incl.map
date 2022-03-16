@@ -1,0 +1,29 @@
+<map id="src_client/msgr_client_autogen/mocs_compilation.cpp" name="src_client/msgr_client_autogen/mocs_compilation.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="825,5,1057,47"/>
+<area shape="rect" id="node2" href="$moc__Client_8cpp.html" title=" " alt="" coords="5,102,225,129"/>
+<area shape="rect" id="node9" href="$moc__ClientThread_8cpp.html" title=" " alt="" coords="249,102,515,129"/>
+<area shape="rect" id="node12" href="$moc__AuthorizationWidget_8cpp.html" title=" " alt="" coords="822,95,1059,136"/>
+<area shape="rect" id="node20" href="$moc__ChatWidget_8cpp.html" title=" " alt="" coords="1337,102,1590,129"/>
+<area shape="rect" id="node22" href="$moc__MainWindow_8cpp.html" title=" " alt="" coords="539,102,799,129"/>
+<area shape="rect" id="node25" href="$moc__RegistrationWidget_8cpp.html" title=" " alt="" coords="1083,95,1313,136"/>
+<area shape="rect" id="node27" href="$moc__IMsgProcessor_8cpp.html" title=" " alt="" coords="1614,102,1867,129"/>
+<area shape="rect" id="node3" href="$Client_8h.html" title=" " alt="" coords="249,281,385,307"/>
+<area shape="rect" id="node7" title=" " alt="" coords="817,191,969,218"/>
+<area shape="rect" id="node8" title=" " alt="" coords="993,191,1147,218"/>
+<area shape="rect" id="node4" title=" " alt="" coords="787,512,862,539"/>
+<area shape="rect" id="node5" title=" " alt="" coords="306,363,423,389"/>
+<area shape="rect" id="node6" title=" " alt="" coords="447,363,506,389"/>
+<area shape="rect" id="node10" href="$ClientThread_8h.html" title=" " alt="" coords="291,191,473,218"/>
+<area shape="rect" id="node11" title=" " alt="" coords="409,281,486,307"/>
+<area shape="rect" id="node13" href="$AuthorizationWidget_8h.html" title=" " alt="" coords="955,273,1182,315"/>
+<area shape="rect" id="node14" title=" " alt="" coords="1060,363,1139,389"/>
+<area shape="rect" id="node15" href="$MsgProcessor_8h.html" title=" " alt="" coords="1163,363,1419,389"/>
+<area shape="rect" id="node18" href="$MainWidgets_8h.html" title=" " alt="" coords="917,363,1036,389"/>
+<area shape="rect" id="node16" href="$IMsgProcessor_8h.html" title=" " alt="" coords="1228,437,1355,464"/>
+<area shape="rect" id="node17" title=" " alt="" coords="1087,437,1165,464"/>
+<area shape="rect" id="node19" title=" " alt="" coords="929,437,1024,464"/>
+<area shape="rect" id="node21" href="$ChatWidget_8h.html" title=" " alt="" coords="1207,281,1435,307"/>
+<area shape="rect" id="node23" href="$MainWindow_8h.html" title=" " alt="" coords="666,281,901,307"/>
+<area shape="rect" id="node24" title=" " alt="" coords="725,363,841,389"/>
+<area shape="rect" id="node26" href="$RegistrationWidget_8h.html" title=" " alt="" coords="1171,184,1390,225"/>
+</map>

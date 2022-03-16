@@ -1,0 +1,9 @@
+Architecture: amd64
+Description: msgr built using CMake
+Maintainer: example@example.com
+Package: msgr
+Priority: optional
+Section: devel
+Version: 0.0.1
+Installed-Size: 1394
+

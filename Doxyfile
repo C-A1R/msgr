@@ -1,0 +1,17 @@
+OUTPUT_DIRECTORY       = /home/runner/work/otus_project/otus_project/
+INPUT                  = /home/runner/work/otus_project/otus_project/ 
+
+DOXYFILE_ENCODING      = UTF-8
+PROJECT_NAME           = msgr
+PROJECT_NUMBER         = 0.0.8
+PROJECT_BRIEF          = "сервер + клиент"
+
+GENERATE_HTML          = YES
+HTML_OUTPUT            = docs
+GENERATE_LATEX         = NO
+
+HAVE_DOT               = YES
+EXTRACT_ALL            = YES
+RECURSIVE              = YES
+
+EXTRACT_PRIVATE        = YES

@@ -1,0 +1,2 @@
+/usr/bin/msgr_client
+/usr/bin/msgr_server
