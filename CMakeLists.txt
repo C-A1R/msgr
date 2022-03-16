@@ -3,9 +3,6 @@ cmake_minimum_required(VERSION 3.0.0)
 set(PROJECT_NAME msgr VERSION 1.0.0)
 project(${PROJECT_NAME})
 
-add_subdirectory(src_client)
-add_subdirectory(src_server)
-
 find_package(Doxygen)
 if (DOXYGEN_FOUND)
     # set input and output files
@@ -25,5 +22,8 @@ if (DOXYGEN_FOUND)
 else (DOXYGEN_FOUND)
   message("Doxygen need to be installed to generate the doxygen documentation")
 endif (DOXYGEN_FOUND)
+
+add_subdirectory(src_client)
+add_subdirectory(src_server)
 
 #enable_testing()
