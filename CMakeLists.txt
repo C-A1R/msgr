@@ -1,6 +1,9 @@
 cmake_minimum_required(VERSION 3.0.0)
 
-set(PROJECT_NAME msgr VERSION 1.0.0)
+set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
+set(PROJECT_VESRION 0.0.${PATCH_VERSION})
+set(PROJECT_NAME msgr VERSION ${PROJECT_VESRION})
+
 project(${PROJECT_NAME})
 
 find_package(Doxygen)
