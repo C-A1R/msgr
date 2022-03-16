@@ -1,6 +1,8 @@
 cmake_minimum_required(VERSION 3.2)
 
-set(PROJECT_NAME msgr_server LANGUAGES CXX)
+set(PATCH_VERSION "1" CACHE INTERNAL "Patch version")
+set(PROJECT_VESRION 0.0.${PATCH_VERSION})
+set(PROJECT_NAME msgr_server VERSION ${PROJECT_VESRION} LANGUAGES CXX)
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -pthread")
 
 project(${PROJECT_NAME})
