@@ -8,7 +8,7 @@
 #include "MainWidgets.h"
 
 class QStackedWidget;
-class IMsgProcessor;
+class IClientProcessor;
 
 class MainWindow : public QMainWindow
 {
@@ -19,7 +19,7 @@ public:
     MainWindow(QWidget *parent = nullptr);
 
 private:
-    void setupUi(const std::shared_ptr<IMsgProcessor> &msgProcessor);
+    void setupUi(const std::shared_ptr<IClientProcessor> &msgProcessor);
 
 private slots:
     void slot_changeSign(MainWidgets wgt);

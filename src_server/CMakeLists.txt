@@ -10,14 +10,21 @@ project(${PROJECT_NAME})
 # find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
 set(HEADERS
-    server.h
-    session.h
+    Server.h
+    Session.h
+    sqlite/sqlite3.h
+    Database.h
+    server_processor/IServerProcessor.h
+    server_processor/ServerProcessor.h
 )
 
 set(SOURCES
     main.cpp
-    server.cpp
-    session.cpp
+    Server.cpp
+    Session.cpp
+    sqlite/sqlite3.c
+    Database.cpp
+    server_processor/ServerProcessor.cpp
 )
 
 add_executable(msgr_server
@@ -47,7 +54,10 @@ PROPERTIES
 
 target_link_libraries(msgr_server
     ${Boost_LIBRARIES}
+    ${CMAKE_THREAD_LIBS_INIT}
+    dl
 )
+
 # target_link_libraries(test_ICommand
 #     ${Boost_LIBRARIES}
 # )

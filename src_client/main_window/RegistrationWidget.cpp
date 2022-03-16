@@ -4,8 +4,8 @@
 #include <QLineEdit>
 #include <QPushButton>
 
-RegistrationWidget::RegistrationWidget(const std::shared_ptr<IMsgProcessor> &msgProcessor, QWidget *parent)
-    : AuthorizationWidget{msgProcessor, parent}
+RegistrationWidget::RegistrationWidget(const std::shared_ptr<IClientProcessor> &processor, QWidget *parent)
+    : AuthorizationWidget{processor, parent}
 {
 }
 
@@ -47,5 +47,5 @@ void RegistrationWidget::slot_SignUp()
         return;
     }
 
-    _msgProcessor->signUp_request(login_lEdit->text(), password_lEdit->text());
+    _processor->signUp_request(login_lEdit->text(), password_lEdit->text());
 }

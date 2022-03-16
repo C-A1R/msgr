@@ -29,8 +29,8 @@ set(HEADERS
     main_window/MainWidgets.h
     client/Client.h
     client/ClientThread.h
-    message_processor/IMsgProcessor.h
-    message_processor/MsgProcessor.h
+    client_processor/IClientProcessor.h
+    client_processor/ClientProcessor.h
 )
 
 set(SOURCES
@@ -41,7 +41,7 @@ set(SOURCES
     main_window/ChatWidget.cpp
     client/Client.cpp
     client/ClientThread.cpp
-    message_processor/MsgProcessor.cpp
+    client_processor/ClientProcessor.cpp
 )
 
 add_executable(msgr_client
