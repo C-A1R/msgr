@@ -3,7 +3,7 @@ INPUT                  = /home/runner/work/otus_project/otus_project/
 
 DOXYFILE_ENCODING      = UTF-8
 PROJECT_NAME           = msgr
-PROJECT_NUMBER         = 0.0.8
+PROJECT_NUMBER         = 0.0.9
 PROJECT_BRIEF          = "сервер + клиент"
 
 GENERATE_HTML          = YES
