@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_ChatWidget_t {
-    QByteArrayData data[5];
-    char stringdata0[41];
+    QByteArrayData data[6];
+    char stringdata0[53];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -35,11 +35,12 @@ QT_MOC_LITERAL(0, 0, 10), // "ChatWidget"
 QT_MOC_LITERAL(1, 11, 12), // "slot_sendMsg"
 QT_MOC_LITERAL(2, 24, 0), // ""
 QT_MOC_LITERAL(3, 25, 11), // "slot_getMsg"
-QT_MOC_LITERAL(4, 37, 3) // "msg"
+QT_MOC_LITERAL(4, 37, 11), // "std::string"
+QT_MOC_LITERAL(5, 49, 3) // "msg"
 
     },
     "ChatWidget\0slot_sendMsg\0\0slot_getMsg\0"
-    "msg"
+    "std::string\0msg"
 };
 #undef QT_MOC_LITERAL
 
@@ -62,7 +63,7 @@ static const uint qt_meta_data_ChatWidget[] = {
 
  // slots: parameters
     QMetaType::Void,
-    QMetaType::Void, QMetaType::QString,    4,
+    QMetaType::Void, 0x80000000 | 4,    5,
 
        0        // eod
 };
@@ -74,7 +75,7 @@ void ChatWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->slot_sendMsg(); break;
-        case 1: _t->slot_getMsg((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 1: _t->slot_getMsg((*reinterpret_cast< const std::string(*)>(_a[1]))); break;
         default: ;
         }
     }

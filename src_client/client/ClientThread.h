@@ -17,8 +17,8 @@ protected:
     void run();
 
 signals:
-    void signal_sendToClient(const QString &msg);
-    void signal_getFromThread(const QString &msg);
+    void signal_sendToClient(const std::string &);
+    void signal_getFromThread(const std::string &);
 
 public slots:
     void slot_stopClient();

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.10</span>
+   &#160;<span id="projectnumber">0.0.11</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -99,26 +99,26 @@ $(function() {
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classClient.html#a3cbb9ed253c9c3668eeedc4b1b39e2f3">writeHandler</a>(<span class="keyword">const</span> std::string &amp;msg);</div>
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;signals:</div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classClient.html#aaa76b5a363e37dd8cb7ebca92aa33068">signal_getFromServer</a>(<span class="keyword">const</span> QString &amp;msg);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classClient.html#a1564d6e2b985ff55654188a9ce053afe">signal_getFromServer</a>(<span class="keyword">const</span> std::string &amp;);</div>
 <div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classClient.html#a211bf02c729f573479f622034c516947">slot_sendToServer</a>(<span class="keyword">const</span> QString &amp;msg);</div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classClient.html#abeadfb47f8040e2148ddc0dc9e61b0b2">slot_sendToServer</a>(<span class="keyword">const</span> std::string &amp;request);</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160;};</div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160; </div>
 <div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;<span class="preprocessor">#endif // CLIENT_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassClient_html_a8152343f481c54137505ff2b0a9dcbcf"><div class="ttname"><a href="classClient.html#a8152343f481c54137505ff2b0a9dcbcf">Client::readHandler</a></div><div class="ttdeci">void readHandler(const boost::system::error_code &amp;ec, std::size_t bytes)</div><div class="ttdef"><b>Definition:</b> Client.cpp:42</div></div>
 <div class="ttc" id="aclassClient_html_ac259f56a281339c89b65f2c7f35e50ce"><div class="ttname"><a href="classClient.html#ac259f56a281339c89b65f2c7f35e50ce">Client::connectHandler</a></div><div class="ttdeci">void connectHandler(const boost::system::error_code &amp;ec)</div><div class="ttdef"><b>Definition:</b> Client.cpp:33</div></div>
-<div class="ttc" id="aclassClient_html_a3cbb9ed253c9c3668eeedc4b1b39e2f3"><div class="ttname"><a href="classClient.html#a3cbb9ed253c9c3668eeedc4b1b39e2f3">Client::writeHandler</a></div><div class="ttdeci">void writeHandler(const std::string &amp;msg)</div><div class="ttdef"><b>Definition:</b> Client.cpp:62</div></div>
+<div class="ttc" id="aclassClient_html_abeadfb47f8040e2148ddc0dc9e61b0b2"><div class="ttname"><a href="classClient.html#abeadfb47f8040e2148ddc0dc9e61b0b2">Client::slot_sendToServer</a></div><div class="ttdeci">void slot_sendToServer(const std::string &amp;request)</div><div class="ttdef"><b>Definition:</b> Client.cpp:55</div></div>
+<div class="ttc" id="aclassClient_html_a3cbb9ed253c9c3668eeedc4b1b39e2f3"><div class="ttname"><a href="classClient.html#a3cbb9ed253c9c3668eeedc4b1b39e2f3">Client::writeHandler</a></div><div class="ttdeci">void writeHandler(const std::string &amp;msg)</div><div class="ttdef"><b>Definition:</b> Client.cpp:60</div></div>
 <div class="ttc" id="aclassClient_html_ac73e4aacd6538436deaafeab9bc7bbfa"><div class="ttname"><a href="classClient.html#ac73e4aacd6538436deaafeab9bc7bbfa">Client::_resolver</a></div><div class="ttdeci">tcp::resolver _resolver</div><div class="ttdef"><b>Definition:</b> Client.h:17</div></div>
-<div class="ttc" id="aclassClient_html_a211bf02c729f573479f622034c516947"><div class="ttname"><a href="classClient.html#a211bf02c729f573479f622034c516947">Client::slot_sendToServer</a></div><div class="ttdeci">void slot_sendToServer(const QString &amp;msg)</div><div class="ttdef"><b>Definition:</b> Client.cpp:57</div></div>
 <div class="ttc" id="aclassClient_html_a1fefe16d82d9f9bcfa117174c49974bb"><div class="ttname"><a href="classClient.html#a1fefe16d82d9f9bcfa117174c49974bb">Client::resolveHandler</a></div><div class="ttdeci">void resolveHandler(const boost::system::error_code &amp;ec, tcp::resolver::iterator it)</div><div class="ttdef"><b>Definition:</b> Client.cpp:19</div></div>
 <div class="ttc" id="aclassClient_html_a146a008c9dc1b156f29821c8405dae12"><div class="ttname"><a href="classClient.html#a146a008c9dc1b156f29821c8405dae12">Client::_socket</a></div><div class="ttdeci">tcp::socket _socket</div><div class="ttdef"><b>Definition:</b> Client.h:16</div></div>
 <div class="ttc" id="aclassClient_html_a834bbdad207b9f38cff18b91712fb683"><div class="ttname"><a href="classClient.html#a834bbdad207b9f38cff18b91712fb683">Client::_buffer</a></div><div class="ttdeci">char _buffer[4096]</div><div class="ttdef"><b>Definition:</b> Client.h:18</div></div>
 <div class="ttc" id="aclassClient_html"><div class="ttname"><a href="classClient.html">Client</a></div><div class="ttdef"><b>Definition:</b> Client.h:12</div></div>
 <div class="ttc" id="aclassClient_html_a97cc70503b3e7b504afc77d797cf2f2c"><div class="ttname"><a href="classClient.html#a97cc70503b3e7b504afc77d797cf2f2c">Client::start</a></div><div class="ttdeci">void start(const std::string &amp;host, const std::string &amp;service)</div><div class="ttdef"><b>Definition:</b> Client.cpp:10</div></div>
 <div class="ttc" id="aclassClient_html_a38aacc9eda023eff7dc44d9b8cd530fe"><div class="ttname"><a href="classClient.html#a38aacc9eda023eff7dc44d9b8cd530fe">Client::Client</a></div><div class="ttdeci">Client(boost::asio::io_context &amp;io_context)</div><div class="ttdef"><b>Definition:</b> Client.cpp:5</div></div>
-<div class="ttc" id="aclassClient_html_aaa76b5a363e37dd8cb7ebca92aa33068"><div class="ttname"><a href="classClient.html#aaa76b5a363e37dd8cb7ebca92aa33068">Client::signal_getFromServer</a></div><div class="ttdeci">void signal_getFromServer(const QString &amp;msg)</div></div>
+<div class="ttc" id="aclassClient_html_a1564d6e2b985ff55654188a9ce053afe"><div class="ttname"><a href="classClient.html#a1564d6e2b985ff55654188a9ce053afe">Client::signal_getFromServer</a></div><div class="ttdeci">void signal_getFromServer(const std::string &amp;)</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

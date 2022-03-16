@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.10</span>
+   &#160;<span id="projectnumber">0.0.11</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -76,8 +76,8 @@ Functions</h2></td></tr>
 <tr class="separator:a8ffb36274f785a4d0a2fd51cb9945730"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91f59a660c8f793914e201dcf84596d4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src__server_2CMakeLists_8txt.html#a91f59a660c8f793914e201dcf84596d4">set</a> (PROJECT_NAME msgr_server VERSION ${PROJECT_VESRION} LANGUAGES CXX) set(CMAKE_CXX_FLAGS &quot;$</td></tr>
 <tr class="separator:a91f59a660c8f793914e201dcf84596d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aff3a6a4550f04fa193486a1e1ec18d45"><td class="memItemLeft" align="right" valign="top">pthread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src__server_2CMakeLists_8txt.html#aff3a6a4550f04fa193486a1e1ec18d45">project</a> (${PROJECT_NAME}) <a class="el" href="src__server_2CMakeLists_8txt.html#a91f59a660c8f793914e201dcf84596d4">set</a>(HEADERS Server.h Session.h sqlite/sqlite3.h Database.h server_processor/IServerProcessor.h server_processor/ServerProcessor.h) <a class="el" href="src__server_2CMakeLists_8txt.html#a91f59a660c8f793914e201dcf84596d4">set</a>(SOURCES main.cpp Server.cpp Session.cpp sqlite/sqlite3.c Database.cpp server_processor/ServerProcessor.cpp) add_executable(msgr_server $</td></tr>
-<tr class="separator:aff3a6a4550f04fa193486a1e1ec18d45"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afc2543126827c482268eeffa149cb3ee"><td class="memItemLeft" align="right" valign="top">pthread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src__server_2CMakeLists_8txt.html#afc2543126827c482268eeffa149cb3ee">project</a> (${PROJECT_NAME}) <a class="el" href="src__server_2CMakeLists_8txt.html#a91f59a660c8f793914e201dcf84596d4">set</a>(HEADERS Server.h Session.h database/sqlite/sqlite3.h database/IDatabase.h database/Database.h server_processor/IServerProcessor.h server_processor/ServerProcessor.h) <a class="el" href="src__server_2CMakeLists_8txt.html#a91f59a660c8f793914e201dcf84596d4">set</a>(SOURCES main.cpp Server.cpp Session.cpp database/sqlite/sqlite3.c database/Database.cpp server_processor/ServerProcessor.cpp) add_executable(msgr_server $</td></tr>
+<tr class="separator:afc2543126827c482268eeffa149cb3ee"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a8ffb36274f785a4d0a2fd51cb9945730"></a>
@@ -98,8 +98,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="aff3a6a4550f04fa193486a1e1ec18d45"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aff3a6a4550f04fa193486a1e1ec18d45">&#9670;&nbsp;</a></span>project()</h2>
+<a id="afc2543126827c482268eeffa149cb3ee"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afc2543126827c482268eeffa149cb3ee">&#9670;&nbsp;</a></span>project()</h2>
 
 <div class="memitem">
 <div class="memproto">

@@ -11,16 +11,21 @@ public:
     virtual ~IClientProcessor() = default;
 
     virtual void start() = 0;
-    virtual void sendMsg(const QString &msg) = 0;
+    virtual void sendMsg(const std::string &msg) = 0;
 
     virtual void signUp_request(const QString &login, const QString &password) = 0;
 
 signals:
     void signal_stopClient();
-    void signal_sendToClientThread(const QString &msg);
-    void signal_sendToGui(const QString &msg);
+    void signal_sendToClientThread(const std::string &);
+    void signal_sendToGui(const std::string &);
 
-    void signal_sendRequest(const QString &);
+    void signal_sendRequest(const std::string &);
+
+    void signal_signUpResponse(const std::string &);
+
+private slots:
+    virtual void slot_getResponse(const std::string &response) = 0;
 };
 
 #endif // ICLIENTPROCESSOR_H

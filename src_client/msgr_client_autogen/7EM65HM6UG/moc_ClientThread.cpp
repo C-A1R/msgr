@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_ClientThread_t {
     QByteArrayData data[6];
-    char stringdata0[75];
+    char stringdata0[83];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -34,13 +34,14 @@ static const qt_meta_stringdata_ClientThread_t qt_meta_stringdata_ClientThread =
 QT_MOC_LITERAL(0, 0, 12), // "ClientThread"
 QT_MOC_LITERAL(1, 13, 19), // "signal_sendToClient"
 QT_MOC_LITERAL(2, 33, 0), // ""
-QT_MOC_LITERAL(3, 34, 3), // "msg"
-QT_MOC_LITERAL(4, 38, 20), // "signal_getFromThread"
-QT_MOC_LITERAL(5, 59, 15) // "slot_stopClient"
+QT_MOC_LITERAL(3, 34, 11), // "std::string"
+QT_MOC_LITERAL(4, 46, 20), // "signal_getFromThread"
+QT_MOC_LITERAL(5, 67, 15) // "slot_stopClient"
 
     },
-    "ClientThread\0signal_sendToClient\0\0msg\0"
-    "signal_getFromThread\0slot_stopClient"
+    "ClientThread\0signal_sendToClient\0\0"
+    "std::string\0signal_getFromThread\0"
+    "slot_stopClient"
 };
 #undef QT_MOC_LITERAL
 
@@ -65,8 +66,8 @@ static const uint qt_meta_data_ClientThread[] = {
        5,    0,   35,    2, 0x0a /* Public */,
 
  // signals: parameters
-    QMetaType::Void, QMetaType::QString,    3,
-    QMetaType::Void, QMetaType::QString,    3,
+    QMetaType::Void, 0x80000000 | 3,    2,
+    QMetaType::Void, 0x80000000 | 3,    2,
 
  // slots: parameters
     QMetaType::Void,
@@ -80,22 +81,22 @@ void ClientThread::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         auto *_t = static_cast<ClientThread *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->signal_sendToClient((*reinterpret_cast< const QString(*)>(_a[1]))); break;
-        case 1: _t->signal_getFromThread((*reinterpret_cast< const QString(*)>(_a[1]))); break;
+        case 0: _t->signal_sendToClient((*reinterpret_cast< const std::string(*)>(_a[1]))); break;
+        case 1: _t->signal_getFromThread((*reinterpret_cast< const std::string(*)>(_a[1]))); break;
         case 2: _t->slot_stopClient(); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
-            using _t = void (ClientThread::*)(const QString & );
+            using _t = void (ClientThread::*)(const std::string & );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&ClientThread::signal_sendToClient)) {
                 *result = 0;
                 return;
             }
         }
         {
-            using _t = void (ClientThread::*)(const QString & );
+            using _t = void (ClientThread::*)(const std::string & );
             if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&ClientThread::signal_getFromThread)) {
                 *result = 1;
                 return;
@@ -145,14 +146,14 @@ int ClientThread::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void ClientThread::signal_sendToClient(const QString & _t1)
+void ClientThread::signal_sendToClient(const std::string & _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
 }
 
 // SIGNAL 1
-void ClientThread::signal_getFromThread(const QString & _t1)
+void ClientThread::signal_getFromThread(const std::string & _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 1, _a);

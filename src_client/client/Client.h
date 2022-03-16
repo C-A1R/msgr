@@ -26,10 +26,10 @@ private:
     void writeHandler(const std::string &msg);
 
 signals:
-    void signal_getFromServer(const QString &msg);
+    void signal_getFromServer(const std::string &);
 
 public slots:
-    void slot_sendToServer(const QString &msg);
+    void slot_sendToServer(const std::string &request);
 };
 
 #endif // CLIENT_H

@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>msgr: src_server/Database.h Source File</title>
+<title>msgr: src_server/database/Database.h Source File</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.10</span>
+   &#160;<span id="projectnumber">0.0.11</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_41e5739e9f2c680807c4e544f1d6210e.html">src_server</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_41e5739e9f2c680807c4e544f1d6210e.html">src_server</a></li><li class="navelem"><a class="el" href="dir_162dff08529aa6dcf573ad12702424bb.html">database</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -74,69 +74,82 @@ $(function() {
 <a href="Database_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef DATABASE_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define DATABASE_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;sqlite/sqlite3.h&quot;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="IDatabase_8h.html">IDatabase.h</a>&quot;</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="sqlite3_8h.html">sqlite/sqlite3.h</a>&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;mutex&gt;</span></div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;functional&gt;</span></div>
 <div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classDatabase.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classDatabase.html">Database</a></div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classDatabase.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classDatabase.html">Database</a> : <span class="keyword">public</span> <a class="code" href="classIDatabase.html">IDatabase</a></div>
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
 <div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classDatabase.html#a05ff91912518af83b7e6db814945ee85">   16</a></span>&#160;    <span class="keyword">const</span> <span class="keywordtype">char</span> *<a class="code" href="classDatabase.html#a05ff91912518af83b7e6db814945ee85">_dbName</a> {<span class="keyword">nullptr</span>};</div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classDatabase.html#a524e6ddc9637ddf40be1f0a050659d32">   17</a></span>&#160;    sqlite3 *<a class="code" href="classDatabase.html#a524e6ddc9637ddf40be1f0a050659d32">_handler</a> {<span class="keyword">nullptr</span>};</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classDatabase.html#a524e6ddc9637ddf40be1f0a050659d32">   17</a></span>&#160;    <a class="code" href="structsqlite3.html">sqlite3</a> *<a class="code" href="classDatabase.html#a524e6ddc9637ddf40be1f0a050659d32">_handler</a> {<span class="keyword">nullptr</span>};</div>
 <div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classDatabase.html#abec7d802fb874dd10cc23563d902126a">   18</a></span>&#160;    std::mutex <a class="code" href="classDatabase.html#abec7d802fb874dd10cc23563d902126a">_mtx</a>;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classDatabase.html#ae319c7e35b275a8369c4567e2ab3439c">   20</a></span>&#160;    <span class="keyword">const</span> std::string <a class="code" href="classDatabase.html#ae319c7e35b275a8369c4567e2ab3439c">_ok</a> {<span class="stringliteral">&quot;OK\n&quot;</span>};</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <a class="code" href="classDatabase.html#a8a4f2194234538961d7a45a3d83b8dad">Database</a>(<span class="keyword">const</span> <span class="keywordtype">char</span> *dbName);</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <a class="code" href="classDatabase.html#a84d399a2ad58d69daab9b05330e1316d">~Database</a>();</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classDatabase.html#a9543d1e3a14ce8021df22d35ebd261f8">   25</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classDatabase.html#a9543d1e3a14ce8021df22d35ebd261f8">invalidId</a>()<span class="keyword"> const </span>{<span class="keywordflow">return</span> -1;}</div>
+<div class="line"><a name="l00025"></a><span class="lineno"><a class="line" href="classDatabase.html#ac016c55f5516a3d70b60e659f6e24895">   25</a></span>&#160;    std::string <a class="code" href="classDatabase.html#ac016c55f5516a3d70b60e659f6e24895">ok</a>()<span class="keyword"> const override </span>{<span class="keywordflow">return</span> <span class="stringliteral">&quot;OK\n&quot;</span>;}</div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classDatabase.html#ace8c041132480b5ff98d2c628ad8aece">create</a>();</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classDatabase.html#ac4891aa6ab13484c10208693b95c79a9">create</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
-<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classDatabase.html#ae83f5078d3494a4ba20521284d7efe79">open</a>();</div>
+<div class="line"><a name="l00035"></a><span class="lineno">   35</span>&#160;    <span class="keywordtype">bool</span> <a class="code" href="classDatabase.html#ab5fd4ed455d34297679b1a0f36a8143b">open</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00036"></a><span class="lineno">   36</span>&#160; </div>
-<div class="line"><a name="l00040"></a><span class="lineno">   40</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classDatabase.html#ab6ae69cf284231ae57287005293a566f">insertUser</a>(<span class="keyword">const</span> std::string &amp;login, <span class="keyword">const</span> std::string &amp;password);</div>
-<div class="line"><a name="l00041"></a><span class="lineno">   41</span>&#160; </div>
-<div class="line"><a name="l00042"></a><span class="lineno">   42</span>&#160; </div>
-<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160; </div>
+<div class="line"><a name="l00037"></a><span class="lineno"><a class="line" href="classDatabase.html#a4d796ad4ad8a1354f6dbc916dad12948">   37</a></span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classDatabase.html#a4d796ad4ad8a1354f6dbc916dad12948">invalidId</a>()<span class="keyword"> const override </span>{<span class="keywordflow">return</span> -1;}</div>
+<div class="line"><a name="l00038"></a><span class="lineno">   38</span>&#160; </div>
+<div class="line"><a name="l00043"></a><span class="lineno">   43</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classDatabase.html#a2d0466870100dd9d0a3d88e2b8dd9693">insertUser</a>(<span class="keyword">const</span> std::string &amp;login, <span class="keyword">const</span> std::string &amp;password) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00044"></a><span class="lineno">   44</span>&#160; </div>
-<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;    std::string <a class="code" href="classDatabase.html#a9e708746041e2154d80bbb74b28e6be3">truncate</a>(<span class="keyword">const</span> std::string &amp;table);</div>
-<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160; </div>
-<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;    std::string <a class="code" href="classDatabase.html#a678c2efb52cacdafd246ffbc17047a9f">intersection</a>();</div>
-<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160; </div>
-<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;    std::string <a class="code" href="classDatabase.html#a632a2f4a3c5d173bdf282cf3a99d4fdf">symmetricDifference</a>();</div>
-<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160; </div>
-<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00064"></a><span class="lineno">   64</span>&#160;    std::string <a class="code" href="classDatabase.html#a07e024cf8ebf89e9fc000c292f16cd45">exec</a>(<span class="keyword">const</span> std::string &amp;query, sqlite3_callback <a class="code" href="classDatabase.html#ac830887489c9e31657dbe7a97a826d59">callback</a> = <span class="keyword">nullptr</span>, <span class="keywordtype">void</span> *context = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00065"></a><span class="lineno">   65</span>&#160; </div>
-<div class="line"><a name="l00069"></a><span class="lineno">   69</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classDatabase.html#ac830887489c9e31657dbe7a97a826d59">callback</a>(<span class="keywordtype">void</span> *context, <span class="keywordtype">int</span> columns, <span class="keywordtype">char</span> **data, <span class="keywordtype">char</span> **);</div>
-<div class="line"><a name="l00070"></a><span class="lineno">   70</span>&#160; </div>
-<div class="line"><a name="l00071"></a><span class="lineno">   71</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classDatabase.html#ad719bd21bf8252b73c1da1b50d7ca4ec">maxId</a>(<span class="keyword">const</span> std::string &amp;table, <span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span> = <span class="stringliteral">&quot;id&quot;</span>);</div>
-<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160;};</div>
-<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160; </div>
-<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;<span class="preprocessor">#endif // DATABASE_H</span></div>
+<div class="line"><a name="l00045"></a><span class="lineno">   45</span>&#160; </div>
+<div class="line"><a name="l00046"></a><span class="lineno">   46</span>&#160; </div>
+<div class="line"><a name="l00047"></a><span class="lineno">   47</span>&#160; </div>
+<div class="line"><a name="l00048"></a><span class="lineno">   48</span>&#160;<span class="comment">//    /**</span></div>
+<div class="line"><a name="l00049"></a><span class="lineno">   49</span>&#160;<span class="comment">//     * @brief очистить таблицу</span></div>
+<div class="line"><a name="l00050"></a><span class="lineno">   50</span>&#160;<span class="comment">//     */</span></div>
+<div class="line"><a name="l00051"></a><span class="lineno">   51</span>&#160;<span class="comment">//    std::string truncate(const std::string &amp;table);</span></div>
+<div class="line"><a name="l00052"></a><span class="lineno">   52</span>&#160; </div>
+<div class="line"><a name="l00053"></a><span class="lineno">   53</span>&#160;<span class="comment">//    /**</span></div>
+<div class="line"><a name="l00054"></a><span class="lineno">   54</span>&#160;<span class="comment">//     * @brief пересечение таблиц А и В</span></div>
+<div class="line"><a name="l00055"></a><span class="lineno">   55</span>&#160;<span class="comment">//     */</span></div>
+<div class="line"><a name="l00056"></a><span class="lineno">   56</span>&#160;<span class="comment">//    std::string intersection();</span></div>
+<div class="line"><a name="l00057"></a><span class="lineno">   57</span>&#160; </div>
+<div class="line"><a name="l00058"></a><span class="lineno">   58</span>&#160;<span class="comment">//    /**</span></div>
+<div class="line"><a name="l00059"></a><span class="lineno">   59</span>&#160;<span class="comment">//     * @brief симметричная разница таблиц А и В</span></div>
+<div class="line"><a name="l00060"></a><span class="lineno">   60</span>&#160;<span class="comment">//     */</span></div>
+<div class="line"><a name="l00061"></a><span class="lineno">   61</span>&#160;<span class="comment">//    std::string symmetricDifference();</span></div>
+<div class="line"><a name="l00062"></a><span class="lineno">   62</span>&#160; </div>
+<div class="line"><a name="l00063"></a><span class="lineno">   63</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00067"></a><span class="lineno">   67</span>&#160;    std::string <a class="code" href="classDatabase.html#a07e024cf8ebf89e9fc000c292f16cd45">exec</a>(<span class="keyword">const</span> std::string &amp;query, <a class="code" href="sqlite3_8c.html#aede337a366367e94a52d849482967ddd">sqlite3_callback</a> <a class="code" href="classDatabase.html#ac830887489c9e31657dbe7a97a826d59">callback</a> = <span class="keyword">nullptr</span>, <span class="keywordtype">void</span> *context = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00068"></a><span class="lineno">   68</span>&#160; </div>
+<div class="line"><a name="l00072"></a><span class="lineno">   72</span>&#160;    <span class="keyword">static</span> <span class="keywordtype">int</span> <a class="code" href="classDatabase.html#ac830887489c9e31657dbe7a97a826d59">callback</a>(<span class="keywordtype">void</span> *context, <span class="keywordtype">int</span> columns, <span class="keywordtype">char</span> **data, <span class="keywordtype">char</span> **);</div>
+<div class="line"><a name="l00073"></a><span class="lineno">   73</span>&#160; </div>
+<div class="line"><a name="l00074"></a><span class="lineno">   74</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00075"></a><span class="lineno">   75</span>&#160;    <span class="keywordtype">int</span> <a class="code" href="classDatabase.html#ad719bd21bf8252b73c1da1b50d7ca4ec">maxId</a>(<span class="keyword">const</span> std::string &amp;table, <span class="keyword">const</span> std::string &amp;<span class="keywordtype">id</span> = <span class="stringliteral">&quot;id&quot;</span>);</div>
+<div class="line"><a name="l00076"></a><span class="lineno">   76</span>&#160;};</div>
+<div class="line"><a name="l00077"></a><span class="lineno">   77</span>&#160; </div>
+<div class="line"><a name="l00078"></a><span class="lineno">   78</span>&#160;<span class="preprocessor">#endif // DATABASE_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassDatabase_html_abec7d802fb874dd10cc23563d902126a"><div class="ttname"><a href="classDatabase.html#abec7d802fb874dd10cc23563d902126a">Database::_mtx</a></div><div class="ttdeci">std::mutex _mtx</div><div class="ttdef"><b>Definition:</b> Database.h:18</div></div>
-<div class="ttc" id="aclassDatabase_html_a9543d1e3a14ce8021df22d35ebd261f8"><div class="ttname"><a href="classDatabase.html#a9543d1e3a14ce8021df22d35ebd261f8">Database::invalidId</a></div><div class="ttdeci">int invalidId() const</div><div class="ttdef"><b>Definition:</b> Database.h:25</div></div>
-<div class="ttc" id="aclassDatabase_html_a9e708746041e2154d80bbb74b28e6be3"><div class="ttname"><a href="classDatabase.html#a9e708746041e2154d80bbb74b28e6be3">Database::truncate</a></div><div class="ttdeci">std::string truncate(const std::string &amp;table)</div><div class="ttdoc">очистить таблицу</div><div class="ttdef"><b>Definition:</b> Database.cpp:57</div></div>
-<div class="ttc" id="aclassDatabase_html_a632a2f4a3c5d173bdf282cf3a99d4fdf"><div class="ttname"><a href="classDatabase.html#a632a2f4a3c5d173bdf282cf3a99d4fdf">Database::symmetricDifference</a></div><div class="ttdeci">std::string symmetricDifference()</div><div class="ttdoc">симметричная разница таблиц А и В</div><div class="ttdef"><b>Definition:</b> Database.cpp:85</div></div>
-<div class="ttc" id="aclassDatabase_html_ace8c041132480b5ff98d2c628ad8aece"><div class="ttname"><a href="classDatabase.html#ace8c041132480b5ff98d2c628ad8aece">Database::create</a></div><div class="ttdeci">bool create()</div><div class="ttdoc">создать таблицы</div><div class="ttdef"><b>Definition:</b> Database.cpp:15</div></div>
+<div class="ttc" id="aclassDatabase_html_a2d0466870100dd9d0a3d88e2b8dd9693"><div class="ttname"><a href="classDatabase.html#a2d0466870100dd9d0a3d88e2b8dd9693">Database::insertUser</a></div><div class="ttdeci">int insertUser(const std::string &amp;login, const std::string &amp;password) override</div><div class="ttdoc">добавить пользователя в таблицу</div><div class="ttdef"><b>Definition:</b> Database.cpp:43</div></div>
+<div class="ttc" id="aIDatabase_8h_html"><div class="ttname"><a href="IDatabase_8h.html">IDatabase.h</a></div></div>
 <div class="ttc" id="aclassDatabase_html_a84d399a2ad58d69daab9b05330e1316d"><div class="ttname"><a href="classDatabase.html#a84d399a2ad58d69daab9b05330e1316d">Database::~Database</a></div><div class="ttdeci">~Database()</div><div class="ttdef"><b>Definition:</b> Database.cpp:9</div></div>
 <div class="ttc" id="aclassDatabase_html_a8a4f2194234538961d7a45a3d83b8dad"><div class="ttname"><a href="classDatabase.html#a8a4f2194234538961d7a45a3d83b8dad">Database::Database</a></div><div class="ttdeci">Database(const char *dbName)</div><div class="ttdef"><b>Definition:</b> Database.cpp:5</div></div>
+<div class="ttc" id="aclassDatabase_html_ab5fd4ed455d34297679b1a0f36a8143b"><div class="ttname"><a href="classDatabase.html#ab5fd4ed455d34297679b1a0f36a8143b">Database::open</a></div><div class="ttdeci">bool open() override</div><div class="ttdoc">открыть базу</div><div class="ttdef"><b>Definition:</b> Database.cpp:33</div></div>
+<div class="ttc" id="aclassDatabase_html_ac016c55f5516a3d70b60e659f6e24895"><div class="ttname"><a href="classDatabase.html#ac016c55f5516a3d70b60e659f6e24895">Database::ok</a></div><div class="ttdeci">std::string ok() const override</div><div class="ttdef"><b>Definition:</b> Database.h:25</div></div>
+<div class="ttc" id="asqlite3_8h_html"><div class="ttname"><a href="sqlite3_8h.html">sqlite3.h</a></div></div>
+<div class="ttc" id="aclassDatabase_html_ac4891aa6ab13484c10208693b95c79a9"><div class="ttname"><a href="classDatabase.html#ac4891aa6ab13484c10208693b95c79a9">Database::create</a></div><div class="ttdeci">bool create() override</div><div class="ttdoc">создать таблицы</div><div class="ttdef"><b>Definition:</b> Database.cpp:15</div></div>
+<div class="ttc" id="aclassIDatabase_html"><div class="ttname"><a href="classIDatabase.html">IDatabase</a></div><div class="ttdef"><b>Definition:</b> IDatabase.h:6</div></div>
 <div class="ttc" id="aclassDatabase_html_a07e024cf8ebf89e9fc000c292f16cd45"><div class="ttname"><a href="classDatabase.html#a07e024cf8ebf89e9fc000c292f16cd45">Database::exec</a></div><div class="ttdeci">std::string exec(const std::string &amp;query, sqlite3_callback callback=nullptr, void *context=nullptr)</div><div class="ttdoc">выполнить запрос в базу</div><div class="ttdef"><b>Definition:</b> Database.cpp:106</div></div>
 <div class="ttc" id="aclassDatabase_html_ad719bd21bf8252b73c1da1b50d7ca4ec"><div class="ttname"><a href="classDatabase.html#ad719bd21bf8252b73c1da1b50d7ca4ec">Database::maxId</a></div><div class="ttdeci">int maxId(const std::string &amp;table, const std::string &amp;id=&quot;id&quot;)</div><div class="ttdef"><b>Definition:</b> Database.cpp:150</div></div>
 <div class="ttc" id="aclassDatabase_html_a524e6ddc9637ddf40be1f0a050659d32"><div class="ttname"><a href="classDatabase.html#a524e6ddc9637ddf40be1f0a050659d32">Database::_handler</a></div><div class="ttdeci">sqlite3 * _handler</div><div class="ttdef"><b>Definition:</b> Database.h:17</div></div>
 <div class="ttc" id="aclassDatabase_html"><div class="ttname"><a href="classDatabase.html">Database</a></div><div class="ttdoc">через этот класс происходит работа с базой</div><div class="ttdef"><b>Definition:</b> Database.h:14</div></div>
-<div class="ttc" id="aclassDatabase_html_ae319c7e35b275a8369c4567e2ab3439c"><div class="ttname"><a href="classDatabase.html#ae319c7e35b275a8369c4567e2ab3439c">Database::_ok</a></div><div class="ttdeci">const std::string _ok</div><div class="ttdef"><b>Definition:</b> Database.h:20</div></div>
 <div class="ttc" id="aclassDatabase_html_ac830887489c9e31657dbe7a97a826d59"><div class="ttname"><a href="classDatabase.html#ac830887489c9e31657dbe7a97a826d59">Database::callback</a></div><div class="ttdeci">static int callback(void *context, int columns, char **data, char **)</div><div class="ttdoc">заполняет context результатом выборки</div><div class="ttdef"><b>Definition:</b> Database.cpp:128</div></div>
-<div class="ttc" id="aclassDatabase_html_a678c2efb52cacdafd246ffbc17047a9f"><div class="ttname"><a href="classDatabase.html#a678c2efb52cacdafd246ffbc17047a9f">Database::intersection</a></div><div class="ttdeci">std::string intersection()</div><div class="ttdoc">пересечение таблиц А и В</div><div class="ttdef"><b>Definition:</b> Database.cpp:67</div></div>
+<div class="ttc" id="aclassDatabase_html_a4d796ad4ad8a1354f6dbc916dad12948"><div class="ttname"><a href="classDatabase.html#a4d796ad4ad8a1354f6dbc916dad12948">Database::invalidId</a></div><div class="ttdeci">int invalidId() const override</div><div class="ttdef"><b>Definition:</b> Database.h:37</div></div>
+<div class="ttc" id="astructsqlite3_html"><div class="ttname"><a href="structsqlite3.html">sqlite3</a></div><div class="ttdef"><b>Definition:</b> sqlite3.c:16463</div></div>
 <div class="ttc" id="aclassDatabase_html_a05ff91912518af83b7e6db814945ee85"><div class="ttname"><a href="classDatabase.html#a05ff91912518af83b7e6db814945ee85">Database::_dbName</a></div><div class="ttdeci">const char * _dbName</div><div class="ttdef"><b>Definition:</b> Database.h:16</div></div>
-<div class="ttc" id="aclassDatabase_html_ae83f5078d3494a4ba20521284d7efe79"><div class="ttname"><a href="classDatabase.html#ae83f5078d3494a4ba20521284d7efe79">Database::open</a></div><div class="ttdeci">bool open()</div><div class="ttdoc">открыть базу и создать пустые таблицы</div><div class="ttdef"><b>Definition:</b> Database.cpp:33</div></div>
-<div class="ttc" id="aclassDatabase_html_ab6ae69cf284231ae57287005293a566f"><div class="ttname"><a href="classDatabase.html#ab6ae69cf284231ae57287005293a566f">Database::insertUser</a></div><div class="ttdeci">int insertUser(const std::string &amp;login, const std::string &amp;password)</div><div class="ttdoc">добавить пользователя в таблицу</div><div class="ttdef"><b>Definition:</b> Database.cpp:43</div></div>
+<div class="ttc" id="asqlite3_8c_html_aede337a366367e94a52d849482967ddd"><div class="ttname"><a href="sqlite3_8c.html#aede337a366367e94a52d849482967ddd">sqlite3_callback</a></div><div class="ttdeci">int(* sqlite3_callback)(void *, int, char **, char **)</div><div class="ttdef"><b>Definition:</b> sqlite3.c:667</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

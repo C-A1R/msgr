@@ -14,7 +14,8 @@ void RegistrationWidget::init()
     AuthorizationWidget::init();
     sign_pBtn->setText(QStringLiteral("Sign up"));
     changeSign_pBtn->setText(QStringLiteral("Sign in your account"));
-    connect(sign_pBtn, &QPushButton::clicked, this, &RegistrationWidget::slot_SignUp);
+    connect(sign_pBtn, &QPushButton::clicked, this, &RegistrationWidget::slot_SignUpRequest);
+    connect(_processor.get(), &IClientProcessor::signal_signUpResponse, this, &RegistrationWidget::slot_SignUpResponse);
 }
 
 QHBoxLayout *RegistrationWidget::createConfirmLine()
@@ -34,7 +35,7 @@ void RegistrationWidget::slot_sign_pBtn_clicked()
     emit signal_changeSign(MainWidgets::Authorization);
 }
 
-void RegistrationWidget::slot_SignUp()
+void RegistrationWidget::slot_SignUpRequest()
 {
     if (login_lEdit->text().isEmpty()
             || password_lEdit->text().isEmpty()
@@ -48,4 +49,12 @@ void RegistrationWidget::slot_SignUp()
     }
 
     _processor->signUp_request(login_lEdit->text(), password_lEdit->text());
+}
+
+void RegistrationWidget::slot_SignUpResponse(const std::string &status)
+{
+    if (status == "ok")
+    {
+        emit signal_changeSign(MainWidgets::Chat);
+    }
 }

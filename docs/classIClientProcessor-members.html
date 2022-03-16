@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.10</span>
+   &#160;<span id="projectnumber">0.0.11</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -71,12 +71,14 @@ $(function() {
 <p>This is the complete list of members for <a class="el" href="classIClientProcessor.html">IClientProcessor</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classIClientProcessor.html#a45ff21f6cba1504ef84fb512db532bb0">IClientProcessor</a>()=default</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classIClientProcessor.html#a2dba44766291057c5265f97599f03abb">sendMsg</a>(const QString &amp;msg)=0</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classIClientProcessor.html#a2c3e7b00f61695f80a3a64ba2e267d8a">signal_sendRequest</a>(const QString &amp;)</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classIClientProcessor.html#a29b83638d0726b27139bc9dafa2cb0a3">signal_sendToClientThread</a>(const QString &amp;msg)</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classIClientProcessor.html#a4439178654383b4115e71f74561980eb">signal_sendToGui</a>(const QString &amp;msg)</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classIClientProcessor.html#a6683b6f1d081a815fc27334cd2f6b95b">signal_stopClient</a>()</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classIClientProcessor.html#ab53f39c0b24105051bd2869a26e7a999">signUp_request</a>(const QString &amp;login, const QString &amp;password)=0</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classIClientProcessor.html#aa06c373ca767e8f753aa1965a4e1cbac">sendMsg</a>(const std::string &amp;msg)=0</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classIClientProcessor.html#aae2d2a2b792991741bd06d714975b0d9">signal_sendRequest</a>(const std::string &amp;)</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classIClientProcessor.html#a69a4eeed28c058a064600aa4db41b11a">signal_sendToClientThread</a>(const std::string &amp;)</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classIClientProcessor.html#a7b65f3959150fa2881e1ee8bea060520">signal_sendToGui</a>(const std::string &amp;)</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classIClientProcessor.html#aa848a7048689ce1cc7308eb3c5dc4703">signal_signUpResponse</a>(const std::string &amp;)</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classIClientProcessor.html#a6683b6f1d081a815fc27334cd2f6b95b">signal_stopClient</a>()</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classIClientProcessor.html#ab53f39c0b24105051bd2869a26e7a999">signUp_request</a>(const QString &amp;login, const QString &amp;password)=0</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classIClientProcessor.html#a53a5243841c81d8d28414ae5c37cb2f7">slot_getResponse</a>(const std::string &amp;response)=0</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">pure virtual</span><span class="mlabel">slot</span></td></tr>
   <tr><td class="entry"><a class="el" href="classIClientProcessor.html#a581251a6eb7c1ea30fce7f5cebd14ee8">start</a>()=0</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classIClientProcessor.html#aeb51912e383e2627bcb1568b79d50fcd">~IClientProcessor</a>()=default</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->

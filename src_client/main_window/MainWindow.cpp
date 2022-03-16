@@ -5,14 +5,16 @@
 #include "ChatWidget.h"
 
 #include <QStackedWidget>
-
 #include <QDebug>
+
+#include <string>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
     std::locale::global(std::locale(""));
     qRegisterMetaType<MainWidgets>();
+    qRegisterMetaType<std::string>();
 
     auto processor = std::make_shared<ClientProcessor>();
     setupUi(processor);

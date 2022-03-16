@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.10</span>
+   &#160;<span id="projectnumber">0.0.11</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -100,20 +100,20 @@ $(function() {
 <div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
 <div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">private</span> slots:</div>
 <div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classChatWidget.html#ac2cc36bf5647d526e83c8088a8ed1e4a">slot_sendMsg</a>();</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classChatWidget.html#a723e43d42c2ff07c0d1a374d75860f30">slot_getMsg</a>(<span class="keyword">const</span> QString &amp;msg);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classChatWidget.html#aa0c4da662a5ac32bd2fc050b844f73a6">slot_getMsg</a>(<span class="keyword">const</span> std::string &amp;msg);</div>
 <div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
 <div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;};</div>
 <div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
 <div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif // CHATWIDGET_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassChatWidget_html_adad25e7754972615a4d1b3cb06eccb8f"><div class="ttname"><a href="classChatWidget.html#adad25e7754972615a4d1b3cb06eccb8f">ChatWidget::_processor</a></div><div class="ttdeci">std::shared_ptr&lt; IClientProcessor &gt; _processor</div><div class="ttdef"><b>Definition:</b> ChatWidget.h:20</div></div>
-<div class="ttc" id="aclassChatWidget_html_a707ded9289b2266b8103f28d2225d202"><div class="ttname"><a href="classChatWidget.html#a707ded9289b2266b8103f28d2225d202">ChatWidget::initUi</a></div><div class="ttdeci">void initUi()</div><div class="ttdef"><b>Definition:</b> ChatWidget.cpp:19</div></div>
-<div class="ttc" id="aclassChatWidget_html_afd9895c0d2c1158cbb49d6e94b3d82dc"><div class="ttname"><a href="classChatWidget.html#afd9895c0d2c1158cbb49d6e94b3d82dc">ChatWidget::ChatWidget</a></div><div class="ttdeci">ChatWidget(const std::shared_ptr&lt; IClientProcessor &gt; &amp;processor, QWidget *parent=nullptr)</div><div class="ttdef"><b>Definition:</b> ChatWidget.cpp:10</div></div>
+<div class="ttc" id="aclassChatWidget_html_a707ded9289b2266b8103f28d2225d202"><div class="ttname"><a href="classChatWidget.html#a707ded9289b2266b8103f28d2225d202">ChatWidget::initUi</a></div><div class="ttdeci">void initUi()</div><div class="ttdef"><b>Definition:</b> ChatWidget.cpp:20</div></div>
+<div class="ttc" id="aclassChatWidget_html_afd9895c0d2c1158cbb49d6e94b3d82dc"><div class="ttname"><a href="classChatWidget.html#afd9895c0d2c1158cbb49d6e94b3d82dc">ChatWidget::ChatWidget</a></div><div class="ttdeci">ChatWidget(const std::shared_ptr&lt; IClientProcessor &gt; &amp;processor, QWidget *parent=nullptr)</div><div class="ttdef"><b>Definition:</b> ChatWidget.cpp:11</div></div>
 <div class="ttc" id="aclassChatWidget_html"><div class="ttname"><a href="classChatWidget.html">ChatWidget</a></div><div class="ttdef"><b>Definition:</b> ChatWidget.h:12</div></div>
 <div class="ttc" id="aclassChatWidget_html_ad6c39fb7fef0a1aeca59379329363eca"><div class="ttname"><a href="classChatWidget.html#ad6c39fb7fef0a1aeca59379329363eca">ChatWidget::chat_tEdit</a></div><div class="ttdeci">QTextEdit * chat_tEdit</div><div class="ttdef"><b>Definition:</b> ChatWidget.h:16</div></div>
 <div class="ttc" id="aclassChatWidget_html_a4341b86df37647b25a69b8a8edb6dd22"><div class="ttname"><a href="classChatWidget.html#a4341b86df37647b25a69b8a8edb6dd22">ChatWidget::send_pBtn</a></div><div class="ttdeci">QPushButton * send_pBtn</div><div class="ttdef"><b>Definition:</b> ChatWidget.h:18</div></div>
-<div class="ttc" id="aclassChatWidget_html_a723e43d42c2ff07c0d1a374d75860f30"><div class="ttname"><a href="classChatWidget.html#a723e43d42c2ff07c0d1a374d75860f30">ChatWidget::slot_getMsg</a></div><div class="ttdeci">void slot_getMsg(const QString &amp;msg)</div><div class="ttdef"><b>Definition:</b> ChatWidget.cpp:42</div></div>
-<div class="ttc" id="aclassChatWidget_html_ac2cc36bf5647d526e83c8088a8ed1e4a"><div class="ttname"><a href="classChatWidget.html#ac2cc36bf5647d526e83c8088a8ed1e4a">ChatWidget::slot_sendMsg</a></div><div class="ttdeci">void slot_sendMsg()</div><div class="ttdef"><b>Definition:</b> ChatWidget.cpp:37</div></div>
+<div class="ttc" id="aclassChatWidget_html_ac2cc36bf5647d526e83c8088a8ed1e4a"><div class="ttname"><a href="classChatWidget.html#ac2cc36bf5647d526e83c8088a8ed1e4a">ChatWidget::slot_sendMsg</a></div><div class="ttdeci">void slot_sendMsg()</div><div class="ttdef"><b>Definition:</b> ChatWidget.cpp:38</div></div>
+<div class="ttc" id="aclassChatWidget_html_aa0c4da662a5ac32bd2fc050b844f73a6"><div class="ttname"><a href="classChatWidget.html#aa0c4da662a5ac32bd2fc050b844f73a6">ChatWidget::slot_getMsg</a></div><div class="ttdeci">void slot_getMsg(const std::string &amp;msg)</div><div class="ttdef"><b>Definition:</b> ChatWidget.cpp:43</div></div>
 <div class="ttc" id="aclassChatWidget_html_aa33a1d50ca344d55313d180c23b1b420"><div class="ttname"><a href="classChatWidget.html#aa33a1d50ca344d55313d180c23b1b420">ChatWidget::msg_lEdit</a></div><div class="ttdeci">QLineEdit * msg_lEdit</div><div class="ttdef"><b>Definition:</b> ChatWidget.h:17</div></div>
 <div class="ttc" id="aClientProcessor_8h_html"><div class="ttname"><a href="ClientProcessor_8h.html">ClientProcessor.h</a></div></div>
 <!-- start footer part -->

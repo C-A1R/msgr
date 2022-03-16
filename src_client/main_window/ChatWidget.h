@@ -27,7 +27,7 @@ private:
 
 private slots:
     void slot_sendMsg();
-    void slot_getMsg(const QString &msg);
+    void slot_getMsg(const std::string &msg);
 
 };
 

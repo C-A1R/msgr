@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.10</span>
+   &#160;<span id="projectnumber">0.0.11</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -88,26 +88,26 @@ $(function() {
 <div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="classClientProcessor.html#aa8c0ec510246a394c389d657c5c02e41">~ClientProcessor</a>();</div>
 <div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
 <div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classClientProcessor.html#a3b7ad54d4251aaec91b9179115f38829">start</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classClientProcessor.html#af1289eb205d6da06ae5e3709b137bfe0">sendMsg</a>(<span class="keyword">const</span> QString &amp;msg) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classClientProcessor.html#adf84c36876631d911ad8991e37606a5c">sendMsg</a>(<span class="keyword">const</span> std::string &amp;msg) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
 <div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classClientProcessor.html#ab1e2acd6e43c1dc5e88ede8095e31d93">signUp_request</a>(<span class="keyword">const</span> QString &amp;login, <span class="keyword">const</span> QString &amp;password) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160; </div>
 <div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classClientProcessor.html#a6bc9fb27727540c5c77218dd12a1fa2e">slot_getMsg</a>(<span class="keyword">const</span> QString &amp;msg);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classClientProcessor.html#a979f490356856230657c1a1db94b7589">slot_getResponse</a>(<span class="keyword">const</span> std::string &amp;response) <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
 <div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
 <div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif // CLIENTPROCESSOR_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aIClientProcessor_8h_html"><div class="ttname"><a href="IClientProcessor_8h.html">IClientProcessor.h</a></div></div>
-<div class="ttc" id="aclassClientProcessor_html_a10ba4ceeda91db15f13fd52dac353b54"><div class="ttname"><a href="classClientProcessor.html#a10ba4ceeda91db15f13fd52dac353b54">ClientProcessor::ClientProcessor</a></div><div class="ttdeci">ClientProcessor()</div><div class="ttdef"><b>Definition:</b> ClientProcessor.cpp:9</div></div>
+<div class="ttc" id="aclassClientProcessor_html_a979f490356856230657c1a1db94b7589"><div class="ttname"><a href="classClientProcessor.html#a979f490356856230657c1a1db94b7589">ClientProcessor::slot_getResponse</a></div><div class="ttdeci">void slot_getResponse(const std::string &amp;response) override</div><div class="ttdef"><b>Definition:</b> ClientProcessor.cpp:57</div></div>
+<div class="ttc" id="aclassClientProcessor_html_a10ba4ceeda91db15f13fd52dac353b54"><div class="ttname"><a href="classClientProcessor.html#a10ba4ceeda91db15f13fd52dac353b54">ClientProcessor::ClientProcessor</a></div><div class="ttdeci">ClientProcessor()</div><div class="ttdef"><b>Definition:</b> ClientProcessor.cpp:10</div></div>
 <div class="ttc" id="aclassClientProcessor_html_a61b4353912027d530af5953ad13582db"><div class="ttname"><a href="classClientProcessor.html#a61b4353912027d530af5953ad13582db">ClientProcessor::_clientThread</a></div><div class="ttdeci">std::unique_ptr&lt; ClientThread &gt; _clientThread</div><div class="ttdef"><b>Definition:</b> ClientProcessor.h:12</div></div>
-<div class="ttc" id="aclassClientProcessor_html_af1289eb205d6da06ae5e3709b137bfe0"><div class="ttname"><a href="classClientProcessor.html#af1289eb205d6da06ae5e3709b137bfe0">ClientProcessor::sendMsg</a></div><div class="ttdeci">void sendMsg(const QString &amp;msg) override</div><div class="ttdef"><b>Definition:</b> ClientProcessor.cpp:30</div></div>
 <div class="ttc" id="aclassIClientProcessor_html"><div class="ttname"><a href="classIClientProcessor.html">IClientProcessor</a></div><div class="ttdef"><b>Definition:</b> IClientProcessor.h:6</div></div>
 <div class="ttc" id="aclassClientProcessor_html_ab1e2acd6e43c1dc5e88ede8095e31d93"><div class="ttname"><a href="classClientProcessor.html#ab1e2acd6e43c1dc5e88ede8095e31d93">ClientProcessor::signUp_request</a></div><div class="ttdeci">void signUp_request(const QString &amp;login, const QString &amp;password) override</div><div class="ttdef"><b>Definition:</b> ClientProcessor.cpp:40</div></div>
-<div class="ttc" id="aclassClientProcessor_html_aa8c0ec510246a394c389d657c5c02e41"><div class="ttname"><a href="classClientProcessor.html#aa8c0ec510246a394c389d657c5c02e41">ClientProcessor::~ClientProcessor</a></div><div class="ttdeci">~ClientProcessor()</div><div class="ttdef"><b>Definition:</b> ClientProcessor.cpp:19</div></div>
+<div class="ttc" id="aclassClientProcessor_html_adf84c36876631d911ad8991e37606a5c"><div class="ttname"><a href="classClientProcessor.html#adf84c36876631d911ad8991e37606a5c">ClientProcessor::sendMsg</a></div><div class="ttdeci">void sendMsg(const std::string &amp;msg) override</div><div class="ttdef"><b>Definition:</b> ClientProcessor.cpp:31</div></div>
+<div class="ttc" id="aclassClientProcessor_html_aa8c0ec510246a394c389d657c5c02e41"><div class="ttname"><a href="classClientProcessor.html#aa8c0ec510246a394c389d657c5c02e41">ClientProcessor::~ClientProcessor</a></div><div class="ttdeci">~ClientProcessor()</div><div class="ttdef"><b>Definition:</b> ClientProcessor.cpp:20</div></div>
 <div class="ttc" id="aclassClientThread_html"><div class="ttname"><a href="classClientThread.html">ClientThread</a></div><div class="ttdef"><b>Definition:</b> ClientThread.h:8</div></div>
-<div class="ttc" id="aclassClientProcessor_html_a6bc9fb27727540c5c77218dd12a1fa2e"><div class="ttname"><a href="classClientProcessor.html#a6bc9fb27727540c5c77218dd12a1fa2e">ClientProcessor::slot_getMsg</a></div><div class="ttdeci">void slot_getMsg(const QString &amp;msg)</div><div class="ttdef"><b>Definition:</b> ClientProcessor.cpp:56</div></div>
-<div class="ttc" id="aclassClientProcessor_html_a3b7ad54d4251aaec91b9179115f38829"><div class="ttname"><a href="classClientProcessor.html#a3b7ad54d4251aaec91b9179115f38829">ClientProcessor::start</a></div><div class="ttdeci">void start() override</div><div class="ttdef"><b>Definition:</b> ClientProcessor.cpp:25</div></div>
+<div class="ttc" id="aclassClientProcessor_html_a3b7ad54d4251aaec91b9179115f38829"><div class="ttname"><a href="classClientProcessor.html#a3b7ad54d4251aaec91b9179115f38829">ClientProcessor::start</a></div><div class="ttdeci">void start() override</div><div class="ttdef"><b>Definition:</b> ClientProcessor.cpp:26</div></div>
 <div class="ttc" id="aclassClientProcessor_html"><div class="ttname"><a href="classClientProcessor.html">ClientProcessor</a></div><div class="ttdef"><b>Definition:</b> ClientProcessor.h:9</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['truncate_282',['truncate',['../classDatabase.html#a9e708746041e2154d80bbb74b28e6be3',1,'Database']]]
+  ['writehandler_7066',['writeHandler',['../classClient.html#a3cbb9ed253c9c3668eeedc4b1b39e2f3',1,'Client']]]
 ];
