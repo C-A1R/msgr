@@ -1,6 +1,6 @@
 OUTPUT_DIRECTORY       = @CMAKE_CURRENT_BINARY_DIR@/
 INPUT                  = @CMAKE_CURRENT_SOURCE_DIR@/
-EXCLUDE                = @CMAKE_CURRENT_SOURCE_DIR@/src_server/sqlite/ \
+EXCLUDE                = @CMAKE_CURRENT_SOURCE_DIR@/src_server/database/sqlite/ \
                          @CMAKE_CURRENT_BINARY_DIR@/src_client/msgr_client_autogen
 
 DOXYFILE_ENCODING      = UTF-8

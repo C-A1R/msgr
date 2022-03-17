@@ -3,6 +3,7 @@
 #include <QHBoxLayout>
 #include <QLineEdit>
 #include <QPushButton>
+#include <QLabel>
 
 RegistrationWidget::RegistrationWidget(const std::shared_ptr<IClientProcessor> &processor, QWidget *parent)
     : AuthorizationWidget{processor, parent}
@@ -11,7 +12,7 @@ RegistrationWidget::RegistrationWidget(const std::shared_ptr<IClientProcessor> &
 
 void RegistrationWidget::init()
 {
-    AuthorizationWidget::init();
+    setupUi();
     sign_pBtn->setText(QStringLiteral("Sign up"));
     changeSign_pBtn->setText(QStringLiteral("Sign in your account"));
     connect(sign_pBtn, &QPushButton::clicked, this, &RegistrationWidget::slot_SignUpRequest);
@@ -45,6 +46,7 @@ void RegistrationWidget::slot_SignUpRequest()
     }
     if (password_lEdit->text() != confirmPassword_lEdit->text())
     {
+        showError(QStringLiteral("Passwords don't match"));
         return;
     }
 
@@ -56,5 +58,13 @@ void RegistrationWidget::slot_SignUpResponse(const std::string &status)
     if (status == "ok")
     {
         emit signal_changeSign(MainWidgets::Chat);
+    }
+    else if (status == "login_exists")
+    {
+        showError(QStringLiteral("This login already exists"));
+    }
+    else
+    {
+        showError(QStringLiteral("Error"));
     }
 }

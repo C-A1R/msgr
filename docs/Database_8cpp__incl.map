@@ -1,12 +1,13 @@
 <map id="src_server/database/Database.cpp" name="src_server/database/Database.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="283,5,436,47"/>
+<area shape="rect" id="node1" title=" " alt="" coords="387,5,540,47"/>
 <area shape="rect" id="node2" href="$Database_8h.html" title=" " alt="" coords="255,95,351,121"/>
-<area shape="rect" id="node10" title=" " alt="" coords="375,95,455,121"/>
+<area shape="rect" id="node9" title=" " alt="" coords="375,95,450,121"/>
+<area shape="rect" id="node10" title=" " alt="" coords="474,95,554,121"/>
+<area shape="rect" id="node11" title=" " alt="" coords="578,95,655,121"/>
 <area shape="rect" id="node3" href="$IDatabase_8h.html" title=" " alt="" coords="5,169,105,196"/>
-<area shape="rect" id="node5" href="$sqlite3_8h.html" title=" " alt="" coords="129,169,248,196"/>
-<area shape="rect" id="node7" title=" " alt="" coords="272,169,335,196"/>
-<area shape="rect" id="node8" title=" " alt="" coords="359,169,423,196"/>
-<area shape="rect" id="node9" title=" " alt="" coords="448,169,535,196"/>
+<area shape="rect" id="node5" title=" " alt="" coords="129,169,248,196"/>
+<area shape="rect" id="node6" title=" " alt="" coords="272,169,335,196"/>
+<area shape="rect" id="node7" title=" " alt="" coords="359,169,423,196"/>
+<area shape="rect" id="node8" title=" " alt="" coords="448,169,535,196"/>
 <area shape="rect" id="node4" title=" " alt="" coords="26,244,85,271"/>
-<area shape="rect" id="node6" title=" " alt="" coords="151,244,226,271"/>
 </map>

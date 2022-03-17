@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.11</span>
+   &#160;<span id="projectnumber">0.0.12</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -120,7 +120,7 @@ $(function() {
 
 <h3><a id="index_e"></a>- e -</h3><ul>
 <li>exec()
-: <a class="el" href="classDatabase.html#a07e024cf8ebf89e9fc000c292f16cd45">Database</a>
+: <a class="el" href="classDatabase.html#a29a9135e679d25d25b644f7c759a10c0">Database</a>
 </li>
 </ul>
 
@@ -129,6 +129,14 @@ $(function() {
 <li>getResponse()
 : <a class="el" href="classIServerProcessor.html#a076f254f834a679f7d8dc1e0f253cbc5">IServerProcessor</a>
 , <a class="el" href="classServerProcessor.html#aed9380ea29a96f4fa2facaf80ca0a408">ServerProcessor</a>
+</li>
+<li>getUserId()
+: <a class="el" href="classDatabase.html#a60ca5177e0773dde89a88a36ebf612e4">Database</a>
+, <a class="el" href="classIDatabase.html#a133cbda0cb91cb37822c3aa62e6c1c19">IDatabase</a>
+</li>
+<li>getUserPassword()
+: <a class="el" href="classDatabase.html#ab5d34ddef84bf9173827f230207f6e2d">Database</a>
+, <a class="el" href="classIDatabase.html#aca5ad5e1716b3d6787194caf659c15b0">IDatabase</a>
 </li>
 </ul>
 
@@ -158,6 +166,10 @@ $(function() {
 <li>IServerProcessor()
 : <a class="el" href="classIServerProcessor.html#aee941c856cdeaf5ac7fa4808fc7e8dfe">IServerProcessor</a>
 </li>
+<li>isRunning()
+: <a class="el" href="classClientProcessor.html#aa527020cfbad837dd2307b50ace2116f">ClientProcessor</a>
+, <a class="el" href="classIClientProcessor.html#a5b262091551806261f2684bd04eabe19">IClientProcessor</a>
+</li>
 </ul>
 
 
@@ -172,10 +184,6 @@ $(function() {
 
 
 <h3><a id="index_o"></a>- o -</h3><ul>
-<li>ok()
-: <a class="el" href="classDatabase.html#ac016c55f5516a3d70b60e659f6e24895">Database</a>
-, <a class="el" href="classIDatabase.html#a587d0820b9f61c4a810666e565c75970">IDatabase</a>
-</li>
 <li>open()
 : <a class="el" href="classDatabase.html#ab5fd4ed455d34297679b1a0f36a8143b">Database</a>
 , <a class="el" href="classIDatabase.html#a759676714eba7f36ab763898f0358b55">IDatabase</a>
@@ -217,6 +225,9 @@ $(function() {
 : <a class="el" href="classAuthorizationWidget.html#a2ebc435097730c03e87473c76e9e710c">AuthorizationWidget</a>
 , <a class="el" href="classMainWindow.html#aa10f1b9752793cc8431a5d5fd0a62955">MainWindow</a>
 </li>
+<li>showError()
+: <a class="el" href="classAuthorizationWidget.html#ad3dfe2fc09a18c8b6a21117e37a429f0">AuthorizationWidget</a>
+</li>
 <li>signal_changeSign()
 : <a class="el" href="classAuthorizationWidget.html#a01f709cfd6d0c1f8fcdc9e66a4196362">AuthorizationWidget</a>
 </li>
@@ -238,15 +249,28 @@ $(function() {
 <li>signal_sendToGui()
 : <a class="el" href="classIClientProcessor.html#a7b65f3959150fa2881e1ee8bea060520">IClientProcessor</a>
 </li>
+<li>signal_signInResponse()
+: <a class="el" href="classIClientProcessor.html#a28ae70d5a3fc20f392ac0d9621d58c05">IClientProcessor</a>
+</li>
 <li>signal_signUpResponse()
 : <a class="el" href="classIClientProcessor.html#aa848a7048689ce1cc7308eb3c5dc4703">IClientProcessor</a>
 </li>
 <li>signal_stopClient()
 : <a class="el" href="classIClientProcessor.html#a6683b6f1d081a815fc27334cd2f6b95b">IClientProcessor</a>
 </li>
+<li>signIn_request()
+: <a class="el" href="classClientProcessor.html#a53efd041f60d22e58462e98b6acaf877">ClientProcessor</a>
+, <a class="el" href="classIClientProcessor.html#a991f00877afa2b83c8085f4eff279a7b">IClientProcessor</a>
+</li>
+<li>signInResponse()
+: <a class="el" href="classServerProcessor.html#a567b9ae0bbe7d90d6e7d9d8fef894aed">ServerProcessor</a>
+</li>
 <li>signUp_request()
 : <a class="el" href="classClientProcessor.html#ab1e2acd6e43c1dc5e88ede8095e31d93">ClientProcessor</a>
 , <a class="el" href="classIClientProcessor.html#ab53f39c0b24105051bd2869a26e7a999">IClientProcessor</a>
+</li>
+<li>signUpResponse()
+: <a class="el" href="classServerProcessor.html#a03db4d97917aa166502fc97c09f23651">ServerProcessor</a>
 </li>
 <li>slot_changeSign()
 : <a class="el" href="classMainWindow.html#a8a97ec8374b073cf3a31f9e88f4fcb64">MainWindow</a>
@@ -268,6 +292,12 @@ $(function() {
 : <a class="el" href="classAuthorizationWidget.html#a712c95c59f73f5da3a6a2ffcea091ef7">AuthorizationWidget</a>
 , <a class="el" href="classRegistrationWidget.html#ac98570a9da83844bfe0299ced86f1ea3">RegistrationWidget</a>
 </li>
+<li>slot_SignInRequest()
+: <a class="el" href="classAuthorizationWidget.html#aa44656e7365ab13327dda061812462d0">AuthorizationWidget</a>
+</li>
+<li>slot_SignInResponse()
+: <a class="el" href="classAuthorizationWidget.html#ab82e7ca531bce1e20cbc39ac979181b8">AuthorizationWidget</a>
+</li>
 <li>slot_SignUpRequest()
 : <a class="el" href="classRegistrationWidget.html#a5211e2c5df535ef0bb6b3fdc8d08167f">RegistrationWidget</a>
 </li>
@@ -282,6 +312,13 @@ $(function() {
 , <a class="el" href="classClientProcessor.html#a3b7ad54d4251aaec91b9179115f38829">ClientProcessor</a>
 , <a class="el" href="classIClientProcessor.html#a581251a6eb7c1ea30fce7f5cebd14ee8">IClientProcessor</a>
 , <a class="el" href="classSession.html#a47baf956cead0046fcbac45c572c70d3">Session</a>
+</li>
+</ul>
+
+
+<h3><a id="index_v"></a>- v -</h3><ul>
+<li>value()
+: <a class="el" href="classDatabase.html#a44cfd7bdda8e5f0545301326a7838d86">Database</a>
 </li>
 </ul>
 

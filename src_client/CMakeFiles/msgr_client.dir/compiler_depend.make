@@ -2350,7 +2350,8 @@ src_client/CMakeFiles/msgr_client.dir/client/ClientThread.cpp.o: src_client/clie
   /usr/include/boost/asio/windows/random_access_handle.hpp \
   /usr/include/boost/asio/windows/stream_handle.hpp \
   /usr/include/boost/asio/write_at.hpp \
-  /usr/include/boost/asio/impl/write_at.hpp
+  /usr/include/boost/asio/impl/write_at.hpp \
+  /usr/include/c++/9/iostream
 
 src_client/CMakeFiles/msgr_client.dir/client_processor/ClientProcessor.cpp.o: src_client/client_processor/ClientProcessor.cpp \
   /usr/include/stdc-predef.h \
@@ -5514,7 +5515,16 @@ src_client/CMakeFiles/msgr_client.dir/main_window/MainWindow.cpp.o: src_client/m
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
   /usr/include/c++/9/variant \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qcontiguouscache.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QThread \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qthread.h \
+  /usr/include/c++/9/future \
+  /usr/include/c++/9/mutex \
+  /usr/include/c++/9/bits/std_mutex.h \
+  /usr/include/c++/9/bits/unique_lock.h \
+  /usr/include/c++/9/thread \
+  /usr/include/c++/9/condition_variable \
+  /usr/include/c++/9/bits/atomic_futex.h
 
 src_client/CMakeFiles/msgr_client.dir/main_window/RegistrationWidget.cpp.o: src_client/main_window/RegistrationWidget.cpp \
   /usr/include/stdc-predef.h \
@@ -5876,7 +5886,9 @@ src_client/CMakeFiles/msgr_client.dir/main_window/RegistrationWidget.cpp.o: src_
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QLabel \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlabel.h
 
 src_client/CMakeFiles/msgr_client.dir/msgr_client_autogen/mocs_compilation.cpp.o: src_client/msgr_client_autogen/mocs_compilation.cpp \
   /usr/include/stdc-predef.h \

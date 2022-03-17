@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.11</span>
+   &#160;<span id="projectnumber">0.0.12</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -103,10 +103,14 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aa8c0ec510246a394c389d657c5c02e41"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a3b7ad54d4251aaec91b9179115f38829"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientProcessor.html#a3b7ad54d4251aaec91b9179115f38829">start</a> () override</td></tr>
 <tr class="separator:a3b7ad54d4251aaec91b9179115f38829"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa527020cfbad837dd2307b50ace2116f"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientProcessor.html#aa527020cfbad837dd2307b50ace2116f">isRunning</a> () const override</td></tr>
+<tr class="separator:aa527020cfbad837dd2307b50ace2116f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:adf84c36876631d911ad8991e37606a5c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientProcessor.html#adf84c36876631d911ad8991e37606a5c">sendMsg</a> (const std::string &amp;msg) override</td></tr>
 <tr class="separator:adf84c36876631d911ad8991e37606a5c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab1e2acd6e43c1dc5e88ede8095e31d93"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientProcessor.html#ab1e2acd6e43c1dc5e88ede8095e31d93">signUp_request</a> (const QString &amp;login, const QString &amp;password) override</td></tr>
 <tr class="separator:ab1e2acd6e43c1dc5e88ede8095e31d93"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a53efd041f60d22e58462e98b6acaf877"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientProcessor.html#a53efd041f60d22e58462e98b6acaf877">signIn_request</a> (const QString &amp;login, const QString &amp;password) override</td></tr>
+<tr class="separator:a53efd041f60d22e58462e98b6acaf877"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classIClientProcessor"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classIClientProcessor')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classIClientProcessor.html">IClientProcessor</a></td></tr>
 <tr class="memitem:a45ff21f6cba1504ef84fb512db532bb0 inherit pub_methods_classIClientProcessor"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIClientProcessor.html#a45ff21f6cba1504ef84fb512db532bb0">IClientProcessor</a> ()=default</td></tr>
 <tr class="separator:a45ff21f6cba1504ef84fb512db532bb0 inherit pub_methods_classIClientProcessor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -136,6 +140,11 @@ Additional Inherited Members</h2></td></tr>
 <tr class="separator:aae2d2a2b792991741bd06d714975b0d9 inherit signals_classIClientProcessor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa848a7048689ce1cc7308eb3c5dc4703 inherit signals_classIClientProcessor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIClientProcessor.html#aa848a7048689ce1cc7308eb3c5dc4703">signal_signUpResponse</a> (const std::string &amp;)</td></tr>
 <tr class="separator:aa848a7048689ce1cc7308eb3c5dc4703 inherit signals_classIClientProcessor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28ae70d5a3fc20f392ac0d9621d58c05 inherit signals_classIClientProcessor"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIClientProcessor.html#a28ae70d5a3fc20f392ac0d9621d58c05">signal_signInResponse</a> (const std::string &amp;)</td></tr>
+<tr class="separator:a28ae70d5a3fc20f392ac0d9621d58c05 inherit signals_classIClientProcessor"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="inherit_header pub_attribs_classIClientProcessor"><td colspan="2" onclick="javascript:toggleInherit('pub_attribs_classIClientProcessor')"><img src="closed.png" alt="-"/>&#160;Public Attributes inherited from <a class="el" href="classIClientProcessor.html">IClientProcessor</a></td></tr>
+<tr class="memitem:ad19c43cf14542ac18d095828df4d9c8a inherit pub_attribs_classIClientProcessor"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIClientProcessor.html#ad19c43cf14542ac18d095828df4d9c8a">_isStarted</a> {false}</td></tr>
+<tr class="separator:ad19c43cf14542ac18d095828df4d9c8a inherit pub_attribs_classIClientProcessor"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a10ba4ceeda91db15f13fd52dac353b54"></a>
@@ -173,6 +182,33 @@ Additional Inherited Members</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="aa527020cfbad837dd2307b50ace2116f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa527020cfbad837dd2307b50ace2116f">&#9670;&nbsp;</a></span>isRunning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool ClientProcessor::isRunning </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classIClientProcessor.html#a5b262091551806261f2684bd04eabe19">IClientProcessor</a>.</p>
+
+</div>
+</div>
 <a id="adf84c36876631d911ad8991e37606a5c"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adf84c36876631d911ad8991e37606a5c">&#9670;&nbsp;</a></span>sendMsg()</h2>
 
@@ -198,6 +234,44 @@ Additional Inherited Members</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classIClientProcessor.html#aa06c373ca767e8f753aa1965a4e1cbac">IClientProcessor</a>.</p>
+
+</div>
+</div>
+<a id="a53efd041f60d22e58462e98b6acaf877"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a53efd041f60d22e58462e98b6acaf877">&#9670;&nbsp;</a></span>signIn_request()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ClientProcessor::signIn_request </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>login</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classIClientProcessor.html#a991f00877afa2b83c8085f4eff279a7b">IClientProcessor</a>.</p>
 
 </div>
 </div>

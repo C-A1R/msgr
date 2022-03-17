@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.11</span>
+   &#160;<span id="projectnumber">0.0.12</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -66,6 +66,7 @@ $(function() {
   <div class="summary">
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pub-attribs">Public Attributes</a> &#124;
 <a href="#pri-slots">Private Slots</a> &#124;
 <a href="classIClientProcessor-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -106,6 +107,8 @@ Signals</h2></td></tr>
 <tr class="separator:aae2d2a2b792991741bd06d714975b0d9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa848a7048689ce1cc7308eb3c5dc4703"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIClientProcessor.html#aa848a7048689ce1cc7308eb3c5dc4703">signal_signUpResponse</a> (const std::string &amp;)</td></tr>
 <tr class="separator:aa848a7048689ce1cc7308eb3c5dc4703"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a28ae70d5a3fc20f392ac0d9621d58c05"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIClientProcessor.html#a28ae70d5a3fc20f392ac0d9621d58c05">signal_signInResponse</a> (const std::string &amp;)</td></tr>
+<tr class="separator:a28ae70d5a3fc20f392ac0d9621d58c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -115,10 +118,19 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aeb51912e383e2627bcb1568b79d50fcd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a581251a6eb7c1ea30fce7f5cebd14ee8"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIClientProcessor.html#a581251a6eb7c1ea30fce7f5cebd14ee8">start</a> ()=0</td></tr>
 <tr class="separator:a581251a6eb7c1ea30fce7f5cebd14ee8"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b262091551806261f2684bd04eabe19"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIClientProcessor.html#a5b262091551806261f2684bd04eabe19">isRunning</a> () const =0</td></tr>
+<tr class="separator:a5b262091551806261f2684bd04eabe19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa06c373ca767e8f753aa1965a4e1cbac"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIClientProcessor.html#aa06c373ca767e8f753aa1965a4e1cbac">sendMsg</a> (const std::string &amp;msg)=0</td></tr>
 <tr class="separator:aa06c373ca767e8f753aa1965a4e1cbac"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab53f39c0b24105051bd2869a26e7a999"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIClientProcessor.html#ab53f39c0b24105051bd2869a26e7a999">signUp_request</a> (const QString &amp;login, const QString &amp;password)=0</td></tr>
 <tr class="separator:ab53f39c0b24105051bd2869a26e7a999"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a991f00877afa2b83c8085f4eff279a7b"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIClientProcessor.html#a991f00877afa2b83c8085f4eff279a7b">signIn_request</a> (const QString &amp;login, const QString &amp;password)=0</td></tr>
+<tr class="separator:a991f00877afa2b83c8085f4eff279a7b"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
+Public Attributes</h2></td></tr>
+<tr class="memitem:ad19c43cf14542ac18d095828df4d9c8a"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIClientProcessor.html#ad19c43cf14542ac18d095828df4d9c8a">_isStarted</a> {false}</td></tr>
+<tr class="separator:ad19c43cf14542ac18d095828df4d9c8a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-slots"></a>
 Private Slots</h2></td></tr>
@@ -177,6 +189,33 @@ Private Slots</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
+<a id="a5b262091551806261f2684bd04eabe19"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b262091551806261f2684bd04eabe19">&#9670;&nbsp;</a></span>isRunning()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IClientProcessor::isRunning </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td> const</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classClientProcessor.html#aa527020cfbad837dd2307b50ace2116f">ClientProcessor</a>.</p>
+
+</div>
+</div>
 <a id="aa06c373ca767e8f753aa1965a4e1cbac"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa06c373ca767e8f753aa1965a4e1cbac">&#9670;&nbsp;</a></span>sendMsg()</h2>
 
@@ -283,6 +322,32 @@ Private Slots</h2></td></tr>
 
 </div>
 </div>
+<a id="a28ae70d5a3fc20f392ac0d9621d58c05"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a28ae70d5a3fc20f392ac0d9621d58c05">&#9670;&nbsp;</a></span>signal_signInResponse</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IClientProcessor::signal_signInResponse </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="aa848a7048689ce1cc7308eb3c5dc4703"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aa848a7048689ce1cc7308eb3c5dc4703">&#9670;&nbsp;</a></span>signal_signUpResponse</h2>
 
@@ -331,6 +396,44 @@ Private Slots</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+</div>
+</div>
+<a id="a991f00877afa2b83c8085f4eff279a7b"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a991f00877afa2b83c8085f4eff279a7b">&#9670;&nbsp;</a></span>signIn_request()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IClientProcessor::signIn_request </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>login</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>password</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classClientProcessor.html#a53efd041f60d22e58462e98b6acaf877">ClientProcessor</a>.</p>
 
 </div>
 </div>
@@ -422,6 +525,21 @@ Private Slots</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classClientProcessor.html#a3b7ad54d4251aaec91b9179115f38829">ClientProcessor</a>.</p>
+
+</div>
+</div>
+<h2 class="groupheader">Member Data Documentation</h2>
+<a id="ad19c43cf14542ac18d095828df4d9c8a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad19c43cf14542ac18d095828df4d9c8a">&#9670;&nbsp;</a></span>_isStarted</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool IClientProcessor::_isStarted {false}</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
 
 </div>
 </div>

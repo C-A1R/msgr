@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.11</span>
+   &#160;<span id="projectnumber">0.0.12</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -66,6 +66,7 @@ $(function() {
   <div class="summary">
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
+<a href="#pro-methods">Protected Member Functions</a> &#124;
 <a href="#pro-attribs">Protected Attributes</a> &#124;
 <a href="#pri-slots">Private Slots</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
@@ -108,8 +109,17 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:adf4dfd31bbfce1c39d64c90fa06c3687"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthorizationWidget.html#adf4dfd31bbfce1c39d64c90fa06c3687">init</a> ()</td></tr>
 <tr class="separator:adf4dfd31bbfce1c39d64c90fa06c3687"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-methods"></a>
+Protected Member Functions</h2></td></tr>
+<tr class="memitem:a2ebc435097730c03e87473c76e9e710c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthorizationWidget.html#a2ebc435097730c03e87473c76e9e710c">setupUi</a> ()</td></tr>
+<tr class="separator:a2ebc435097730c03e87473c76e9e710c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad3dfe2fc09a18c8b6a21117e37a429f0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthorizationWidget.html#ad3dfe2fc09a18c8b6a21117e37a429f0">showError</a> (const QString &amp;err)</td></tr>
+<tr class="separator:ad3dfe2fc09a18c8b6a21117e37a429f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pro-attribs"></a>
 Protected Attributes</h2></td></tr>
+<tr class="memitem:aedbfc6876081e39e6de8dbf0aca6730e"><td class="memItemLeft" align="right" valign="top">QLabel *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthorizationWidget.html#aedbfc6876081e39e6de8dbf0aca6730e">err_lbl</a> {nullptr}</td></tr>
+<tr class="separator:aedbfc6876081e39e6de8dbf0aca6730e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a2464597c709c0d437f5263cd61853e83"><td class="memItemLeft" align="right" valign="top">QLineEdit *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthorizationWidget.html#a2464597c709c0d437f5263cd61853e83">login_lEdit</a> {nullptr}</td></tr>
 <tr class="separator:a2464597c709c0d437f5263cd61853e83"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ae7484d9d6d837e6405b45b33eb2bbd51"><td class="memItemLeft" align="right" valign="top">QLineEdit *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthorizationWidget.html#ae7484d9d6d837e6405b45b33eb2bbd51">password_lEdit</a> {nullptr}</td></tr>
@@ -125,11 +135,13 @@ Protected Attributes</h2></td></tr>
 Private Slots</h2></td></tr>
 <tr class="memitem:a712c95c59f73f5da3a6a2ffcea091ef7"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthorizationWidget.html#a712c95c59f73f5da3a6a2ffcea091ef7">slot_sign_pBtn_clicked</a> ()</td></tr>
 <tr class="separator:a712c95c59f73f5da3a6a2ffcea091ef7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa44656e7365ab13327dda061812462d0"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthorizationWidget.html#aa44656e7365ab13327dda061812462d0">slot_SignInRequest</a> ()</td></tr>
+<tr class="separator:aa44656e7365ab13327dda061812462d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab82e7ca531bce1e20cbc39ac979181b8"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthorizationWidget.html#ab82e7ca531bce1e20cbc39ac979181b8">slot_SignInResponse</a> (const std::string &amp;status)</td></tr>
+<tr class="separator:ab82e7ca531bce1e20cbc39ac979181b8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a2ebc435097730c03e87473c76e9e710c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthorizationWidget.html#a2ebc435097730c03e87473c76e9e710c">setupUi</a> ()</td></tr>
-<tr class="separator:a2ebc435097730c03e87473c76e9e710c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abc75cda0961edadb794aec4b6f873616"><td class="memItemLeft" align="right" valign="top">virtual QHBoxLayout *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthorizationWidget.html#abc75cda0961edadb794aec4b6f873616">createConfirmLine</a> ()</td></tr>
 <tr class="separator:abc75cda0961edadb794aec4b6f873616"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -243,7 +255,33 @@ Private Member Functions</h2></td></tr>
       </table>
   </td>
   <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ad3dfe2fc09a18c8b6a21117e37a429f0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad3dfe2fc09a18c8b6a21117e37a429f0">&#9670;&nbsp;</a></span>showError()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AuthorizationWidget::showError </td>
+          <td>(</td>
+          <td class="paramtype">const QString &amp;&#160;</td>
+          <td class="paramname"><em>err</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -301,6 +339,57 @@ Private Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="aa44656e7365ab13327dda061812462d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa44656e7365ab13327dda061812462d0">&#9670;&nbsp;</a></span>slot_SignInRequest</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AuthorizationWidget::slot_SignInRequest </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ab82e7ca531bce1e20cbc39ac979181b8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab82e7ca531bce1e20cbc39ac979181b8">&#9670;&nbsp;</a></span>slot_SignInResponse</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void AuthorizationWidget::slot_SignInResponse </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>status</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="adf1fb420589bc8ce730e8ddd74017867"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adf1fb420589bc8ce730e8ddd74017867">&#9670;&nbsp;</a></span>_processor</h2>
@@ -335,6 +424,28 @@ Private Member Functions</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">QPushButton* AuthorizationWidget::changeSign_pBtn {nullptr}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">protected</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="aedbfc6876081e39e6de8dbf0aca6730e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aedbfc6876081e39e6de8dbf0aca6730e">&#9670;&nbsp;</a></span>err_lbl</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QLabel* AuthorizationWidget::err_lbl {nullptr}</td>
         </tr>
       </table>
   </td>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.11</span>
+   &#160;<span id="projectnumber">0.0.12</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -77,28 +77,35 @@ $(function() {
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="IServerProcessor_8h.html">IServerProcessor.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &quot;../database/Database.h&quot;</span></div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;<span class="preprocessor">#include &lt;boost/property_tree/ptree.hpp&gt;</span></div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classServerProcessor.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classServerProcessor.html">ServerProcessor</a> : <span class="keyword">public</span> <a class="code" href="classIServerProcessor.html">IServerProcessor</a></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classServerProcessor.html#a24d0e13a9f27b5950a697fea58dd0f59">   11</a></span>&#160;    std::shared_ptr&lt;IDatabase&gt; <a class="code" href="classServerProcessor.html#a24d0e13a9f27b5950a697fea58dd0f59">_db</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classServerProcessor.html#a077ebf1e5a0174434851ad93b6491c88">ServerProcessor</a>(<span class="keyword">const</span> std::shared_ptr&lt;IDatabase&gt; &amp;db);</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    std::string <a class="code" href="classServerProcessor.html#aed9380ea29a96f4fa2facaf80ca0a408">getResponse</a>(<span class="keyword">const</span> std::string &amp;request) <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="comment">//    void parseRequest(const std::string &amp;request);</span></div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;};</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160; </div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="preprocessor">#endif // SERVERPROCESSOR_H</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="preprocessor">#include &lt;memory&gt;</span></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classServerProcessor.html">   11</a></span>&#160;<span class="keyword">class </span><a class="code" href="classServerProcessor.html">ServerProcessor</a> : <span class="keyword">public</span> <a class="code" href="classIServerProcessor.html">IServerProcessor</a></div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;{</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classServerProcessor.html#a24d0e13a9f27b5950a697fea58dd0f59">   13</a></span>&#160;    std::shared_ptr&lt;IDatabase&gt; <a class="code" href="classServerProcessor.html#a24d0e13a9f27b5950a697fea58dd0f59">_db</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classServerProcessor.html#aa3a5b87044674d1605e300068d51fa58">   14</a></span>&#160;    <span class="keyword">const</span> std::string <a class="code" href="classServerProcessor.html#aa3a5b87044674d1605e300068d51fa58">errResponse</a> = <span class="stringliteral">&quot;{\&quot;response_type\&quot;: \&quot;sign_up\&quot;, \&quot;status\&quot;: \&quot;err\&quot;}\n&quot;</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classServerProcessor.html#a077ebf1e5a0174434851ad93b6491c88">ServerProcessor</a>(<span class="keyword">const</span> std::shared_ptr&lt;IDatabase&gt; &amp;db);</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    std::string <a class="code" href="classServerProcessor.html#aed9380ea29a96f4fa2facaf80ca0a408">getResponse</a>(<span class="keyword">const</span> std::string &amp;request) <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    std::string <a class="code" href="classServerProcessor.html#a03db4d97917aa166502fc97c09f23651">signUpResponse</a>(<span class="keyword">const</span> boost::property_tree::ptree &amp;requestRoot);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    std::string <a class="code" href="classServerProcessor.html#a567b9ae0bbe7d90d6e7d9d8fef894aed">signInResponse</a>(<span class="keyword">const</span> boost::property_tree::ptree &amp;requestRoot);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;};</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="preprocessor">#endif // SERVERPROCESSOR_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aIServerProcessor_8h_html"><div class="ttname"><a href="IServerProcessor_8h.html">IServerProcessor.h</a></div></div>
 <div class="ttc" id="aclassIServerProcessor_html"><div class="ttname"><a href="classIServerProcessor.html">IServerProcessor</a></div><div class="ttdef"><b>Definition:</b> IServerProcessor.h:6</div></div>
-<div class="ttc" id="aclassServerProcessor_html_a24d0e13a9f27b5950a697fea58dd0f59"><div class="ttname"><a href="classServerProcessor.html#a24d0e13a9f27b5950a697fea58dd0f59">ServerProcessor::_db</a></div><div class="ttdeci">std::shared_ptr&lt; IDatabase &gt; _db</div><div class="ttdef"><b>Definition:</b> ServerProcessor.h:11</div></div>
-<div class="ttc" id="aclassServerProcessor_html"><div class="ttname"><a href="classServerProcessor.html">ServerProcessor</a></div><div class="ttdef"><b>Definition:</b> ServerProcessor.h:9</div></div>
-<div class="ttc" id="aclassServerProcessor_html_a077ebf1e5a0174434851ad93b6491c88"><div class="ttname"><a href="classServerProcessor.html#a077ebf1e5a0174434851ad93b6491c88">ServerProcessor::ServerProcessor</a></div><div class="ttdeci">ServerProcessor(const std::shared_ptr&lt; IDatabase &gt; &amp;db)</div><div class="ttdef"><b>Definition:</b> ServerProcessor.cpp:8</div></div>
-<div class="ttc" id="aclassServerProcessor_html_aed9380ea29a96f4fa2facaf80ca0a408"><div class="ttname"><a href="classServerProcessor.html#aed9380ea29a96f4fa2facaf80ca0a408">ServerProcessor::getResponse</a></div><div class="ttdeci">std::string getResponse(const std::string &amp;request) override</div><div class="ttdef"><b>Definition:</b> ServerProcessor.cpp:13</div></div>
+<div class="ttc" id="aclassServerProcessor_html_a24d0e13a9f27b5950a697fea58dd0f59"><div class="ttname"><a href="classServerProcessor.html#a24d0e13a9f27b5950a697fea58dd0f59">ServerProcessor::_db</a></div><div class="ttdeci">std::shared_ptr&lt; IDatabase &gt; _db</div><div class="ttdef"><b>Definition:</b> ServerProcessor.h:13</div></div>
+<div class="ttc" id="aclassServerProcessor_html"><div class="ttname"><a href="classServerProcessor.html">ServerProcessor</a></div><div class="ttdef"><b>Definition:</b> ServerProcessor.h:11</div></div>
+<div class="ttc" id="aclassServerProcessor_html_a567b9ae0bbe7d90d6e7d9d8fef894aed"><div class="ttname"><a href="classServerProcessor.html#a567b9ae0bbe7d90d6e7d9d8fef894aed">ServerProcessor::signInResponse</a></div><div class="ttdeci">std::string signInResponse(const boost::property_tree::ptree &amp;requestRoot)</div><div class="ttdef"><b>Definition:</b> ServerProcessor.cpp:69</div></div>
+<div class="ttc" id="aclassServerProcessor_html_a077ebf1e5a0174434851ad93b6491c88"><div class="ttname"><a href="classServerProcessor.html#a077ebf1e5a0174434851ad93b6491c88">ServerProcessor::ServerProcessor</a></div><div class="ttdeci">ServerProcessor(const std::shared_ptr&lt; IDatabase &gt; &amp;db)</div><div class="ttdef"><b>Definition:</b> ServerProcessor.cpp:7</div></div>
+<div class="ttc" id="aclassServerProcessor_html_aed9380ea29a96f4fa2facaf80ca0a408"><div class="ttname"><a href="classServerProcessor.html#aed9380ea29a96f4fa2facaf80ca0a408">ServerProcessor::getResponse</a></div><div class="ttdeci">std::string getResponse(const std::string &amp;request) override</div><div class="ttdef"><b>Definition:</b> ServerProcessor.cpp:12</div></div>
+<div class="ttc" id="aclassServerProcessor_html_aa3a5b87044674d1605e300068d51fa58"><div class="ttname"><a href="classServerProcessor.html#aa3a5b87044674d1605e300068d51fa58">ServerProcessor::errResponse</a></div><div class="ttdeci">const std::string errResponse</div><div class="ttdef"><b>Definition:</b> ServerProcessor.h:14</div></div>
+<div class="ttc" id="aclassServerProcessor_html_a03db4d97917aa166502fc97c09f23651"><div class="ttname"><a href="classServerProcessor.html#a03db4d97917aa166502fc97c09f23651">ServerProcessor::signUpResponse</a></div><div class="ttdeci">std::string signUpResponse(const boost::property_tree::ptree &amp;requestRoot)</div><div class="ttdef"><b>Definition:</b> ServerProcessor.cpp:36</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

@@ -15,9 +15,11 @@ public:
     ~ClientProcessor();
 
     void start() override;
+    bool isRunning() const override;
     void sendMsg(const std::string &msg) override;
 
     void signUp_request(const QString &login, const QString &password) override;
+    void signIn_request(const QString &login, const QString &password) override;
 
 private slots:
     void slot_getResponse(const std::string &response) override;

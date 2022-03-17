@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.11</span>
+   &#160;<span id="projectnumber">0.0.12</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -76,13 +76,15 @@ $(function() {
   <tr><td class="entry"><a class="el" href="classDatabase.html#ac830887489c9e31657dbe7a97a826d59">callback</a>(void *context, int columns, char **data, char **)</td><td class="entry"><a class="el" href="classDatabase.html">Database</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">static</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classDatabase.html#ac4891aa6ab13484c10208693b95c79a9">create</a>() override</td><td class="entry"><a class="el" href="classDatabase.html">Database</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classDatabase.html#a8a4f2194234538961d7a45a3d83b8dad">Database</a>(const char *dbName)</td><td class="entry"><a class="el" href="classDatabase.html">Database</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classDatabase.html#a07e024cf8ebf89e9fc000c292f16cd45">exec</a>(const std::string &amp;query, sqlite3_callback callback=nullptr, void *context=nullptr)</td><td class="entry"><a class="el" href="classDatabase.html">Database</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classDatabase.html#a29a9135e679d25d25b644f7c759a10c0">exec</a>(const std::string &amp;query, sqlite3_callback callback=nullptr, void *context=nullptr)</td><td class="entry"><a class="el" href="classDatabase.html">Database</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classDatabase.html#a60ca5177e0773dde89a88a36ebf612e4">getUserId</a>(const std::string &amp;login, int &amp;id) override</td><td class="entry"><a class="el" href="classDatabase.html">Database</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classDatabase.html#ab5d34ddef84bf9173827f230207f6e2d">getUserPassword</a>(const int id, std::string &amp;result) override</td><td class="entry"><a class="el" href="classDatabase.html">Database</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classIDatabase.html#aeca95478f1091eebb28139a28c33cf50">IDatabase</a>()=default</td><td class="entry"><a class="el" href="classIDatabase.html">IDatabase</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classDatabase.html#a2d0466870100dd9d0a3d88e2b8dd9693">insertUser</a>(const std::string &amp;login, const std::string &amp;password) override</td><td class="entry"><a class="el" href="classDatabase.html">Database</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
   <tr><td class="entry"><a class="el" href="classDatabase.html#a4d796ad4ad8a1354f6dbc916dad12948">invalidId</a>() const override</td><td class="entry"><a class="el" href="classDatabase.html">Database</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classDatabase.html#ad719bd21bf8252b73c1da1b50d7ca4ec">maxId</a>(const std::string &amp;table, const std::string &amp;id=&quot;id&quot;)</td><td class="entry"><a class="el" href="classDatabase.html">Database</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classDatabase.html#ac016c55f5516a3d70b60e659f6e24895">ok</a>() const override</td><td class="entry"><a class="el" href="classDatabase.html">Database</a></td><td class="entry"><span class="mlabel">inline</span><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classDatabase.html#ab5fd4ed455d34297679b1a0f36a8143b">open</a>() override</td><td class="entry"><a class="el" href="classDatabase.html">Database</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classDatabase.html#ab5fd4ed455d34297679b1a0f36a8143b">open</a>() override</td><td class="entry"><a class="el" href="classDatabase.html">Database</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classDatabase.html#a44cfd7bdda8e5f0545301326a7838d86">value</a>(const std::string &amp;query, std::string &amp;value)</td><td class="entry"><a class="el" href="classDatabase.html">Database</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="classDatabase.html#a84d399a2ad58d69daab9b05330e1316d">~Database</a>()</td><td class="entry"><a class="el" href="classDatabase.html">Database</a></td><td class="entry"></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classIDatabase.html#a6535769342a3ea52b1f95f1cdfe2ff54">~IDatabase</a>()=default</td><td class="entry"><a class="el" href="classIDatabase.html">IDatabase</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->

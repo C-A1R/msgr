@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.11</span>
+   &#160;<span id="projectnumber">0.0.12</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -71,10 +71,13 @@ $(function() {
 <p>This is the complete list of members for <a class="el" href="classServerProcessor.html">ServerProcessor</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classServerProcessor.html#a24d0e13a9f27b5950a697fea58dd0f59">_db</a></td><td class="entry"><a class="el" href="classServerProcessor.html">ServerProcessor</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classServerProcessor.html#aed9380ea29a96f4fa2facaf80ca0a408">getResponse</a>(const std::string &amp;request) override</td><td class="entry"><a class="el" href="classServerProcessor.html">ServerProcessor</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classIServerProcessor.html#aee941c856cdeaf5ac7fa4808fc7e8dfe">IServerProcessor</a>()=default</td><td class="entry"><a class="el" href="classIServerProcessor.html">IServerProcessor</a></td><td class="entry"></td></tr>
-  <tr><td class="entry"><a class="el" href="classServerProcessor.html#a077ebf1e5a0174434851ad93b6491c88">ServerProcessor</a>(const std::shared_ptr&lt; IDatabase &gt; &amp;db)</td><td class="entry"><a class="el" href="classServerProcessor.html">ServerProcessor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classIServerProcessor.html#a69e3473d80b74c905a51ff5433317bf6">~IServerProcessor</a>()=default</td><td class="entry"><a class="el" href="classIServerProcessor.html">IServerProcessor</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classServerProcessor.html#aa3a5b87044674d1605e300068d51fa58">errResponse</a></td><td class="entry"><a class="el" href="classServerProcessor.html">ServerProcessor</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classServerProcessor.html#aed9380ea29a96f4fa2facaf80ca0a408">getResponse</a>(const std::string &amp;request) override</td><td class="entry"><a class="el" href="classServerProcessor.html">ServerProcessor</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classIServerProcessor.html#aee941c856cdeaf5ac7fa4808fc7e8dfe">IServerProcessor</a>()=default</td><td class="entry"><a class="el" href="classIServerProcessor.html">IServerProcessor</a></td><td class="entry"></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classServerProcessor.html#a077ebf1e5a0174434851ad93b6491c88">ServerProcessor</a>(const std::shared_ptr&lt; IDatabase &gt; &amp;db)</td><td class="entry"><a class="el" href="classServerProcessor.html">ServerProcessor</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classServerProcessor.html#a567b9ae0bbe7d90d6e7d9d8fef894aed">signInResponse</a>(const boost::property_tree::ptree &amp;requestRoot)</td><td class="entry"><a class="el" href="classServerProcessor.html">ServerProcessor</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classServerProcessor.html#a03db4d97917aa166502fc97c09f23651">signUpResponse</a>(const boost::property_tree::ptree &amp;requestRoot)</td><td class="entry"><a class="el" href="classServerProcessor.html">ServerProcessor</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classIServerProcessor.html#a69e3473d80b74c905a51ff5433317bf6">~IServerProcessor</a>()=default</td><td class="entry"><a class="el" href="classIServerProcessor.html">IServerProcessor</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
 </table></div><!-- contents -->
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

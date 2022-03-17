@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['_5fht_5515',['_ht',['../structHash_1_1__ht.html',1,'Hash']]]
+  ['authorizationwidget_176',['AuthorizationWidget',['../classAuthorizationWidget.html',1,'']]]
 ];
