@@ -16,11 +16,21 @@ AuthorizationWidget::AuthorizationWidget(const std::shared_ptr<IClientProcessor>
 void AuthorizationWidget::init()
 {
     setupUi();
+    connect(sign_pBtn, &QPushButton::clicked, this, &AuthorizationWidget::slot_SignInRequest);
+    connect(_processor.get(), &IClientProcessor::signal_signInResponse, this, &AuthorizationWidget::slot_SignInResponse);
 }
 
 void AuthorizationWidget::setupUi()
 {
     auto main_vLay = new QVBoxLayout();
+
+    err_lbl = new QLabel("error", this);
+    err_lbl->setStyleSheet(QStringLiteral("color: red;"));
+    err_lbl->setVisible(false);
+    auto err_hLay = new QHBoxLayout();
+    err_hLay->addStretch();
+    err_hLay->addWidget(err_lbl);
+    err_hLay->addStretch();
 
     login_lEdit = new QLineEdit(this);
     login_lEdit->setPlaceholderText(QStringLiteral("Login"));
@@ -55,6 +65,7 @@ void AuthorizationWidget::setupUi()
     changeSign_hLay->addStretch();
 
     main_vLay->addStretch();
+    main_vLay->addLayout(err_hLay);
     main_vLay->addLayout(login_hLay);
     main_vLay->addLayout(password_hLay);
     if (confirmPassword_hLay)
@@ -68,7 +79,42 @@ void AuthorizationWidget::setupUi()
     setLayout(main_vLay);
 }
 
+void AuthorizationWidget::showError(const QString &err)
+{
+    err_lbl->setText(err);
+    err_lbl->setVisible(true);
+}
+
 void AuthorizationWidget::slot_sign_pBtn_clicked()
 {
     emit signal_changeSign(MainWidgets::Registration);
+}
+
+void AuthorizationWidget::slot_SignInRequest()
+{
+    if (login_lEdit->text().isEmpty() || password_lEdit->text().isEmpty())
+    {
+        return;
+    }
+    _processor->signIn_request(login_lEdit->text(), password_lEdit->text());
+}
+
+void AuthorizationWidget::slot_SignInResponse(const std::string &status)
+{
+    if (status == "ok")
+    {
+        emit signal_changeSign(MainWidgets::Chat);
+    }
+    else if (status == "login_not_exists")
+    {
+        showError(QStringLiteral("This login does not exist"));
+    }
+    else if (status == "password_incorrect")
+    {
+        showError(QStringLiteral("Password is incorrect"));
+    }
+    else
+    {
+        showError(QStringLiteral("Error"));
+    }
 }

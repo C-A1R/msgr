@@ -6,6 +6,7 @@
 #include "client_processor/ClientProcessor.h"
 #include "MainWidgets.h"
 
+class QLabel;
 class QLineEdit;
 class QPushButton;
 class QHBoxLayout;
@@ -15,6 +16,7 @@ class AuthorizationWidget : public QWidget
     Q_OBJECT
 
 protected:
+    QLabel *err_lbl{nullptr};
     QLineEdit *login_lEdit{nullptr};
     QLineEdit *password_lEdit{nullptr};
     QPushButton *sign_pBtn{nullptr};
@@ -27,14 +29,19 @@ public:
     virtual void init();
 
 private:
-    void setupUi();
     virtual QHBoxLayout *createConfirmLine() {return nullptr;}
+
+protected:
+    void setupUi();
+    void showError(const QString &err);
 
 signals:
     void signal_changeSign(MainWidgets);
 
 private slots:
     virtual void slot_sign_pBtn_clicked();
+    void slot_SignInRequest();
+    void slot_SignInResponse(const std::string &status);
 };
 
 #endif // AUTHORIZATIONWIDGET_H

@@ -28,6 +28,11 @@ void ClientProcessor::start()
     _clientThread->start();
 }
 
+bool ClientProcessor::isRunning() const
+{
+    return _clientThread->isRunning();
+}
+
 void ClientProcessor::sendMsg(const std::string &msg)
 {
     if (msg.empty())
@@ -48,7 +53,22 @@ void ClientProcessor::signUp_request(const QString &login, const QString &passwo
     root.put("request_type", "sign_up");
     root.put("user.login", login.toStdString());
     root.put("user.password", password.toStdString());
+    std::stringstream stream;
+    boost::property_tree::write_json(stream, root);
+    emit signal_sendRequest(stream.str() + "\n");
+}
 
+void ClientProcessor::signIn_request(const QString &login, const QString &password)
+{
+    if (login.isEmpty() || password.isEmpty())
+    {
+        return;
+    }
+
+    boost::property_tree::ptree root;
+    root.put("request_type", "sign_in");
+    root.put("user.login", login.toStdString());
+    root.put("user.password", password.toStdString());
     std::stringstream stream;
     boost::property_tree::write_json(stream, root);
     emit signal_sendRequest(stream.str() + "\n");
@@ -56,9 +76,10 @@ void ClientProcessor::signUp_request(const QString &login, const QString &passwo
 
 void ClientProcessor::slot_getResponse(const std::string &response)
 {
-    std::cout << "# response " << response;
+    std::cout << response;
     if (response.empty() || response == "pong\n")
     {
+        _isStarted = true;
         return;
     }
 
@@ -70,6 +91,10 @@ void ClientProcessor::slot_getResponse(const std::string &response)
     if (responseType == "sign_up")
     {
         emit signal_signUpResponse(root.get<std::string>("status"));
+    }
+    if (responseType == "sign_in")
+    {
+        emit signal_signInResponse(root.get<std::string>("status"));
     }
 
 //    emit signal_sendToGui(response);

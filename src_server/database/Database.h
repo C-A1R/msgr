@@ -22,8 +22,6 @@ public:
     Database(const char *dbName);
     ~Database();
 
-    std::string ok() const override {return "OK\n";}
-
     /**
      * @brief создать таблицы
      */
@@ -41,6 +39,9 @@ public:
      * @return id нового пользователя
      */
     int insertUser(const std::string &login, const std::string &password) override;
+
+    bool getUserId(const std::string &login, int &id) override;
+    bool getUserPassword(const int id, std::string &result) override;
 
 
 
@@ -64,7 +65,7 @@ private:
     /**
      * @brief выполнить запрос в базу
      */
-    std::string exec(const std::string &query, sqlite3_callback callback = nullptr, void *context = nullptr);
+    bool exec(const std::string &query, sqlite3_callback callback = nullptr, void *context = nullptr);
 
     /**
      * @brief заполняет context результатом выборки
@@ -73,6 +74,7 @@ private:
 
 private:
     int maxId(const std::string &table, const std::string &id = "id");
+    bool value(const std::string &query, std::string &value);
 };
 
 #endif // DATABASE_H

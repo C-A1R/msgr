@@ -1,5 +1,7 @@
 #include "ClientThread.h"
 
+#include "iostream"
+
 ClientThread::ClientThread()
 {
     _client = std::make_unique<Client>(_io_context);
@@ -15,8 +17,10 @@ ClientThread::~ClientThread()
 
 void ClientThread::run()
 {
+//    std::cout << "# run begin" << std::endl;
     _client->start("localhost", "9000");
     _io_context.run();
+//    std::cout << "# run end" << std::endl;
 }
 
 void ClientThread::slot_stopClient()
