@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.12</span>
+   &#160;<span id="projectnumber">0.0.13</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -78,36 +78,36 @@ $(function() {
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
 <div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Client_8h.html">Client.h</a>&quot;</span></div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno"><a class="line" href="classClientThread.html">    8</a></span>&#160;<span class="keyword">class </span><a class="code" href="classClientThread.html">ClientThread</a> : <span class="keyword">public</span> QThread</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;{</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classClientThread.html#aa7fd959afd3e6726c4b232b94e439548">   11</a></span>&#160;    boost::asio::io_context <a class="code" href="classClientThread.html#aa7fd959afd3e6726c4b232b94e439548">_io_context</a>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classClientThread.html#a5998ae5933f60cd0c7645e3f9216fde0">   12</a></span>&#160;    std::unique_ptr&lt;Client&gt; <a class="code" href="classClientThread.html#a5998ae5933f60cd0c7645e3f9216fde0">_client</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <a class="code" href="classClientThread.html#a1afcb2ba5bb43e097c24943c7ed146b5">ClientThread</a>();</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="classClientThread.html#a7d9131c33261203409522c9fde3b26b1">~ClientThread</a>();</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classClientThread.html#a928ef0e2be22e15fa5ca1ccd03ed9c6e">run</a>();</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160; </div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;signals:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classClientThread.html#a69382f3ae12a9775840dafc946a11b86">signal_sendToClient</a>(<span class="keyword">const</span> std::string &amp;);</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classClientThread.html#ac89aaeffb250ce8aa73a2e8ee562c168">signal_getFromThread</a>(<span class="keyword">const</span> std::string &amp;);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span> slots:</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classClientThread.html#a640fe38541ddf4a510ed9e4100a3da3b">slot_stopClient</a>();</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;};</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160; </div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;<span class="preprocessor">#endif // CLIENTTHREAD_H</span></div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classClientThread.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classClientThread.html">ClientThread</a> : <span class="keyword">public</span> QThread</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    Q_OBJECT</div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classClientThread.html#aa7fd959afd3e6726c4b232b94e439548">   12</a></span>&#160;    boost::asio::io_context <a class="code" href="classClientThread.html#aa7fd959afd3e6726c4b232b94e439548">_io_context</a>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classClientThread.html#a5998ae5933f60cd0c7645e3f9216fde0">   13</a></span>&#160;    std::unique_ptr&lt;Client&gt; <a class="code" href="classClientThread.html#a5998ae5933f60cd0c7645e3f9216fde0">_client</a>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <a class="code" href="classClientThread.html#a1afcb2ba5bb43e097c24943c7ed146b5">ClientThread</a>();</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <a class="code" href="classClientThread.html#a7d9131c33261203409522c9fde3b26b1">~ClientThread</a>();</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classClientThread.html#a928ef0e2be22e15fa5ca1ccd03ed9c6e">run</a>();</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;signals:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classClientThread.html#a69382f3ae12a9775840dafc946a11b86">signal_sendToClient</a>(<span class="keyword">const</span> std::string &amp;);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classClientThread.html#a697d506320f6ee4c0b69bd8223f4680e">signal_responseRecieved</a>(<span class="keyword">const</span> std::string &amp;);</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">public</span> slots:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classClientThread.html#a640fe38541ddf4a510ed9e4100a3da3b">slot_stopClient</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;};</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="preprocessor">#endif // CLIENTTHREAD_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aClient_8h_html"><div class="ttname"><a href="Client_8h.html">Client.h</a></div></div>
-<div class="ttc" id="aclassClientThread_html_aa7fd959afd3e6726c4b232b94e439548"><div class="ttname"><a href="classClientThread.html#aa7fd959afd3e6726c4b232b94e439548">ClientThread::_io_context</a></div><div class="ttdeci">boost::asio::io_context _io_context</div><div class="ttdef"><b>Definition:</b> ClientThread.h:11</div></div>
+<div class="ttc" id="aclassClientThread_html_aa7fd959afd3e6726c4b232b94e439548"><div class="ttname"><a href="classClientThread.html#aa7fd959afd3e6726c4b232b94e439548">ClientThread::_io_context</a></div><div class="ttdeci">boost::asio::io_context _io_context</div><div class="ttdef"><b>Definition:</b> ClientThread.h:12</div></div>
+<div class="ttc" id="aclassClientThread_html_a697d506320f6ee4c0b69bd8223f4680e"><div class="ttname"><a href="classClientThread.html#a697d506320f6ee4c0b69bd8223f4680e">ClientThread::signal_responseRecieved</a></div><div class="ttdeci">void signal_responseRecieved(const std::string &amp;)</div></div>
 <div class="ttc" id="aclassClientThread_html_a7d9131c33261203409522c9fde3b26b1"><div class="ttname"><a href="classClientThread.html#a7d9131c33261203409522c9fde3b26b1">ClientThread::~ClientThread</a></div><div class="ttdeci">~ClientThread()</div><div class="ttdef"><b>Definition:</b> ClientThread.cpp:12</div></div>
-<div class="ttc" id="aclassClientThread_html_ac89aaeffb250ce8aa73a2e8ee562c168"><div class="ttname"><a href="classClientThread.html#ac89aaeffb250ce8aa73a2e8ee562c168">ClientThread::signal_getFromThread</a></div><div class="ttdeci">void signal_getFromThread(const std::string &amp;)</div></div>
-<div class="ttc" id="aclassClientThread_html_a640fe38541ddf4a510ed9e4100a3da3b"><div class="ttname"><a href="classClientThread.html#a640fe38541ddf4a510ed9e4100a3da3b">ClientThread::slot_stopClient</a></div><div class="ttdeci">void slot_stopClient()</div><div class="ttdef"><b>Definition:</b> ClientThread.cpp:26</div></div>
+<div class="ttc" id="aclassClientThread_html_a640fe38541ddf4a510ed9e4100a3da3b"><div class="ttname"><a href="classClientThread.html#a640fe38541ddf4a510ed9e4100a3da3b">ClientThread::slot_stopClient</a></div><div class="ttdeci">void slot_stopClient()</div><div class="ttdef"><b>Definition:</b> ClientThread.cpp:24</div></div>
 <div class="ttc" id="aclassClientThread_html_a928ef0e2be22e15fa5ca1ccd03ed9c6e"><div class="ttname"><a href="classClientThread.html#a928ef0e2be22e15fa5ca1ccd03ed9c6e">ClientThread::run</a></div><div class="ttdeci">void run()</div><div class="ttdef"><b>Definition:</b> ClientThread.cpp:18</div></div>
 <div class="ttc" id="aclassClientThread_html_a1afcb2ba5bb43e097c24943c7ed146b5"><div class="ttname"><a href="classClientThread.html#a1afcb2ba5bb43e097c24943c7ed146b5">ClientThread::ClientThread</a></div><div class="ttdeci">ClientThread()</div><div class="ttdef"><b>Definition:</b> ClientThread.cpp:5</div></div>
-<div class="ttc" id="aclassClientThread_html_a5998ae5933f60cd0c7645e3f9216fde0"><div class="ttname"><a href="classClientThread.html#a5998ae5933f60cd0c7645e3f9216fde0">ClientThread::_client</a></div><div class="ttdeci">std::unique_ptr&lt; Client &gt; _client</div><div class="ttdef"><b>Definition:</b> ClientThread.h:12</div></div>
-<div class="ttc" id="aclassClientThread_html"><div class="ttname"><a href="classClientThread.html">ClientThread</a></div><div class="ttdef"><b>Definition:</b> ClientThread.h:8</div></div>
+<div class="ttc" id="aclassClientThread_html_a5998ae5933f60cd0c7645e3f9216fde0"><div class="ttname"><a href="classClientThread.html#a5998ae5933f60cd0c7645e3f9216fde0">ClientThread::_client</a></div><div class="ttdeci">std::unique_ptr&lt; Client &gt; _client</div><div class="ttdef"><b>Definition:</b> ClientThread.h:13</div></div>
+<div class="ttc" id="aclassClientThread_html"><div class="ttname"><a href="classClientThread.html">ClientThread</a></div><div class="ttdoc">отдельный поток для взаимодействий с сервером</div><div class="ttdef"><b>Definition:</b> ClientThread.h:9</div></div>
 <div class="ttc" id="aclassClientThread_html_a69382f3ae12a9775840dafc946a11b86"><div class="ttname"><a href="classClientThread.html#a69382f3ae12a9775840dafc946a11b86">ClientThread::signal_sendToClient</a></div><div class="ttdeci">void signal_sendToClient(const std::string &amp;)</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

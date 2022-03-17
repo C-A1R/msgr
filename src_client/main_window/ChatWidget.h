@@ -26,8 +26,8 @@ private:
     void initUi();
 
 private slots:
-    void slot_sendMsg();
-    void slot_getMsg(const std::string &msg);
+    void slot_outputMessageRequest();
+    void slot_outputMessageResponse(const std::string &text);
 
 };
 

@@ -26,7 +26,7 @@ private:
     void writeHandler(const std::string &msg);
 
 signals:
-    void signal_getFromServer(const std::string &);
+    void signal_responseRecieved(const std::string &);
 
 public slots:
     void slot_sendToServer(const std::string &request);

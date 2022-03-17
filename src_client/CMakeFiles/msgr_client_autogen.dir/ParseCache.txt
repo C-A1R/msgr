@@ -6,15 +6,16 @@
 /home/runner/work/msgr/msgr/src_client/client_processor/ClientProcessor.cpp
 /home/runner/work/msgr/msgr/src_client/client/ClientThread.cpp
 /home/runner/work/msgr/msgr/src_client/main_window/MainWidgets.h
-/home/runner/work/msgr/msgr/src_client/main_window/AuthorizationWidget.cpp
-/home/runner/work/msgr/msgr/src_client/client_processor/IClientProcessor.h
- mmc:Q_OBJECT
-/home/runner/work/msgr/msgr/src_client/client/Client.cpp
 /home/runner/work/msgr/msgr/src_client/client_processor/ClientProcessor.h
 /home/runner/work/msgr/msgr/src_client/client/ClientThread.h
  mmc:Q_OBJECT
 /home/runner/work/msgr/msgr/src_client/client/Client.h
  mmc:Q_OBJECT
+/home/runner/work/msgr/msgr/src_client/main_window/AuthorizationWidget.cpp
+/home/runner/work/msgr/msgr/src_client/client/Client.cpp
+/home/runner/work/msgr/msgr/src_client/client_processor/IClientProcessor.h
+ mmc:Q_OBJECT
+/home/runner/work/msgr/msgr/src_client/client_processor/UserInfo.h
 /home/runner/work/msgr/msgr/src_client/main_window/AuthorizationWidget.h
  mmc:Q_OBJECT
 /home/runner/work/msgr/msgr/src_client/main_window/RegistrationWidget.h

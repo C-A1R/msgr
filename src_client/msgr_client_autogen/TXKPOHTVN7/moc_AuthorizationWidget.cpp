@@ -36,15 +36,15 @@ QT_MOC_LITERAL(1, 20, 17), // "signal_changeSign"
 QT_MOC_LITERAL(2, 38, 0), // ""
 QT_MOC_LITERAL(3, 39, 11), // "MainWidgets"
 QT_MOC_LITERAL(4, 51, 22), // "slot_sign_pBtn_clicked"
-QT_MOC_LITERAL(5, 74, 18), // "slot_SignInRequest"
-QT_MOC_LITERAL(6, 93, 19), // "slot_SignInResponse"
+QT_MOC_LITERAL(5, 74, 18), // "slot_signInRequest"
+QT_MOC_LITERAL(6, 93, 19), // "slot_signInResponse"
 QT_MOC_LITERAL(7, 113, 11), // "std::string"
 QT_MOC_LITERAL(8, 125, 6) // "status"
 
     },
     "AuthorizationWidget\0signal_changeSign\0"
     "\0MainWidgets\0slot_sign_pBtn_clicked\0"
-    "slot_SignInRequest\0slot_SignInResponse\0"
+    "slot_signInRequest\0slot_signInResponse\0"
     "std::string\0status"
 };
 #undef QT_MOC_LITERAL
@@ -89,8 +89,8 @@ void AuthorizationWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, 
         switch (_id) {
         case 0: _t->signal_changeSign((*reinterpret_cast< MainWidgets(*)>(_a[1]))); break;
         case 1: _t->slot_sign_pBtn_clicked(); break;
-        case 2: _t->slot_SignInRequest(); break;
-        case 3: _t->slot_SignInResponse((*reinterpret_cast< const std::string(*)>(_a[1]))); break;
+        case 2: _t->slot_signInRequest(); break;
+        case 3: _t->slot_signInResponse((*reinterpret_cast< const std::string(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {

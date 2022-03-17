@@ -5,6 +5,8 @@
 #include <QPushButton>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
+#include <QString>
+#include <QShortcut>
 
 #include <iostream>
 
@@ -12,9 +14,11 @@ ChatWidget::ChatWidget(const std::shared_ptr<IClientProcessor> &processor, QWidg
     : QWidget{parent}, _processor{processor}
 {
     initUi();
-    connect(send_pBtn, &QPushButton::clicked, this, &ChatWidget::slot_sendMsg);
+    auto sendShortcut = new QShortcut(QKeySequence(Qt::Key_Enter), this);
+    connect(sendShortcut, &QShortcut::activated, this, &ChatWidget::slot_outputMessageRequest);
 
-    connect(_processor.get(), &IClientProcessor::signal_sendToGui, this, &ChatWidget::slot_getMsg);
+    connect(send_pBtn, &QPushButton::clicked, this, &ChatWidget::slot_outputMessageRequest);
+    connect(_processor.get(), &IClientProcessor::signal_outputMessageResponse, this, &ChatWidget::slot_outputMessageResponse);
 }
 
 void ChatWidget::initUi()
@@ -35,19 +39,23 @@ void ChatWidget::initUi()
     setLayout(main_vLay);
 }
 
-void ChatWidget::slot_sendMsg()
+void ChatWidget::slot_outputMessageRequest()
 {
-    _processor->sendMsg(msg_lEdit->text().toStdString());
+    _processor->outputMessage_request(msg_lEdit->text().toStdString());
 }
 
-void ChatWidget::slot_getMsg(const std::string &msg)
+void ChatWidget::slot_outputMessageResponse(const std::string &text)
 {
-    std::cout << msg << std::endl;
-    if (msg == "pong\n")
+    QString html;
+    if (!chat_tEdit->toPlainText().isEmpty())
     {
-        return;
+        html = chat_tEdit->toHtml();
     }
+    html += QStringLiteral("<h4 align=\"right\"><font color=\"#943126\">%1:</font></h4>")
+            .arg(QString::fromStdString(_processor->currentLogin()));
+    html += QStringLiteral("<p align=\"right\"><font color=\"#424949\">%1</font></p>")
+            .arg(QString::fromStdString(text));
 
-    chat_tEdit->setText(chat_tEdit->toPlainText() + QString::fromStdString(msg));
+    chat_tEdit->setHtml(html);
     msg_lEdit->clear();
 }

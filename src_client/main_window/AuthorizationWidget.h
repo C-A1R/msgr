@@ -40,8 +40,8 @@ signals:
 
 private slots:
     virtual void slot_sign_pBtn_clicked();
-    void slot_SignInRequest();
-    void slot_SignInResponse(const std::string &status);
+    void slot_signInRequest();
+    void slot_signInResponse(const std::string &status);
 };
 
 #endif // AUTHORIZATIONWIDGET_H

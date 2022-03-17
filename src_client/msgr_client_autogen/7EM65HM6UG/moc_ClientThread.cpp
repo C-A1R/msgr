@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_ClientThread_t {
     QByteArrayData data[6];
-    char stringdata0[83];
+    char stringdata0[86];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -35,12 +35,12 @@ QT_MOC_LITERAL(0, 0, 12), // "ClientThread"
 QT_MOC_LITERAL(1, 13, 19), // "signal_sendToClient"
 QT_MOC_LITERAL(2, 33, 0), // ""
 QT_MOC_LITERAL(3, 34, 11), // "std::string"
-QT_MOC_LITERAL(4, 46, 20), // "signal_getFromThread"
-QT_MOC_LITERAL(5, 67, 15) // "slot_stopClient"
+QT_MOC_LITERAL(4, 46, 23), // "signal_responseRecieved"
+QT_MOC_LITERAL(5, 70, 15) // "slot_stopClient"
 
     },
     "ClientThread\0signal_sendToClient\0\0"
-    "std::string\0signal_getFromThread\0"
+    "std::string\0signal_responseRecieved\0"
     "slot_stopClient"
 };
 #undef QT_MOC_LITERAL
@@ -82,7 +82,7 @@ void ClientThread::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->signal_sendToClient((*reinterpret_cast< const std::string(*)>(_a[1]))); break;
-        case 1: _t->signal_getFromThread((*reinterpret_cast< const std::string(*)>(_a[1]))); break;
+        case 1: _t->signal_responseRecieved((*reinterpret_cast< const std::string(*)>(_a[1]))); break;
         case 2: _t->slot_stopClient(); break;
         default: ;
         }
@@ -97,7 +97,7 @@ void ClientThread::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         }
         {
             using _t = void (ClientThread::*)(const std::string & );
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&ClientThread::signal_getFromThread)) {
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&ClientThread::signal_responseRecieved)) {
                 *result = 1;
                 return;
             }
@@ -153,7 +153,7 @@ void ClientThread::signal_sendToClient(const std::string & _t1)
 }
 
 // SIGNAL 1
-void ClientThread::signal_getFromThread(const std::string & _t1)
+void ClientThread::signal_responseRecieved(const std::string & _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 1, _a);

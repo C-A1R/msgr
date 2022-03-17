@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.12</span>
+   &#160;<span id="projectnumber">0.0.13</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -75,13 +75,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>отдельный поток для взаимодействий с сервером  
+ <a href="classClientThread.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="ClientThread_8h_source.html">ClientThread.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ClientThread:</div>
 <div class="dyncontent">
 <div class="center"><img src="classClientThread__inherit__graph.png" border="0" usemap="#ClientThread_inherit__map" alt="Inheritance graph"/></div>
 <map name="ClientThread_inherit__map" id="ClientThread_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,80,111,107"/>
+<area shape="rect" title="отдельный поток для взаимодействий с сервером" alt="" coords="5,80,111,107"/>
 <area shape="rect" title=" " alt="" coords="19,5,97,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -90,7 +93,7 @@ Collaboration diagram for ClientThread:</div>
 <div class="dyncontent">
 <div class="center"><img src="classClientThread__coll__graph.png" border="0" usemap="#ClientThread_coll__map" alt="Collaboration graph"/></div>
 <map name="ClientThread_coll__map" id="ClientThread_coll__map">
-<area shape="rect" title=" " alt="" coords="5,80,111,107"/>
+<area shape="rect" title="отдельный поток для взаимодействий с сервером" alt="" coords="5,80,111,107"/>
 <area shape="rect" title=" " alt="" coords="19,5,97,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -104,8 +107,8 @@ Public Slots</h2></td></tr>
 Signals</h2></td></tr>
 <tr class="memitem:a69382f3ae12a9775840dafc946a11b86"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientThread.html#a69382f3ae12a9775840dafc946a11b86">signal_sendToClient</a> (const std::string &amp;)</td></tr>
 <tr class="separator:a69382f3ae12a9775840dafc946a11b86"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac89aaeffb250ce8aa73a2e8ee562c168"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientThread.html#ac89aaeffb250ce8aa73a2e8ee562c168">signal_getFromThread</a> (const std::string &amp;)</td></tr>
-<tr class="separator:ac89aaeffb250ce8aa73a2e8ee562c168"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a697d506320f6ee4c0b69bd8223f4680e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientThread.html#a697d506320f6ee4c0b69bd8223f4680e">signal_responseRecieved</a> (const std::string &amp;)</td></tr>
+<tr class="separator:a697d506320f6ee4c0b69bd8223f4680e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -126,7 +129,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:a5998ae5933f60cd0c7645e3f9216fde0"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classClient.html">Client</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClientThread.html#a5998ae5933f60cd0c7645e3f9216fde0">_client</a></td></tr>
 <tr class="separator:a5998ae5933f60cd0c7645e3f9216fde0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>отдельный поток для взаимодействий с сервером </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a1afcb2ba5bb43e097c24943c7ed146b5"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a1afcb2ba5bb43e097c24943c7ed146b5">&#9670;&nbsp;</a></span>ClientThread()</h2>
 
@@ -187,8 +192,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac89aaeffb250ce8aa73a2e8ee562c168"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac89aaeffb250ce8aa73a2e8ee562c168">&#9670;&nbsp;</a></span>signal_getFromThread</h2>
+<a id="a697d506320f6ee4c0b69bd8223f4680e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a697d506320f6ee4c0b69bd8223f4680e">&#9670;&nbsp;</a></span>signal_responseRecieved</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -197,7 +202,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void ClientThread::signal_getFromThread </td>
+          <td class="memname">void ClientThread::signal_responseRecieved </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>

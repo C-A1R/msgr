@@ -11,7 +11,7 @@
 class ServerProcessor : public IServerProcessor
 {
     std::shared_ptr<IDatabase> _db;
-    const std::string errResponse = "{\"response_type\": \"sign_up\", \"status\": \"err\"}\n";
+    const std::string errResponse = "{\n    \"response_type\": \"error\"\n}\n";
 public:
     ServerProcessor(const std::shared_ptr<IDatabase> &db);
 
@@ -20,6 +20,7 @@ public:
 private:
     std::string signUpResponse(const boost::property_tree::ptree &requestRoot);
     std::string signInResponse(const boost::property_tree::ptree &requestRoot);
+    std::string outputMessageResponse(const boost::property_tree::ptree &requestRoot);
 };
 
 #endif // SERVERPROCESSOR_H

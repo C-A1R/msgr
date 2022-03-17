@@ -2639,6 +2639,7 @@ src_client/CMakeFiles/msgr_client.dir/client_processor/ClientProcessor.cpp.o: sr
   /usr/include/c++/9/ratio \
   /usr/include/c++/9/ctime \
   /usr/include/c++/9/bits/parse_numbers.h \
+  src_client/client_processor/UserInfo.h \
   /usr/include/c++/9/memory \
   /usr/include/c++/9/bits/stl_raw_storage_iter.h \
   /usr/include/c++/9/ext/concurrence.h \
@@ -4749,6 +4750,7 @@ src_client/CMakeFiles/msgr_client.dir/main_window/AuthorizationWidget.cpp.o: src
   src_client/client_processor/IClientProcessor.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
+  src_client/client_processor/UserInfo.h \
   /usr/include/c++/9/memory \
   /usr/include/c++/9/bits/stl_raw_storage_iter.h \
   /usr/include/c++/9/ext/concurrence.h \
@@ -5119,6 +5121,7 @@ src_client/CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.o: src_client/m
   src_client/client_processor/IClientProcessor.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
+  src_client/client_processor/UserInfo.h \
   /usr/include/c++/9/memory \
   /usr/include/c++/9/bits/stl_raw_storage_iter.h \
   /usr/include/c++/9/ext/concurrence.h \
@@ -5155,6 +5158,10 @@ src_client/CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.o: src_client/m
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QShortcut \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qshortcut.h \
   /usr/include/c++/9/iostream
 
 src_client/CMakeFiles/msgr_client.dir/main_window/MainWindow.cpp.o: src_client/main_window/MainWindow.cpp \
@@ -5502,6 +5509,7 @@ src_client/CMakeFiles/msgr_client.dir/main_window/MainWindow.cpp.o: src_client/m
   src_client/client_processor/IClientProcessor.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
+  src_client/client_processor/UserInfo.h \
   src_client/main_window/RegistrationWidget.h \
   src_client/main_window/ChatWidget.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStackedWidget \
@@ -5854,6 +5862,7 @@ src_client/CMakeFiles/msgr_client.dir/main_window/RegistrationWidget.cpp.o: src_
   src_client/client_processor/IClientProcessor.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
+  src_client/client_processor/UserInfo.h \
   /usr/include/c++/9/memory \
   /usr/include/c++/9/bits/stl_raw_storage_iter.h \
   /usr/include/c++/9/ext/concurrence.h \
@@ -7114,6 +7123,7 @@ src_client/CMakeFiles/msgr_client.dir/msgr_client_autogen/mocs_compilation.cpp.o
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h \
   src_client/client_processor/ClientProcessor.h \
   src_client/client_processor/IClientProcessor.h \
+  src_client/client_processor/UserInfo.h \
   src_client/main_window/MainWidgets.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QMetaType \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h \
@@ -7146,6 +7156,10 @@ src_client/msgr_client_autogen/mocs_compilation.cpp:
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstackedwidget.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStackedWidget:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QShortcut:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QString:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h:
 
@@ -7534,6 +7548,8 @@ src_client/main_window/ChatWidget.cpp:
 /usr/include/boost/multi_index/detail/seq_index_node.hpp:
 
 /usr/include/boost/date_time/posix_time/posix_time_types.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qshortcut.h:
 
 /usr/include/c++/9/list:
 
@@ -8459,6 +8475,10 @@ src_client/msgr_client_autogen/7EM65HM6UG/moc_Client.cpp:
 
 /usr/include/boost/asio/ip/address_v4_iterator.hpp:
 
+/usr/include/c++/9/variant:
+
+/usr/include/boost/optional/detail/optional_relops.hpp:
+
 /usr/include/x86_64-linux-gnu/asm/types.h:
 
 /usr/include/boost/mpl/erase_fwd.hpp:
@@ -8930,6 +8950,8 @@ src_client/msgr_client_autogen/7EM65HM6UG/moc_Client.cpp:
 /usr/include/boost/asio/detail/reactor_fwd.hpp:
 
 /usr/include/boost/numeric/conversion/converter.hpp:
+
+src_client/client_processor/UserInfo.h:
 
 src_client/main_window/RegistrationWidget.h:
 
@@ -10770,7 +10792,3 @@ src_client/msgr_client_autogen/TXKPOHTVN7/moc_RegistrationWidget.cpp:
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h:
-
-/usr/include/boost/optional/detail/optional_relops.hpp:
-
-/usr/include/c++/9/variant:

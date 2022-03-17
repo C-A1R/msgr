@@ -2642,6 +2642,7 @@ src_client/CMakeFiles/msgr_client.dir/client_processor/ClientProcessor.cpp.o
  /usr/include/c++/9/ratio
  /usr/include/c++/9/ctime
  /usr/include/c++/9/bits/parse_numbers.h
+ /home/runner/work/msgr/msgr/src_client/client_processor/UserInfo.h
  /usr/include/c++/9/memory
  /usr/include/c++/9/bits/stl_raw_storage_iter.h
  /usr/include/c++/9/ext/concurrence.h
@@ -4754,6 +4755,7 @@ src_client/CMakeFiles/msgr_client.dir/main_window/AuthorizationWidget.cpp.o
  /home/runner/work/msgr/msgr/src_client/client_processor/IClientProcessor.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h
+ /home/runner/work/msgr/msgr/src_client/client_processor/UserInfo.h
  /usr/include/c++/9/memory
  /usr/include/c++/9/bits/stl_raw_storage_iter.h
  /usr/include/c++/9/ext/concurrence.h
@@ -5125,6 +5127,7 @@ src_client/CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.o
  /home/runner/work/msgr/msgr/src_client/client_processor/IClientProcessor.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h
+ /home/runner/work/msgr/msgr/src_client/client_processor/UserInfo.h
  /usr/include/c++/9/memory
  /usr/include/c++/9/bits/stl_raw_storage_iter.h
  /usr/include/c++/9/ext/concurrence.h
@@ -5161,6 +5164,10 @@ src_client/CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/QString
+ /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QShortcut
+ /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qshortcut.h
  /usr/include/c++/9/iostream
 
 src_client/CMakeFiles/msgr_client.dir/main_window/MainWindow.cpp.o
@@ -5509,6 +5516,7 @@ src_client/CMakeFiles/msgr_client.dir/main_window/MainWindow.cpp.o
  /home/runner/work/msgr/msgr/src_client/client_processor/IClientProcessor.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h
+ /home/runner/work/msgr/msgr/src_client/client_processor/UserInfo.h
  /home/runner/work/msgr/msgr/src_client/main_window/RegistrationWidget.h
  /home/runner/work/msgr/msgr/src_client/main_window/ChatWidget.h
  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QStackedWidget
@@ -5862,6 +5870,7 @@ src_client/CMakeFiles/msgr_client.dir/main_window/RegistrationWidget.cpp.o
  /home/runner/work/msgr/msgr/src_client/client_processor/IClientProcessor.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h
+ /home/runner/work/msgr/msgr/src_client/client_processor/UserInfo.h
  /usr/include/c++/9/memory
  /usr/include/c++/9/bits/stl_raw_storage_iter.h
  /usr/include/c++/9/ext/concurrence.h
@@ -7123,6 +7132,7 @@ src_client/CMakeFiles/msgr_client.dir/msgr_client_autogen/mocs_compilation.cpp.o
  /usr/include/x86_64-linux-gnu/qt5/QtGui/qkeysequence.h
  /home/runner/work/msgr/msgr/src_client/client_processor/ClientProcessor.h
  /home/runner/work/msgr/msgr/src_client/client_processor/IClientProcessor.h
+ /home/runner/work/msgr/msgr/src_client/client_processor/UserInfo.h
  /home/runner/work/msgr/msgr/src_client/main_window/MainWidgets.h
  /usr/include/x86_64-linux-gnu/qt5/QtCore/QMetaType
  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h

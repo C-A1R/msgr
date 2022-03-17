@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.12</span>
+   &#160;<span id="projectnumber">0.0.13</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -99,6 +99,10 @@ $(function() {
 : <a class="el" href="classAuthorizationWidget.html#abc75cda0961edadb794aec4b6f873616">AuthorizationWidget</a>
 , <a class="el" href="classRegistrationWidget.html#a9e3934ab8e9a03470edca839e040ab4e">RegistrationWidget</a>
 </li>
+<li>currentLogin()
+: <a class="el" href="classClientProcessor.html#add0c6f2208cbb2eb394367a6fe25d9d2">ClientProcessor</a>
+, <a class="el" href="classIClientProcessor.html#a3e9ed8f0ad86dfe5973e293560844a63">IClientProcessor</a>
+</li>
 </ul>
 
 
@@ -166,10 +170,6 @@ $(function() {
 <li>IServerProcessor()
 : <a class="el" href="classIServerProcessor.html#aee941c856cdeaf5ac7fa4808fc7e8dfe">IServerProcessor</a>
 </li>
-<li>isRunning()
-: <a class="el" href="classClientProcessor.html#aa527020cfbad837dd2307b50ace2116f">ClientProcessor</a>
-, <a class="el" href="classIClientProcessor.html#a5b262091551806261f2684bd04eabe19">IClientProcessor</a>
-</li>
 </ul>
 
 
@@ -187,6 +187,13 @@ $(function() {
 <li>open()
 : <a class="el" href="classDatabase.html#ab5fd4ed455d34297679b1a0f36a8143b">Database</a>
 , <a class="el" href="classIDatabase.html#a759676714eba7f36ab763898f0358b55">IDatabase</a>
+</li>
+<li>outputMessage_request()
+: <a class="el" href="classClientProcessor.html#aef9d55cd91fd7bc6392f2e00cfeb429c">ClientProcessor</a>
+, <a class="el" href="classIClientProcessor.html#a5c4b696f3670834b17c9eabdd70a3e08">IClientProcessor</a>
+</li>
+<li>outputMessageResponse()
+: <a class="el" href="classServerProcessor.html#a67a0d1ebb4ee2a7692f3b80dfda1c27f">ServerProcessor</a>
 </li>
 </ul>
 
@@ -208,10 +215,6 @@ $(function() {
 
 
 <h3><a id="index_s"></a>- s -</h3><ul>
-<li>sendMsg()
-: <a class="el" href="classClientProcessor.html#adf84c36876631d911ad8991e37606a5c">ClientProcessor</a>
-, <a class="el" href="classIClientProcessor.html#aa06c373ca767e8f753aa1965a4e1cbac">IClientProcessor</a>
-</li>
 <li>Server()
 : <a class="el" href="classServer.html#a486a04867d8f44f04763c2c8f6064aa3">Server</a>
 </li>
@@ -231,23 +234,18 @@ $(function() {
 <li>signal_changeSign()
 : <a class="el" href="classAuthorizationWidget.html#a01f709cfd6d0c1f8fcdc9e66a4196362">AuthorizationWidget</a>
 </li>
-<li>signal_getFromServer()
-: <a class="el" href="classClient.html#a1564d6e2b985ff55654188a9ce053afe">Client</a>
+<li>signal_outputMessageResponse()
+: <a class="el" href="classIClientProcessor.html#a67f0c6ac1df5c98f856bdb9cac218831">IClientProcessor</a>
 </li>
-<li>signal_getFromThread()
-: <a class="el" href="classClientThread.html#ac89aaeffb250ce8aa73a2e8ee562c168">ClientThread</a>
+<li>signal_responseRecieved()
+: <a class="el" href="classClient.html#ac653af3869ee192e33f98da69a482bc7">Client</a>
+, <a class="el" href="classClientThread.html#a697d506320f6ee4c0b69bd8223f4680e">ClientThread</a>
 </li>
 <li>signal_sendRequest()
 : <a class="el" href="classIClientProcessor.html#aae2d2a2b792991741bd06d714975b0d9">IClientProcessor</a>
 </li>
 <li>signal_sendToClient()
 : <a class="el" href="classClientThread.html#a69382f3ae12a9775840dafc946a11b86">ClientThread</a>
-</li>
-<li>signal_sendToClientThread()
-: <a class="el" href="classIClientProcessor.html#a69a4eeed28c058a064600aa4db41b11a">IClientProcessor</a>
-</li>
-<li>signal_sendToGui()
-: <a class="el" href="classIClientProcessor.html#a7b65f3959150fa2881e1ee8bea060520">IClientProcessor</a>
 </li>
 <li>signal_signInResponse()
 : <a class="el" href="classIClientProcessor.html#a28ae70d5a3fc20f392ac0d9621d58c05">IClientProcessor</a>
@@ -275,15 +273,15 @@ $(function() {
 <li>slot_changeSign()
 : <a class="el" href="classMainWindow.html#a8a97ec8374b073cf3a31f9e88f4fcb64">MainWindow</a>
 </li>
-<li>slot_getMsg()
-: <a class="el" href="classChatWidget.html#aa0c4da662a5ac32bd2fc050b844f73a6">ChatWidget</a>
+<li>slot_outputMessageRequest()
+: <a class="el" href="classChatWidget.html#afbf7238ef286c4e6cc79cc06ba184067">ChatWidget</a>
 </li>
-<li>slot_getResponse()
-: <a class="el" href="classClientProcessor.html#a979f490356856230657c1a1db94b7589">ClientProcessor</a>
-, <a class="el" href="classIClientProcessor.html#a53a5243841c81d8d28414ae5c37cb2f7">IClientProcessor</a>
+<li>slot_outputMessageResponse()
+: <a class="el" href="classChatWidget.html#ab335e68df7bf00a50c2172ab3bea0ca2">ChatWidget</a>
 </li>
-<li>slot_sendMsg()
-: <a class="el" href="classChatWidget.html#ac2cc36bf5647d526e83c8088a8ed1e4a">ChatWidget</a>
+<li>slot_parseResponse()
+: <a class="el" href="classClientProcessor.html#a6e8afdf7d0fc9588fcb9e603d7a6e834">ClientProcessor</a>
+, <a class="el" href="classIClientProcessor.html#a1e5d2487978dc2f1221654e0c1b2963a">IClientProcessor</a>
 </li>
 <li>slot_sendToServer()
 : <a class="el" href="classClient.html#abeadfb47f8040e2148ddc0dc9e61b0b2">Client</a>
@@ -292,11 +290,11 @@ $(function() {
 : <a class="el" href="classAuthorizationWidget.html#a712c95c59f73f5da3a6a2ffcea091ef7">AuthorizationWidget</a>
 , <a class="el" href="classRegistrationWidget.html#ac98570a9da83844bfe0299ced86f1ea3">RegistrationWidget</a>
 </li>
-<li>slot_SignInRequest()
-: <a class="el" href="classAuthorizationWidget.html#aa44656e7365ab13327dda061812462d0">AuthorizationWidget</a>
+<li>slot_signInRequest()
+: <a class="el" href="classAuthorizationWidget.html#a4980c544676db1025e6092336daf65fc">AuthorizationWidget</a>
 </li>
-<li>slot_SignInResponse()
-: <a class="el" href="classAuthorizationWidget.html#ab82e7ca531bce1e20cbc39ac979181b8">AuthorizationWidget</a>
+<li>slot_signInResponse()
+: <a class="el" href="classAuthorizationWidget.html#a1cb7768b6fb5b3311eb7b75f923453d0">AuthorizationWidget</a>
 </li>
 <li>slot_SignUpRequest()
 : <a class="el" href="classRegistrationWidget.html#a5211e2c5df535ef0bb6b3fdc8d08167f">RegistrationWidget</a>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.12</span>
+   &#160;<span id="projectnumber">0.0.13</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -111,12 +111,14 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:a03db4d97917aa166502fc97c09f23651"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a567b9ae0bbe7d90d6e7d9d8fef894aed"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a567b9ae0bbe7d90d6e7d9d8fef894aed">signInResponse</a> (const boost::property_tree::ptree &amp;requestRoot)</td></tr>
 <tr class="separator:a567b9ae0bbe7d90d6e7d9d8fef894aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a67a0d1ebb4ee2a7692f3b80dfda1c27f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a67a0d1ebb4ee2a7692f3b80dfda1c27f">outputMessageResponse</a> (const boost::property_tree::ptree &amp;requestRoot)</td></tr>
+<tr class="separator:a67a0d1ebb4ee2a7692f3b80dfda1c27f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a24d0e13a9f27b5950a697fea58dd0f59"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classIDatabase.html">IDatabase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a24d0e13a9f27b5950a697fea58dd0f59">_db</a></td></tr>
 <tr class="separator:a24d0e13a9f27b5950a697fea58dd0f59"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3a5b87044674d1605e300068d51fa58"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#aa3a5b87044674d1605e300068d51fa58">errResponse</a> = &quot;{\&quot;response_type\&quot;: \&quot;sign_up\&quot;, \&quot;status\&quot;: \&quot;err\&quot;}\n&quot;</td></tr>
+<tr class="memitem:aa3a5b87044674d1605e300068d51fa58"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#aa3a5b87044674d1605e300068d51fa58">errResponse</a> = &quot;{\n \&quot;response_type\&quot;: \&quot;error\&quot;\n}\n&quot;</td></tr>
 <tr class="separator:aa3a5b87044674d1605e300068d51fa58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
@@ -164,6 +166,32 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implements <a class="el" href="classIServerProcessor.html#a076f254f834a679f7d8dc1e0f253cbc5">IServerProcessor</a>.</p>
+
+</div>
+</div>
+<a id="a67a0d1ebb4ee2a7692f3b80dfda1c27f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a67a0d1ebb4ee2a7692f3b80dfda1c27f">&#9670;&nbsp;</a></span>outputMessageResponse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ServerProcessor::outputMessageResponse </td>
+          <td>(</td>
+          <td class="paramtype">const boost::property_tree::ptree &amp;&#160;</td>
+          <td class="paramname"><em>requestRoot</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>
@@ -252,7 +280,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">const std::string ServerProcessor::errResponse = &quot;{\&quot;response_type\&quot;: \&quot;sign_up\&quot;, \&quot;status\&quot;: \&quot;err\&quot;}\n&quot;</td>
+          <td class="memname">const std::string ServerProcessor::errResponse = &quot;{\n \&quot;response_type\&quot;: \&quot;error\&quot;\n}\n&quot;</td>
         </tr>
       </table>
   </td>
