@@ -19,12 +19,7 @@ MainWindow::MainWindow(QWidget *parent)
 
     auto processor = std::make_shared<ClientProcessor>();
     setupUi(processor);
-    while (!processor->_isStarted)
-    {
-        qDebug() << "connecting..." << processor->isRunning();
-        processor->start();
-        QThread::currentThread()->sleep(3);
-    }
+    processor->start();
 }
 
 void MainWindow::setupUi(const std::shared_ptr<IClientProcessor> &msgProcessor)

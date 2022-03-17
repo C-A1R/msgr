@@ -3,33 +3,40 @@
 
 #include <QObject>
 
+/**
+ * @brief интерфейс, отвечающий за работу с запросами/ответами
+ */
 class IClientProcessor : public QObject
 {
     Q_OBJECT
 public:
-    bool _isStarted{false};
     IClientProcessor() = default;
     virtual ~IClientProcessor() = default;
 
-    virtual void start() = 0;
-    virtual bool isRunning() const = 0;
-    virtual void sendMsg(const std::string &msg) = 0;
+    virtual std::string currentLogin() const = 0;
 
+    virtual void start() = 0;
+
+    ///запрос на регистрацию учетной записи
     virtual void signUp_request(const QString &login, const QString &password) = 0;
+    ///запрос на вход в учетную запись
     virtual void signIn_request(const QString &login, const QString &password) = 0;
+    ///запрос на отправку сообщения
+    virtual void outputMessage_request(const std::string &msg) = 0;
 
 signals:
     void signal_stopClient();
-    void signal_sendToClientThread(const std::string &);
-    void signal_sendToGui(const std::string &);
 
+    ///отправить запрос
     void signal_sendRequest(const std::string &);
 
     void signal_signUpResponse(const std::string &);
     void signal_signInResponse(const std::string &);
+    void signal_outputMessageResponse(const std::string &);
 
 private slots:
-    virtual void slot_getResponse(const std::string &response) = 0;
+    ///обработка ответов
+    virtual void slot_parseResponse(const std::string &response) = 0;
 };
 
 #endif // ICLIENTPROCESSOR_H

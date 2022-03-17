@@ -16,15 +16,15 @@ AuthorizationWidget::AuthorizationWidget(const std::shared_ptr<IClientProcessor>
 void AuthorizationWidget::init()
 {
     setupUi();
-    connect(sign_pBtn, &QPushButton::clicked, this, &AuthorizationWidget::slot_SignInRequest);
-    connect(_processor.get(), &IClientProcessor::signal_signInResponse, this, &AuthorizationWidget::slot_SignInResponse);
+    connect(sign_pBtn, &QPushButton::clicked, this, &AuthorizationWidget::slot_signInRequest);
+    connect(_processor.get(), &IClientProcessor::signal_signInResponse, this, &AuthorizationWidget::slot_signInResponse);
 }
 
 void AuthorizationWidget::setupUi()
 {
     auto main_vLay = new QVBoxLayout();
 
-    err_lbl = new QLabel("error", this);
+    err_lbl = new QLabel(this);
     err_lbl->setStyleSheet(QStringLiteral("color: red;"));
     err_lbl->setVisible(false);
     auto err_hLay = new QHBoxLayout();
@@ -90,7 +90,7 @@ void AuthorizationWidget::slot_sign_pBtn_clicked()
     emit signal_changeSign(MainWidgets::Registration);
 }
 
-void AuthorizationWidget::slot_SignInRequest()
+void AuthorizationWidget::slot_signInRequest()
 {
     if (login_lEdit->text().isEmpty() || password_lEdit->text().isEmpty())
     {
@@ -99,7 +99,7 @@ void AuthorizationWidget::slot_SignInRequest()
     _processor->signIn_request(login_lEdit->text(), password_lEdit->text());
 }
 
-void AuthorizationWidget::slot_SignInResponse(const std::string &status)
+void AuthorizationWidget::slot_signInResponse(const std::string &status)
 {
     if (status == "ok")
     {

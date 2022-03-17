@@ -9,7 +9,7 @@ Client::Client(boost::asio::io_context &io_context)
 
 void Client::start(const std::string &host, const std::string &service)
 {
-    std::cout << "# / Client::start " << host << " " << service << std::endl;
+//    std::cout << "# / Client::start " << host << " " << service << std::endl;
     tcp::resolver::query query{host, service};
     _resolver.async_resolve(query, [&](const boost::system::error_code &ec, tcp::resolver::iterator it)
     {
@@ -24,7 +24,7 @@ void Client::resolveHandler(const boost::system::error_code &ec, tcp::resolver::
         std::cout << "# / ec " << ec.message() << std::endl;
         return;
     }
-    std::cout << "# / endpoint " << it->endpoint().address() << ":" << it->endpoint().port() << std::endl;
+//    std::cout << "# / endpoint " << it->endpoint().address() << ":" << it->endpoint().port() << std::endl;
 
     _socket.async_connect(*it, [&](const boost::system::error_code &ec)
     {
@@ -38,7 +38,7 @@ void Client::connectHandler(const boost::system::error_code &ec)
     {
         return;
     }
-    std::cout << "# / ping " << std::endl;
+//    std::cout << "# / ping " << std::endl;
     writeHandler("ping\n");
 }
 
@@ -50,7 +50,7 @@ void Client::readHandler(const boost::system::error_code &ec, std::size_t bytes)
     }
     _socket.async_read_some(boost::asio::buffer(_buffer), [&](const boost::system::error_code &ec, std::size_t bytes)
     {
-        emit signal_getFromServer(std::string(_buffer, bytes));
+        emit signal_responseRecieved(std::string(_buffer, bytes));
         readHandler(ec, bytes);
     });
 }

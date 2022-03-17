@@ -29,6 +29,10 @@ std::string ServerProcessor::getResponse(const std::string &request)
     {
         return signInResponse(requestRoot);
     }
+    else if (requestType == "output_message")
+    {
+        return outputMessageResponse(requestRoot);
+    }
 
     return errResponse;
 }
@@ -103,4 +107,22 @@ std::string ServerProcessor::signInResponse(const boost::property_tree::ptree &r
     std::stringstream responseStream;
     boost::property_tree::write_json(responseStream, responseRoot);
     return responseStream.str() + "\n";
+}
+
+std::string ServerProcessor::outputMessageResponse(const boost::property_tree::ptree &requestRoot)
+{
+//    auto id_sender = requestRoot.get<int>("sender");
+//    auto id_recipient = requestRoot.get<int>("recipient");
+    auto text = requestRoot.get<std::string>("text");
+
+
+    boost::property_tree::ptree responseRoot;
+    responseRoot.put("response_type", "output_message");
+    responseRoot.put("status", "ok");
+    responseRoot.put("text", text);
+    std::stringstream responseStream;
+    boost::property_tree::write_json(responseStream, responseRoot);
+    return responseStream.str() + "\n";
+
+
 }

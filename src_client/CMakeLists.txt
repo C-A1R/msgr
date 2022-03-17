@@ -31,6 +31,7 @@ set(HEADERS
     client/ClientThread.h
     client_processor/IClientProcessor.h
     client_processor/ClientProcessor.h
+    client_processor/UserInfo.h
 )
 
 set(SOURCES
