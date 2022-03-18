@@ -8,38 +8,35 @@
 #include <QDebug>
 #include <QThread>
 
-#include <string>
-
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
 {
     std::locale::global(std::locale(""));
     qRegisterMetaType<MainWidgets>();
-    qRegisterMetaType<std::string>();
+
 
     auto processor = std::make_shared<ClientProcessor>();
-    setupUi(processor);
+    initUi(processor);
     processor->start();
 }
 
-void MainWindow::setupUi(const std::shared_ptr<IClientProcessor> &msgProcessor)
+void MainWindow::initUi(const std::shared_ptr<IClientProcessor> &msgProcessor)
 {
-    resize(600, 400);
-    setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
     setMinimumSize(QSize(600, 400));
+    setSizePolicy(QSizePolicy::Minimum, QSizePolicy::Minimum);
 
     main_widget = new QStackedWidget(this);
 
     auto authorizationWidget = new AuthorizationWidget(msgProcessor, main_widget);
     authorizationWidget->init();
     connect(authorizationWidget, &AuthorizationWidget::signal_changeSign,
-            this, &MainWindow::slot_changeSign);
+            this, &MainWindow::slot_changeWidget);
     main_widget->insertWidget(static_cast<int>(MainWidgets::Authorization), authorizationWidget);
 
     auto registrationWidget = new RegistrationWidget(msgProcessor, main_widget);
     registrationWidget->init();
     connect(registrationWidget, &RegistrationWidget::signal_changeSign,
-            this, &MainWindow::slot_changeSign);
+            this, &MainWindow::slot_changeWidget);
     main_widget->insertWidget(static_cast<int>(MainWidgets::Registration), registrationWidget);
 
     auto chatWidget = new ChatWidget(msgProcessor, main_widget);
@@ -48,7 +45,7 @@ void MainWindow::setupUi(const std::shared_ptr<IClientProcessor> &msgProcessor)
     setCentralWidget(main_widget);
 }
 
-void MainWindow::slot_changeSign(MainWidgets wgt)
+void MainWindow::slot_changeWidget(MainWidgets wgt)
 {
     main_widget->setCurrentIndex(static_cast<int>(wgt));
 }

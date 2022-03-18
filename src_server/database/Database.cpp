@@ -3,16 +3,16 @@
 #include <iostream>
 #include <memory>
 
-Database::Database(const char *dbName) : _dbName{dbName}
+SqliteDatabase::SqliteDatabase(const char *dbName) : _dbName{dbName}
 {
 }
 
-Database::~Database()
+SqliteDatabase::~SqliteDatabase()
 {
     sqlite3_close(_handler);
 }
 
-bool Database::create()
+bool SqliteDatabase::create()
 {
     if (!exec("CREATE TABLE IF NOT EXISTS users ("
              "id INTEGER PRIMARY KEY AUTOINCREMENT, "
@@ -25,7 +25,7 @@ bool Database::create()
     return true;
 }
 
-bool Database::open()
+bool SqliteDatabase::open()
 {
     if (sqlite3_open(_dbName, &_handler))
     {
@@ -35,7 +35,7 @@ bool Database::open()
     return true;
 }
 
-int Database::insertUser(const std::string &login, const std::string &password)
+int SqliteDatabase::insertUser(const std::string &login, const std::string &password)
 {
     std::string query = "INSERT INTO users (login, password) VALUES (\""
                  + login + "\", \"" + password + "\");";
@@ -47,21 +47,21 @@ int Database::insertUser(const std::string &login, const std::string &password)
     return maxId("users");
 }
 
-bool Database::getUserId(const std::string &login, int &id)
+bool SqliteDatabase::getUserId(const std::string &login, int &result)
 {
     std::string query = "SELECT id FROM users WHERE login = '" + login + "';";
-    std::string result;
-    if (!value(query, result))
+    std::string id;
+    if (!value(query, id))
     {
         std::cout << "DB_ERR: " << query << std::endl;
         return false;
     }
-    if (!result.empty())
-        id = stoi(result);
+    if (!id.empty())
+        result = stoi(id);
     return true;
 }
 
-bool Database::getUserPassword(const int id, std::string &result)
+bool SqliteDatabase::getUserPassword(const int id, std::string &result)
 {
     std::string query = "SELECT password FROM users WHERE id = " + std::to_string(id) + ";";
     if (!value(query, result))
@@ -121,7 +121,7 @@ bool Database::getUserPassword(const int id, std::string &result)
 //    return response;
 //}
 
-bool Database::exec(const std::string &query, sqlite3_callback callback, void *context)
+bool SqliteDatabase::exec(const std::string &query, sqlite3_callback callback, void *context)
 {
     if (!_handler)
     {
@@ -145,7 +145,7 @@ bool Database::exec(const std::string &query, sqlite3_callback callback, void *c
     return true;
 }
 
-int Database::callback(void *context, int columns, char **data, char **)
+int SqliteDatabase::callback(void *context, int columns, char **data, char **)
 {
     if (!columns || !data)
     {
@@ -166,7 +166,7 @@ int Database::callback(void *context, int columns, char **data, char **)
     return 0;
 }
 
-int Database::maxId(const std::string &table, const std::string &id)
+int SqliteDatabase::maxId(const std::string &table, const std::string &id)
 {
     std::unique_ptr<std::string> context_str(new std::string());
     std::string query = "SELECT MAX(" + id+ ") FROM " + table + ";";
@@ -182,7 +182,7 @@ int Database::maxId(const std::string &table, const std::string &id)
     return std::stoi(response);
 }
 
-bool Database::value(const std::string &query, std::string &value)
+bool SqliteDatabase::value(const std::string &query, std::string &value)
 {
     std::unique_ptr<std::string> context_str(new std::string());
     if (!exec(query, &callback, context_str.get()))

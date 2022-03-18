@@ -7,6 +7,9 @@
 
 using boost::asio::ip::tcp;
 
+/**
+ * @brief сессия пользователя
+ */
 class Session : public std::enable_shared_from_this<Session>
 {
     tcp::socket _socket;
@@ -14,8 +17,10 @@ class Session : public std::enable_shared_from_this<Session>
     char _data[max_length];
     std::unique_ptr<IServerProcessor> _processor;
 public:
-    Session(tcp::socket socket, std::unique_ptr<IServerProcessor> processor);
+    Session(tcp::socket socket);
+    void setProcessor(std::unique_ptr<IServerProcessor> processor);
     void start();
+    void write(const std::string &msg);
 private:
     void do_read();
     void do_write(const std::string &msg);

@@ -5,8 +5,7 @@
 ClientThread::ClientThread()
 {
     _client = std::make_unique<Client>(_io_context);
-    connect(this, &ClientThread::signal_sendToClient, _client.get(), &Client::slot_sendToServer);
-    connect(_client.get(), &Client::signal_responseRecieved, this, &ClientThread::signal_responseRecieved);
+    connect(_client.get(), &Client::signal_recieved, this, &ClientThread::signal_recieved);
 }
 
 ClientThread::~ClientThread()
@@ -25,4 +24,9 @@ void ClientThread::slot_stopClient()
 {
     _io_context.stop();
     exit();
+}
+
+void ClientThread::slot_send(const std::string &msg)
+{
+    _client->send(msg);
 }

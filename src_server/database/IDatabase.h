@@ -3,6 +3,9 @@
 
 #include <string>
 
+/**
+ * @brief через этот класс происходит работа с базой
+ */
 class IDatabase
 {
 public:

@@ -11,6 +11,9 @@ class QLineEdit;
 class QPushButton;
 class QHBoxLayout;
 
+/**
+ * @brief виджет входа в учетную запись пользователя
+ */
 class AuthorizationWidget : public QWidget
 {
     Q_OBJECT
@@ -29,18 +32,24 @@ public:
     virtual void init();
 
 private:
+    ///создает (или нет) поле подтверждения пароля
     virtual QHBoxLayout *createConfirmLine() {return nullptr;}
 
 protected:
-    void setupUi();
+    ///инициализация пользовательского интерфейса
+    void initUi();
+    ///отобразить ошибку авторизации
     void showError(const QString &err);
 
 signals:
+    ///переклюение между входом и регистрацией пользователя
     void signal_changeSign(MainWidgets);
 
 private slots:
     virtual void slot_sign_pBtn_clicked();
+    ///отправить запрос на вход
     void slot_signInRequest();
+    ///обработка ответа на запрос входа
     void slot_signInResponse(const std::string &status);
 };
 

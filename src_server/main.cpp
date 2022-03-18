@@ -12,11 +12,11 @@ int main(int argc, char* argv[])
             return 1;
         }
         int port = atoi(argv[1]);
-        std::cout << "### RUN_SERVER / port " << port << std::endl;
+        std::cout << "RUN_SERVER / port " << port << std::endl;
 
         boost::asio::io_context io_context;
         Server server(io_context, port);
-        io_context .run();
+        io_context.run();
     }
     catch (std::exception& e)
     {

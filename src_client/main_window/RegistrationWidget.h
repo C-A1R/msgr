@@ -3,6 +3,9 @@
 
 #include "AuthorizationWidget.h"
 
+/**
+ * @brief виджет регистрации пользователя
+ */
 class RegistrationWidget : public AuthorizationWidget
 {
     Q_OBJECT
@@ -19,8 +22,10 @@ private:
 
 private slots:
     void slot_sign_pBtn_clicked() override;
-    void slot_SignUpRequest();
-    void slot_SignUpResponse(const std::string &status);
+    ///отправить запрос на регистрацию
+    void slot_signUpRequest();
+    ///обработка ответа на запрос о регистрации
+    void slot_signUpResponse(const std::string &status);
 };
 
 #endif // REGISTRATIONWINDOW_H

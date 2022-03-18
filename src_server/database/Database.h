@@ -9,9 +9,9 @@
 #include <functional>
 
 /**
- * @brief через этот класс происходит работа с базой
+ * @brief база sqlite
  */
-class Database : public IDatabase
+class SqliteDatabase : public IDatabase
 {
     const char *_dbName {nullptr};
     sqlite3 *_handler {nullptr};
@@ -19,17 +19,12 @@ class Database : public IDatabase
 
 public:
 
-    Database(const char *dbName);
-    ~Database();
+    SqliteDatabase(const char *dbName);
+    ~SqliteDatabase();
 
-    /**
-     * @brief создать таблицы
-     */
+    ///создать таблицы
     bool create() override;
-
-    /**
-     * @brief открыть базу
-     */
+    ///brief открыть базу
     bool open() override;
 
     int invalidId() const override {return -1;}
@@ -39,12 +34,8 @@ public:
      * @return id нового пользователя
      */
     int insertUser(const std::string &login, const std::string &password) override;
-
-    bool getUserId(const std::string &login, int &id) override;
+    bool getUserId(const std::string &login, int &result) override;
     bool getUserPassword(const int id, std::string &result) override;
-
-
-
 
 //    /**
 //     * @brief очистить таблицу
@@ -62,17 +53,11 @@ public:
 //    std::string symmetricDifference();
 
 private:
-    /**
-     * @brief выполнить запрос в базу
-     */
+    ///выполнить запрос в базу
     bool exec(const std::string &query, sqlite3_callback callback = nullptr, void *context = nullptr);
-
-    /**
-     * @brief заполняет context результатом выборки
-     */
+    ///заполняет context результатом выборки
     static int callback(void *context, int columns, char **data, char **);
 
-private:
     int maxId(const std::string &table, const std::string &id = "id");
     bool value(const std::string &query, std::string &value);
 };
