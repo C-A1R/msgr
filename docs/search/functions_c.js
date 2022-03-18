@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['value_316',['value',['../classDatabase.html#a44cfd7bdda8e5f0545301326a7838d86',1,'Database']]]
+  ['value_359',['value',['../classSqliteDatabase.html#a08a5c9fca5fc27cdb28be73df9001555',1,'SqliteDatabase']]]
 ];

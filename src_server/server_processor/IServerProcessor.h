@@ -3,13 +3,16 @@
 
 #include <string>
 
+/**
+ * @brief интерфейс обработчика запросов/ответов от клиента
+ */
 class IServerProcessor
 {
 public:
     IServerProcessor() = default;
     virtual ~IServerProcessor() = default;
 
-    virtual std::string getResponse(const std::string &request) = 0;
+    virtual std::string parseClientMessage(const std::string &request) = 0;
 };
 
 #endif // ISERVERPROCESSOR_H

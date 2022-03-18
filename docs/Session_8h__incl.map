@@ -1,11 +1,12 @@
 <map id="src_server/Session.h" name="src_server/Session.h">
-<area shape="rect" id="node1" title=" " alt="" coords="187,5,342,32"/>
-<area shape="rect" id="node2" title=" " alt="" coords="102,80,219,107"/>
-<area shape="rect" id="node3" href="$ServerProcessor_8h.html" title=" " alt="" coords="243,80,497,107"/>
+<area shape="rect" id="node1" title=" " alt="" coords="281,5,435,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="195,80,313,107"/>
+<area shape="rect" id="node3" href="$ServerProcessor_8h.html" title=" " alt="" coords="337,80,590,107"/>
 <area shape="rect" id="node4" href="$IServerProcessor_8h.html" title=" " alt="" coords="5,162,148,189"/>
 <area shape="rect" id="node6" href="$Database_8h.html" title=" " alt="" coords="192,162,364,189"/>
 <area shape="rect" id="node12" title=" " alt="" coords="388,155,539,196"/>
 <area shape="rect" id="node13" title=" " alt="" coords="563,162,641,189"/>
+<area shape="rect" id="node14" title=" " alt="" coords="665,162,715,189"/>
 <area shape="rect" id="node5" title=" " alt="" coords="14,319,73,345"/>
 <area shape="rect" id="node7" href="$IDatabase_8h.html" title=" " alt="" coords="37,244,137,271"/>
 <area shape="rect" id="node8" title=" " alt="" coords="161,244,280,271"/>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.13</span>
+   &#160;<span id="projectnumber">0.0.14</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -74,13 +74,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>виджет переписки  
+ <a href="classChatWidget.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="ChatWidget_8h_source.html">ChatWidget.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ChatWidget:</div>
 <div class="dyncontent">
 <div class="center"><img src="classChatWidget__inherit__graph.png" border="0" usemap="#ChatWidget_inherit__map" alt="Inheritance graph"/></div>
 <map name="ChatWidget_inherit__map" id="ChatWidget_inherit__map">
-<area shape="rect" title=" " alt="" coords="5,80,104,107"/>
+<area shape="rect" title="виджет переписки" alt="" coords="5,80,104,107"/>
 <area shape="rect" title=" " alt="" coords="15,5,94,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -89,7 +92,7 @@ Collaboration diagram for ChatWidget:</div>
 <div class="dyncontent">
 <div class="center"><img src="classChatWidget__coll__graph.png" border="0" usemap="#ChatWidget_coll__map" alt="Collaboration graph"/></div>
 <map name="ChatWidget_coll__map" id="ChatWidget_coll__map">
-<area shape="rect" title=" " alt="" coords="5,80,104,107"/>
+<area shape="rect" title="виджет переписки" alt="" coords="5,80,104,107"/>
 <area shape="rect" title=" " alt="" coords="15,5,94,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -98,17 +101,25 @@ Collaboration diagram for ChatWidget:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:afd9895c0d2c1158cbb49d6e94b3d82dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChatWidget.html#afd9895c0d2c1158cbb49d6e94b3d82dc">ChatWidget</a> (const std::shared_ptr&lt; <a class="el" href="classIClientProcessor.html">IClientProcessor</a> &gt; &amp;processor, QWidget *parent=nullptr)</td></tr>
 <tr class="separator:afd9895c0d2c1158cbb49d6e94b3d82dc"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a167206aa0dbd376e56b692b3a0c7a434"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChatWidget.html#a167206aa0dbd376e56b692b3a0c7a434">~ChatWidget</a> ()</td></tr>
+<tr class="separator:a167206aa0dbd376e56b692b3a0c7a434"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-slots"></a>
 Private Slots</h2></td></tr>
 <tr class="memitem:afbf7238ef286c4e6cc79cc06ba184067"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChatWidget.html#afbf7238ef286c4e6cc79cc06ba184067">slot_outputMessageRequest</a> ()</td></tr>
+<tr class="memdesc:afbf7238ef286c4e6cc79cc06ba184067"><td class="mdescLeft">&#160;</td><td class="mdescRight">отправка исходящего сообщения  <a href="classChatWidget.html#afbf7238ef286c4e6cc79cc06ba184067">More...</a><br /></td></tr>
 <tr class="separator:afbf7238ef286c4e6cc79cc06ba184067"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab335e68df7bf00a50c2172ab3bea0ca2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChatWidget.html#ab335e68df7bf00a50c2172ab3bea0ca2">slot_outputMessageResponse</a> (const std::string &amp;text)</td></tr>
+<tr class="memdesc:ab335e68df7bf00a50c2172ab3bea0ca2"><td class="mdescLeft">&#160;</td><td class="mdescRight">получение ответа на исходящее сообщения (результат отправки)  <a href="classChatWidget.html#ab335e68df7bf00a50c2172ab3bea0ca2">More...</a><br /></td></tr>
 <tr class="separator:ab335e68df7bf00a50c2172ab3bea0ca2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9e3c753ed85c5ceac5198fc2a8d8da4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChatWidget.html#ae9e3c753ed85c5ceac5198fc2a8d8da4">slot_inputMessageRequest</a> (const std::string &amp;sender, const std::string &amp;text)</td></tr>
+<tr class="memdesc:ae9e3c753ed85c5ceac5198fc2a8d8da4"><td class="mdescLeft">&#160;</td><td class="mdescRight">получение входящего сообщения и отправка ответа на него (результат получения)  <a href="classChatWidget.html#ae9e3c753ed85c5ceac5198fc2a8d8da4">More...</a><br /></td></tr>
+<tr class="separator:ae9e3c753ed85c5ceac5198fc2a8d8da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a707ded9289b2266b8103f28d2225d202"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChatWidget.html#a707ded9289b2266b8103f28d2225d202">initUi</a> ()</td></tr>
+<tr class="memdesc:a707ded9289b2266b8103f28d2225d202"><td class="mdescLeft">&#160;</td><td class="mdescRight">инициализация пользовательского интерфейса  <a href="classChatWidget.html#a707ded9289b2266b8103f28d2225d202">More...</a><br /></td></tr>
 <tr class="separator:a707ded9289b2266b8103f28d2225d202"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
@@ -122,7 +133,9 @@ Private Attributes</h2></td></tr>
 <tr class="memitem:adad25e7754972615a4d1b3cb06eccb8f"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classIClientProcessor.html">IClientProcessor</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChatWidget.html#adad25e7754972615a4d1b3cb06eccb8f">_processor</a></td></tr>
 <tr class="separator:adad25e7754972615a4d1b3cb06eccb8f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>виджет переписки </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="afd9895c0d2c1158cbb49d6e94b3d82dc"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#afd9895c0d2c1158cbb49d6e94b3d82dc">&#9670;&nbsp;</a></span>ChatWidget()</h2>
 
@@ -159,6 +172,23 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a167206aa0dbd376e56b692b3a0c7a434"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a167206aa0dbd376e56b692b3a0c7a434">&#9670;&nbsp;</a></span>~ChatWidget()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">ChatWidget::~ChatWidget </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Function Documentation</h2>
 <a id="a707ded9289b2266b8103f28d2225d202"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a707ded9289b2266b8103f28d2225d202">&#9670;&nbsp;</a></span>initUi()</h2>
@@ -182,6 +212,46 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>инициализация пользовательского интерфейса </p>
+
+</div>
+</div>
+<a id="ae9e3c753ed85c5ceac5198fc2a8d8da4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9e3c753ed85c5ceac5198fc2a8d8da4">&#9670;&nbsp;</a></span>slot_inputMessageRequest</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ChatWidget::slot_inputMessageRequest </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>text</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>получение входящего сообщения и отправка ответа на него (результат получения) </p>
 
 </div>
 </div>
@@ -208,6 +278,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>отправка исходящего сообщения </p>
+
 </div>
 </div>
 <a id="ab335e68df7bf00a50c2172ab3bea0ca2"></a>
@@ -233,6 +305,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>получение ответа на исходящее сообщения (результат отправки) </p>
 
 </div>
 </div>

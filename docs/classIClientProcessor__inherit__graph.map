@@ -1,5 +1,5 @@
 <map id="IClientProcessor" name="IClientProcessor">
-<area shape="rect" id="node1" title="интерфейс, отвечающий за работу с запросами/ответами" alt="" coords="5,80,132,107"/>
-<area shape="rect" id="node3" href="$classClientProcessor.html" title=" " alt="" coords="7,155,130,181"/>
+<area shape="rect" id="node1" title="интерфейс обработчика запросов/ответов от клиента" alt="" coords="5,80,132,107"/>
+<area shape="rect" id="node3" href="$classClientProcessor.html" title="обработчик запросов/ответов от клиента" alt="" coords="7,155,130,181"/>
 <area shape="rect" id="node2" title=" " alt="" coords="31,5,106,32"/>
 </map>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.13</span>
+   &#160;<span id="projectnumber">0.0.14</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -73,35 +73,35 @@ $(function() {
 <tr><td><img src="inherit_graph_0.png" border="0" usemap="#AuthorizationWidget" alt=""/>
 <map name="AuthorizationWidget" id="AuthorizationWidget">
 <area shape="rect" title=" " alt="" coords="5,31,84,57"/>
-<area shape="rect" href="classAuthorizationWidget.html" title=" " alt="" coords="132,5,287,32"/>
-<area shape="rect" href="classChatWidget.html" title=" " alt="" coords="160,56,259,83"/>
-<area shape="rect" href="classRegistrationWidget.html" title=" " alt="" coords="335,5,481,32"/>
+<area shape="rect" href="classAuthorizationWidget.html" title="виджет входа в учетную запись пользователя" alt="" coords="132,5,287,32"/>
+<area shape="rect" href="classChatWidget.html" title="виджет переписки" alt="" coords="160,56,259,83"/>
+<area shape="rect" href="classRegistrationWidget.html" title="виджет регистрации пользователя" alt="" coords="335,5,481,32"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_1.png" border="0" usemap="#Client" alt=""/>
 <map name="Client" id="Client">
 <area shape="rect" title=" " alt="" coords="5,31,80,57"/>
-<area shape="rect" href="classClient.html" title=" " alt="" coords="161,5,221,32"/>
-<area shape="rect" href="classIClientProcessor.html" title="интерфейс, отвечающий за работу с запросами/ответами" alt="" coords="128,56,255,83"/>
-<area shape="rect" href="classClientProcessor.html" title=" " alt="" coords="303,56,425,83"/>
+<area shape="rect" href="classClient.html" title="асинхронный клиент, непосредственно работает с сокетом" alt="" coords="161,5,221,32"/>
+<area shape="rect" href="classIClientProcessor.html" title="интерфейс обработчика запросов/ответов от клиента" alt="" coords="128,56,255,83"/>
+<area shape="rect" href="classClientProcessor.html" title="обработчик запросов/ответов от клиента" alt="" coords="303,56,425,83"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_2.png" border="0" usemap="#ClientThread" alt=""/>
 <map name="ClientThread" id="ClientThread">
 <area shape="rect" title=" " alt="" coords="5,5,83,32"/>
-<area shape="rect" href="classClientThread.html" title="отдельный поток для взаимодействий с сервером" alt="" coords="131,5,236,32"/>
+<area shape="rect" href="classClientThread.html" title="поток для взаимодействия с сервером" alt="" coords="131,5,236,32"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_3.png" border="0" usemap="#IDatabase" alt=""/>
 <map name="IDatabase" id="IDatabase">
-<area shape="rect" href="classIDatabase.html" title=" " alt="" coords="5,5,93,32"/>
-<area shape="rect" href="classDatabase.html" title="через этот класс происходит работа с базой" alt="" coords="141,5,225,32"/>
+<area shape="rect" href="classIDatabase.html" title="через этот класс происходит работа с базой" alt="" coords="5,5,93,32"/>
+<area shape="rect" href="classSqliteDatabase.html" title="база sqlite." alt="" coords="141,5,263,32"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_4.png" border="0" usemap="#IServerProcessor" alt=""/>
 <map name="IServerProcessor" id="IServerProcessor">
-<area shape="rect" href="classIServerProcessor.html" title=" " alt="" coords="5,5,136,32"/>
-<area shape="rect" href="classServerProcessor.html" title=" " alt="" coords="184,5,311,32"/>
+<area shape="rect" href="classIServerProcessor.html" title="интерфейс обработчика запросов/ответов от клиента" alt="" coords="5,5,136,32"/>
+<area shape="rect" href="classServerProcessor.html" title="обработчик запросов/ответов от клиента" alt="" coords="184,5,311,32"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_5.png" border="0" usemap="#MainWindow" alt=""/>
@@ -112,16 +112,21 @@ $(function() {
 </td></tr>
 <tr><td><img src="inherit_graph_6.png" border="0" usemap="#Server" alt=""/>
 <map name="Server" id="Server">
-<area shape="rect" href="classServer.html" title=" " alt="" coords="5,5,69,32"/>
+<area shape="rect" href="classServer.html" title="асинхронный сервер" alt="" coords="5,5,69,32"/>
 </map>
 </td></tr>
 <tr><td><img src="inherit_graph_7.png" border="0" usemap="#Session" alt=""/>
 <map name="Session" id="Session">
 <area shape="rect" title=" " alt="" coords="5,5,192,32"/>
-<area shape="rect" href="classSession.html" title=" " alt="" coords="240,5,312,32"/>
+<area shape="rect" href="classSession.html" title="сессия пользователя" alt="" coords="240,5,312,32"/>
 </map>
 </td></tr>
-<tr><td><img src="inherit_graph_8.png" border="0" usemap="#UserInfo" alt=""/>
+<tr><td><img src="inherit_graph_8.png" border="0" usemap="#SessionManager" alt=""/>
+<map name="SessionManager" id="SessionManager">
+<area shape="rect" href="classSessionManager.html" title="учет и взаимодействие подключенных пользователей" alt="" coords="5,5,135,32"/>
+</map>
+</td></tr>
+<tr><td><img src="inherit_graph_9.png" border="0" usemap="#UserInfo" alt=""/>
 <map name="UserInfo" id="UserInfo">
 <area shape="rect" href="structUserInfo.html" title=" " alt="" coords="5,5,83,32"/>
 </map>

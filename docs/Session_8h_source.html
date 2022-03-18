@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.13</span>
+   &#160;<span id="projectnumber">0.0.14</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -80,32 +80,36 @@ $(function() {
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
 <div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">using</span> boost::asio::ip::tcp;</div>
 <div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classSession.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSession.html">Session</a> : <span class="keyword">public</span> std::enable_shared_from_this&lt;Session&gt;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
-<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="classSession.html#ab18d5bb8dd24f1c3031a1c77049055a3">   12</a></span>&#160;    tcp::socket <a class="code" href="classSession.html#ab18d5bb8dd24f1c3031a1c77049055a3">_socket</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classSession.html#a9251d35017dc98d7e0531db8ce4eadfba91789f09a8674b8daa03927e3ceb7df4">   13</a></span>&#160;    <span class="keyword">enum</span> {<a class="code" href="classSession.html#a9251d35017dc98d7e0531db8ce4eadfba91789f09a8674b8daa03927e3ceb7df4">max_length</a> = 1024};</div>
-<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classSession.html#a5a874b0ee39713f631dfc3405be018b1">   14</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="classSession.html#a5a874b0ee39713f631dfc3405be018b1">_data</a>[<a class="code" href="classSession.html#a9251d35017dc98d7e0531db8ce4eadfba91789f09a8674b8daa03927e3ceb7df4">max_length</a>];</div>
-<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classSession.html#a15700fd3247b8ccbf88c094ed75c957c">   15</a></span>&#160;    std::unique_ptr&lt;IServerProcessor&gt; <a class="code" href="classSession.html#a15700fd3247b8ccbf88c094ed75c957c">_processor</a>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <a class="code" href="classSession.html#a9fdb2c4cfb08ee541d1181929f8d56e0">Session</a>(tcp::socket socket, std::unique_ptr&lt;IServerProcessor&gt; processor);</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSession.html#a47baf956cead0046fcbac45c572c70d3">start</a>();</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSession.html#a121783ddf71dfcc3fab4d90c2daeecd2">do_read</a>();</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSession.html#a0a1db6328e138ac9ce6c4e45c3fb8fb5">do_write</a>(<span class="keyword">const</span> std::string &amp;msg);</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;};</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160; </div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="preprocessor">#endif //SESSION_H</span></div>
+<div class="line"><a name="l00013"></a><span class="lineno"><a class="line" href="classSession.html">   13</a></span>&#160;<span class="keyword">class </span><a class="code" href="classSession.html">Session</a> : <span class="keyword">public</span> std::enable_shared_from_this&lt;Session&gt;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;{</div>
+<div class="line"><a name="l00015"></a><span class="lineno"><a class="line" href="classSession.html#ab18d5bb8dd24f1c3031a1c77049055a3">   15</a></span>&#160;    tcp::socket <a class="code" href="classSession.html#ab18d5bb8dd24f1c3031a1c77049055a3">_socket</a>;</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classSession.html#a9251d35017dc98d7e0531db8ce4eadfba91789f09a8674b8daa03927e3ceb7df4">   16</a></span>&#160;    <span class="keyword">enum</span> {<a class="code" href="classSession.html#a9251d35017dc98d7e0531db8ce4eadfba91789f09a8674b8daa03927e3ceb7df4">max_length</a> = 1024};</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classSession.html#a5a874b0ee39713f631dfc3405be018b1">   17</a></span>&#160;    <span class="keywordtype">char</span> <a class="code" href="classSession.html#a5a874b0ee39713f631dfc3405be018b1">_data</a>[<a class="code" href="classSession.html#a9251d35017dc98d7e0531db8ce4eadfba91789f09a8674b8daa03927e3ceb7df4">max_length</a>];</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classSession.html#a15700fd3247b8ccbf88c094ed75c957c">   18</a></span>&#160;    std::unique_ptr&lt;IServerProcessor&gt; <a class="code" href="classSession.html#a15700fd3247b8ccbf88c094ed75c957c">_processor</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <a class="code" href="classSession.html#a936fb78d44e9593395f873e388cc1b85">Session</a>(tcp::socket socket);</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSession.html#a580c6f1982d1f247b8e2e89014790a00">setProcessor</a>(std::unique_ptr&lt;IServerProcessor&gt; processor);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSession.html#a47baf956cead0046fcbac45c572c70d3">start</a>();</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSession.html#a41315ad3804a881ddf5cb99c52dd4a65">write</a>(<span class="keyword">const</span> std::string &amp;msg);</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSession.html#a121783ddf71dfcc3fab4d90c2daeecd2">do_read</a>();</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classSession.html#a0a1db6328e138ac9ce6c4e45c3fb8fb5">do_write</a>(<span class="keyword">const</span> std::string &amp;msg);</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif //SESSION_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aServerProcessor_8h_html"><div class="ttname"><a href="ServerProcessor_8h.html">ServerProcessor.h</a></div></div>
-<div class="ttc" id="aclassSession_html_a5a874b0ee39713f631dfc3405be018b1"><div class="ttname"><a href="classSession.html#a5a874b0ee39713f631dfc3405be018b1">Session::_data</a></div><div class="ttdeci">char _data[max_length]</div><div class="ttdef"><b>Definition:</b> Session.h:14</div></div>
-<div class="ttc" id="aclassSession_html_a47baf956cead0046fcbac45c572c70d3"><div class="ttname"><a href="classSession.html#a47baf956cead0046fcbac45c572c70d3">Session::start</a></div><div class="ttdeci">void start()</div><div class="ttdef"><b>Definition:</b> Session.cpp:11</div></div>
-<div class="ttc" id="aclassSession_html_a9251d35017dc98d7e0531db8ce4eadfba91789f09a8674b8daa03927e3ceb7df4"><div class="ttname"><a href="classSession.html#a9251d35017dc98d7e0531db8ce4eadfba91789f09a8674b8daa03927e3ceb7df4">Session::max_length</a></div><div class="ttdeci">@ max_length</div><div class="ttdef"><b>Definition:</b> Session.h:13</div></div>
-<div class="ttc" id="aclassSession_html"><div class="ttname"><a href="classSession.html">Session</a></div><div class="ttdef"><b>Definition:</b> Session.h:10</div></div>
-<div class="ttc" id="aclassSession_html_a121783ddf71dfcc3fab4d90c2daeecd2"><div class="ttname"><a href="classSession.html#a121783ddf71dfcc3fab4d90c2daeecd2">Session::do_read</a></div><div class="ttdeci">void do_read()</div><div class="ttdef"><b>Definition:</b> Session.cpp:16</div></div>
-<div class="ttc" id="aclassSession_html_a0a1db6328e138ac9ce6c4e45c3fb8fb5"><div class="ttname"><a href="classSession.html#a0a1db6328e138ac9ce6c4e45c3fb8fb5">Session::do_write</a></div><div class="ttdeci">void do_write(const std::string &amp;msg)</div><div class="ttdef"><b>Definition:</b> Session.cpp:31</div></div>
-<div class="ttc" id="aclassSession_html_a9fdb2c4cfb08ee541d1181929f8d56e0"><div class="ttname"><a href="classSession.html#a9fdb2c4cfb08ee541d1181929f8d56e0">Session::Session</a></div><div class="ttdeci">Session(tcp::socket socket, std::unique_ptr&lt; IServerProcessor &gt; processor)</div><div class="ttdef"><b>Definition:</b> Session.cpp:6</div></div>
-<div class="ttc" id="aclassSession_html_ab18d5bb8dd24f1c3031a1c77049055a3"><div class="ttname"><a href="classSession.html#ab18d5bb8dd24f1c3031a1c77049055a3">Session::_socket</a></div><div class="ttdeci">tcp::socket _socket</div><div class="ttdef"><b>Definition:</b> Session.h:12</div></div>
-<div class="ttc" id="aclassSession_html_a15700fd3247b8ccbf88c094ed75c957c"><div class="ttname"><a href="classSession.html#a15700fd3247b8ccbf88c094ed75c957c">Session::_processor</a></div><div class="ttdeci">std::unique_ptr&lt; IServerProcessor &gt; _processor</div><div class="ttdef"><b>Definition:</b> Session.h:15</div></div>
+<div class="ttc" id="aclassSession_html_a580c6f1982d1f247b8e2e89014790a00"><div class="ttname"><a href="classSession.html#a580c6f1982d1f247b8e2e89014790a00">Session::setProcessor</a></div><div class="ttdeci">void setProcessor(std::unique_ptr&lt; IServerProcessor &gt; processor)</div><div class="ttdef"><b>Definition:</b> Session.cpp:11</div></div>
+<div class="ttc" id="aclassSession_html_a5a874b0ee39713f631dfc3405be018b1"><div class="ttname"><a href="classSession.html#a5a874b0ee39713f631dfc3405be018b1">Session::_data</a></div><div class="ttdeci">char _data[max_length]</div><div class="ttdef"><b>Definition:</b> Session.h:17</div></div>
+<div class="ttc" id="aclassSession_html_a47baf956cead0046fcbac45c572c70d3"><div class="ttname"><a href="classSession.html#a47baf956cead0046fcbac45c572c70d3">Session::start</a></div><div class="ttdeci">void start()</div><div class="ttdef"><b>Definition:</b> Session.cpp:16</div></div>
+<div class="ttc" id="aclassSession_html_a9251d35017dc98d7e0531db8ce4eadfba91789f09a8674b8daa03927e3ceb7df4"><div class="ttname"><a href="classSession.html#a9251d35017dc98d7e0531db8ce4eadfba91789f09a8674b8daa03927e3ceb7df4">Session::max_length</a></div><div class="ttdeci">@ max_length</div><div class="ttdef"><b>Definition:</b> Session.h:16</div></div>
+<div class="ttc" id="aclassSession_html_a936fb78d44e9593395f873e388cc1b85"><div class="ttname"><a href="classSession.html#a936fb78d44e9593395f873e388cc1b85">Session::Session</a></div><div class="ttdeci">Session(tcp::socket socket)</div><div class="ttdef"><b>Definition:</b> Session.cpp:6</div></div>
+<div class="ttc" id="aclassSession_html_a41315ad3804a881ddf5cb99c52dd4a65"><div class="ttname"><a href="classSession.html#a41315ad3804a881ddf5cb99c52dd4a65">Session::write</a></div><div class="ttdeci">void write(const std::string &amp;msg)</div><div class="ttdef"><b>Definition:</b> Session.cpp:25</div></div>
+<div class="ttc" id="aclassSession_html"><div class="ttname"><a href="classSession.html">Session</a></div><div class="ttdoc">сессия пользователя</div><div class="ttdef"><b>Definition:</b> Session.h:13</div></div>
+<div class="ttc" id="aclassSession_html_a121783ddf71dfcc3fab4d90c2daeecd2"><div class="ttname"><a href="classSession.html#a121783ddf71dfcc3fab4d90c2daeecd2">Session::do_read</a></div><div class="ttdeci">void do_read()</div><div class="ttdef"><b>Definition:</b> Session.cpp:30</div></div>
+<div class="ttc" id="aclassSession_html_a0a1db6328e138ac9ce6c4e45c3fb8fb5"><div class="ttname"><a href="classSession.html#a0a1db6328e138ac9ce6c4e45c3fb8fb5">Session::do_write</a></div><div class="ttdeci">void do_write(const std::string &amp;msg)</div><div class="ttdef"><b>Definition:</b> Session.cpp:47</div></div>
+<div class="ttc" id="aclassSession_html_ab18d5bb8dd24f1c3031a1c77049055a3"><div class="ttname"><a href="classSession.html#ab18d5bb8dd24f1c3031a1c77049055a3">Session::_socket</a></div><div class="ttdeci">tcp::socket _socket</div><div class="ttdef"><b>Definition:</b> Session.h:15</div></div>
+<div class="ttc" id="aclassSession_html_a15700fd3247b8ccbf88c094ed75c957c"><div class="ttname"><a href="classSession.html#a15700fd3247b8ccbf88c094ed75c957c">Session::_processor</a></div><div class="ttdeci">std::unique_ptr&lt; IServerProcessor &gt; _processor</div><div class="ttdef"><b>Definition:</b> Session.h:18</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

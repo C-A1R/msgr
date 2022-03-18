@@ -1,6 +1,7 @@
 #include "Server.h"
 
 #include "Session.h"
+#include "SessionManager.h"
 #include "server_processor/ServerProcessor.h"
 
 #include <filesystem>
@@ -10,7 +11,7 @@ Server::Server(boost::asio::io_context& io_context, int port)
     : _acceptor{io_context, tcp::endpoint(tcp::v4(), port)}
 {
     const char *dbName = "db.sqlite";
-    _db = std::make_shared<Database>(dbName);
+    _db = std::make_shared<SqliteDatabase>(dbName);
     std::filesystem::path dbPath = std::filesystem::current_path() / dbName;
     bool baseCreated = std::filesystem::exists(dbPath);
 
@@ -22,6 +23,7 @@ Server::Server(boost::asio::io_context& io_context, int port)
     {
         return;
     }
+    _sessionManager = std::make_shared<SessionManager>();
     do_accept();
 }
 
@@ -31,7 +33,9 @@ void Server::do_accept()
     {
         if (!ec)
         {
-            std::make_shared<Session>(std::move(socket), std::make_unique<ServerProcessor>(_db))->start();
+            auto session = std::make_shared<Session>(std::move(socket));
+            session->setProcessor(std::make_unique<ServerProcessor>(_db, _sessionManager, session));
+            session->start();
         }
         do_accept();
     });

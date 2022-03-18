@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.13</span>
+   &#160;<span id="projectnumber">0.0.14</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -74,14 +74,17 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>виджет регистрации пользователя  
+ <a href="classRegistrationWidget.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="RegistrationWidget_8h_source.html">RegistrationWidget.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for RegistrationWidget:</div>
 <div class="dyncontent">
 <div class="center"><img src="classRegistrationWidget__inherit__graph.png" border="0" usemap="#RegistrationWidget_inherit__map" alt="Inheritance graph"/></div>
 <map name="RegistrationWidget_inherit__map" id="RegistrationWidget_inherit__map">
-<area shape="rect" title=" " alt="" coords="9,155,156,181"/>
-<area shape="rect" href="classAuthorizationWidget.html" title=" " alt="" coords="5,80,160,107"/>
+<area shape="rect" title="виджет регистрации пользователя" alt="" coords="9,155,156,181"/>
+<area shape="rect" href="classAuthorizationWidget.html" title="виджет входа в учетную запись пользователя" alt="" coords="5,80,160,107"/>
 <area shape="rect" title=" " alt="" coords="43,5,122,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -90,8 +93,8 @@ Collaboration diagram for RegistrationWidget:</div>
 <div class="dyncontent">
 <div class="center"><img src="classRegistrationWidget__coll__graph.png" border="0" usemap="#RegistrationWidget_coll__map" alt="Collaboration graph"/></div>
 <map name="RegistrationWidget_coll__map" id="RegistrationWidget_coll__map">
-<area shape="rect" title=" " alt="" coords="9,155,156,181"/>
-<area shape="rect" href="classAuthorizationWidget.html" title=" " alt="" coords="5,80,160,107"/>
+<area shape="rect" title="виджет регистрации пользователя" alt="" coords="9,155,156,181"/>
+<area shape="rect" href="classAuthorizationWidget.html" title="виджет входа в учетную запись пользователя" alt="" coords="5,80,160,107"/>
 <area shape="rect" title=" " alt="" coords="43,5,122,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -128,28 +131,36 @@ Protected Attributes</h2></td></tr>
 Private Slots</h2></td></tr>
 <tr class="memitem:ac98570a9da83844bfe0299ced86f1ea3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRegistrationWidget.html#ac98570a9da83844bfe0299ced86f1ea3">slot_sign_pBtn_clicked</a> () override</td></tr>
 <tr class="separator:ac98570a9da83844bfe0299ced86f1ea3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5211e2c5df535ef0bb6b3fdc8d08167f"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRegistrationWidget.html#a5211e2c5df535ef0bb6b3fdc8d08167f">slot_SignUpRequest</a> ()</td></tr>
-<tr class="separator:a5211e2c5df535ef0bb6b3fdc8d08167f"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a94d6bd94ac531115a04140dfac66bfba"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRegistrationWidget.html#a94d6bd94ac531115a04140dfac66bfba">slot_SignUpResponse</a> (const std::string &amp;status)</td></tr>
-<tr class="separator:a94d6bd94ac531115a04140dfac66bfba"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4b7c5da69263f10c4b5c0449b28296c2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRegistrationWidget.html#a4b7c5da69263f10c4b5c0449b28296c2">slot_signUpRequest</a> ()</td></tr>
+<tr class="memdesc:a4b7c5da69263f10c4b5c0449b28296c2"><td class="mdescLeft">&#160;</td><td class="mdescRight">отправить запрос на регистрацию  <a href="classRegistrationWidget.html#a4b7c5da69263f10c4b5c0449b28296c2">More...</a><br /></td></tr>
+<tr class="separator:a4b7c5da69263f10c4b5c0449b28296c2"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a7a1734aad066762db8c89b2970a09791"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRegistrationWidget.html#a7a1734aad066762db8c89b2970a09791">slot_signUpResponse</a> (const std::string &amp;status)</td></tr>
+<tr class="memdesc:a7a1734aad066762db8c89b2970a09791"><td class="mdescLeft">&#160;</td><td class="mdescRight">обработка ответа на запрос о регистрации  <a href="classRegistrationWidget.html#a7a1734aad066762db8c89b2970a09791">More...</a><br /></td></tr>
+<tr class="separator:a7a1734aad066762db8c89b2970a09791"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
 <tr class="memitem:a9e3934ab8e9a03470edca839e040ab4e"><td class="memItemLeft" align="right" valign="top">QHBoxLayout *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classRegistrationWidget.html#a9e3934ab8e9a03470edca839e040ab4e">createConfirmLine</a> () override</td></tr>
+<tr class="memdesc:a9e3934ab8e9a03470edca839e040ab4e"><td class="mdescLeft">&#160;</td><td class="mdescRight">создает (или нет) поле подтверждения пароля  <a href="classRegistrationWidget.html#a9e3934ab8e9a03470edca839e040ab4e">More...</a><br /></td></tr>
 <tr class="separator:a9e3934ab8e9a03470edca839e040ab4e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="inherited"></a>
 Additional Inherited Members</h2></td></tr>
 <tr class="inherit_header signals_classAuthorizationWidget"><td colspan="2" onclick="javascript:toggleInherit('signals_classAuthorizationWidget')"><img src="closed.png" alt="-"/>&#160;Signals inherited from <a class="el" href="classAuthorizationWidget.html">AuthorizationWidget</a></td></tr>
 <tr class="memitem:a01f709cfd6d0c1f8fcdc9e66a4196362 inherit signals_classAuthorizationWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthorizationWidget.html#a01f709cfd6d0c1f8fcdc9e66a4196362">signal_changeSign</a> (<a class="el" href="MainWidgets_8h.html#adcd5eb519932c561d0b8dd950adde10a">MainWidgets</a>)</td></tr>
+<tr class="memdesc:a01f709cfd6d0c1f8fcdc9e66a4196362 inherit signals_classAuthorizationWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">переклюение между входом и регистрацией пользователя  <a href="classAuthorizationWidget.html#a01f709cfd6d0c1f8fcdc9e66a4196362">More...</a><br /></td></tr>
 <tr class="separator:a01f709cfd6d0c1f8fcdc9e66a4196362 inherit signals_classAuthorizationWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pro_methods_classAuthorizationWidget"><td colspan="2" onclick="javascript:toggleInherit('pro_methods_classAuthorizationWidget')"><img src="closed.png" alt="-"/>&#160;Protected Member Functions inherited from <a class="el" href="classAuthorizationWidget.html">AuthorizationWidget</a></td></tr>
-<tr class="memitem:a2ebc435097730c03e87473c76e9e710c inherit pro_methods_classAuthorizationWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthorizationWidget.html#a2ebc435097730c03e87473c76e9e710c">setupUi</a> ()</td></tr>
-<tr class="separator:a2ebc435097730c03e87473c76e9e710c inherit pro_methods_classAuthorizationWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a90fd0d68e19f3021e730b6a77a286c45 inherit pro_methods_classAuthorizationWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthorizationWidget.html#a90fd0d68e19f3021e730b6a77a286c45">initUi</a> ()</td></tr>
+<tr class="memdesc:a90fd0d68e19f3021e730b6a77a286c45 inherit pro_methods_classAuthorizationWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">инициализация пользовательского интерфейса  <a href="classAuthorizationWidget.html#a90fd0d68e19f3021e730b6a77a286c45">More...</a><br /></td></tr>
+<tr class="separator:a90fd0d68e19f3021e730b6a77a286c45 inherit pro_methods_classAuthorizationWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad3dfe2fc09a18c8b6a21117e37a429f0 inherit pro_methods_classAuthorizationWidget"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classAuthorizationWidget.html#ad3dfe2fc09a18c8b6a21117e37a429f0">showError</a> (const QString &amp;err)</td></tr>
+<tr class="memdesc:ad3dfe2fc09a18c8b6a21117e37a429f0 inherit pro_methods_classAuthorizationWidget"><td class="mdescLeft">&#160;</td><td class="mdescRight">отобразить ошибку авторизации  <a href="classAuthorizationWidget.html#ad3dfe2fc09a18c8b6a21117e37a429f0">More...</a><br /></td></tr>
 <tr class="separator:ad3dfe2fc09a18c8b6a21117e37a429f0 inherit pro_methods_classAuthorizationWidget"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>виджет регистрации пользователя </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a88cc7c13242006fb3a24938f6d6d81b1"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a88cc7c13242006fb3a24938f6d6d81b1">&#9670;&nbsp;</a></span>RegistrationWidget()</h2>
 
@@ -210,6 +221,8 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>создает (или нет) поле подтверждения пароля </p>
+
 <p>Reimplemented from <a class="el" href="classAuthorizationWidget.html#abc75cda0961edadb794aec4b6f873616">AuthorizationWidget</a>.</p>
 
 </div>
@@ -266,8 +279,8 @@ Additional Inherited Members</h2></td></tr>
 
 </div>
 </div>
-<a id="a5211e2c5df535ef0bb6b3fdc8d08167f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5211e2c5df535ef0bb6b3fdc8d08167f">&#9670;&nbsp;</a></span>slot_SignUpRequest</h2>
+<a id="a4b7c5da69263f10c4b5c0449b28296c2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4b7c5da69263f10c4b5c0449b28296c2">&#9670;&nbsp;</a></span>slot_signUpRequest</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -276,7 +289,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void RegistrationWidget::slot_SignUpRequest </td>
+          <td class="memname">void RegistrationWidget::slot_signUpRequest </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
           <td></td>
@@ -289,10 +302,12 @@ Additional Inherited Members</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>отправить запрос на регистрацию </p>
+
 </div>
 </div>
-<a id="a94d6bd94ac531115a04140dfac66bfba"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a94d6bd94ac531115a04140dfac66bfba">&#9670;&nbsp;</a></span>slot_SignUpResponse</h2>
+<a id="a7a1734aad066762db8c89b2970a09791"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a7a1734aad066762db8c89b2970a09791">&#9670;&nbsp;</a></span>slot_signUpResponse</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -301,7 +316,7 @@ Additional Inherited Members</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void RegistrationWidget::slot_SignUpResponse </td>
+          <td class="memname">void RegistrationWidget::slot_signUpResponse </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>status</em></td><td>)</td>
@@ -314,6 +329,8 @@ Additional Inherited Members</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>обработка ответа на запрос о регистрации </p>
 
 </div>
 </div>

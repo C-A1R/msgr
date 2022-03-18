@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['getresponse_265',['getResponse',['../classIServerProcessor.html#a076f254f834a679f7d8dc1e0f253cbc5',1,'IServerProcessor::getResponse()'],['../classServerProcessor.html#aed9380ea29a96f4fa2facaf80ca0a408',1,'ServerProcessor::getResponse()']]],
-  ['getuserid_266',['getUserId',['../classDatabase.html#a60ca5177e0773dde89a88a36ebf612e4',1,'Database::getUserId()'],['../classIDatabase.html#a133cbda0cb91cb37822c3aa62e6c1c19',1,'IDatabase::getUserId()']]],
-  ['getuserpassword_267',['getUserPassword',['../classDatabase.html#ab5d34ddef84bf9173827f230207f6e2d',1,'Database::getUserPassword()'],['../classIDatabase.html#aca5ad5e1716b3d6787194caf659c15b0',1,'IDatabase::getUserPassword()']]]
+  ['getuserid_296',['getUserId',['../classSqliteDatabase.html#ab3b0294e80d9cdb511f8ed8dca6ec16b',1,'SqliteDatabase::getUserId()'],['../classIDatabase.html#a133cbda0cb91cb37822c3aa62e6c1c19',1,'IDatabase::getUserId()']]],
+  ['getuserpassword_297',['getUserPassword',['../classSqliteDatabase.html#a04a2fb2a1d2ff0d64f0f3f3972a353f6',1,'SqliteDatabase::getUserPassword()'],['../classIDatabase.html#aca5ad5e1716b3d6787194caf659c15b0',1,'IDatabase::getUserPassword()']]]
 ];

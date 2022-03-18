@@ -1,12 +1,10 @@
 var searchData=
 [
-  ['readhandler_114',['readHandler',['../classClient.html#a8152343f481c54137505ff2b0a9dcbcf',1,'Client']]],
-  ['readme_2emd_115',['README.md',['../README_8md.html',1,'']]],
-  ['registration_116',['Registration',['../MainWidgets_8h.html#adcd5eb519932c561d0b8dd950adde10aa0f98b7f230f3c91292f0de4c99e263f2',1,'MainWidgets.h']]],
-  ['registrationwidget_117',['RegistrationWidget',['../classRegistrationWidget.html',1,'RegistrationWidget'],['../classRegistrationWidget.html#a88cc7c13242006fb3a24938f6d6d81b1',1,'RegistrationWidget::RegistrationWidget()']]],
-  ['registrationwidget_2ecpp_118',['RegistrationWidget.cpp',['../RegistrationWidget_8cpp.html',1,'']]],
-  ['registrationwidget_2ecpp_2eo_2ed_119',['RegistrationWidget.cpp.o.d',['../RegistrationWidget_8cpp_8o_8d.html',1,'']]],
-  ['registrationwidget_2eh_120',['RegistrationWidget.h',['../RegistrationWidget_8h.html',1,'']]],
-  ['resolvehandler_121',['resolveHandler',['../classClient.html#a1fefe16d82d9f9bcfa117174c49974bb',1,'Client']]],
-  ['run_122',['run',['../classClientThread.html#a928ef0e2be22e15fa5ca1ccd03ed9c6e',1,'ClientThread']]]
+  ['parsecache_2etxt_121',['ParseCache.txt',['../ParseCache_8txt.html',1,'']]],
+  ['parseclientmessage_122',['parseClientMessage',['../classIServerProcessor.html#add294e88af3b73572920e8e3ba1fa4bf',1,'IServerProcessor::parseClientMessage()'],['../classServerProcessor.html#a46161fa012cacf9c1bd09703f21ffc7a',1,'ServerProcessor::parseClientMessage()']]],
+  ['parserequest_123',['parseRequest',['../classClientProcessor.html#a3614104ae0bb24a23703c6d0eee40f02',1,'ClientProcessor::parseRequest()'],['../classServerProcessor.html#a5f4d7af2e23a4eb9b04f6abb1f3bffa9',1,'ServerProcessor::parseRequest()']]],
+  ['parseresponse_124',['parseResponse',['../classClientProcessor.html#aaaebc7a880bd06c52e775c0a612aade4',1,'ClientProcessor::parseResponse()'],['../classServerProcessor.html#a223762fc5f6ccc37ac68db6735049c33',1,'ServerProcessor::parseResponse()']]],
+  ['password_5fledit_125',['password_lEdit',['../classAuthorizationWidget.html#ae7484d9d6d837e6405b45b33eb2bbd51',1,'AuthorizationWidget']]],
+  ['platform_5fid_126',['PLATFORM_ID',['../CMakeCCompilerId_8c.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID():&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#adbc5372f40838899018fadbc89bd588b',1,'PLATFORM_ID():&#160;CMakeCXXCompilerId.cpp']]],
+  ['project_127',['project',['../src__client_2CMakeLists_8txt.html#a6b95563f9336629ab5cab3b1a645ce1e',1,'project(${PROJECT_NAME}) set(CMAKE_INCLUDE_CURRENT_DIR ON) set(CMAKE_AUTOUIC ON) set(CMAKE_AUTOMOC ON) set(CMAKE_AUTORCC ON) set(CMAKE_CXX_STANDARD 11) set(CMAKE_CXX_STANDARD_REQUIRED ON) find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED) find_package(Qt$:&#160;CMakeLists.txt'],['../src__server_2CMakeLists_8txt.html#a5c3a43c156708439f0732e517a81d7a0',1,'project(${PROJECT_NAME}) set(HEADERS Server.h Session.h SessionManager.h database/sqlite/sqlite3.h database/IDatabase.h database/Database.h server_processor/IServerProcessor.h server_processor/ServerProcessor.h) set(SOURCES main.cpp Server.cpp Session.cpp SessionManager.cpp database/sqlite/sqlite3.c database/Database.cpp server_processor/ServerProcessor.cpp) add_executable(msgr_server $:&#160;CMakeLists.txt']]]
 ];

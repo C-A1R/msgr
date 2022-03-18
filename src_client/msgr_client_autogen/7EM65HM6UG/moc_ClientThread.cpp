@@ -21,8 +21,8 @@ QT_BEGIN_MOC_NAMESPACE
 QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_ClientThread_t {
-    QByteArrayData data[6];
-    char stringdata0[86];
+    QByteArrayData data[7];
+    char stringdata0[72];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,16 +32,16 @@ struct qt_meta_stringdata_ClientThread_t {
 static const qt_meta_stringdata_ClientThread_t qt_meta_stringdata_ClientThread = {
     {
 QT_MOC_LITERAL(0, 0, 12), // "ClientThread"
-QT_MOC_LITERAL(1, 13, 19), // "signal_sendToClient"
-QT_MOC_LITERAL(2, 33, 0), // ""
-QT_MOC_LITERAL(3, 34, 11), // "std::string"
-QT_MOC_LITERAL(4, 46, 23), // "signal_responseRecieved"
-QT_MOC_LITERAL(5, 70, 15) // "slot_stopClient"
+QT_MOC_LITERAL(1, 13, 15), // "signal_recieved"
+QT_MOC_LITERAL(2, 29, 0), // ""
+QT_MOC_LITERAL(3, 30, 11), // "std::string"
+QT_MOC_LITERAL(4, 42, 15), // "slot_stopClient"
+QT_MOC_LITERAL(5, 58, 9), // "slot_send"
+QT_MOC_LITERAL(6, 68, 3) // "msg"
 
     },
-    "ClientThread\0signal_sendToClient\0\0"
-    "std::string\0signal_responseRecieved\0"
-    "slot_stopClient"
+    "ClientThread\0signal_recieved\0\0std::string\0"
+    "slot_stopClient\0slot_send\0msg"
 };
 #undef QT_MOC_LITERAL
 
@@ -56,21 +56,21 @@ static const uint qt_meta_data_ClientThread[] = {
        0,    0, // enums/sets
        0,    0, // constructors
        0,       // flags
-       2,       // signalCount
+       1,       // signalCount
 
  // signals: name, argc, parameters, tag, flags
        1,    1,   29,    2, 0x06 /* Public */,
-       4,    1,   32,    2, 0x06 /* Public */,
 
  // slots: name, argc, parameters, tag, flags
-       5,    0,   35,    2, 0x0a /* Public */,
+       4,    0,   32,    2, 0x0a /* Public */,
+       5,    1,   33,    2, 0x0a /* Public */,
 
  // signals: parameters
-    QMetaType::Void, 0x80000000 | 3,    2,
     QMetaType::Void, 0x80000000 | 3,    2,
 
  // slots: parameters
     QMetaType::Void,
+    QMetaType::Void, 0x80000000 | 3,    6,
 
        0        // eod
 };
@@ -81,24 +81,17 @@ void ClientThread::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id
         auto *_t = static_cast<ClientThread *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->signal_sendToClient((*reinterpret_cast< const std::string(*)>(_a[1]))); break;
-        case 1: _t->signal_responseRecieved((*reinterpret_cast< const std::string(*)>(_a[1]))); break;
-        case 2: _t->slot_stopClient(); break;
+        case 0: _t->signal_recieved((*reinterpret_cast< const std::string(*)>(_a[1]))); break;
+        case 1: _t->slot_stopClient(); break;
+        case 2: _t->slot_send((*reinterpret_cast< const std::string(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::IndexOfMethod) {
         int *result = reinterpret_cast<int *>(_a[0]);
         {
             using _t = void (ClientThread::*)(const std::string & );
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&ClientThread::signal_sendToClient)) {
+            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&ClientThread::signal_recieved)) {
                 *result = 0;
-                return;
-            }
-        }
-        {
-            using _t = void (ClientThread::*)(const std::string & );
-            if (*reinterpret_cast<_t *>(_a[1]) == static_cast<_t>(&ClientThread::signal_responseRecieved)) {
-                *result = 1;
                 return;
             }
         }
@@ -146,17 +139,10 @@ int ClientThread::qt_metacall(QMetaObject::Call _c, int _id, void **_a)
 }
 
 // SIGNAL 0
-void ClientThread::signal_sendToClient(const std::string & _t1)
+void ClientThread::signal_recieved(const std::string & _t1)
 {
     void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
     QMetaObject::activate(this, &staticMetaObject, 0, _a);
-}
-
-// SIGNAL 1
-void ClientThread::signal_responseRecieved(const std::string & _t1)
-{
-    void *_a[] = { nullptr, const_cast<void*>(reinterpret_cast<const void*>(&_t1)) };
-    QMetaObject::activate(this, &staticMetaObject, 1, _a);
 }
 QT_WARNING_POP
 QT_END_MOC_NAMESPACE

@@ -22,7 +22,7 @@ QT_WARNING_PUSH
 QT_WARNING_DISABLE_DEPRECATED
 struct qt_meta_stringdata_MainWindow_t {
     QByteArrayData data[5];
-    char stringdata0[44];
+    char stringdata0[46];
 };
 #define QT_MOC_LITERAL(idx, ofs, len) \
     Q_STATIC_BYTE_ARRAY_DATA_HEADER_INITIALIZER_WITH_OFFSET(len, \
@@ -32,13 +32,13 @@ struct qt_meta_stringdata_MainWindow_t {
 static const qt_meta_stringdata_MainWindow_t qt_meta_stringdata_MainWindow = {
     {
 QT_MOC_LITERAL(0, 0, 10), // "MainWindow"
-QT_MOC_LITERAL(1, 11, 15), // "slot_changeSign"
-QT_MOC_LITERAL(2, 27, 0), // ""
-QT_MOC_LITERAL(3, 28, 11), // "MainWidgets"
-QT_MOC_LITERAL(4, 40, 3) // "wgt"
+QT_MOC_LITERAL(1, 11, 17), // "slot_changeWidget"
+QT_MOC_LITERAL(2, 29, 0), // ""
+QT_MOC_LITERAL(3, 30, 11), // "MainWidgets"
+QT_MOC_LITERAL(4, 42, 3) // "wgt"
 
     },
-    "MainWindow\0slot_changeSign\0\0MainWidgets\0"
+    "MainWindow\0slot_changeWidget\0\0MainWidgets\0"
     "wgt"
 };
 #undef QT_MOC_LITERAL
@@ -71,7 +71,7 @@ void MainWindow::qt_static_metacall(QObject *_o, QMetaObject::Call _c, int _id, 
         auto *_t = static_cast<MainWindow *>(_o);
         Q_UNUSED(_t)
         switch (_id) {
-        case 0: _t->slot_changeSign((*reinterpret_cast< MainWidgets(*)>(_a[1]))); break;
+        case 0: _t->slot_changeWidget((*reinterpret_cast< MainWidgets(*)>(_a[1]))); break;
         default: ;
         }
     } else if (_c == QMetaObject::RegisterMethodArgumentMetaType) {

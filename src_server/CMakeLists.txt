@@ -12,6 +12,7 @@ project(${PROJECT_NAME})
 set(HEADERS
     Server.h
     Session.h
+    SessionManager.h
     database/sqlite/sqlite3.h
     database/IDatabase.h
     database/Database.h
@@ -23,6 +24,7 @@ set(SOURCES
     main.cpp
     Server.cpp
     Session.cpp
+    SessionManager.cpp
     database/sqlite/sqlite3.c
     database/Database.cpp
     server_processor/ServerProcessor.cpp

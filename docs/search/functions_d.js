@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['writehandler_317',['writeHandler',['../classClient.html#a3cbb9ed253c9c3668eeedc4b1b39e2f3',1,'Client']]]
+  ['write_360',['write',['../classSession.html#a41315ad3804a881ddf5cb99c52dd4a65',1,'Session']]]
 ];

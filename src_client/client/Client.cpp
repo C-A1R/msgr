@@ -9,40 +9,37 @@ Client::Client(boost::asio::io_context &io_context)
 
 void Client::start(const std::string &host, const std::string &service)
 {
-//    std::cout << "# / Client::start " << host << " " << service << std::endl;
     tcp::resolver::query query{host, service};
     _resolver.async_resolve(query, [&](const boost::system::error_code &ec, tcp::resolver::iterator it)
     {
-        resolveHandler(ec, it);
+        do_resolve(ec, it);
     });
 }
 
-void Client::resolveHandler(const boost::system::error_code &ec, tcp::resolver::iterator it)
+void Client::do_resolve(const boost::system::error_code &ec, tcp::resolver::iterator it)
 {
     if (ec || it == tcp::resolver::iterator{})
     {
-        std::cout << "# / ec " << ec.message() << std::endl;
         return;
     }
 //    std::cout << "# / endpoint " << it->endpoint().address() << ":" << it->endpoint().port() << std::endl;
 
     _socket.async_connect(*it, [&](const boost::system::error_code &ec)
     {
-        connectHandler(ec);
+        do_connect(ec);
     });
 }
 
-void Client::connectHandler(const boost::system::error_code &ec)
+void Client::do_connect(const boost::system::error_code &ec)
 {
     if (ec)
     {
         return;
     }
-//    std::cout << "# / ping " << std::endl;
-    writeHandler("ping\n");
+    do_write("ping\n");
 }
 
-void Client::readHandler(const boost::system::error_code &ec, std::size_t bytes)
+void Client::do_read(const boost::system::error_code &ec, std::size_t bytes)
 {
     if (ec || !bytes)
     {
@@ -50,17 +47,17 @@ void Client::readHandler(const boost::system::error_code &ec, std::size_t bytes)
     }
     _socket.async_read_some(boost::asio::buffer(_buffer), [&](const boost::system::error_code &ec, std::size_t bytes)
     {
-        emit signal_responseRecieved(std::string(_buffer, bytes));
-        readHandler(ec, bytes);
+        emit signal_recieved(std::string(_buffer, bytes));
+        do_read(ec, bytes);
     });
 }
 
-void Client::slot_sendToServer(const std::string &request)
+void Client::send(const std::string &msg)
 {    
-    writeHandler(request);
+    do_write(msg);
 }
 
-void Client::writeHandler(const std::string &msg)
+void Client::do_write(const std::string &msg)
 {
     if (msg.empty())
     {
@@ -70,7 +67,7 @@ void Client::writeHandler(const std::string &msg)
     {
         if (!ec)
         {
-            readHandler(ec, bytes);
+            do_read(ec, bytes);
         }
     });
 }

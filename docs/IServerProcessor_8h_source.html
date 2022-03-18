@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.13</span>
+   &#160;<span id="projectnumber">0.0.14</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -76,20 +76,20 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classIServerProcessor.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="classIServerProcessor.html">IServerProcessor</a></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;    <a class="code" href="classIServerProcessor.html#aee941c856cdeaf5ac7fa4808fc7e8dfe">IServerProcessor</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classIServerProcessor.html#a69e3473d80b74c905a51ff5433317bf6">~IServerProcessor</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="classIServerProcessor.html#a076f254f834a679f7d8dc1e0f253cbc5">getResponse</a>(<span class="keyword">const</span> std::string &amp;request) = 0;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;};</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classIServerProcessor.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classIServerProcessor.html">IServerProcessor</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classIServerProcessor.html#aee941c856cdeaf5ac7fa4808fc7e8dfe">IServerProcessor</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classIServerProcessor.html#a69e3473d80b74c905a51ff5433317bf6">~IServerProcessor</a>() = <span class="keywordflow">default</span>;</div>
 <div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif // ISERVERPROCESSOR_H</span></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">virtual</span> std::string <a class="code" href="classIServerProcessor.html#add294e88af3b73572920e8e3ba1fa4bf">parseClientMessage</a>(<span class="keyword">const</span> std::string &amp;request) = 0;</div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;};</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160; </div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;<span class="preprocessor">#endif // ISERVERPROCESSOR_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassIServerProcessor_html_aee941c856cdeaf5ac7fa4808fc7e8dfe"><div class="ttname"><a href="classIServerProcessor.html#aee941c856cdeaf5ac7fa4808fc7e8dfe">IServerProcessor::IServerProcessor</a></div><div class="ttdeci">IServerProcessor()=default</div></div>
-<div class="ttc" id="aclassIServerProcessor_html_a076f254f834a679f7d8dc1e0f253cbc5"><div class="ttname"><a href="classIServerProcessor.html#a076f254f834a679f7d8dc1e0f253cbc5">IServerProcessor::getResponse</a></div><div class="ttdeci">virtual std::string getResponse(const std::string &amp;request)=0</div></div>
-<div class="ttc" id="aclassIServerProcessor_html"><div class="ttname"><a href="classIServerProcessor.html">IServerProcessor</a></div><div class="ttdef"><b>Definition:</b> IServerProcessor.h:6</div></div>
+<div class="ttc" id="aclassIServerProcessor_html_add294e88af3b73572920e8e3ba1fa4bf"><div class="ttname"><a href="classIServerProcessor.html#add294e88af3b73572920e8e3ba1fa4bf">IServerProcessor::parseClientMessage</a></div><div class="ttdeci">virtual std::string parseClientMessage(const std::string &amp;request)=0</div></div>
+<div class="ttc" id="aclassIServerProcessor_html"><div class="ttname"><a href="classIServerProcessor.html">IServerProcessor</a></div><div class="ttdoc">интерфейс обработчика запросов/ответов от клиента</div><div class="ttdef"><b>Definition:</b> IServerProcessor.h:9</div></div>
 <div class="ttc" id="aclassIServerProcessor_html_a69e3473d80b74c905a51ff5433317bf6"><div class="ttname"><a href="classIServerProcessor.html#a69e3473d80b74c905a51ff5433317bf6">IServerProcessor::~IServerProcessor</a></div><div class="ttdeci">virtual ~IServerProcessor()=default</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

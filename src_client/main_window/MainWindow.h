@@ -19,10 +19,11 @@ public:
     MainWindow(QWidget *parent = nullptr);
 
 private:
-    void setupUi(const std::shared_ptr<IClientProcessor> &msgProcessor);
+    ///инициализация пользовательского интерфейса
+    void initUi(const std::shared_ptr<IClientProcessor> &msgProcessor);
 
 private slots:
-    void slot_changeSign(MainWidgets wgt);
+    void slot_changeWidget(MainWidgets wgt);
 };
 
 Q_DECLARE_METATYPE(std::string)

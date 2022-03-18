@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.13</span>
+   &#160;<span id="projectnumber">0.0.14</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -73,14 +73,17 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>обработчик запросов/ответов от клиента  
+ <a href="classServerProcessor.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="ServerProcessor_8h_source.html">ServerProcessor.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for ServerProcessor:</div>
 <div class="dyncontent">
 <div class="center"><img src="classServerProcessor__inherit__graph.png" border="0" usemap="#ServerProcessor_inherit__map" alt="Inheritance graph"/></div>
 <map name="ServerProcessor_inherit__map" id="ServerProcessor_inherit__map">
-<area shape="rect" title=" " alt="" coords="7,80,134,107"/>
-<area shape="rect" href="classIServerProcessor.html" title=" " alt="" coords="5,5,136,32"/>
+<area shape="rect" title="обработчик запросов/ответов от клиента" alt="" coords="7,80,134,107"/>
+<area shape="rect" href="classIServerProcessor.html" title="интерфейс обработчика запросов/ответов от клиента" alt="" coords="5,5,136,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <div class="dynheader">
@@ -88,17 +91,17 @@ Collaboration diagram for ServerProcessor:</div>
 <div class="dyncontent">
 <div class="center"><img src="classServerProcessor__coll__graph.png" border="0" usemap="#ServerProcessor_coll__map" alt="Collaboration graph"/></div>
 <map name="ServerProcessor_coll__map" id="ServerProcessor_coll__map">
-<area shape="rect" title=" " alt="" coords="7,80,134,107"/>
-<area shape="rect" href="classIServerProcessor.html" title=" " alt="" coords="5,5,136,32"/>
+<area shape="rect" title="обработчик запросов/ответов от клиента" alt="" coords="7,80,134,107"/>
+<area shape="rect" href="classIServerProcessor.html" title="интерфейс обработчика запросов/ответов от клиента" alt="" coords="5,5,136,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a077ebf1e5a0174434851ad93b6491c88"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a077ebf1e5a0174434851ad93b6491c88">ServerProcessor</a> (const std::shared_ptr&lt; <a class="el" href="classIDatabase.html">IDatabase</a> &gt; &amp;db)</td></tr>
-<tr class="separator:a077ebf1e5a0174434851ad93b6491c88"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aed9380ea29a96f4fa2facaf80ca0a408"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#aed9380ea29a96f4fa2facaf80ca0a408">getResponse</a> (const std::string &amp;request) override</td></tr>
-<tr class="separator:aed9380ea29a96f4fa2facaf80ca0a408"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad1481956d2b21d716460cc49d7785604"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#ad1481956d2b21d716460cc49d7785604">ServerProcessor</a> (const std::shared_ptr&lt; <a class="el" href="classIDatabase.html">IDatabase</a> &gt; &amp;db, const std::shared_ptr&lt; <a class="el" href="classSessionManager.html">SessionManager</a> &gt; &amp;sessionMgr, const std::shared_ptr&lt; <a class="el" href="classSession.html">Session</a> &gt; &amp;currentSession)</td></tr>
+<tr class="separator:ad1481956d2b21d716460cc49d7785604"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a46161fa012cacf9c1bd09703f21ffc7a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a46161fa012cacf9c1bd09703f21ffc7a">parseClientMessage</a> (const std::string &amp;msg) override</td></tr>
+<tr class="separator:a46161fa012cacf9c1bd09703f21ffc7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classIServerProcessor"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classIServerProcessor')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classIServerProcessor.html">IServerProcessor</a></td></tr>
 <tr class="memitem:aee941c856cdeaf5ac7fa4808fc7e8dfe inherit pub_methods_classIServerProcessor"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIServerProcessor.html#aee941c856cdeaf5ac7fa4808fc7e8dfe">IServerProcessor</a> ()=default</td></tr>
 <tr class="separator:aee941c856cdeaf5ac7fa4808fc7e8dfe inherit pub_methods_classIServerProcessor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -107,23 +110,46 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a03db4d97917aa166502fc97c09f23651"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a03db4d97917aa166502fc97c09f23651">signUpResponse</a> (const boost::property_tree::ptree &amp;requestRoot)</td></tr>
-<tr class="separator:a03db4d97917aa166502fc97c09f23651"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a567b9ae0bbe7d90d6e7d9d8fef894aed"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a567b9ae0bbe7d90d6e7d9d8fef894aed">signInResponse</a> (const boost::property_tree::ptree &amp;requestRoot)</td></tr>
-<tr class="separator:a567b9ae0bbe7d90d6e7d9d8fef894aed"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a67a0d1ebb4ee2a7692f3b80dfda1c27f"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a67a0d1ebb4ee2a7692f3b80dfda1c27f">outputMessageResponse</a> (const boost::property_tree::ptree &amp;requestRoot)</td></tr>
-<tr class="separator:a67a0d1ebb4ee2a7692f3b80dfda1c27f"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5f4d7af2e23a4eb9b04f6abb1f3bffa9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a5f4d7af2e23a4eb9b04f6abb1f3bffa9">parseRequest</a> (const boost::property_tree::ptree &amp;root)</td></tr>
+<tr class="memdesc:a5f4d7af2e23a4eb9b04f6abb1f3bffa9"><td class="mdescLeft">&#160;</td><td class="mdescRight">обработка запросов от клиента  <a href="classServerProcessor.html#a5f4d7af2e23a4eb9b04f6abb1f3bffa9">More...</a><br /></td></tr>
+<tr class="separator:a5f4d7af2e23a4eb9b04f6abb1f3bffa9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a223762fc5f6ccc37ac68db6735049c33"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a223762fc5f6ccc37ac68db6735049c33">parseResponse</a> (const boost::property_tree::ptree &amp;root)</td></tr>
+<tr class="memdesc:a223762fc5f6ccc37ac68db6735049c33"><td class="mdescLeft">&#160;</td><td class="mdescRight">обработка ответов от клиента  <a href="classServerProcessor.html#a223762fc5f6ccc37ac68db6735049c33">More...</a><br /></td></tr>
+<tr class="separator:a223762fc5f6ccc37ac68db6735049c33"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a48c4983ceea19a9d150da0fdf1c844b0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a48c4983ceea19a9d150da0fdf1c844b0">signUp</a> (const boost::property_tree::ptree &amp;requestRoot)</td></tr>
+<tr class="memdesc:a48c4983ceea19a9d150da0fdf1c844b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">регистрация  <a href="classServerProcessor.html#a48c4983ceea19a9d150da0fdf1c844b0">More...</a><br /></td></tr>
+<tr class="separator:a48c4983ceea19a9d150da0fdf1c844b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0a2146479334cca4f932c0559d829529"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a0a2146479334cca4f932c0559d829529">signIn</a> (const boost::property_tree::ptree &amp;requestRoot)</td></tr>
+<tr class="memdesc:a0a2146479334cca4f932c0559d829529"><td class="mdescLeft">&#160;</td><td class="mdescRight">вход  <a href="classServerProcessor.html#a0a2146479334cca4f932c0559d829529">More...</a><br /></td></tr>
+<tr class="separator:a0a2146479334cca4f932c0559d829529"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a16d031931d7e242d568b6e96ceaba7b0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a16d031931d7e242d568b6e96ceaba7b0">signOut</a> ()</td></tr>
+<tr class="memdesc:a16d031931d7e242d568b6e96ceaba7b0"><td class="mdescLeft">&#160;</td><td class="mdescRight">выход  <a href="classServerProcessor.html#a16d031931d7e242d568b6e96ceaba7b0">More...</a><br /></td></tr>
+<tr class="separator:a16d031931d7e242d568b6e96ceaba7b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae1d36f78fad407d4f21f8965adaec488"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#ae1d36f78fad407d4f21f8965adaec488">outputMessage</a> (const boost::property_tree::ptree &amp;root)</td></tr>
+<tr class="memdesc:ae1d36f78fad407d4f21f8965adaec488"><td class="mdescLeft">&#160;</td><td class="mdescRight">исходящее сообщение от клиента  <a href="classServerProcessor.html#ae1d36f78fad407d4f21f8965adaec488">More...</a><br /></td></tr>
+<tr class="separator:ae1d36f78fad407d4f21f8965adaec488"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a225f9d60303d3b49af9bfda9a613ebb2"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a225f9d60303d3b49af9bfda9a613ebb2">inputMessage</a> (const boost::property_tree::ptree &amp;root)</td></tr>
+<tr class="memdesc:a225f9d60303d3b49af9bfda9a613ebb2"><td class="mdescLeft">&#160;</td><td class="mdescRight">входящее сообщение клиенту  <a href="classServerProcessor.html#a225f9d60303d3b49af9bfda9a613ebb2">More...</a><br /></td></tr>
+<tr class="separator:a225f9d60303d3b49af9bfda9a613ebb2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:a24d0e13a9f27b5950a697fea58dd0f59"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classIDatabase.html">IDatabase</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a24d0e13a9f27b5950a697fea58dd0f59">_db</a></td></tr>
 <tr class="separator:a24d0e13a9f27b5950a697fea58dd0f59"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d0d058ff5e6c84569ea3ae16aa24108"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classSessionManager.html">SessionManager</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a9d0d058ff5e6c84569ea3ae16aa24108">_sessionMgr</a></td></tr>
+<tr class="separator:a9d0d058ff5e6c84569ea3ae16aa24108"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6b57b384212d7a8a40dc92d5aa45cf24"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a6b57b384212d7a8a40dc92d5aa45cf24">_currentUser</a> {-1}</td></tr>
+<tr class="separator:a6b57b384212d7a8a40dc92d5aa45cf24"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5b8f5e55942b5c34aecc598fefe0286c"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classSession.html">Session</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a5b8f5e55942b5c34aecc598fefe0286c">_currentSession</a></td></tr>
+<tr class="separator:a5b8f5e55942b5c34aecc598fefe0286c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa3a5b87044674d1605e300068d51fa58"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#aa3a5b87044674d1605e300068d51fa58">errResponse</a> = &quot;{\n \&quot;response_type\&quot;: \&quot;error\&quot;\n}\n&quot;</td></tr>
 <tr class="separator:aa3a5b87044674d1605e300068d51fa58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a077ebf1e5a0174434851ad93b6491c88"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a077ebf1e5a0174434851ad93b6491c88">&#9670;&nbsp;</a></span>ServerProcessor()</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>обработчик запросов/ответов от клиента </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a id="ad1481956d2b21d716460cc49d7785604"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad1481956d2b21d716460cc49d7785604">&#9670;&nbsp;</a></span>ServerProcessor()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -132,8 +158,24 @@ Private Attributes</h2></td></tr>
           <td class="memname">ServerProcessor::ServerProcessor </td>
           <td>(</td>
           <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classIDatabase.html">IDatabase</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>db</em></td><td>)</td>
+          <td class="paramname"><em>db</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classSessionManager.html">SessionManager</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>sessionMgr</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">const std::shared_ptr&lt; <a class="el" href="classSession.html">Session</a> &gt; &amp;&#160;</td>
+          <td class="paramname"><em>currentSession</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
         </tr>
       </table>
 </div><div class="memdoc">
@@ -141,8 +183,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="aed9380ea29a96f4fa2facaf80ca0a408"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aed9380ea29a96f4fa2facaf80ca0a408">&#9670;&nbsp;</a></span>getResponse()</h2>
+<a id="a225f9d60303d3b49af9bfda9a613ebb2"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a225f9d60303d3b49af9bfda9a613ebb2">&#9670;&nbsp;</a></span>inputMessage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -151,10 +193,66 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string ServerProcessor::getResponse </td>
+          <td class="memname">std::string ServerProcessor::inputMessage </td>
+          <td>(</td>
+          <td class="paramtype">const boost::property_tree::ptree &amp;&#160;</td>
+          <td class="paramname"><em>root</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>входящее сообщение клиенту </p>
+
+</div>
+</div>
+<a id="ae1d36f78fad407d4f21f8965adaec488"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae1d36f78fad407d4f21f8965adaec488">&#9670;&nbsp;</a></span>outputMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ServerProcessor::outputMessage </td>
+          <td>(</td>
+          <td class="paramtype">const boost::property_tree::ptree &amp;&#160;</td>
+          <td class="paramname"><em>root</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>исходящее сообщение от клиента </p>
+
+</div>
+</div>
+<a id="a46161fa012cacf9c1bd09703f21ffc7a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a46161fa012cacf9c1bd09703f21ffc7a">&#9670;&nbsp;</a></span>parseClientMessage()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ServerProcessor::parseClientMessage </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>request</em></td><td>)</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
           <td></td>
         </tr>
       </table>
@@ -165,12 +263,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classIServerProcessor.html#a076f254f834a679f7d8dc1e0f253cbc5">IServerProcessor</a>.</p>
+<p>Implements <a class="el" href="classIServerProcessor.html#add294e88af3b73572920e8e3ba1fa4bf">IServerProcessor</a>.</p>
 
 </div>
 </div>
-<a id="a67a0d1ebb4ee2a7692f3b80dfda1c27f"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a67a0d1ebb4ee2a7692f3b80dfda1c27f">&#9670;&nbsp;</a></span>outputMessageResponse()</h2>
+<a id="a5f4d7af2e23a4eb9b04f6abb1f3bffa9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5f4d7af2e23a4eb9b04f6abb1f3bffa9">&#9670;&nbsp;</a></span>parseRequest()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -179,7 +277,63 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string ServerProcessor::outputMessageResponse </td>
+          <td class="memname">std::string ServerProcessor::parseRequest </td>
+          <td>(</td>
+          <td class="paramtype">const boost::property_tree::ptree &amp;&#160;</td>
+          <td class="paramname"><em>root</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>обработка запросов от клиента </p>
+
+</div>
+</div>
+<a id="a223762fc5f6ccc37ac68db6735049c33"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a223762fc5f6ccc37ac68db6735049c33">&#9670;&nbsp;</a></span>parseResponse()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ServerProcessor::parseResponse </td>
+          <td>(</td>
+          <td class="paramtype">const boost::property_tree::ptree &amp;&#160;</td>
+          <td class="paramname"><em>root</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>обработка ответов от клиента </p>
+
+</div>
+</div>
+<a id="a0a2146479334cca4f932c0559d829529"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0a2146479334cca4f932c0559d829529">&#9670;&nbsp;</a></span>signIn()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ServerProcessor::signIn </td>
           <td>(</td>
           <td class="paramtype">const boost::property_tree::ptree &amp;&#160;</td>
           <td class="paramname"><em>requestRoot</em></td><td>)</td>
@@ -193,10 +347,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>вход </p>
+
 </div>
 </div>
-<a id="a567b9ae0bbe7d90d6e7d9d8fef894aed"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a567b9ae0bbe7d90d6e7d9d8fef894aed">&#9670;&nbsp;</a></span>signInResponse()</h2>
+<a id="a16d031931d7e242d568b6e96ceaba7b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a16d031931d7e242d568b6e96ceaba7b0">&#9670;&nbsp;</a></span>signOut()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -205,7 +361,34 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::string ServerProcessor::signInResponse </td>
+          <td class="memname">std::string ServerProcessor::signOut </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>выход </p>
+
+</div>
+</div>
+<a id="a48c4983ceea19a9d150da0fdf1c844b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a48c4983ceea19a9d150da0fdf1c844b0">&#9670;&nbsp;</a></span>signUp()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string ServerProcessor::signUp </td>
           <td>(</td>
           <td class="paramtype">const boost::property_tree::ptree &amp;&#160;</td>
           <td class="paramname"><em>requestRoot</em></td><td>)</td>
@@ -219,35 +402,55 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="a03db4d97917aa166502fc97c09f23651"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a03db4d97917aa166502fc97c09f23651">&#9670;&nbsp;</a></span>signUpResponse()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">std::string ServerProcessor::signUpResponse </td>
-          <td>(</td>
-          <td class="paramtype">const boost::property_tree::ptree &amp;&#160;</td>
-          <td class="paramname"><em>requestRoot</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>регистрация </p>
 
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
+<a id="a5b8f5e55942b5c34aecc598fefe0286c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5b8f5e55942b5c34aecc598fefe0286c">&#9670;&nbsp;</a></span>_currentSession</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classSession.html">Session</a>&gt; ServerProcessor::_currentSession</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a6b57b384212d7a8a40dc92d5aa45cf24"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6b57b384212d7a8a40dc92d5aa45cf24">&#9670;&nbsp;</a></span>_currentUser</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int ServerProcessor::_currentUser {-1}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a24d0e13a9f27b5950a697fea58dd0f59"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a24d0e13a9f27b5950a697fea58dd0f59">&#9670;&nbsp;</a></span>_db</h2>
 
@@ -259,6 +462,28 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">std::shared_ptr&lt;<a class="el" href="classIDatabase.html">IDatabase</a>&gt; ServerProcessor::_db</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="a9d0d058ff5e6c84569ea3ae16aa24108"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d0d058ff5e6c84569ea3ae16aa24108">&#9670;&nbsp;</a></span>_sessionMgr</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::shared_ptr&lt;<a class="el" href="classSessionManager.html">SessionManager</a>&gt; ServerProcessor::_sessionMgr</td>
         </tr>
       </table>
   </td>

@@ -34,14 +34,14 @@ static const qt_meta_stringdata_RegistrationWidget_t qt_meta_stringdata_Registra
 QT_MOC_LITERAL(0, 0, 18), // "RegistrationWidget"
 QT_MOC_LITERAL(1, 19, 22), // "slot_sign_pBtn_clicked"
 QT_MOC_LITERAL(2, 42, 0), // ""
-QT_MOC_LITERAL(3, 43, 18), // "slot_SignUpRequest"
-QT_MOC_LITERAL(4, 62, 19), // "slot_SignUpResponse"
+QT_MOC_LITERAL(3, 43, 18), // "slot_signUpRequest"
+QT_MOC_LITERAL(4, 62, 19), // "slot_signUpResponse"
 QT_MOC_LITERAL(5, 82, 11), // "std::string"
 QT_MOC_LITERAL(6, 94, 6) // "status"
 
     },
     "RegistrationWidget\0slot_sign_pBtn_clicked\0"
-    "\0slot_SignUpRequest\0slot_SignUpResponse\0"
+    "\0slot_signUpRequest\0slot_signUpResponse\0"
     "std::string\0status"
 };
 #undef QT_MOC_LITERAL
@@ -79,8 +79,8 @@ void RegistrationWidget::qt_static_metacall(QObject *_o, QMetaObject::Call _c, i
         Q_UNUSED(_t)
         switch (_id) {
         case 0: _t->slot_sign_pBtn_clicked(); break;
-        case 1: _t->slot_SignUpRequest(); break;
-        case 2: _t->slot_SignUpResponse((*reinterpret_cast< const std::string(*)>(_a[1]))); break;
+        case 1: _t->slot_signUpRequest(); break;
+        case 2: _t->slot_signUpResponse((*reinterpret_cast< const std::string(*)>(_a[1]))); break;
         default: ;
         }
     }

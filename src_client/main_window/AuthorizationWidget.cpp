@@ -15,12 +15,12 @@ AuthorizationWidget::AuthorizationWidget(const std::shared_ptr<IClientProcessor>
 
 void AuthorizationWidget::init()
 {
-    setupUi();
+    initUi();
     connect(sign_pBtn, &QPushButton::clicked, this, &AuthorizationWidget::slot_signInRequest);
     connect(_processor.get(), &IClientProcessor::signal_signInResponse, this, &AuthorizationWidget::slot_signInResponse);
 }
 
-void AuthorizationWidget::setupUi()
+void AuthorizationWidget::initUi()
 {
     auto main_vLay = new QVBoxLayout();
 
@@ -107,11 +107,15 @@ void AuthorizationWidget::slot_signInResponse(const std::string &status)
     }
     else if (status == "login_not_exists")
     {
-        showError(QStringLiteral("This login does not exist"));
+        showError(QStringLiteral("Login does not exist"));
     }
     else if (status == "password_incorrect")
     {
         showError(QStringLiteral("Password is incorrect"));
+    }
+    else if (status == "already_signed")
+    {
+        showError(QStringLiteral("User is already logged in"));
     }
     else
     {

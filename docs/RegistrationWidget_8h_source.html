@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.13</span>
+   &#160;<span id="projectnumber">0.0.14</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -76,37 +76,37 @@ $(function() {
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="AuthorizationWidget_8h.html">AuthorizationWidget.h</a>&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno"><a class="line" href="classRegistrationWidget.html">    6</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRegistrationWidget.html">RegistrationWidget</a> : <span class="keyword">public</span> <a class="code" href="classAuthorizationWidget.html">AuthorizationWidget</a></div>
-<div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160;{</div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;    Q_OBJECT</div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">protected</span>:</div>
-<div class="line"><a name="l00011"></a><span class="lineno"><a class="line" href="classRegistrationWidget.html#a8d3017b4e92abcee6dc82774f80e3f9a">   11</a></span>&#160;    QLineEdit *<a class="code" href="classRegistrationWidget.html#a8d3017b4e92abcee6dc82774f80e3f9a">confirmPassword_lEdit</a>{<span class="keyword">nullptr</span>};</div>
+<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classRegistrationWidget.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classRegistrationWidget.html">RegistrationWidget</a> : <span class="keyword">public</span> <a class="code" href="classAuthorizationWidget.html">AuthorizationWidget</a></div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    Q_OBJECT</div>
 <div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160; </div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classRegistrationWidget.html#a88cc7c13242006fb3a24938f6d6d81b1">RegistrationWidget</a>(<span class="keyword">const</span> std::shared_ptr&lt;IClientProcessor&gt; &amp;processor, QWidget *parent = <span class="keyword">nullptr</span>);</div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRegistrationWidget.html#a091a86faa27625319e7d7b46a8f81b81">init</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    QHBoxLayout *<a class="code" href="classRegistrationWidget.html#a9e3934ab8e9a03470edca839e040ab4e">createConfirmLine</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;<span class="keyword">protected</span>:</div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classRegistrationWidget.html#a8d3017b4e92abcee6dc82774f80e3f9a">   14</a></span>&#160;    QLineEdit *<a class="code" href="classRegistrationWidget.html#a8d3017b4e92abcee6dc82774f80e3f9a">confirmPassword_lEdit</a>{<span class="keyword">nullptr</span>};</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">explicit</span> <a class="code" href="classRegistrationWidget.html#a88cc7c13242006fb3a24938f6d6d81b1">RegistrationWidget</a>(<span class="keyword">const</span> std::shared_ptr&lt;IClientProcessor&gt; &amp;processor, QWidget *parent = <span class="keyword">nullptr</span>);</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRegistrationWidget.html#a091a86faa27625319e7d7b46a8f81b81">init</a>() <span class="keyword">override</span>;</div>
 <div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRegistrationWidget.html#ac98570a9da83844bfe0299ced86f1ea3">slot_sign_pBtn_clicked</a>() <span class="keyword">override</span>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRegistrationWidget.html#a5211e2c5df535ef0bb6b3fdc8d08167f">slot_SignUpRequest</a>();</div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRegistrationWidget.html#a94d6bd94ac531115a04140dfac66bfba">slot_SignUpResponse</a>(<span class="keyword">const</span> std::string &amp;status);</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif // REGISTRATIONWINDOW_H</span></div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    QHBoxLayout *<a class="code" href="classRegistrationWidget.html#a9e3934ab8e9a03470edca839e040ab4e">createConfirmLine</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRegistrationWidget.html#ac98570a9da83844bfe0299ced86f1ea3">slot_sign_pBtn_clicked</a>() <span class="keyword">override</span>;</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRegistrationWidget.html#a4b7c5da69263f10c4b5c0449b28296c2">slot_signUpRequest</a>();</div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classRegistrationWidget.html#a7a1734aad066762db8c89b2970a09791">slot_signUpResponse</a>(<span class="keyword">const</span> std::string &amp;status);</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;};</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif // REGISTRATIONWINDOW_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassRegistrationWidget_html_a9e3934ab8e9a03470edca839e040ab4e"><div class="ttname"><a href="classRegistrationWidget.html#a9e3934ab8e9a03470edca839e040ab4e">RegistrationWidget::createConfirmLine</a></div><div class="ttdeci">QHBoxLayout * createConfirmLine() override</div><div class="ttdef"><b>Definition:</b> RegistrationWidget.cpp:22</div></div>
+<div class="ttc" id="aclassRegistrationWidget_html_a9e3934ab8e9a03470edca839e040ab4e"><div class="ttname"><a href="classRegistrationWidget.html#a9e3934ab8e9a03470edca839e040ab4e">RegistrationWidget::createConfirmLine</a></div><div class="ttdeci">QHBoxLayout * createConfirmLine() override</div><div class="ttdoc">создает (или нет) поле подтверждения пароля</div><div class="ttdef"><b>Definition:</b> RegistrationWidget.cpp:22</div></div>
 <div class="ttc" id="aAuthorizationWidget_8h_html"><div class="ttname"><a href="AuthorizationWidget_8h.html">AuthorizationWidget.h</a></div></div>
 <div class="ttc" id="aclassRegistrationWidget_html_a091a86faa27625319e7d7b46a8f81b81"><div class="ttname"><a href="classRegistrationWidget.html#a091a86faa27625319e7d7b46a8f81b81">RegistrationWidget::init</a></div><div class="ttdeci">void init() override</div><div class="ttdef"><b>Definition:</b> RegistrationWidget.cpp:13</div></div>
-<div class="ttc" id="aclassRegistrationWidget_html_a5211e2c5df535ef0bb6b3fdc8d08167f"><div class="ttname"><a href="classRegistrationWidget.html#a5211e2c5df535ef0bb6b3fdc8d08167f">RegistrationWidget::slot_SignUpRequest</a></div><div class="ttdeci">void slot_SignUpRequest()</div><div class="ttdef"><b>Definition:</b> RegistrationWidget.cpp:39</div></div>
-<div class="ttc" id="aclassAuthorizationWidget_html"><div class="ttname"><a href="classAuthorizationWidget.html">AuthorizationWidget</a></div><div class="ttdef"><b>Definition:</b> AuthorizationWidget.h:14</div></div>
+<div class="ttc" id="aclassRegistrationWidget_html_a7a1734aad066762db8c89b2970a09791"><div class="ttname"><a href="classRegistrationWidget.html#a7a1734aad066762db8c89b2970a09791">RegistrationWidget::slot_signUpResponse</a></div><div class="ttdeci">void slot_signUpResponse(const std::string &amp;status)</div><div class="ttdoc">обработка ответа на запрос о регистрации</div><div class="ttdef"><b>Definition:</b> RegistrationWidget.cpp:56</div></div>
+<div class="ttc" id="aclassAuthorizationWidget_html"><div class="ttname"><a href="classAuthorizationWidget.html">AuthorizationWidget</a></div><div class="ttdoc">виджет входа в учетную запись пользователя</div><div class="ttdef"><b>Definition:</b> AuthorizationWidget.h:17</div></div>
 <div class="ttc" id="aclassRegistrationWidget_html_ac98570a9da83844bfe0299ced86f1ea3"><div class="ttname"><a href="classRegistrationWidget.html#ac98570a9da83844bfe0299ced86f1ea3">RegistrationWidget::slot_sign_pBtn_clicked</a></div><div class="ttdeci">void slot_sign_pBtn_clicked() override</div><div class="ttdef"><b>Definition:</b> RegistrationWidget.cpp:34</div></div>
-<div class="ttc" id="aclassRegistrationWidget_html_a8d3017b4e92abcee6dc82774f80e3f9a"><div class="ttname"><a href="classRegistrationWidget.html#a8d3017b4e92abcee6dc82774f80e3f9a">RegistrationWidget::confirmPassword_lEdit</a></div><div class="ttdeci">QLineEdit * confirmPassword_lEdit</div><div class="ttdef"><b>Definition:</b> RegistrationWidget.h:11</div></div>
-<div class="ttc" id="aclassRegistrationWidget_html"><div class="ttname"><a href="classRegistrationWidget.html">RegistrationWidget</a></div><div class="ttdef"><b>Definition:</b> RegistrationWidget.h:6</div></div>
-<div class="ttc" id="aclassRegistrationWidget_html_a94d6bd94ac531115a04140dfac66bfba"><div class="ttname"><a href="classRegistrationWidget.html#a94d6bd94ac531115a04140dfac66bfba">RegistrationWidget::slot_SignUpResponse</a></div><div class="ttdeci">void slot_SignUpResponse(const std::string &amp;status)</div><div class="ttdef"><b>Definition:</b> RegistrationWidget.cpp:56</div></div>
+<div class="ttc" id="aclassRegistrationWidget_html_a8d3017b4e92abcee6dc82774f80e3f9a"><div class="ttname"><a href="classRegistrationWidget.html#a8d3017b4e92abcee6dc82774f80e3f9a">RegistrationWidget::confirmPassword_lEdit</a></div><div class="ttdeci">QLineEdit * confirmPassword_lEdit</div><div class="ttdef"><b>Definition:</b> RegistrationWidget.h:14</div></div>
+<div class="ttc" id="aclassRegistrationWidget_html"><div class="ttname"><a href="classRegistrationWidget.html">RegistrationWidget</a></div><div class="ttdoc">виджет регистрации пользователя</div><div class="ttdef"><b>Definition:</b> RegistrationWidget.h:9</div></div>
+<div class="ttc" id="aclassRegistrationWidget_html_a4b7c5da69263f10c4b5c0449b28296c2"><div class="ttname"><a href="classRegistrationWidget.html#a4b7c5da69263f10c4b5c0449b28296c2">RegistrationWidget::slot_signUpRequest</a></div><div class="ttdeci">void slot_signUpRequest()</div><div class="ttdoc">отправить запрос на регистрацию</div><div class="ttdef"><b>Definition:</b> RegistrationWidget.cpp:39</div></div>
 <div class="ttc" id="aclassRegistrationWidget_html_a88cc7c13242006fb3a24938f6d6d81b1"><div class="ttname"><a href="classRegistrationWidget.html#a88cc7c13242006fb3a24938f6d6d81b1">RegistrationWidget::RegistrationWidget</a></div><div class="ttdeci">RegistrationWidget(const std::shared_ptr&lt; IClientProcessor &gt; &amp;processor, QWidget *parent=nullptr)</div><div class="ttdef"><b>Definition:</b> RegistrationWidget.cpp:8</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

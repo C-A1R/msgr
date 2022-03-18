@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.13</span>
+   &#160;<span id="projectnumber">0.0.14</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -64,7 +64,6 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
-<a href="#pub-slots">Public Slots</a> &#124;
 <a href="#signals">Signals</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
@@ -75,13 +74,16 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 
+<p>асинхронный клиент, непосредственно работает с сокетом  
+ <a href="classClient.html#details">More...</a></p>
+
 <p><code>#include &lt;<a class="el" href="Client_8h_source.html">Client.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for Client:</div>
 <div class="dyncontent">
 <div class="center"><img src="classClient__inherit__graph.png" border="0" usemap="#Client_inherit__map" alt="Inheritance graph"/></div>
 <map name="Client_inherit__map" id="Client_inherit__map">
-<area shape="rect" title=" " alt="" coords="13,80,73,107"/>
+<area shape="rect" title="асинхронный клиент, непосредственно работает с сокетом" alt="" coords="13,80,73,107"/>
 <area shape="rect" title=" " alt="" coords="5,5,80,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
@@ -90,20 +92,16 @@ Collaboration diagram for Client:</div>
 <div class="dyncontent">
 <div class="center"><img src="classClient__coll__graph.png" border="0" usemap="#Client_coll__map" alt="Collaboration graph"/></div>
 <map name="Client_coll__map" id="Client_coll__map">
-<area shape="rect" title=" " alt="" coords="13,80,73,107"/>
+<area shape="rect" title="асинхронный клиент, непосредственно работает с сокетом" alt="" coords="13,80,73,107"/>
 <area shape="rect" title=" " alt="" coords="5,5,80,32"/>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
-Public Slots</h2></td></tr>
-<tr class="memitem:abeadfb47f8040e2148ddc0dc9e61b0b2"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#abeadfb47f8040e2148ddc0dc9e61b0b2">slot_sendToServer</a> (const std::string &amp;request)</td></tr>
-<tr class="separator:abeadfb47f8040e2148ddc0dc9e61b0b2"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="signals"></a>
 Signals</h2></td></tr>
-<tr class="memitem:ac653af3869ee192e33f98da69a482bc7"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#ac653af3869ee192e33f98da69a482bc7">signal_responseRecieved</a> (const std::string &amp;)</td></tr>
-<tr class="separator:ac653af3869ee192e33f98da69a482bc7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abc7198b7314baa54b9f4f1b48bfd244e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#abc7198b7314baa54b9f4f1b48bfd244e">signal_recieved</a> (const std::string &amp;)</td></tr>
+<tr class="memdesc:abc7198b7314baa54b9f4f1b48bfd244e"><td class="mdescLeft">&#160;</td><td class="mdescRight">что-то получили от сервера  <a href="classClient.html#abc7198b7314baa54b9f4f1b48bfd244e">More...</a><br /></td></tr>
+<tr class="separator:abc7198b7314baa54b9f4f1b48bfd244e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
@@ -111,17 +109,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a38aacc9eda023eff7dc44d9b8cd530fe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a97cc70503b3e7b504afc77d797cf2f2c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#a97cc70503b3e7b504afc77d797cf2f2c">start</a> (const std::string &amp;host, const std::string &amp;service)</td></tr>
 <tr class="separator:a97cc70503b3e7b504afc77d797cf2f2c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac7d9620a16e8df07778a80beb7c880cd"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#ac7d9620a16e8df07778a80beb7c880cd">send</a> (const std::string &amp;msg)</td></tr>
+<tr class="memdesc:ac7d9620a16e8df07778a80beb7c880cd"><td class="mdescLeft">&#160;</td><td class="mdescRight">отправка на сервер  <a href="classClient.html#ac7d9620a16e8df07778a80beb7c880cd">More...</a><br /></td></tr>
+<tr class="separator:ac7d9620a16e8df07778a80beb7c880cd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a1fefe16d82d9f9bcfa117174c49974bb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#a1fefe16d82d9f9bcfa117174c49974bb">resolveHandler</a> (const boost::system::error_code &amp;ec, tcp::resolver::iterator it)</td></tr>
-<tr class="separator:a1fefe16d82d9f9bcfa117174c49974bb"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac259f56a281339c89b65f2c7f35e50ce"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#ac259f56a281339c89b65f2c7f35e50ce">connectHandler</a> (const boost::system::error_code &amp;ec)</td></tr>
-<tr class="separator:ac259f56a281339c89b65f2c7f35e50ce"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a8152343f481c54137505ff2b0a9dcbcf"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#a8152343f481c54137505ff2b0a9dcbcf">readHandler</a> (const boost::system::error_code &amp;ec, std::size_t bytes)</td></tr>
-<tr class="separator:a8152343f481c54137505ff2b0a9dcbcf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a3cbb9ed253c9c3668eeedc4b1b39e2f3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#a3cbb9ed253c9c3668eeedc4b1b39e2f3">writeHandler</a> (const std::string &amp;msg)</td></tr>
-<tr class="separator:a3cbb9ed253c9c3668eeedc4b1b39e2f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a59dc5357cbd3a96cff3f725cdde70d9c"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#a59dc5357cbd3a96cff3f725cdde70d9c">do_resolve</a> (const boost::system::error_code &amp;ec, tcp::resolver::iterator it)</td></tr>
+<tr class="separator:a59dc5357cbd3a96cff3f725cdde70d9c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a19325934427197131cd8f34e4ca90a17"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#a19325934427197131cd8f34e4ca90a17">do_connect</a> (const boost::system::error_code &amp;ec)</td></tr>
+<tr class="separator:a19325934427197131cd8f34e4ca90a17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a65b25df1dfa2de27472c23243b5304fb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#a65b25df1dfa2de27472c23243b5304fb">do_read</a> (const boost::system::error_code &amp;ec, std::size_t bytes)</td></tr>
+<tr class="separator:a65b25df1dfa2de27472c23243b5304fb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a4119fdf583ee8ffd3349a6d4ecbb8b18"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#a4119fdf583ee8ffd3349a6d4ecbb8b18">do_write</a> (const std::string &amp;msg)</td></tr>
+<tr class="separator:a4119fdf583ee8ffd3349a6d4ecbb8b18"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -129,10 +130,12 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a146a008c9dc1b156f29821c8405dae12"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ac73e4aacd6538436deaafeab9bc7bbfa"><td class="memItemLeft" align="right" valign="top">tcp::resolver&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#ac73e4aacd6538436deaafeab9bc7bbfa">_resolver</a></td></tr>
 <tr class="separator:ac73e4aacd6538436deaafeab9bc7bbfa"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a834bbdad207b9f38cff18b91712fb683"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#a834bbdad207b9f38cff18b91712fb683">_buffer</a> [4096]</td></tr>
-<tr class="separator:a834bbdad207b9f38cff18b91712fb683"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9163035607a8adda44169fd111f26be"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classClient.html#ae9163035607a8adda44169fd111f26be">_buffer</a> [1024]</td></tr>
+<tr class="separator:ae9163035607a8adda44169fd111f26be"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
-<h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
+<a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
+<div class="textblock"><p>асинхронный клиент, непосредственно работает с сокетом </p>
+</div><h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a38aacc9eda023eff7dc44d9b8cd530fe"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a38aacc9eda023eff7dc44d9b8cd530fe">&#9670;&nbsp;</a></span>Client()</h2>
 
@@ -152,8 +155,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="ac259f56a281339c89b65f2c7f35e50ce"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac259f56a281339c89b65f2c7f35e50ce">&#9670;&nbsp;</a></span>connectHandler()</h2>
+<a id="a19325934427197131cd8f34e4ca90a17"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a19325934427197131cd8f34e4ca90a17">&#9670;&nbsp;</a></span>do_connect()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -162,7 +165,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Client::connectHandler </td>
+          <td class="memname">void Client::do_connect </td>
           <td>(</td>
           <td class="paramtype">const boost::system::error_code &amp;&#160;</td>
           <td class="paramname"><em>ec</em></td><td>)</td>
@@ -178,8 +181,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a8152343f481c54137505ff2b0a9dcbcf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a8152343f481c54137505ff2b0a9dcbcf">&#9670;&nbsp;</a></span>readHandler()</h2>
+<a id="a65b25df1dfa2de27472c23243b5304fb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a65b25df1dfa2de27472c23243b5304fb">&#9670;&nbsp;</a></span>do_read()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -188,7 +191,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Client::readHandler </td>
+          <td class="memname">void Client::do_read </td>
           <td>(</td>
           <td class="paramtype">const boost::system::error_code &amp;&#160;</td>
           <td class="paramname"><em>ec</em>, </td>
@@ -214,8 +217,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a1fefe16d82d9f9bcfa117174c49974bb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a1fefe16d82d9f9bcfa117174c49974bb">&#9670;&nbsp;</a></span>resolveHandler()</h2>
+<a id="a59dc5357cbd3a96cff3f725cdde70d9c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a59dc5357cbd3a96cff3f725cdde70d9c">&#9670;&nbsp;</a></span>do_resolve()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -224,7 +227,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Client::resolveHandler </td>
+          <td class="memname">void Client::do_resolve </td>
           <td>(</td>
           <td class="paramtype">const boost::system::error_code &amp;&#160;</td>
           <td class="paramname"><em>ec</em>, </td>
@@ -250,8 +253,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac653af3869ee192e33f98da69a482bc7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac653af3869ee192e33f98da69a482bc7">&#9670;&nbsp;</a></span>signal_responseRecieved</h2>
+<a id="a4119fdf583ee8ffd3349a6d4ecbb8b18"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a4119fdf583ee8ffd3349a6d4ecbb8b18">&#9670;&nbsp;</a></span>do_write()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -260,7 +263,53 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">void Client::signal_responseRecieved </td>
+          <td class="memname">void Client::do_write </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="ac7d9620a16e8df07778a80beb7c880cd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac7d9620a16e8df07778a80beb7c880cd">&#9670;&nbsp;</a></span>send()</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Client::send </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+<p>отправка на сервер </p>
+
+</div>
+</div>
+<a id="abc7198b7314baa54b9f4f1b48bfd244e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abc7198b7314baa54b9f4f1b48bfd244e">&#9670;&nbsp;</a></span>signal_recieved</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Client::signal_recieved </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"></td><td>)</td>
@@ -274,31 +323,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-</div>
-</div>
-<a id="abeadfb47f8040e2148ddc0dc9e61b0b2"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abeadfb47f8040e2148ddc0dc9e61b0b2">&#9670;&nbsp;</a></span>slot_sendToServer</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Client::slot_sendToServer </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>request</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
+<p>что-то получили от сервера </p>
 
 </div>
 </div>
@@ -330,35 +355,9 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a3cbb9ed253c9c3668eeedc4b1b39e2f3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a3cbb9ed253c9c3668eeedc4b1b39e2f3">&#9670;&nbsp;</a></span>writeHandler()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">void Client::writeHandler </td>
-          <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>msg</em></td><td>)</td>
-          <td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a834bbdad207b9f38cff18b91712fb683"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a834bbdad207b9f38cff18b91712fb683">&#9670;&nbsp;</a></span>_buffer</h2>
+<a id="ae9163035607a8adda44169fd111f26be"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9163035607a8adda44169fd111f26be">&#9670;&nbsp;</a></span>_buffer</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -367,7 +366,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">char Client::_buffer[4096]</td>
+          <td class="memname">char Client::_buffer[1024]</td>
         </tr>
       </table>
   </td>

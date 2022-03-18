@@ -5,12 +5,21 @@
 
 #include "boost/asio.hpp"
 
+#include <map>
+
 using boost::asio::ip::tcp;
 
+class SessionManager;
+
+/**
+ * @brief асинхронный сервер
+ */
 class Server
 {
     tcp::acceptor _acceptor;
     std::shared_ptr<IDatabase> _db{nullptr};
+    std::shared_ptr<SessionManager> _sessionManager;
+
 public:
     Server(boost::asio::io_context& io_context, int port);
 private:

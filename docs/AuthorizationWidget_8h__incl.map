@@ -1,12 +1,13 @@
 <map id="src_client/main_window/AuthorizationWidget.h" name="src_client/main_window/AuthorizationWidget.h">
-<area shape="rect" id="node1" title=" " alt="" coords="141,5,319,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,95,84,121"/>
-<area shape="rect" id="node3" href="$ClientProcessor_8h.html" title=" " alt="" coords="108,95,352,121"/>
-<area shape="rect" id="node9" href="$MainWidgets_8h.html" title=" " alt="" coords="383,95,501,121"/>
-<area shape="rect" id="node4" href="$IClientProcessor_8h.html" title=" " alt="" coords="18,169,157,196"/>
-<area shape="rect" id="node6" href="$UserInfo_8h.html" title=" " alt="" coords="181,169,271,196"/>
-<area shape="rect" id="node8" title=" " alt="" coords="295,169,373,196"/>
-<area shape="rect" id="node5" title=" " alt="" coords="50,244,125,271"/>
-<area shape="rect" id="node7" title=" " alt="" coords="197,244,255,271"/>
-<area shape="rect" id="node10" title=" " alt="" coords="397,169,492,196"/>
+<area shape="rect" id="node1" title=" " alt="" coords="268,5,447,47"/>
+<area shape="rect" id="node2" title=" " alt="" coords="133,95,211,121"/>
+<area shape="rect" id="node3" href="$ClientProcessor_8h.html" title=" " alt="" coords="235,95,479,121"/>
+<area shape="rect" id="node10" href="$MainWidgets_8h.html" title=" " alt="" coords="526,95,645,121"/>
+<area shape="rect" id="node4" href="$IClientProcessor_8h.html" title=" " alt="" coords="5,177,144,203"/>
+<area shape="rect" id="node6" href="$UserInfo_8h.html" title=" " alt="" coords="169,177,258,203"/>
+<area shape="rect" id="node8" title=" " alt="" coords="282,169,433,211"/>
+<area shape="rect" id="node9" title=" " alt="" coords="457,177,535,203"/>
+<area shape="rect" id="node5" title=" " alt="" coords="37,259,112,285"/>
+<area shape="rect" id="node7" title=" " alt="" coords="184,259,243,285"/>
+<area shape="rect" id="node11" title=" " alt="" coords="559,177,654,203"/>
 </map>

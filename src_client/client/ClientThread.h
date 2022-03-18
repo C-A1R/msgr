@@ -5,7 +5,9 @@
 
 #include "Client.h"
 
-///отдельный поток для взаимодействий с сервером
+/**
+ * @brief поток для взаимодействия с сервером
+ */
 class ClientThread : public QThread
 {
     Q_OBJECT
@@ -18,11 +20,13 @@ protected:
     void run();
 
 signals:
-    void signal_sendToClient(const std::string &);
-    void signal_responseRecieved(const std::string &);
+    ///что-то получили от сервера
+    void signal_recieved(const std::string &);
 
 public slots:
     void slot_stopClient();
+    ///отправка на сервер
+    void slot_send(const std::string &msg);
 };
 
 #endif // CLIENTTHREAD_H

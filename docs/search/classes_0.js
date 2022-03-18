@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['authorizationwidget_179',['AuthorizationWidget',['../classAuthorizationWidget.html',1,'']]]
+  ['authorizationwidget_204',['AuthorizationWidget',['../classAuthorizationWidget.html',1,'']]]
 ];

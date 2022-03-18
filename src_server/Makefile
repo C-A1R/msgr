@@ -243,6 +243,30 @@ Session.cpp.s:
 	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/Session.cpp.s
 .PHONY : Session.cpp.s
 
+SessionManager.o: SessionManager.cpp.o
+.PHONY : SessionManager.o
+
+# target to build an object file
+SessionManager.cpp.o:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/SessionManager.cpp.o
+.PHONY : SessionManager.cpp.o
+
+SessionManager.i: SessionManager.cpp.i
+.PHONY : SessionManager.i
+
+# target to preprocess a source file
+SessionManager.cpp.i:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/SessionManager.cpp.i
+.PHONY : SessionManager.cpp.i
+
+SessionManager.s: SessionManager.cpp.s
+.PHONY : SessionManager.s
+
+# target to generate assembly for a file
+SessionManager.cpp.s:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/SessionManager.cpp.s
+.PHONY : SessionManager.cpp.s
+
 database/Database.o: database/Database.cpp.o
 .PHONY : database/Database.o
 
@@ -360,6 +384,9 @@ help:
 	@echo "... Session.o"
 	@echo "... Session.i"
 	@echo "... Session.s"
+	@echo "... SessionManager.o"
+	@echo "... SessionManager.i"
+	@echo "... SessionManager.s"
 	@echo "... database/Database.o"
 	@echo "... database/Database.i"
 	@echo "... database/Database.s"

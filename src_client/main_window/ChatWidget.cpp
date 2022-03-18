@@ -16,9 +16,14 @@ ChatWidget::ChatWidget(const std::shared_ptr<IClientProcessor> &processor, QWidg
     initUi();
     auto sendShortcut = new QShortcut(QKeySequence(Qt::Key_Enter), this);
     connect(sendShortcut, &QShortcut::activated, this, &ChatWidget::slot_outputMessageRequest);
-
     connect(send_pBtn, &QPushButton::clicked, this, &ChatWidget::slot_outputMessageRequest);
     connect(_processor.get(), &IClientProcessor::signal_outputMessageResponse, this, &ChatWidget::slot_outputMessageResponse);
+    connect(_processor.get(), &IClientProcessor::signal_inputMessageRequest, this, &ChatWidget::slot_inputMessageRequest);
+}
+
+ChatWidget::~ChatWidget()
+{
+    _processor->signOut_request();
 }
 
 void ChatWidget::initUi()
@@ -47,15 +52,21 @@ void ChatWidget::slot_outputMessageRequest()
 void ChatWidget::slot_outputMessageResponse(const std::string &text)
 {
     QString html;
-    if (!chat_tEdit->toPlainText().isEmpty())
-    {
-        html = chat_tEdit->toHtml();
-    }
     html += QStringLiteral("<h4 align=\"right\"><font color=\"#943126\">%1:</font></h4>")
             .arg(QString::fromStdString(_processor->currentLogin()));
     html += QStringLiteral("<p align=\"right\"><font color=\"#424949\">%1</font></p>")
             .arg(QString::fromStdString(text));
-
-    chat_tEdit->setHtml(html);
+    chat_tEdit->append(html);
     msg_lEdit->clear();
+}
+
+void ChatWidget::slot_inputMessageRequest(const std::string &sender, const std::string &text)
+{
+    QString html;
+    html += QStringLiteral("<h4 align=\"left\"><font color=\"#943126\">%1:</font></h4>")
+            .arg(QString::fromStdString(sender));
+    html += QStringLiteral("<p align=\"left\"><font color=\"#424949\">%1</font></p>")
+            .arg(QString::fromStdString(text));
+    chat_tEdit->append(html);
+    _processor->inputMessage_response(text);
 }

@@ -2,7 +2,6 @@
 
 #include "client/ClientThread.h"
 
-#include <boost/property_tree/ptree.hpp>
 #include <boost/property_tree/json_parser.hpp>
 
 #include <iostream>
@@ -11,10 +10,12 @@ ClientProcessor::ClientProcessor()
 {
     _clientThread = std::make_unique<ClientThread>();
     connect(this, &ClientProcessor::signal_stopClient, _clientThread.get(), &ClientThread::slot_stopClient);
-    ///отправка запроса
-    connect(this, &ClientProcessor::signal_sendRequest, _clientThread.get(), &ClientThread::signal_sendToClient);
-    ///полуение ответа
-    connect(_clientThread.get(), &ClientThread::signal_responseRecieved, this, &ClientProcessor::slot_parseResponse);
+    ///отправка запроса на сервер
+    connect(this, &ClientProcessor::signal_sendRequest, _clientThread.get(), &ClientThread::slot_send);
+    ///получение ответа от сервера
+    connect(_clientThread.get(), &ClientThread::signal_recieved, this, &ClientProcessor::slot_parseRecieved);
+    ///отправка ответа на сервер
+    connect(this, &ClientProcessor::signal_sendResponse, _clientThread.get(), &ClientThread::slot_send);
 }
 
 ClientProcessor::~ClientProcessor()
@@ -60,6 +61,15 @@ void ClientProcessor::signIn_request(const QString &login, const QString &passwo
     emit signal_sendRequest(stream.str() + "\n");
 }
 
+void ClientProcessor::signOut_request()
+{
+    boost::property_tree::ptree root;
+    root.put("request_type", "sign_out");
+    std::stringstream stream;
+    boost::property_tree::write_json(stream, root);
+    emit signal_sendRequest(stream.str() + "\n");
+}
+
 void ClientProcessor::outputMessage_request(const std::string &msg)
 {
     if (msg.empty())
@@ -77,18 +87,52 @@ void ClientProcessor::outputMessage_request(const std::string &msg)
     emit signal_sendRequest(stream.str() + "\n");
 }
 
-void ClientProcessor::slot_parseResponse(const std::string &response)
+void ClientProcessor::inputMessage_response(const std::string &text)
 {
-    std::cout << response;
-    if (response.empty() || response == "pong\n")
+    boost::property_tree::ptree root;
+    root.put("response_type", "input_message");
+    root.put("status", "ok");
+    root.put("sender", 1);
+    root.put("recipient", currentUser.id);
+    root.put("text", text);
+    std::stringstream stream;
+    boost::property_tree::write_json(stream, root);
+    emit signal_sendResponse(stream.str() + "\n");
+}
+
+void ClientProcessor::slot_parseRecieved(const std::string &msg)
+{
+    std::cout << msg;
+    if (msg.empty() || msg == "pong\n")
     {
         return;
     }
 
-    std::stringstream stream(response);
+    std::stringstream stream(msg);
     boost::property_tree::ptree root;
     boost::property_tree::read_json(stream, root);
 
+    if (root.count("response_type") > 0)
+    {
+        parseResponse(root);
+    }
+    else if (root.count("request_type") > 0)
+    {
+        parseRequest(root);
+    }
+}
+
+void ClientProcessor::parseRequest(const boost::property_tree::ptree &root)
+{
+    std::string requestType = root.get<std::string>("request_type");
+    if (requestType == "input_message")
+    {
+        emit signal_inputMessageRequest(root.get<std::string>("sender.login"), root.get<std::string>("text"));
+    }
+}
+
+void ClientProcessor::parseResponse(const boost::property_tree::ptree &root)
+{
     std::string responseType = root.get<std::string>("response_type");
     if (responseType == "sign_up")
     {

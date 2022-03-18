@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['value_170',['value',['../classDatabase.html#a44cfd7bdda8e5f0545301326a7838d86',1,'Database']]]
+  ['userinfo_192',['UserInfo',['../structUserInfo.html',1,'']]],
+  ['userinfo_2eh_193',['UserInfo.h',['../UserInfo_8h.html',1,'']]]
 ];

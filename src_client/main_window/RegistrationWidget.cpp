@@ -12,11 +12,11 @@ RegistrationWidget::RegistrationWidget(const std::shared_ptr<IClientProcessor> &
 
 void RegistrationWidget::init()
 {
-    setupUi();
+    initUi();
     sign_pBtn->setText(QStringLiteral("Sign up"));
     changeSign_pBtn->setText(QStringLiteral("Sign in your account"));
-    connect(sign_pBtn, &QPushButton::clicked, this, &RegistrationWidget::slot_SignUpRequest);
-    connect(_processor.get(), &IClientProcessor::signal_signUpResponse, this, &RegistrationWidget::slot_SignUpResponse);
+    connect(sign_pBtn, &QPushButton::clicked, this, &RegistrationWidget::slot_signUpRequest);
+    connect(_processor.get(), &IClientProcessor::signal_signUpResponse, this, &RegistrationWidget::slot_signUpResponse);
 }
 
 QHBoxLayout *RegistrationWidget::createConfirmLine()
@@ -36,7 +36,7 @@ void RegistrationWidget::slot_sign_pBtn_clicked()
     emit signal_changeSign(MainWidgets::Authorization);
 }
 
-void RegistrationWidget::slot_SignUpRequest()
+void RegistrationWidget::slot_signUpRequest()
 {
     if (login_lEdit->text().isEmpty()
             || password_lEdit->text().isEmpty()
@@ -53,7 +53,7 @@ void RegistrationWidget::slot_SignUpRequest()
     _processor->signUp_request(login_lEdit->text(), password_lEdit->text());
 }
 
-void RegistrationWidget::slot_SignUpResponse(const std::string &status)
+void RegistrationWidget::slot_signUpResponse(const std::string &status)
 {
     if (status == "ok")
     {
@@ -61,7 +61,11 @@ void RegistrationWidget::slot_SignUpResponse(const std::string &status)
     }
     else if (status == "login_exists")
     {
-        showError(QStringLiteral("This login already exists"));
+        showError(QStringLiteral("Login already exists"));
+    }
+    else if (status == "already_signed")
+    {
+        showError(QStringLiteral("User is already registered"));
     }
     else
     {

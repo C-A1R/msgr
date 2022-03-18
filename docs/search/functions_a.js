@@ -1,7 +1,6 @@
 var searchData=
 [
-  ['readhandler_282',['readHandler',['../classClient.html#a8152343f481c54137505ff2b0a9dcbcf',1,'Client']]],
-  ['registrationwidget_283',['RegistrationWidget',['../classRegistrationWidget.html#a88cc7c13242006fb3a24938f6d6d81b1',1,'RegistrationWidget']]],
-  ['resolvehandler_284',['resolveHandler',['../classClient.html#a1fefe16d82d9f9bcfa117174c49974bb',1,'Client']]],
-  ['run_285',['run',['../classClientThread.html#a928ef0e2be22e15fa5ca1ccd03ed9c6e',1,'ClientThread']]]
+  ['registrationwidget_318',['RegistrationWidget',['../classRegistrationWidget.html#a88cc7c13242006fb3a24938f6d6d81b1',1,'RegistrationWidget']]],
+  ['removesession_319',['removeSession',['../classSessionManager.html#a220f4da6f636ee959799396942383198',1,'SessionManager']]],
+  ['run_320',['run',['../classClientThread.html#a928ef0e2be22e15fa5ca1ccd03ed9c6e',1,'ClientThread']]]
 ];
