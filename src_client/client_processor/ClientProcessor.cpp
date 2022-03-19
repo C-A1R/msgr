@@ -1,5 +1,4 @@
 #include "ClientProcessor.h"
-
 #include "client/ClientThread.h"
 
 #include <boost/property_tree/json_parser.hpp>
@@ -36,7 +35,7 @@ void ClientProcessor::signUp_request(const QString &login, const QString &passwo
         return;
     }
 
-    boost::property_tree::ptree root;
+    ptree root;
     root.put("request_type", "sign_up");
     root.put("user.login", login.toStdString());
     root.put("user.password", password.toStdString());
@@ -52,7 +51,7 @@ void ClientProcessor::signIn_request(const QString &login, const QString &passwo
         return;
     }
 
-    boost::property_tree::ptree root;
+    ptree root;
     root.put("request_type", "sign_in");
     root.put("user.login", login.toStdString());
     root.put("user.password", password.toStdString());
@@ -63,8 +62,17 @@ void ClientProcessor::signIn_request(const QString &login, const QString &passwo
 
 void ClientProcessor::signOut_request()
 {
-    boost::property_tree::ptree root;
+    ptree root;
     root.put("request_type", "sign_out");
+    std::stringstream stream;
+    boost::property_tree::write_json(stream, root);
+    emit signal_sendRequest(stream.str() + "\n");
+}
+
+void ClientProcessor::getUsers_request()
+{
+    ptree root;
+    root.put("request_type", "get_all_users");
     std::stringstream stream;
     boost::property_tree::write_json(stream, root);
     emit signal_sendRequest(stream.str() + "\n");
@@ -77,7 +85,7 @@ void ClientProcessor::outputMessage_request(const std::string &msg)
         return;
     }
 
-    boost::property_tree::ptree root;
+    ptree root;
     root.put("request_type", "output_message");
     root.put("sender", currentUser.id);
     root.put("recipient", 3);
@@ -89,7 +97,7 @@ void ClientProcessor::outputMessage_request(const std::string &msg)
 
 void ClientProcessor::inputMessage_response(const std::string &text)
 {
-    boost::property_tree::ptree root;
+    ptree root;
     root.put("response_type", "input_message");
     root.put("status", "ok");
     root.put("sender", 1);
@@ -109,7 +117,7 @@ void ClientProcessor::slot_parseRecieved(const std::string &msg)
     }
 
     std::stringstream stream(msg);
-    boost::property_tree::ptree root;
+    ptree root;
     boost::property_tree::read_json(stream, root);
 
     if (root.count("response_type") > 0)
@@ -122,7 +130,7 @@ void ClientProcessor::slot_parseRecieved(const std::string &msg)
     }
 }
 
-void ClientProcessor::parseRequest(const boost::property_tree::ptree &root)
+void ClientProcessor::parseRequest(const ptree &root)
 {
     std::string requestType = root.get<std::string>("request_type");
     if (requestType == "input_message")
@@ -131,7 +139,7 @@ void ClientProcessor::parseRequest(const boost::property_tree::ptree &root)
     }
 }
 
-void ClientProcessor::parseResponse(const boost::property_tree::ptree &root)
+void ClientProcessor::parseResponse(const ptree &root)
 {
     std::string responseType = root.get<std::string>("response_type");
     if (responseType == "sign_up")
@@ -160,6 +168,20 @@ void ClientProcessor::parseResponse(const boost::property_tree::ptree &root)
         if (status == "ok")
         {
             emit signal_outputMessageResponse(root.get<std::string>("text"));
+        }
+    }
+    if (responseType == "get_all_users")
+    {
+        auto status = root.get<std::string>("status");
+        if (status == "ok")
+        {
+            std::vector<UserInfo> users;
+            auto usersTree = root.get_child("users");
+            for (auto u : usersTree)
+            {
+                users.emplace_back(std::stoi(u.second.get<std::string>("id")), u.second.get<std::string>("login"));
+            }
+            emit signal_getUsersResponse(users);
         }
     }
 }

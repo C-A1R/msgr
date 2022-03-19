@@ -12,6 +12,8 @@
 class Session;
 class SessionManager;
 
+using boost::property_tree::ptree;
+
 /**
  * @brief обработчик запросов/ответов от клиента
  */
@@ -32,20 +34,22 @@ public:
 
 private:
     ///обработка запросов от клиента
-    std::string parseRequest(const boost::property_tree::ptree &root);
+    std::string parseRequest(const ptree &root);
     ///обработка ответов от клиента
-    std::string parseResponse(const boost::property_tree::ptree &root);
+    std::string parseResponse(const ptree &root);
 
     ///регистрация
-    std::string signUp(const boost::property_tree::ptree &requestRoot);
+    std::string signUp(const ptree &requestRoot);
     ///вход
-    std::string signIn(const boost::property_tree::ptree &requestRoot);
+    std::string signIn(const ptree &requestRoot);
     ///выход
     std::string signOut();
+    ///достать всех пользователей
+    std::string allUsers();
     ///исходящее сообщение от клиента
-    std::string outputMessage(const boost::property_tree::ptree &root);
+    std::string outputMessage(const ptree &root);
     ///входящее сообщение клиенту
-    std::string inputMessage(const boost::property_tree::ptree &root);
+    std::string inputMessage(const ptree &root);
 };
 
 #endif // SERVERPROCESSOR_H

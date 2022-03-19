@@ -22,6 +22,9 @@ private:
     ///инициализация пользовательского интерфейса
     void initUi(const std::shared_ptr<IClientProcessor> &msgProcessor);
 
+signals:
+    void signal_updateContactList();
+
 private slots:
     void slot_changeWidget(MainWidgets wgt);
 };

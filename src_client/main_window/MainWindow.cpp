@@ -40,6 +40,7 @@ void MainWindow::initUi(const std::shared_ptr<IClientProcessor> &msgProcessor)
     main_widget->insertWidget(static_cast<int>(MainWidgets::Registration), registrationWidget);
 
     auto chatWidget = new ChatWidget(msgProcessor, main_widget);
+    connect(this, &MainWindow::signal_updateContactList, chatWidget, &ChatWidget::updateContactList);
     main_widget->insertWidget(static_cast<int>(MainWidgets::Chat), chatWidget);
 
     setCentralWidget(main_widget);
@@ -48,5 +49,9 @@ void MainWindow::initUi(const std::shared_ptr<IClientProcessor> &msgProcessor)
 void MainWindow::slot_changeWidget(MainWidgets wgt)
 {
     main_widget->setCurrentIndex(static_cast<int>(wgt));
+    if (wgt == MainWidgets::Chat)
+    {
+        emit signal_updateContactList();
+    }
 }
 

@@ -5,6 +5,7 @@
 
 #include "client_processor/ClientProcessor.h"
 
+class QListWidget;
 class QTextEdit;
 class QLineEdit;
 class QPushButton;
@@ -16,6 +17,7 @@ class ChatWidget : public QWidget
 {
     Q_OBJECT
 
+    QListWidget *contacts_listWidget{nullptr};
     QTextEdit *chat_tEdit{nullptr};
     QLineEdit *msg_lEdit{nullptr};
     QPushButton *send_pBtn{nullptr};
@@ -37,6 +39,11 @@ private slots:
     void slot_outputMessageResponse(const std::string &text);
     ///получение входящего сообщения и отправка ответа на него (результат получения)
     void slot_inputMessageRequest(const std::string &sender, const std::string &text);
+    ///получение ответа на запрос контактов
+    void slot_getUsersResponse(const std::vector<UserInfo> contacts);
+
+public slots:
+    void updateContactList();
 };
 
 #endif // CHATWIDGET_H
