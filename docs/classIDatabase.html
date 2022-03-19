@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.14</span>
+   &#160;<span id="projectnumber">0.0.15</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -103,6 +103,10 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a133cbda0cb91cb37822c3aa62e6c1c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca5ad5e1716b3d6787194caf659c15b0"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIDatabase.html#aca5ad5e1716b3d6787194caf659c15b0">getUserPassword</a> (const int id, std::string &amp;result)=0</td></tr>
 <tr class="separator:aca5ad5e1716b3d6787194caf659c15b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a12f0ac82d911f2afd3af8cb9004b704d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIDatabase.html#a12f0ac82d911f2afd3af8cb9004b704d">getUserData</a> (const std::string &amp;ids, std::string &amp;result)=0</td></tr>
+<tr class="separator:a12f0ac82d911f2afd3af8cb9004b704d"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae5f1ab977c64e3b8c973e0325c302319"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIDatabase.html#ae5f1ab977c64e3b8c973e0325c302319">getAllUsersData</a> (std::vector&lt; std::tuple&lt; std::string, std::string &gt; &gt; &amp;result)=0</td></tr>
+<tr class="separator:ae5f1ab977c64e3b8c973e0325c302319"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>через этот класс происходит работа с базой </p>
@@ -182,6 +186,72 @@ Public Member Functions</h2></td></tr>
 </div><div class="memdoc">
 
 <p>Implemented in <a class="el" href="classSqliteDatabase.html#a5634ae17f2aef2d07991025c9baf981d">SqliteDatabase</a>.</p>
+
+</div>
+</div>
+<a id="ae5f1ab977c64e3b8c973e0325c302319"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae5f1ab977c64e3b8c973e0325c302319">&#9670;&nbsp;</a></span>getAllUsersData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IDatabase::getAllUsersData </td>
+          <td>(</td>
+          <td class="paramtype">std::vector&lt; std::tuple&lt; std::string, std::string &gt; &gt; &amp;&#160;</td>
+          <td class="paramname"><em>result</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classSqliteDatabase.html#a84f3e0a7f4a00ba7637986f5362384b7">SqliteDatabase</a>.</p>
+
+</div>
+</div>
+<a id="a12f0ac82d911f2afd3af8cb9004b704d"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a12f0ac82d911f2afd3af8cb9004b704d">&#9670;&nbsp;</a></span>getUserData()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IDatabase::getUserData </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>ids</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classSqliteDatabase.html#aa826789e552199983f902fa2df3659f6">SqliteDatabase</a>.</p>
 
 </div>
 </div>

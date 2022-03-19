@@ -1,5 +1,7 @@
 #include "SessionManager.h"
 
+#include <algorithm>
+
 SessionManager::SessionManager()
 {
 }
@@ -33,3 +35,14 @@ void SessionManager::sendToUser(int userId, const std::string &msg)
         _sessions.at(userId)->write(msg);
     }
 }
+
+
+//std::string SessionManager::onlineIds() const
+//{
+//    std::string result;
+//    std::transform(_sessions.cbegin(), _sessions.cend(), std::back_inserter(result), [](const std::pair<int, std::shared_ptr<Session> > &pair)
+//    {
+//        return std::to_string(pair.first) + ",";
+//    });
+//    return result;
+//}

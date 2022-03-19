@@ -291,6 +291,30 @@ database/Database.cpp.s:
 	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/database/Database.cpp.s
 .PHONY : database/Database.cpp.s
 
+database/SqlRec.o: database/SqlRec.cpp.o
+.PHONY : database/SqlRec.o
+
+# target to build an object file
+database/SqlRec.cpp.o:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/database/SqlRec.cpp.o
+.PHONY : database/SqlRec.cpp.o
+
+database/SqlRec.i: database/SqlRec.cpp.i
+.PHONY : database/SqlRec.i
+
+# target to preprocess a source file
+database/SqlRec.cpp.i:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/database/SqlRec.cpp.i
+.PHONY : database/SqlRec.cpp.i
+
+database/SqlRec.s: database/SqlRec.cpp.s
+.PHONY : database/SqlRec.s
+
+# target to generate assembly for a file
+database/SqlRec.cpp.s:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/database/SqlRec.cpp.s
+.PHONY : database/SqlRec.cpp.s
+
 database/sqlite/sqlite3.o: database/sqlite/sqlite3.c.o
 .PHONY : database/sqlite/sqlite3.o
 
@@ -390,6 +414,9 @@ help:
 	@echo "... database/Database.o"
 	@echo "... database/Database.i"
 	@echo "... database/Database.s"
+	@echo "... database/SqlRec.o"
+	@echo "... database/SqlRec.i"
+	@echo "... database/SqlRec.s"
 	@echo "... database/sqlite/sqlite3.o"
 	@echo "... database/sqlite/sqlite3.i"
 	@echo "... database/sqlite/sqlite3.s"

@@ -18,6 +18,6 @@ var searchData=
   ['_5fresolver_15',['_resolver',['../classClient.html#ac73e4aacd6538436deaafeab9bc7bbfa',1,'Client']]],
   ['_5fsessionmanager_16',['_sessionManager',['../classServer.html#a3403c086af0c9f5ae290b4d14e07be21',1,'Server']]],
   ['_5fsessionmgr_17',['_sessionMgr',['../classServerProcessor.html#a9d0d058ff5e6c84569ea3ae16aa24108',1,'ServerProcessor']]],
-  ['_5fsessions_18',['_sessions',['../classSessionManager.html#a9d6d3d57bc9930f2e4cfd608794982f0',1,'SessionManager']]],
+  ['_5fsessions_18',['_sessions',['../classSessionManager.html#a5e5d10bc958785713e45e6b03cb2a8d0',1,'SessionManager']]],
   ['_5fsocket_19',['_socket',['../classClient.html#a146a008c9dc1b156f29821c8405dae12',1,'Client::_socket()'],['../classSession.html#ab18d5bb8dd24f1c3031a1c77049055a3',1,'Session::_socket()']]]
 ];

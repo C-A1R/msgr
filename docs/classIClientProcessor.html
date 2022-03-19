@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.14</span>
+   &#160;<span id="projectnumber">0.0.15</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -113,6 +113,8 @@ Signals</h2></td></tr>
 <tr class="separator:a28ae70d5a3fc20f392ac0d9621d58c05"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a67f0c6ac1df5c98f856bdb9cac218831"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIClientProcessor.html#a67f0c6ac1df5c98f856bdb9cac218831">signal_outputMessageResponse</a> (const std::string &amp;)</td></tr>
 <tr class="separator:a67f0c6ac1df5c98f856bdb9cac218831"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a171712c901e2052a58b93bc99425ca28"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIClientProcessor.html#a171712c901e2052a58b93bc99425ca28">signal_getUsersResponse</a> (const std::vector&lt; <a class="el" href="structUserInfo.html">UserInfo</a> &gt;)</td></tr>
+<tr class="separator:a171712c901e2052a58b93bc99425ca28"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a01f84cc450d9aaac2976e80bf74f6c96"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIClientProcessor.html#a01f84cc450d9aaac2976e80bf74f6c96">signal_inputMessageRequest</a> (const std::string &amp;, const std::string &amp;)</td></tr>
 <tr class="separator:a01f84cc450d9aaac2976e80bf74f6c96"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
@@ -135,10 +137,14 @@ Public Member Functions</h2></td></tr>
 <tr class="memitem:ad2d651e577a0f9853bf924014aa01421"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIClientProcessor.html#ad2d651e577a0f9853bf924014aa01421">signOut_request</a> ()=0</td></tr>
 <tr class="memdesc:ad2d651e577a0f9853bf924014aa01421"><td class="mdescLeft">&#160;</td><td class="mdescRight">запрос на выход из учетной записи  <a href="classIClientProcessor.html#ad2d651e577a0f9853bf924014aa01421">More...</a><br /></td></tr>
 <tr class="separator:ad2d651e577a0f9853bf924014aa01421"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a9d8c815bf539258efeaadc31daee9eea"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIClientProcessor.html#a9d8c815bf539258efeaadc31daee9eea">getUsers_request</a> ()=0</td></tr>
+<tr class="memdesc:a9d8c815bf539258efeaadc31daee9eea"><td class="mdescLeft">&#160;</td><td class="mdescRight">запрос на полуечние активных пользователей  <a href="classIClientProcessor.html#a9d8c815bf539258efeaadc31daee9eea">More...</a><br /></td></tr>
+<tr class="separator:a9d8c815bf539258efeaadc31daee9eea"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5c4b696f3670834b17c9eabdd70a3e08"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIClientProcessor.html#a5c4b696f3670834b17c9eabdd70a3e08">outputMessage_request</a> (const std::string &amp;msg)=0</td></tr>
 <tr class="memdesc:a5c4b696f3670834b17c9eabdd70a3e08"><td class="mdescLeft">&#160;</td><td class="mdescRight">запрос на отправку сообщения  <a href="classIClientProcessor.html#a5c4b696f3670834b17c9eabdd70a3e08">More...</a><br /></td></tr>
 <tr class="separator:a5c4b696f3670834b17c9eabdd70a3e08"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:af2f744ea15e6277123681996f55437fd"><td class="memItemLeft" align="right" valign="top">virtual void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIClientProcessor.html#af2f744ea15e6277123681996f55437fd">inputMessage_response</a> (const std::string &amp;text)=0</td></tr>
+<tr class="memdesc:af2f744ea15e6277123681996f55437fd"><td class="mdescLeft">&#160;</td><td class="mdescRight">ответ на входящее сообщение  <a href="classIClientProcessor.html#af2f744ea15e6277123681996f55437fd">More...</a><br /></td></tr>
 <tr class="separator:af2f744ea15e6277123681996f55437fd"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-slots"></a>
@@ -228,6 +234,35 @@ Private Slots</h2></td></tr>
 
 </div>
 </div>
+<a id="a9d8c815bf539258efeaadc31daee9eea"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a9d8c815bf539258efeaadc31daee9eea">&#9670;&nbsp;</a></span>getUsers_request()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual void IClientProcessor::getUsers_request </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>запрос на полуечние активных пользователей </p>
+
+<p>Implemented in <a class="el" href="classClientProcessor.html#a27fba9684a6c5f357cd26c62c2c60988">ClientProcessor</a>.</p>
+
+</div>
+</div>
 <a id="af2f744ea15e6277123681996f55437fd"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#af2f744ea15e6277123681996f55437fd">&#9670;&nbsp;</a></span>inputMessage_response()</h2>
 
@@ -251,6 +286,8 @@ Private Slots</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>ответ на входящее сообщение </p>
 
 <p>Implemented in <a class="el" href="classClientProcessor.html#a40f859b7fcc7f2b97ded0ac7ccb7ebd2">ClientProcessor</a>.</p>
 
@@ -283,6 +320,32 @@ Private Slots</h2></td></tr>
 <p>запрос на отправку сообщения </p>
 
 <p>Implemented in <a class="el" href="classClientProcessor.html#aef9d55cd91fd7bc6392f2e00cfeb429c">ClientProcessor</a>.</p>
+
+</div>
+</div>
+<a id="a171712c901e2052a58b93bc99425ca28"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a171712c901e2052a58b93bc99425ca28">&#9670;&nbsp;</a></span>signal_getUsersResponse</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void IClientProcessor::signal_getUsersResponse </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="structUserInfo.html">UserInfo</a> &gt;&#160;</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">signal</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
 
 </div>
 </div>

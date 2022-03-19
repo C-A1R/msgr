@@ -1,4 +1,5 @@
 #include "Database.h"
+#include "SqlRec.h"
 
 #include <iostream>
 #include <memory>
@@ -68,6 +69,37 @@ bool SqliteDatabase::getUserPassword(const int id, std::string &result)
     {
         std::cout << "DB_ERR: " << query << std::endl;
         return false;
+    }
+    return true;
+}
+
+bool SqliteDatabase::getUserData(const std::string &ids, std::string &result)
+{
+    std::string query = "SELECT * FROM users WHERE id IN (" + ids + ");";
+    std::cout << "query: " << query << std::endl;
+    std::unique_ptr<std::string> context_str(new std::string());
+    if (!exec(query, &callback, context_str.get()))
+    {
+        return false;
+    }
+    result = (*context_str);
+    std::cout << "result: " << result << std::endl;
+    return true;
+}
+
+bool SqliteDatabase::getAllUsersData(std::vector<std::tuple<std::string, std::string> > &result)
+{
+    std::string query = "SELECT * FROM users;";
+    std::vector<SqlRec> recs;
+    if (!sqlTable(query, recs))
+    {
+        std::cout << "DB_ERR: " << query << std::endl;
+        return false;
+    }
+    result.reserve(recs.size());
+    for (const auto &rec : recs)
+    {
+        result.push_back(std::make_tuple(rec.value("id"), rec.value("login")));
     }
     return true;
 }
@@ -166,6 +198,25 @@ int SqliteDatabase::callback(void *context, int columns, char **data, char **)
     return 0;
 }
 
+int SqliteDatabase::callback_2(void *context, int columns, char **data, char **names)
+{
+    if (!columns || !data)
+    {
+        return 0;
+    }
+    auto result = reinterpret_cast<std::vector<SqlRec> *>(context);
+    SqlRec rec;
+    for (int i = 0; i < columns; ++i)
+    {
+        if (data[i] != nullptr)
+        {
+            rec.insert(names[i], data[i]);
+        }
+    }
+    result->push_back(rec);
+    return 0;
+}
+
 int SqliteDatabase::maxId(const std::string &table, const std::string &id)
 {
     std::unique_ptr<std::string> context_str(new std::string());
@@ -190,5 +241,18 @@ bool SqliteDatabase::value(const std::string &query, std::string &value)
         return false;
     }
     value = (*context_str);
+    return true;
+}
+
+bool SqliteDatabase::sqlTable(const std::string &query, std::vector<SqlRec> &recs)
+{
+    if (!exec(query, &callback_2, &recs))
+    {
+        return false;
+    }
+//    for (const auto &rec : recs)
+//    {
+//        std::cout << "id=\"" << rec.value("id") <<  "\" login=\"" << rec.value("login") << "\"" << std::endl;
+//    }
     return true;
 }

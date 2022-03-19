@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.14</span>
+   &#160;<span id="projectnumber">0.0.15</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -64,6 +64,7 @@ $(function() {
 </div><!-- top -->
 <div class="header">
   <div class="summary">
+<a href="#pub-slots">Public Slots</a> &#124;
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-slots">Private Slots</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
@@ -97,6 +98,11 @@ Collaboration diagram for ChatWidget:</div>
 </map>
 <center><span class="legend">[<a href="graph_legend.html">legend</a>]</span></center></div>
 <table class="memberdecls">
+<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-slots"></a>
+Public Slots</h2></td></tr>
+<tr class="memitem:a77b872efabd40a2850a25d323dc82322"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChatWidget.html#a77b872efabd40a2850a25d323dc82322">updateContactList</a> ()</td></tr>
+<tr class="separator:a77b872efabd40a2850a25d323dc82322"><td class="memSeparator" colspan="2">&#160;</td></tr>
+</table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:afd9895c0d2c1158cbb49d6e94b3d82dc"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChatWidget.html#afd9895c0d2c1158cbb49d6e94b3d82dc">ChatWidget</a> (const std::shared_ptr&lt; <a class="el" href="classIClientProcessor.html">IClientProcessor</a> &gt; &amp;processor, QWidget *parent=nullptr)</td></tr>
@@ -115,6 +121,9 @@ Private Slots</h2></td></tr>
 <tr class="memitem:ae9e3c753ed85c5ceac5198fc2a8d8da4"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChatWidget.html#ae9e3c753ed85c5ceac5198fc2a8d8da4">slot_inputMessageRequest</a> (const std::string &amp;sender, const std::string &amp;text)</td></tr>
 <tr class="memdesc:ae9e3c753ed85c5ceac5198fc2a8d8da4"><td class="mdescLeft">&#160;</td><td class="mdescRight">получение входящего сообщения и отправка ответа на него (результат получения)  <a href="classChatWidget.html#ae9e3c753ed85c5ceac5198fc2a8d8da4">More...</a><br /></td></tr>
 <tr class="separator:ae9e3c753ed85c5ceac5198fc2a8d8da4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab3c73828b183fc3e4d07bca6ee6e5bcb"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChatWidget.html#ab3c73828b183fc3e4d07bca6ee6e5bcb">slot_getUsersResponse</a> (const std::vector&lt; <a class="el" href="structUserInfo.html">UserInfo</a> &gt; contacts)</td></tr>
+<tr class="memdesc:ab3c73828b183fc3e4d07bca6ee6e5bcb"><td class="mdescLeft">&#160;</td><td class="mdescRight">получение ответа на запрос контактов  <a href="classChatWidget.html#ab3c73828b183fc3e4d07bca6ee6e5bcb">More...</a><br /></td></tr>
+<tr class="separator:ab3c73828b183fc3e4d07bca6ee6e5bcb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -124,6 +133,8 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
+<tr class="memitem:af845b8afaea0d6e5b6c860da66b1bd4a"><td class="memItemLeft" align="right" valign="top">QListWidget *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChatWidget.html#af845b8afaea0d6e5b6c860da66b1bd4a">contacts_listWidget</a> {nullptr}</td></tr>
+<tr class="separator:af845b8afaea0d6e5b6c860da66b1bd4a"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad6c39fb7fef0a1aeca59379329363eca"><td class="memItemLeft" align="right" valign="top">QTextEdit *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChatWidget.html#ad6c39fb7fef0a1aeca59379329363eca">chat_tEdit</a> {nullptr}</td></tr>
 <tr class="separator:ad6c39fb7fef0a1aeca59379329363eca"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa33a1d50ca344d55313d180c23b1b420"><td class="memItemLeft" align="right" valign="top">QLineEdit *&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classChatWidget.html#aa33a1d50ca344d55313d180c23b1b420">msg_lEdit</a> {nullptr}</td></tr>
@@ -214,6 +225,34 @@ Private Attributes</h2></td></tr>
 </div><div class="memdoc">
 
 <p>инициализация пользовательского интерфейса </p>
+
+</div>
+</div>
+<a id="ab3c73828b183fc3e4d07bca6ee6e5bcb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab3c73828b183fc3e4d07bca6ee6e5bcb">&#9670;&nbsp;</a></span>slot_getUsersResponse</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ChatWidget::slot_getUsersResponse </td>
+          <td>(</td>
+          <td class="paramtype">const std::vector&lt; <a class="el" href="structUserInfo.html">UserInfo</a> &gt;&#160;</td>
+          <td class="paramname"><em>contacts</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>получение ответа на запрос контактов </p>
 
 </div>
 </div>
@@ -310,6 +349,31 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a77b872efabd40a2850a25d323dc82322"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77b872efabd40a2850a25d323dc82322">&#9670;&nbsp;</a></span>updateContactList</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void ChatWidget::updateContactList </td>
+          <td>(</td>
+          <td class="paramname"></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">slot</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <h2 class="groupheader">Member Data Documentation</h2>
 <a id="adad25e7754972615a4d1b3cb06eccb8f"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#adad25e7754972615a4d1b3cb06eccb8f">&#9670;&nbsp;</a></span>_processor</h2>
@@ -344,6 +408,28 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">QTextEdit* ChatWidget::chat_tEdit {nullptr}</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="af845b8afaea0d6e5b6c860da66b1bd4a"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af845b8afaea0d6e5b6c860da66b1bd4a">&#9670;&nbsp;</a></span>contacts_listWidget</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">QListWidget* ChatWidget::contacts_listWidget {nullptr}</td>
         </tr>
       </table>
   </td>

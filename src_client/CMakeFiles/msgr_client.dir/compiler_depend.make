@@ -2640,6 +2640,8 @@ src_client/CMakeFiles/msgr_client.dir/client_processor/ClientProcessor.cpp.o: sr
   /usr/include/c++/9/ctime \
   /usr/include/c++/9/bits/parse_numbers.h \
   src_client/client_processor/UserInfo.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QMetaType \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h \
   /usr/include/boost/property_tree/ptree.hpp \
   /usr/include/boost/property_tree/ptree_fwd.hpp \
   /usr/include/boost/config.hpp \
@@ -4751,6 +4753,8 @@ src_client/CMakeFiles/msgr_client.dir/main_window/AuthorizationWidget.cpp.o: src
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
   src_client/client_processor/UserInfo.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QMetaType \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h \
   /usr/include/boost/property_tree/ptree.hpp \
   /usr/include/boost/property_tree/ptree_fwd.hpp \
   /usr/include/boost/config.hpp \
@@ -5370,8 +5374,6 @@ src_client/CMakeFiles/msgr_client.dir/main_window/AuthorizationWidget.cpp.o: src
   /usr/include/boost/multi_index/member.hpp \
   /usr/include/boost/property_tree/detail/ptree_implementation.hpp \
   src_client/main_window/MainWidgets.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QMetaType \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h \
@@ -5731,6 +5733,8 @@ src_client/CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.o: src_client/m
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
   src_client/client_processor/UserInfo.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QMetaType \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h \
   /usr/include/boost/property_tree/ptree.hpp \
   /usr/include/boost/property_tree/ptree_fwd.hpp \
   /usr/include/boost/config.hpp \
@@ -6349,15 +6353,35 @@ src_client/CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.o: src_client/m
   /usr/include/boost/multi_index/detail/duplicates_iterator.hpp \
   /usr/include/boost/multi_index/member.hpp \
   /usr/include/boost/property_tree/detail/ptree_implementation.hpp \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTextEdit \
-  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtextedit.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidget \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistwidget.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qframe.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qwidget.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextdocument.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qvariant.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qmap.h \
   /usr/include/c++/9/variant \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qset.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabwidget.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QTextEdit \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtextedit.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextdocument.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextoption.h \
   /usr/include/x86_64-linux-gnu/qt5/QtGui/qtextcursor.h \
@@ -6368,7 +6392,6 @@ src_client/CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.o: src_client/m
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QPushButton \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qpushbutton.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractbutton.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtGui/qicon.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h \
@@ -6376,6 +6399,8 @@ src_client/CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.o: src_client/m
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qgridlayout.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QVBoxLayout \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSplitter \
+  /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsplitter.h \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QString \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qstring.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QShortcut \
@@ -7690,6 +7715,8 @@ src_client/CMakeFiles/msgr_client.dir/main_window/RegistrationWidget.cpp.o: src_
   /usr/include/x86_64-linux-gnu/qt5/QtCore/QObject \
   /usr/include/x86_64-linux-gnu/qt5/QtCore/qobject.h \
   src_client/client_processor/UserInfo.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QMetaType \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h \
   /usr/include/boost/property_tree/ptree.hpp \
   /usr/include/boost/property_tree/ptree_fwd.hpp \
   /usr/include/boost/config.hpp \
@@ -8309,8 +8336,6 @@ src_client/CMakeFiles/msgr_client.dir/main_window/RegistrationWidget.cpp.o: src_
   /usr/include/boost/multi_index/member.hpp \
   /usr/include/boost/property_tree/detail/ptree_implementation.hpp \
   src_client/main_window/MainWidgets.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QMetaType \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/QHBoxLayout \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qboxlayout.h \
   /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlayout.h \
@@ -9560,6 +9585,8 @@ src_client/CMakeFiles/msgr_client.dir/msgr_client_autogen/mocs_compilation.cpp.o
   src_client/client_processor/ClientProcessor.h \
   src_client/client_processor/IClientProcessor.h \
   src_client/client_processor/UserInfo.h \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/QMetaType \
+  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h \
   /usr/include/boost/property_tree/ptree.hpp \
   /usr/include/boost/property_tree/ptree_fwd.hpp \
   /usr/include/boost/optional/optional_fwd.hpp \
@@ -9995,8 +10022,6 @@ src_client/CMakeFiles/msgr_client.dir/msgr_client_autogen/mocs_compilation.cpp.o
   /usr/include/boost/multi_index/member.hpp \
   /usr/include/boost/property_tree/detail/ptree_implementation.hpp \
   src_client/main_window/MainWidgets.h \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/QMetaType \
-  /usr/include/x86_64-linux-gnu/qt5/QtCore/qmetatype.h \
   src_client/msgr_client_autogen/TXKPOHTVN7/moc_ChatWidget.cpp \
   src_client/main_window/ChatWidget.h \
   src_client/msgr_client_autogen/TXKPOHTVN7/moc_MainWindow.cpp \
@@ -10031,9 +10056,29 @@ src_client/msgr_client_autogen/mocs_compilation.cpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/QString:
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qsplitter.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QSplitter:
+
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qurl.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qrubberband.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyle.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractslider.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qregularexpression.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtGui/qvalidator.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemdelegate.h:
+
 /usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractscrollarea.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractitemview.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistwidget.h:
 
 src_client/main_window/ChatWidget.h:
 
@@ -10122,6 +10167,8 @@ src_client/main_window/MainWidgets.h:
 src_client/main_window/MainWindow.h:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qshareddata.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h:
 
 /usr/include/boost/numeric/conversion/detail/is_subranged.hpp:
 
@@ -10265,10 +10312,6 @@ src_client/main_window/MainWindow.h:
 
 /usr/include/boost/date_time/posix_time/posix_time_duration.hpp:
 
-/usr/include/x86_64-linux-gnu/qt5/QtCore/QMetaType:
-
-/usr/include/boost/asio/detail/reactor_op.hpp:
-
 /usr/include/boost/asio/bind_executor.hpp:
 
 /usr/include/boost/mpl/aux_/arity.hpp:
@@ -10367,6 +10410,10 @@ src_client/main_window/ChatWidget.cpp:
 
 /usr/include/boost/numeric/conversion/detail/conversion_traits.hpp:
 
+/usr/include/boost/asio/detail/reactor_op.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/QMetaType:
+
 /usr/include/boost/preprocessor/logical/bitand.hpp:
 
 /usr/include/boost/format/alt_sstream.hpp:
@@ -10410,6 +10457,8 @@ src_client/main_window/ChatWidget.cpp:
 /usr/include/boost/type_traits/is_class.hpp:
 
 /usr/include/boost/asio/ip/basic_endpoint.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qstyleoption.h:
 
 /usr/include/boost/date_time/c_time.hpp:
 
@@ -10718,6 +10767,8 @@ src_client/client_processor/ClientProcessor.h:
 /usr/include/boost/preprocessor/stringize.hpp:
 
 /usr/include/c++/9/bits/alloc_traits.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/QListWidget:
 
 /usr/include/boost/range/config.hpp:
 
@@ -11109,6 +11160,8 @@ src_client/msgr_client_autogen/7EM65HM6UG/moc_Client.cpp:
 
 /usr/include/c++/9/cstring:
 
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qitemselectionmodel.h:
+
 /usr/include/c++/9/bits/node_handle.h:
 
 /usr/include/boost/predef/architecture/alpha.h:
@@ -11358,6 +11411,8 @@ src_client/msgr_client_autogen/7EM65HM6UG/moc_Client.cpp:
 /usr/include/x86_64-linux-gnu/bits/siginfo-consts.h:
 
 /usr/include/boost/type_traits/is_constructible.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtCore/qabstractitemmodel.h:
 
 /usr/include/asm-generic/sockios.h:
 
@@ -11644,6 +11699,8 @@ src_client/msgr_client_autogen/7EM65HM6UG/moc_Client.cpp:
 /usr/include/boost/type_traits/is_polymorphic.hpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qstringview.h:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qslider.h:
 
 /usr/include/boost/optional/detail/optional_aligned_storage.hpp:
 
@@ -12087,6 +12144,8 @@ src_client/client_processor/IClientProcessor.h:
 
 /usr/include/x86_64-linux-gnu/bits/time.h:
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qlistview.h:
+
 /usr/include/c++/9/climits:
 
 /usr/include/boost/asio/detail/thread_info_base.hpp:
@@ -12429,6 +12488,8 @@ src_client/client_processor/IClientProcessor.h:
 
 /usr/include/boost/asio/impl/detached.hpp:
 
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qabstractspinbox.h:
+
 /usr/include/boost/mpl/int_fwd.hpp:
 
 /usr/include/boost/asio/generic/datagram_protocol.hpp:
@@ -12562,6 +12623,8 @@ src_client/client_processor/IClientProcessor.h:
 /usr/include/boost/asio/local/stream_protocol.hpp:
 
 /usr/include/boost/asio/packaged_task.hpp:
+
+/usr/include/x86_64-linux-gnu/qt5/QtWidgets/qtabbar.h:
 
 /usr/include/boost/asio/detail/future.hpp:
 
@@ -13660,5 +13723,3 @@ src_client/msgr_client_autogen/TXKPOHTVN7/moc_RegistrationWidget.cpp:
 /usr/include/boost/mpl/clear.hpp:
 
 /usr/include/x86_64-linux-gnu/qt5/QtCore/qlocale.h:
-
-/usr/include/x86_64-linux-gnu/qt5/QtCore/qhash.h:

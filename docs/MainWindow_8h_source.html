@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.14</span>
+   &#160;<span id="projectnumber">0.0.15</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -94,21 +94,25 @@ $(function() {
 <div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;<span class="keyword">private</span>:</div>
 <div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMainWindow.html#a2368bc1f69099fac3a2c5c8a951f8e1b">initUi</a>(<span class="keyword">const</span> std::shared_ptr&lt;IClientProcessor&gt; &amp;msgProcessor);</div>
 <div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160; </div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">private</span> slots:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMainWindow.html#a3079bf880221d9aa2716715509bd453c">slot_changeWidget</a>(<a class="code" href="MainWidgets_8h.html#adcd5eb519932c561d0b8dd950adde10a">MainWidgets</a> wgt);</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;Q_DECLARE_METATYPE(std::string)</div>
-<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160; </div>
-<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160;<span class="preprocessor">#endif // MAINWINDOW_H</span></div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;signals:</div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMainWindow.html#aa1fb0c075969a0e4c9887036ecf4fac1">signal_updateContactList</a>();</div>
+<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160; </div>
+<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160;<span class="keyword">private</span> slots:</div>
+<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classMainWindow.html#a3079bf880221d9aa2716715509bd453c">slot_changeWidget</a>(<a class="code" href="MainWidgets_8h.html#adcd5eb519932c561d0b8dd950adde10a">MainWidgets</a> wgt);</div>
+<div class="line"><a name="l00030"></a><span class="lineno">   30</span>&#160;};</div>
+<div class="line"><a name="l00031"></a><span class="lineno">   31</span>&#160; </div>
+<div class="line"><a name="l00032"></a><span class="lineno">   32</span>&#160;Q_DECLARE_METATYPE(std::string)</div>
+<div class="line"><a name="l00033"></a><span class="lineno">   33</span>&#160; </div>
+<div class="line"><a name="l00034"></a><span class="lineno">   34</span>&#160;<span class="preprocessor">#endif // MAINWINDOW_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aMainWidgets_8h_html"><div class="ttname"><a href="MainWidgets_8h.html">MainWidgets.h</a></div></div>
 <div class="ttc" id="aclassMainWindow_html_a4c37b8281e29b946992c30ddd23633ea"><div class="ttname"><a href="classMainWindow.html#a4c37b8281e29b946992c30ddd23633ea">MainWindow::main_widget</a></div><div class="ttdeci">QStackedWidget * main_widget</div><div class="ttdef"><b>Definition:</b> MainWindow.h:16</div></div>
 <div class="ttc" id="aclassMainWindow_html"><div class="ttname"><a href="classMainWindow.html">MainWindow</a></div><div class="ttdef"><b>Definition:</b> MainWindow.h:13</div></div>
-<div class="ttc" id="aclassMainWindow_html_a3079bf880221d9aa2716715509bd453c"><div class="ttname"><a href="classMainWindow.html#a3079bf880221d9aa2716715509bd453c">MainWindow::slot_changeWidget</a></div><div class="ttdeci">void slot_changeWidget(MainWidgets wgt)</div><div class="ttdef"><b>Definition:</b> MainWindow.cpp:48</div></div>
+<div class="ttc" id="aclassMainWindow_html_aa1fb0c075969a0e4c9887036ecf4fac1"><div class="ttname"><a href="classMainWindow.html#aa1fb0c075969a0e4c9887036ecf4fac1">MainWindow::signal_updateContactList</a></div><div class="ttdeci">void signal_updateContactList()</div></div>
+<div class="ttc" id="aclassMainWindow_html_a3079bf880221d9aa2716715509bd453c"><div class="ttname"><a href="classMainWindow.html#a3079bf880221d9aa2716715509bd453c">MainWindow::slot_changeWidget</a></div><div class="ttdeci">void slot_changeWidget(MainWidgets wgt)</div><div class="ttdef"><b>Definition:</b> MainWindow.cpp:49</div></div>
 <div class="ttc" id="aclassMainWindow_html_a996c5a2b6f77944776856f08ec30858d"><div class="ttname"><a href="classMainWindow.html#a996c5a2b6f77944776856f08ec30858d">MainWindow::MainWindow</a></div><div class="ttdeci">MainWindow(QWidget *parent=nullptr)</div><div class="ttdef"><b>Definition:</b> MainWindow.cpp:11</div></div>
 <div class="ttc" id="aclassMainWindow_html_a2368bc1f69099fac3a2c5c8a951f8e1b"><div class="ttname"><a href="classMainWindow.html#a2368bc1f69099fac3a2c5c8a951f8e1b">MainWindow::initUi</a></div><div class="ttdeci">void initUi(const std::shared_ptr&lt; IClientProcessor &gt; &amp;msgProcessor)</div><div class="ttdoc">инициализация пользовательского интерфейса</div><div class="ttdef"><b>Definition:</b> MainWindow.cpp:23</div></div>
-<div class="ttc" id="aclassIClientProcessor_html"><div class="ttname"><a href="classIClientProcessor.html">IClientProcessor</a></div><div class="ttdoc">интерфейс обработчика запросов/ответов от клиента</div><div class="ttdef"><b>Definition:</b> IClientProcessor.h:9</div></div>
+<div class="ttc" id="aclassIClientProcessor_html"><div class="ttname"><a href="classIClientProcessor.html">IClientProcessor</a></div><div class="ttdoc">интерфейс обработчика запросов/ответов от клиента</div><div class="ttdef"><b>Definition:</b> IClientProcessor.h:11</div></div>
 <div class="ttc" id="aMainWidgets_8h_html_adcd5eb519932c561d0b8dd950adde10a"><div class="ttname"><a href="MainWidgets_8h.html#adcd5eb519932c561d0b8dd950adde10a">MainWidgets</a></div><div class="ttdeci">MainWidgets</div><div class="ttdef"><b>Definition:</b> MainWidgets.h:6</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>

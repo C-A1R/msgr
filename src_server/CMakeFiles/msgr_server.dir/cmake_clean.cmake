@@ -7,6 +7,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/msgr_server.dir/SessionManager.cpp.o.d"
   "CMakeFiles/msgr_server.dir/database/Database.cpp.o"
   "CMakeFiles/msgr_server.dir/database/Database.cpp.o.d"
+  "CMakeFiles/msgr_server.dir/database/SqlRec.cpp.o"
+  "CMakeFiles/msgr_server.dir/database/SqlRec.cpp.o.d"
   "CMakeFiles/msgr_server.dir/database/sqlite/sqlite3.c.o"
   "CMakeFiles/msgr_server.dir/database/sqlite/sqlite3.c.o.d"
   "CMakeFiles/msgr_server.dir/main.cpp.o"

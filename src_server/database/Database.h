@@ -4,9 +4,11 @@
 #include "IDatabase.h"
 #include "sqlite/sqlite3.h"
 
-#include <vector>
 #include <mutex>
 #include <functional>
+
+
+class SqlRec;
 
 /**
  * @brief база sqlite
@@ -36,6 +38,8 @@ public:
     int insertUser(const std::string &login, const std::string &password) override;
     bool getUserId(const std::string &login, int &result) override;
     bool getUserPassword(const int id, std::string &result) override;
+    bool getUserData(const std::string &ids, std::string &result) override;
+    bool getAllUsersData(std::vector<std::tuple<std::string, std::string> > &result) override;
 
 //    /**
 //     * @brief очистить таблицу
@@ -57,9 +61,11 @@ private:
     bool exec(const std::string &query, sqlite3_callback callback = nullptr, void *context = nullptr);
     ///заполняет context результатом выборки
     static int callback(void *context, int columns, char **data, char **);
+    static int callback_2(void *context, int columns, char **data, char **names);
 
     int maxId(const std::string &table, const std::string &id = "id");
     bool value(const std::string &query, std::string &value);
+    bool sqlTable(const std::string &query, std::vector<SqlRec> &recs);
 };
 
 #endif // DATABASE_H

@@ -16,6 +16,7 @@ set(HEADERS
     database/sqlite/sqlite3.h
     database/IDatabase.h
     database/Database.h
+    database/SqlRec.h
     server_processor/IServerProcessor.h
     server_processor/ServerProcessor.h
 )
@@ -27,6 +28,7 @@ set(SOURCES
     SessionManager.cpp
     database/sqlite/sqlite3.c
     database/Database.cpp
+    database/SqlRec.cpp
     server_processor/ServerProcessor.cpp
 )
 

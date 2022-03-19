@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.14</span>
+   &#160;<span id="projectnumber">0.0.15</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -71,9 +71,11 @@ $(function() {
 <p>This is the complete list of members for <a class="el" href="classIClientProcessor.html">IClientProcessor</a>, including all inherited members.</p>
 <table class="directory">
   <tr class="even"><td class="entry"><a class="el" href="classIClientProcessor.html#a3e9ed8f0ad86dfe5973e293560844a63">currentLogin</a>() const =0</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classIClientProcessor.html#a45ff21f6cba1504ef84fb512db532bb0">IClientProcessor</a>()=default</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classIClientProcessor.html#af2f744ea15e6277123681996f55437fd">inputMessage_response</a>(const std::string &amp;text)=0</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classIClientProcessor.html#a5c4b696f3670834b17c9eabdd70a3e08">outputMessage_request</a>(const std::string &amp;msg)=0</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classIClientProcessor.html#a9d8c815bf539258efeaadc31daee9eea">getUsers_request</a>()=0</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classIClientProcessor.html#a45ff21f6cba1504ef84fb512db532bb0">IClientProcessor</a>()=default</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"></td></tr>
+  <tr><td class="entry"><a class="el" href="classIClientProcessor.html#af2f744ea15e6277123681996f55437fd">inputMessage_response</a>(const std::string &amp;text)=0</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classIClientProcessor.html#a5c4b696f3670834b17c9eabdd70a3e08">outputMessage_request</a>(const std::string &amp;msg)=0</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">pure virtual</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classIClientProcessor.html#a171712c901e2052a58b93bc99425ca28">signal_getUsersResponse</a>(const std::vector&lt; UserInfo &gt;)</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classIClientProcessor.html#a01f84cc450d9aaac2976e80bf74f6c96">signal_inputMessageRequest</a>(const std::string &amp;, const std::string &amp;)</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
   <tr><td class="entry"><a class="el" href="classIClientProcessor.html#a67f0c6ac1df5c98f856bdb9cac218831">signal_outputMessageResponse</a>(const std::string &amp;)</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classIClientProcessor.html#aae2d2a2b792991741bd06d714975b0d9">signal_sendRequest</a>(const std::string &amp;)</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.14</span>
+   &#160;<span id="projectnumber">0.0.15</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -75,32 +75,37 @@ $(function() {
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define IDATABASE_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
 <div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &lt;string&gt;</span></div>
-<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="classIDatabase.html">    9</a></span>&#160;<span class="keyword">class </span><a class="code" href="classIDatabase.html">IDatabase</a></div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;{</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;    <a class="code" href="classIDatabase.html#aeca95478f1091eebb28139a28c33cf50">IDatabase</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classIDatabase.html#a6535769342a3ea52b1f95f1cdfe2ff54">~IDatabase</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
-<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classIDatabase.html#aebd11d2f2264e876051ca57c0b0b604e">create</a>() = 0;</div>
-<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classIDatabase.html#a759676714eba7f36ab763898f0358b55">open</a>() = 0;</div>
-<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classIDatabase.html#a41c9b8a6c57bd25a2b6a5c635de94074">invalidId</a>() <span class="keyword">const</span> = 0;</div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classIDatabase.html#afafe86842f4441bad9bd72207e54fd17">insertUser</a>(<span class="keyword">const</span> std::string &amp;login, <span class="keyword">const</span> std::string &amp;password) = 0;</div>
-<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classIDatabase.html#a133cbda0cb91cb37822c3aa62e6c1c19">getUserId</a>(<span class="keyword">const</span> std::string &amp;login, <span class="keywordtype">int</span> &amp;result) = 0;</div>
-<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classIDatabase.html#aca5ad5e1716b3d6787194caf659c15b0">getUserPassword</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span>, std::string &amp;result) = 0;</div>
-<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;};</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="preprocessor">#endif // IDATABASE_H</span></div>
+<div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160;<span class="preprocessor">#include &lt;vector&gt;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160; </div>
+<div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="classIDatabase.html">   10</a></span>&#160;<span class="keyword">class </span><a class="code" href="classIDatabase.html">IDatabase</a></div>
+<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;{</div>
+<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;    <a class="code" href="classIDatabase.html#aeca95478f1091eebb28139a28c33cf50">IDatabase</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;    <span class="keyword">virtual</span> <a class="code" href="classIDatabase.html#a6535769342a3ea52b1f95f1cdfe2ff54">~IDatabase</a>() = <span class="keywordflow">default</span>;</div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160; </div>
+<div class="line"><a name="l00016"></a><span class="lineno">   16</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classIDatabase.html#aebd11d2f2264e876051ca57c0b0b604e">create</a>() = 0;</div>
+<div class="line"><a name="l00017"></a><span class="lineno">   17</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classIDatabase.html#a759676714eba7f36ab763898f0358b55">open</a>() = 0;</div>
+<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classIDatabase.html#a41c9b8a6c57bd25a2b6a5c635de94074">invalidId</a>() <span class="keyword">const</span> = 0;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">int</span> <a class="code" href="classIDatabase.html#afafe86842f4441bad9bd72207e54fd17">insertUser</a>(<span class="keyword">const</span> std::string &amp;login, <span class="keyword">const</span> std::string &amp;password) = 0;</div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classIDatabase.html#a133cbda0cb91cb37822c3aa62e6c1c19">getUserId</a>(<span class="keyword">const</span> std::string &amp;login, <span class="keywordtype">int</span> &amp;result) = 0;</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classIDatabase.html#aca5ad5e1716b3d6787194caf659c15b0">getUserPassword</a>(<span class="keyword">const</span> <span class="keywordtype">int</span> <span class="keywordtype">id</span>, std::string &amp;result) = 0;</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classIDatabase.html#a12f0ac82d911f2afd3af8cb9004b704d">getUserData</a>(<span class="keyword">const</span> std::string &amp;ids, std::string &amp;result) = 0;</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keyword">virtual</span> <span class="keywordtype">bool</span> <a class="code" href="classIDatabase.html#ae5f1ab977c64e3b8c973e0325c302319">getAllUsersData</a>(std::vector&lt;std::tuple&lt;std::string, std::string&gt; &gt; &amp;result) = 0;</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif // IDATABASE_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="aclassIDatabase_html_a759676714eba7f36ab763898f0358b55"><div class="ttname"><a href="classIDatabase.html#a759676714eba7f36ab763898f0358b55">IDatabase::open</a></div><div class="ttdeci">virtual bool open()=0</div></div>
 <div class="ttc" id="aclassIDatabase_html_a133cbda0cb91cb37822c3aa62e6c1c19"><div class="ttname"><a href="classIDatabase.html#a133cbda0cb91cb37822c3aa62e6c1c19">IDatabase::getUserId</a></div><div class="ttdeci">virtual bool getUserId(const std::string &amp;login, int &amp;result)=0</div></div>
 <div class="ttc" id="aclassIDatabase_html_a41c9b8a6c57bd25a2b6a5c635de94074"><div class="ttname"><a href="classIDatabase.html#a41c9b8a6c57bd25a2b6a5c635de94074">IDatabase::invalidId</a></div><div class="ttdeci">virtual int invalidId() const =0</div></div>
 <div class="ttc" id="aclassIDatabase_html_aebd11d2f2264e876051ca57c0b0b604e"><div class="ttname"><a href="classIDatabase.html#aebd11d2f2264e876051ca57c0b0b604e">IDatabase::create</a></div><div class="ttdeci">virtual bool create()=0</div></div>
-<div class="ttc" id="aclassIDatabase_html"><div class="ttname"><a href="classIDatabase.html">IDatabase</a></div><div class="ttdoc">через этот класс происходит работа с базой</div><div class="ttdef"><b>Definition:</b> IDatabase.h:9</div></div>
+<div class="ttc" id="aclassIDatabase_html_ae5f1ab977c64e3b8c973e0325c302319"><div class="ttname"><a href="classIDatabase.html#ae5f1ab977c64e3b8c973e0325c302319">IDatabase::getAllUsersData</a></div><div class="ttdeci">virtual bool getAllUsersData(std::vector&lt; std::tuple&lt; std::string, std::string &gt; &gt; &amp;result)=0</div></div>
+<div class="ttc" id="aclassIDatabase_html"><div class="ttname"><a href="classIDatabase.html">IDatabase</a></div><div class="ttdoc">через этот класс происходит работа с базой</div><div class="ttdef"><b>Definition:</b> IDatabase.h:10</div></div>
 <div class="ttc" id="aclassIDatabase_html_afafe86842f4441bad9bd72207e54fd17"><div class="ttname"><a href="classIDatabase.html#afafe86842f4441bad9bd72207e54fd17">IDatabase::insertUser</a></div><div class="ttdeci">virtual int insertUser(const std::string &amp;login, const std::string &amp;password)=0</div></div>
 <div class="ttc" id="aclassIDatabase_html_a6535769342a3ea52b1f95f1cdfe2ff54"><div class="ttname"><a href="classIDatabase.html#a6535769342a3ea52b1f95f1cdfe2ff54">IDatabase::~IDatabase</a></div><div class="ttdeci">virtual ~IDatabase()=default</div></div>
 <div class="ttc" id="aclassIDatabase_html_aeca95478f1091eebb28139a28c33cf50"><div class="ttname"><a href="classIDatabase.html#aeca95478f1091eebb28139a28c33cf50">IDatabase::IDatabase</a></div><div class="ttdeci">IDatabase()=default</div></div>
 <div class="ttc" id="aclassIDatabase_html_aca5ad5e1716b3d6787194caf659c15b0"><div class="ttname"><a href="classIDatabase.html#aca5ad5e1716b3d6787194caf659c15b0">IDatabase::getUserPassword</a></div><div class="ttdeci">virtual bool getUserPassword(const int id, std::string &amp;result)=0</div></div>
+<div class="ttc" id="aclassIDatabase_html_a12f0ac82d911f2afd3af8cb9004b704d"><div class="ttname"><a href="classIDatabase.html#a12f0ac82d911f2afd3af8cb9004b704d">IDatabase::getUserData</a></div><div class="ttdeci">virtual bool getUserData(const std::string &amp;ids, std::string &amp;result)=0</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

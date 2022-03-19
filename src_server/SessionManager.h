@@ -3,7 +3,7 @@
 
 #include "Session.h"
 
-#include <map>
+#include <unordered_map>
 #include <mutex>
 
 /**
@@ -11,7 +11,7 @@
  */
 class SessionManager
 {
-    std::map<int, std::shared_ptr<Session> > _sessions;
+    std::unordered_map<int, std::shared_ptr<Session> > _sessions;
     std::mutex _mutex;
 public:
     SessionManager();
@@ -19,6 +19,7 @@ public:
     void removeSession(int userId);
     bool isUserOnline(int userId) const;
     void sendToUser(int userId, const std::string &msg);
+//    std::string onlineIds() const;
 };
 
 #endif // SESSIONMANAGER_H

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.14</span>
+   &#160;<span id="projectnumber">0.0.15</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -92,8 +92,8 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:a9d6d3d57bc9930f2e4cfd608794982f0"><td class="memItemLeft" align="right" valign="top">std::map&lt; int, std::shared_ptr&lt; <a class="el" href="classSession.html">Session</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSessionManager.html#a9d6d3d57bc9930f2e4cfd608794982f0">_sessions</a></td></tr>
-<tr class="separator:a9d6d3d57bc9930f2e4cfd608794982f0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a5e5d10bc958785713e45e6b03cb2a8d0"><td class="memItemLeft" align="right" valign="top">std::unordered_map&lt; int, std::shared_ptr&lt; <a class="el" href="classSession.html">Session</a> &gt; &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSessionManager.html#a5e5d10bc958785713e45e6b03cb2a8d0">_sessions</a></td></tr>
+<tr class="separator:a5e5d10bc958785713e45e6b03cb2a8d0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a05d87c5c88d86aa2852d0e4778275273"><td class="memItemLeft" align="right" valign="top">std::mutex&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSessionManager.html#a05d87c5c88d86aa2852d0e4778275273">_mutex</a></td></tr>
 <tr class="separator:a05d87c5c88d86aa2852d0e4778275273"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
@@ -233,8 +233,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a9d6d3d57bc9930f2e4cfd608794982f0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9d6d3d57bc9930f2e4cfd608794982f0">&#9670;&nbsp;</a></span>_sessions</h2>
+<a id="a5e5d10bc958785713e45e6b03cb2a8d0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a5e5d10bc958785713e45e6b03cb2a8d0">&#9670;&nbsp;</a></span>_sessions</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -243,7 +243,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">std::map&lt;int, std::shared_ptr&lt;<a class="el" href="classSession.html">Session</a>&gt; &gt; SessionManager::_sessions</td>
+          <td class="memname">std::unordered_map&lt;int, std::shared_ptr&lt;<a class="el" href="classSession.html">Session</a>&gt; &gt; SessionManager::_sessions</td>
         </tr>
       </table>
   </td>

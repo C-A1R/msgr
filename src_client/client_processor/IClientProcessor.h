@@ -3,6 +3,8 @@
 
 #include <QObject>
 
+class UserInfo;
+
 /**
  * @brief интерфейс обработчика запросов/ответов от клиента
  */
@@ -23,9 +25,11 @@ public:
     virtual void signIn_request(const QString &login, const QString &password) = 0;
     ///запрос на выход из учетной записи
     virtual void signOut_request() = 0;
+    ///запрос на полуечние активных пользователей
+    virtual void getUsers_request() = 0;
     ///запрос на отправку сообщения
     virtual void outputMessage_request(const std::string &msg) = 0;
-
+    ///ответ на входящее сообщение
     virtual void inputMessage_response(const std::string &text) = 0;
 
 signals:
@@ -39,7 +43,7 @@ signals:
     void signal_signUpResponse(const std::string &);
     void signal_signInResponse(const std::string &);
     void signal_outputMessageResponse(const std::string &);
-
+    void signal_getUsersResponse(const std::vector<UserInfo>);
     void signal_inputMessageRequest(const std::string &, const std::string &);
 
 private slots:

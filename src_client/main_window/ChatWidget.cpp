@@ -1,10 +1,12 @@
 #include "ChatWidget.h"
 
+#include <QListWidget>
 #include <QTextEdit>
 #include <QLineEdit>
 #include <QPushButton>
 #include <QHBoxLayout>
 #include <QVBoxLayout>
+#include <QSplitter>
 #include <QString>
 #include <QShortcut>
 
@@ -19,6 +21,7 @@ ChatWidget::ChatWidget(const std::shared_ptr<IClientProcessor> &processor, QWidg
     connect(send_pBtn, &QPushButton::clicked, this, &ChatWidget::slot_outputMessageRequest);
     connect(_processor.get(), &IClientProcessor::signal_outputMessageResponse, this, &ChatWidget::slot_outputMessageResponse);
     connect(_processor.get(), &IClientProcessor::signal_inputMessageRequest, this, &ChatWidget::slot_inputMessageRequest);
+    connect(_processor.get(), &IClientProcessor::signal_getUsersResponse, this, &ChatWidget::slot_getUsersResponse);
 }
 
 ChatWidget::~ChatWidget()
@@ -28,19 +31,34 @@ ChatWidget::~ChatWidget()
 
 void ChatWidget::initUi()
 {
-    chat_tEdit = new QTextEdit(this);
-    chat_tEdit->setReadOnly(true);
+    contacts_listWidget = new QListWidget(this);
 
-    msg_lEdit = new QLineEdit(this);
-    send_pBtn = new QPushButton(QStringLiteral("Send"), this);
-    auto send_hLay = new QHBoxLayout();
-    send_hLay->addWidget(msg_lEdit);
-    send_hLay->addWidget(send_pBtn);
+    auto chat_widget = new QWidget();
+    {
+        chat_tEdit = new QTextEdit(this);
+        chat_tEdit->setReadOnly(true);
+
+        msg_lEdit = new QLineEdit(this);
+        send_pBtn = new QPushButton(QStringLiteral("Send"), this);
+        auto send_hLay = new QHBoxLayout();
+        send_hLay->addWidget(msg_lEdit);
+        send_hLay->addWidget(send_pBtn);
+
+        auto chat_vLay = new QVBoxLayout();
+        chat_vLay->setMargin(0);
+        chat_vLay->addWidget(chat_tEdit);
+        chat_vLay->addLayout(send_hLay);
+        chat_widget->setLayout(chat_vLay);
+    }
+
+    auto splitter = new QSplitter(this);
+    splitter->addWidget(contacts_listWidget);
+    splitter->addWidget(chat_widget);
+    splitter->setStretchFactor(0, 1);
+    splitter->setStretchFactor(1, 3);
 
     auto main_vLay = new QVBoxLayout();
-    main_vLay->addWidget(chat_tEdit);
-    main_vLay->addLayout(send_hLay);
-
+    main_vLay->addWidget(splitter);
     setLayout(main_vLay);
 }
 
@@ -69,4 +87,17 @@ void ChatWidget::slot_inputMessageRequest(const std::string &sender, const std::
             .arg(QString::fromStdString(text));
     chat_tEdit->append(html);
     _processor->inputMessage_response(text);
+}
+
+void ChatWidget::slot_getUsersResponse(const std::vector<UserInfo> contacts)
+{
+    for (const auto &user : contacts)
+    {
+        contacts_listWidget->addItem(QString::fromStdString(user.login));
+    }
+}
+
+void ChatWidget::updateContactList()
+{
+    _processor->getUsers_request();
 }

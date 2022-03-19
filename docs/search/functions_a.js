@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['registrationwidget_318',['RegistrationWidget',['../classRegistrationWidget.html#a88cc7c13242006fb3a24938f6d6d81b1',1,'RegistrationWidget']]],
-  ['removesession_319',['removeSession',['../classSessionManager.html#a220f4da6f636ee959799396942383198',1,'SessionManager']]],
-  ['run_320',['run',['../classClientThread.html#a928ef0e2be22e15fa5ca1ccd03ed9c6e',1,'ClientThread']]]
+  ['registrationwidget_345',['RegistrationWidget',['../classRegistrationWidget.html#a88cc7c13242006fb3a24938f6d6d81b1',1,'RegistrationWidget']]],
+  ['removesession_346',['removeSession',['../classSessionManager.html#a220f4da6f636ee959799396942383198',1,'SessionManager']]],
+  ['run_347',['run',['../classClientThread.html#a928ef0e2be22e15fa5ca1ccd03ed9c6e',1,'ClientThread']]]
 ];
