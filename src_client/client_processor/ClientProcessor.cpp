@@ -132,8 +132,10 @@ void ClientProcessor::inputMessage_response(const std::shared_ptr<MessageInfo> &
 
 void ClientProcessor::slot_parseRecieved(const std::string &msg)
 {
-    std::cout << msg;
-    if (msg.empty() || msg == "pong\n")
+    std::cout << "msg " << msg;
+    if (msg.empty()
+            || msg == "#pong\n"     //соединение установлено
+            || msg == "#large\n")   //сервер хочет передать длинное сообщение по частям
     {
         return;
     }

@@ -18,10 +18,14 @@ ServerProcessor::ServerProcessor(const std::shared_ptr<IDatabase> &db,
 
 std::string ServerProcessor::parseClientMessage(const std::string &msg)
 {
-    std::cout << msg;
-    if (msg == "ping\n")
+    std::cout << "msg " << msg;
+    if (msg == "#ping\n")
     {
-        return "pong\n";
+        return "#pong\n";
+    }
+    if (msg == "#large\n")
+    {
+        return msg;
     }
 
     std::stringstream stream(msg);

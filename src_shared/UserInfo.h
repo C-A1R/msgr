@@ -9,6 +9,7 @@ struct UserInfo
     std::string login;
     std::string name;
     UserInfo() = default;
+    std::string username() const { return name.empty() ? login : name; }
 };
 
 #endif // USERINFO_H

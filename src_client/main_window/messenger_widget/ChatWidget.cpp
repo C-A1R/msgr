@@ -26,23 +26,25 @@ ChatWidget::ChatWidget(const std::shared_ptr<UserInfo> &contact, QWidget *parent
 
 void ChatWidget::writeInputMessage(const std::shared_ptr<MessageInfo> &message)
 {
-    auto html = QStringLiteral("<h4><font color=\"#239B56\">%1:</font></h4>").arg(QString::fromStdString(_contact->login));
+    auto html = QStringLiteral("<h4><font color=\"#943126\">%1:</font></h4>").arg(QString::fromStdString(_contact->username()));
     chat_tEdit->append(html);
     chat_tEdit->setAlignment(Qt::AlignLeft);
     html = QStringLiteral("<p><font color=\"#424949\">%1</font></p>").arg(QString::fromStdString(message->text));
     chat_tEdit->append(html);
     chat_tEdit->setAlignment(Qt::AlignLeft);
+    chat_tEdit->textCursor().movePosition(QTextCursor::End);
     lastMessage = message->id;
 }
 
 void ChatWidget::writeOutputMessage(const std::shared_ptr<UserInfo> &currentUser, const std::shared_ptr<MessageInfo> &message)
 {
-    auto html = QStringLiteral("<h4><font color=\"#943126\">%1:</font></h4>").arg(QString::fromStdString(currentUser->login));
+    auto html = QStringLiteral("<h4><font color=\"#239B56\">%1:</font></h4>").arg(QString::fromStdString(currentUser->username()));
     chat_tEdit->append(html);
     chat_tEdit->setAlignment(Qt::AlignRight);
     html = QStringLiteral("<p><font color=\"#424949\">%1</font></p>").arg(QString::fromStdString(message->text));
     chat_tEdit->append(html);
     chat_tEdit->setAlignment(Qt::AlignRight);
+    chat_tEdit->textCursor().movePosition(QTextCursor::End);
     msg_lEdit->clear();
     lastMessage = message->id;
 }
