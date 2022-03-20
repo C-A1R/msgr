@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.16</span>
+   &#160;<span id="projectnumber">0.0.17</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -110,9 +110,9 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-types"></a>
 Private Types</h2></td></tr>
-<tr class="memitem:a9251d35017dc98d7e0531db8ce4eadfb"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="classSession.html#a9251d35017dc98d7e0531db8ce4eadfba91789f09a8674b8daa03927e3ceb7df4">max_length</a> = 1024
+<tr class="memitem:a1c1e665c9a689e9224fea0332e737e49"><td class="memItemLeft" align="right" valign="top">enum &#160;</td><td class="memItemRight" valign="bottom">{ <a class="el" href="classSession.html#a1c1e665c9a689e9224fea0332e737e49a91789f09a8674b8daa03927e3ceb7df4">max_length</a> = 1024
  }</td></tr>
-<tr class="separator:a9251d35017dc98d7e0531db8ce4eadfb"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="separator:a1c1e665c9a689e9224fea0332e737e49"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
@@ -120,21 +120,25 @@ Private Member Functions</h2></td></tr>
 <tr class="separator:a121783ddf71dfcc3fab4d90c2daeecd2"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a0a1db6328e138ac9ce6c4e45c3fb8fb5"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#a0a1db6328e138ac9ce6c4e45c3fb8fb5">do_write</a> (const std::string &amp;msg)</td></tr>
 <tr class="separator:a0a1db6328e138ac9ce6c4e45c3fb8fb5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abb59fb114f5b98e9f0e171dc27c8384e"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#abb59fb114f5b98e9f0e171dc27c8384e">do_write_large</a> (std::string msg)</td></tr>
+<tr class="separator:abb59fb114f5b98e9f0e171dc27c8384e"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
 <tr class="memitem:ab18d5bb8dd24f1c3031a1c77049055a3"><td class="memItemLeft" align="right" valign="top">tcp::socket&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#ab18d5bb8dd24f1c3031a1c77049055a3">_socket</a></td></tr>
 <tr class="separator:ab18d5bb8dd24f1c3031a1c77049055a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a5a874b0ee39713f631dfc3405be018b1"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#a5a874b0ee39713f631dfc3405be018b1">_data</a> [<a class="el" href="classSession.html#a9251d35017dc98d7e0531db8ce4eadfba91789f09a8674b8daa03927e3ceb7df4">max_length</a>]</td></tr>
-<tr class="separator:a5a874b0ee39713f631dfc3405be018b1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a77742a163c1ae6425f3e2893adac0cb9"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#a77742a163c1ae6425f3e2893adac0cb9">_buffer</a> [<a class="el" href="classSession.html#a1c1e665c9a689e9224fea0332e737e49a91789f09a8674b8daa03927e3ceb7df4">max_length</a>]</td></tr>
+<tr class="separator:a77742a163c1ae6425f3e2893adac0cb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:abf9a3b12db64697ed5adb2ac6453a6c1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#abf9a3b12db64697ed5adb2ac6453a6c1">_bufferLarge</a></td></tr>
+<tr class="separator:abf9a3b12db64697ed5adb2ac6453a6c1"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a15700fd3247b8ccbf88c094ed75c957c"><td class="memItemLeft" align="right" valign="top">std::unique_ptr&lt; <a class="el" href="classIServerProcessor.html">IServerProcessor</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#a15700fd3247b8ccbf88c094ed75c957c">_processor</a></td></tr>
 <tr class="separator:a15700fd3247b8ccbf88c094ed75c957c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>сессия пользователя </p>
 </div><h2 class="groupheader">Member Enumeration Documentation</h2>
-<a id="a9251d35017dc98d7e0531db8ce4eadfb"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9251d35017dc98d7e0531db8ce4eadfb">&#9670;&nbsp;</a></span>anonymous enum</h2>
+<a id="a1c1e665c9a689e9224fea0332e737e49"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a1c1e665c9a689e9224fea0332e737e49">&#9670;&nbsp;</a></span>anonymous enum</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -153,7 +157,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 <table class="fieldtable">
-<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a9251d35017dc98d7e0531db8ce4eadfba91789f09a8674b8daa03927e3ceb7df4"></a>max_length&#160;</td><td class="fielddoc"></td></tr>
+<tr><th colspan="2">Enumerator</th></tr><tr><td class="fieldname"><a id="a1c1e665c9a689e9224fea0332e737e49a91789f09a8674b8daa03927e3ceb7df4"></a>max_length&#160;</td><td class="fielddoc"></td></tr>
 </table>
 
 </div>
@@ -229,6 +233,32 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="abb59fb114f5b98e9f0e171dc27c8384e"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abb59fb114f5b98e9f0e171dc27c8384e">&#9670;&nbsp;</a></span>do_write_large()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">void Session::do_write_large </td>
+          <td>(</td>
+          <td class="paramtype">std::string&#160;</td>
+          <td class="paramname"><em>msg</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a580c6f1982d1f247b8e2e89014790a00"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a580c6f1982d1f247b8e2e89014790a00">&#9670;&nbsp;</a></span>setProcessor()</h2>
 
@@ -283,8 +313,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Data Documentation</h2>
-<a id="a5a874b0ee39713f631dfc3405be018b1"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a5a874b0ee39713f631dfc3405be018b1">&#9670;&nbsp;</a></span>_data</h2>
+<a id="a77742a163c1ae6425f3e2893adac0cb9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a77742a163c1ae6425f3e2893adac0cb9">&#9670;&nbsp;</a></span>_buffer</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -293,7 +323,29 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">char Session::_data[<a class="el" href="classSession.html#a9251d35017dc98d7e0531db8ce4eadfba91789f09a8674b8daa03927e3ceb7df4">max_length</a>]</td>
+          <td class="memname">char Session::_buffer[<a class="el" href="classSession.html#a1c1e665c9a689e9224fea0332e737e49a91789f09a8674b8daa03927e3ceb7df4">max_length</a>]</td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+</div>
+</div>
+<a id="abf9a3b12db64697ed5adb2ac6453a6c1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#abf9a3b12db64697ed5adb2ac6453a6c1">&#9670;&nbsp;</a></span>_bufferLarge</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string Session::_bufferLarge</td>
         </tr>
       </table>
   </td>

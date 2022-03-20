@@ -43,7 +43,7 @@ void MessengerWidget::initUi()
 
 void MessengerWidget::addContact(const std::shared_ptr<UserInfo> &contact)
 {
-    auto item = new QListWidgetItem(QString::fromStdString(contact->name.empty() ? contact->login : contact->name));
+    auto item = new QListWidgetItem(QString::fromStdString(contact->username()));
     item->setData(Qt::UserRole, contact->id);
     contacts_listWidget->addItem(item);
     chats_widget->addChat(contact);

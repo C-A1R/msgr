@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.16</span>
+   &#160;<span id="projectnumber">0.0.17</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -82,12 +82,14 @@ $(function() {
 <div class="line"><a name="l00009"></a><span class="lineno"><a class="line" href="structUserInfo.html#ab2f091d188e0e804a8ec6956f55102d1">    9</a></span>&#160;    std::string <a class="code" href="structUserInfo.html#ab2f091d188e0e804a8ec6956f55102d1">login</a>;</div>
 <div class="line"><a name="l00010"></a><span class="lineno"><a class="line" href="structUserInfo.html#a080c9e0ddc13388199a67d6e02b2d8e4">   10</a></span>&#160;    std::string <a class="code" href="structUserInfo.html#a080c9e0ddc13388199a67d6e02b2d8e4">name</a>;</div>
 <div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160;    <a class="code" href="structUserInfo.html#a45a5e129d7d3c237ec3e3a891f0b37c4">UserInfo</a>() = <span class="keywordflow">default</span>;</div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;};</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160;<span class="preprocessor">#endif // USERINFO_H</span></div>
+<div class="line"><a name="l00012"></a><span class="lineno"><a class="line" href="structUserInfo.html#a737f39be1ec575c6c8a4870522ed057d">   12</a></span>&#160;    std::string <a class="code" href="structUserInfo.html#a737f39be1ec575c6c8a4870522ed057d">username</a>()<span class="keyword"> const </span>{ <span class="keywordflow">return</span> <a class="code" href="structUserInfo.html#a080c9e0ddc13388199a67d6e02b2d8e4">name</a>.empty() ? <a class="code" href="structUserInfo.html#ab2f091d188e0e804a8ec6956f55102d1">login</a> : <a class="code" href="structUserInfo.html#a080c9e0ddc13388199a67d6e02b2d8e4">name</a>; }</div>
+<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160;};</div>
+<div class="line"><a name="l00014"></a><span class="lineno">   14</span>&#160; </div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;<span class="preprocessor">#endif // USERINFO_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
 <div class="ttc" id="astructUserInfo_html_a080c9e0ddc13388199a67d6e02b2d8e4"><div class="ttname"><a href="structUserInfo.html#a080c9e0ddc13388199a67d6e02b2d8e4">UserInfo::name</a></div><div class="ttdeci">std::string name</div><div class="ttdef"><b>Definition:</b> UserInfo.h:10</div></div>
 <div class="ttc" id="astructUserInfo_html"><div class="ttname"><a href="structUserInfo.html">UserInfo</a></div><div class="ttdef"><b>Definition:</b> UserInfo.h:6</div></div>
+<div class="ttc" id="astructUserInfo_html_a737f39be1ec575c6c8a4870522ed057d"><div class="ttname"><a href="structUserInfo.html#a737f39be1ec575c6c8a4870522ed057d">UserInfo::username</a></div><div class="ttdeci">std::string username() const</div><div class="ttdef"><b>Definition:</b> UserInfo.h:12</div></div>
 <div class="ttc" id="astructUserInfo_html_a45a5e129d7d3c237ec3e3a891f0b37c4"><div class="ttname"><a href="structUserInfo.html#a45a5e129d7d3c237ec3e3a891f0b37c4">UserInfo::UserInfo</a></div><div class="ttdeci">UserInfo()=default</div></div>
 <div class="ttc" id="astructUserInfo_html_ab2f091d188e0e804a8ec6956f55102d1"><div class="ttname"><a href="structUserInfo.html#ab2f091d188e0e804a8ec6956f55102d1">UserInfo::login</a></div><div class="ttdeci">std::string login</div><div class="ttdef"><b>Definition:</b> UserInfo.h:9</div></div>
 <!-- start footer part -->

@@ -16,7 +16,9 @@ class Client : public QObject
 
     tcp::socket _socket;
     tcp::resolver _resolver;
-    char _buffer[1024];
+    enum {max_length = 1024};
+    char _buffer[max_length];
+    std::string _bufferLarge;
 public:
     Client(boost::asio::io_context &io_context);
     void start(const std::string &host, const std::string &service);
@@ -26,6 +28,7 @@ private:
     void do_resolve(const boost::system::error_code &ec, tcp::resolver::iterator it);
     void do_connect(const boost::system::error_code &ec);
     void do_read(const boost::system::error_code &ec, std::size_t bytes);
+    void do_read_large(const boost::system::error_code &ec, std::size_t bytes);
     void do_write(const std::string &msg);
 
 signals:

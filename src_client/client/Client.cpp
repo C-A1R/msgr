@@ -36,7 +36,7 @@ void Client::do_connect(const boost::system::error_code &ec)
     {
         return;
     }
-    do_write("ping\n");
+    do_write("#ping\n");
 }
 
 void Client::do_read(const boost::system::error_code &ec, std::size_t bytes)
@@ -45,11 +45,39 @@ void Client::do_read(const boost::system::error_code &ec, std::size_t bytes)
     {
         return;
     }
+
     _socket.async_read_some(boost::asio::buffer(_buffer), [&](const boost::system::error_code &ec, std::size_t bytes)
     {
-        emit signal_recieved(std::string(_buffer, bytes));
-        do_read(ec, bytes);
+        auto str = std::string(_buffer, bytes);
+        emit signal_recieved(str);
+        if (str == "#large\n")
+        {
+            do_read_large(ec, bytes);
+        }
+        else
+        {
+            do_read(ec, bytes);
+        }
     });
+}
+
+void Client::do_read_large(const boost::system::error_code &ec, std::size_t bytes)
+{
+    if (ec || !bytes)
+    {
+        return;
+    }
+
+    _socket.write_some(boost::asio::buffer(std::string("#ready\n")));
+    do
+    {
+        auto byts = _socket.read_some(boost::asio::buffer(_buffer));
+        _bufferLarge += std::string(_buffer, byts);
+    }
+    while (_bufferLarge.at(_bufferLarge.length() - 1) != '\n');
+
+    emit signal_recieved(_bufferLarge);
+    _bufferLarge.clear();
 }
 
 void Client::send(const std::string &msg)
