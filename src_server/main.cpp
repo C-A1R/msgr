@@ -2,16 +2,17 @@
 
 #include <iostream>
 
-int main(int argc, char* argv[])
+int main(int /*argc*/, char* /*argv*/[])
 {
     try
     {
-        if (argc < 2)
-        {
-            std::cerr << "Usage: server <port> [<port> ...]\n";
-            return 1;
-        }
-        int port = atoi(argv[1]);
+//        if (argc < 2)
+//        {
+//            std::cerr << "Usage: server <port> [<port> ...]\n";
+//            return 1;
+//        }
+//        int port = atoi(argv[1]);
+        int port = 9000;
         std::cout << "RUN_SERVER / port " << port << std::endl;
 
         boost::asio::io_context io_context;
