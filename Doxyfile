@@ -5,7 +5,7 @@ EXCLUDE                = /home/runner/work/msgr/msgr/src_server/database/sqlite/
 
 DOXYFILE_ENCODING      = UTF-8
 PROJECT_NAME           = msgr
-PROJECT_NUMBER         = 0.0.18
+PROJECT_NUMBER         = 0.0.19
 PROJECT_BRIEF          = "сервер + клиент"
 
 GENERATE_HTML          = YES
