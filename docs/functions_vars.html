@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.15</span>
+   &#160;<span id="projectnumber">0.0.16</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -78,11 +78,17 @@ $(function() {
 <li>_clientThread
 : <a class="el" href="classClientProcessor.html#a61b4353912027d530af5953ad13582db">ClientProcessor</a>
 </li>
+<li>_contact
+: <a class="el" href="classChatWidget.html#a7262541a61dde024909945b93b0e63a3">ChatWidget</a>
+</li>
+<li>_contacts
+: <a class="el" href="classStackedChatWidget.html#abc50fcf7a24fa50d1233585bf613d2f9">StackedChatWidget</a>
+</li>
 <li>_currentSession
 : <a class="el" href="classServerProcessor.html#a5b8f5e55942b5c34aecc598fefe0286c">ServerProcessor</a>
 </li>
 <li>_currentUser
-: <a class="el" href="classServerProcessor.html#a6b57b384212d7a8a40dc92d5aa45cf24">ServerProcessor</a>
+: <a class="el" href="classClientProcessor.html#a7b37effa670a19fe06a2eb2282f87f31">ClientProcessor</a>
 </li>
 <li>_data
 : <a class="el" href="classSession.html#a5a874b0ee39713f631dfc3405be018b1">Session</a>
@@ -108,7 +114,7 @@ $(function() {
 </li>
 <li>_processor
 : <a class="el" href="classAuthorizationWidget.html#adf1fb420589bc8ce730e8ddd74017867">AuthorizationWidget</a>
-, <a class="el" href="classChatWidget.html#adad25e7754972615a4d1b3cb06eccb8f">ChatWidget</a>
+, <a class="el" href="classMessengerWidget.html#a495e7ecca19a16650fa9ad34da3e141f">MessengerWidget</a>
 , <a class="el" href="classSession.html#a15700fd3247b8ccbf88c094ed75c957c">Session</a>
 </li>
 <li>_resolver
@@ -127,6 +133,9 @@ $(function() {
 : <a class="el" href="classClient.html#a146a008c9dc1b156f29821c8405dae12">Client</a>
 , <a class="el" href="classSession.html#ab18d5bb8dd24f1c3031a1c77049055a3">Session</a>
 </li>
+<li>_stack
+: <a class="el" href="classStackedChatWidget.html#a6e046d8477ab4561d4c3ef89af761634">StackedChatWidget</a>
+</li>
 </ul>
 
 
@@ -137,14 +146,14 @@ $(function() {
 <li>chat_tEdit
 : <a class="el" href="classChatWidget.html#ad6c39fb7fef0a1aeca59379329363eca">ChatWidget</a>
 </li>
+<li>chats_widget
+: <a class="el" href="classMessengerWidget.html#a278c65d04fb51a182615a71a251d18a9">MessengerWidget</a>
+</li>
 <li>confirmPassword_lEdit
 : <a class="el" href="classRegistrationWidget.html#a8d3017b4e92abcee6dc82774f80e3f9a">RegistrationWidget</a>
 </li>
 <li>contacts_listWidget
-: <a class="el" href="classChatWidget.html#af845b8afaea0d6e5b6c860da66b1bd4a">ChatWidget</a>
-</li>
-<li>currentUser
-: <a class="el" href="classClientProcessor.html#afe3655073d42546634c2249889817873">ClientProcessor</a>
+: <a class="el" href="classMessengerWidget.html#a3d63ad62b914060d56cb392d3b7cc6ca">MessengerWidget</a>
 </li>
 </ul>
 
@@ -161,12 +170,16 @@ $(function() {
 
 <h3><a id="index_i"></a>- i -</h3><ul>
 <li>id
-: <a class="el" href="structUserInfo.html#a782c91e3af7e6ed09eb1a949767e3b92">UserInfo</a>
+: <a class="el" href="structMessageInfo.html#a8b61398f068160f73cb2efc7c94558f7">MessageInfo</a>
+, <a class="el" href="structUserInfo.html#a782c91e3af7e6ed09eb1a949767e3b92">UserInfo</a>
 </li>
 </ul>
 
 
 <h3><a id="index_l"></a>- l -</h3><ul>
+<li>lastMessage
+: <a class="el" href="classChatWidget.html#ad1e18fb20700174f3595be213d348a9c">ChatWidget</a>
+</li>
 <li>login
 : <a class="el" href="structUserInfo.html#ab2f091d188e0e804a8ec6956f55102d1">UserInfo</a>
 </li>
@@ -186,9 +199,23 @@ $(function() {
 </ul>
 
 
+<h3><a id="index_n"></a>- n -</h3><ul>
+<li>name
+: <a class="el" href="structUserInfo.html#a080c9e0ddc13388199a67d6e02b2d8e4">UserInfo</a>
+</li>
+</ul>
+
+
 <h3><a id="index_p"></a>- p -</h3><ul>
 <li>password_lEdit
 : <a class="el" href="classAuthorizationWidget.html#ae7484d9d6d837e6405b45b33eb2bbd51">AuthorizationWidget</a>
+</li>
+</ul>
+
+
+<h3><a id="index_r"></a>- r -</h3><ul>
+<li>recipientId
+: <a class="el" href="structMessageInfo.html#a66d2410405d12f13029d5f041b692357">MessageInfo</a>
 </li>
 </ul>
 
@@ -197,8 +224,18 @@ $(function() {
 <li>send_pBtn
 : <a class="el" href="classChatWidget.html#a4341b86df37647b25a69b8a8edb6dd22">ChatWidget</a>
 </li>
+<li>senderId
+: <a class="el" href="structMessageInfo.html#a1695d06bf4998e764b0d53f501ec537d">MessageInfo</a>
+</li>
 <li>sign_pBtn
 : <a class="el" href="classAuthorizationWidget.html#a2c0c3949af25fc102a6e7cb49a62190f">AuthorizationWidget</a>
+</li>
+</ul>
+
+
+<h3><a id="index_t"></a>- t -</h3><ul>
+<li>text
+: <a class="el" href="structMessageInfo.html#afaaf5331218dcc2746f6e0d533b645c1">MessageInfo</a>
 </li>
 </ul>
 

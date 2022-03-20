@@ -4,6 +4,9 @@
 #include <string>
 #include <vector>
 
+class UserInfo;
+class MessageInfo;
+
 /**
  * @brief через этот класс происходит работа с базой
  */
@@ -16,11 +19,13 @@ public:
     virtual bool create() = 0;
     virtual bool open() = 0;
     virtual int invalidId() const = 0;
-    virtual int insertUser(const std::string &login, const std::string &password) = 0;
+    virtual int insertUser(const std::pair<std::string, std::string> &values) = 0;
     virtual bool getUserId(const std::string &login, int &result) = 0;
     virtual bool getUserPassword(const int id, std::string &result) = 0;
-    virtual bool getUserData(const std::string &ids, std::string &result) = 0;
-    virtual bool getAllUsersData(std::vector<std::tuple<std::string, std::string> > &result) = 0;
+    virtual bool getUsername(const int id, std::string &result) = 0;
+    virtual bool getAllUsers(std::vector<UserInfo> &result) = 0;
+    virtual int insertMessage(int sender, int recipient, const std::string &text) = 0;
+    virtual bool getMessages(int user_1, int user_2, int lastId, std::vector<MessageInfo> &result) = 0;
 };
 
 #endif // IDATABASE_H

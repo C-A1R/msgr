@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.15</span>
+   &#160;<span id="projectnumber">0.0.16</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -66,7 +66,6 @@ $(function() {
   <div class="summary">
 <a href="#pub-methods">Public Member Functions</a> &#124;
 <a href="#pri-methods">Private Member Functions</a> &#124;
-<a href="#pri-static-methods">Static Private Member Functions</a> &#124;
 <a href="#pri-attribs">Private Attributes</a> &#124;
 <a href="classSqliteDatabase-members.html">List of all members</a>  </div>
   <div class="headertitle">
@@ -77,7 +76,7 @@ $(function() {
 <p>база sqlite.  
  <a href="classSqliteDatabase.html#details">More...</a></p>
 
-<p><code>#include &lt;<a class="el" href="Database_8h_source.html">Database.h</a>&gt;</code></p>
+<p><code>#include &lt;<a class="el" href="SqliteDatabase_8h_source.html">SqliteDatabase.h</a>&gt;</code></p>
 <div class="dynheader">
 Inheritance diagram for SqliteDatabase:</div>
 <div class="dyncontent">
@@ -111,17 +110,21 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a415ef2639513fce4d753be17c391a931"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ad10092c50bef556458d71017cccf6681"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqliteDatabase.html#ad10092c50bef556458d71017cccf6681">invalidId</a> () const override</td></tr>
 <tr class="separator:ad10092c50bef556458d71017cccf6681"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a492bbd12b21012dfdf1ca1c16018c00c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqliteDatabase.html#a492bbd12b21012dfdf1ca1c16018c00c">insertUser</a> (const std::string &amp;login, const std::string &amp;password) override</td></tr>
-<tr class="memdesc:a492bbd12b21012dfdf1ca1c16018c00c"><td class="mdescLeft">&#160;</td><td class="mdescRight">добавить пользователя в таблицу  <a href="classSqliteDatabase.html#a492bbd12b21012dfdf1ca1c16018c00c">More...</a><br /></td></tr>
-<tr class="separator:a492bbd12b21012dfdf1ca1c16018c00c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a91932cb72d24daa49121ae03d97f122c"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqliteDatabase.html#a91932cb72d24daa49121ae03d97f122c">insertUser</a> (const std::pair&lt; std::string, std::string &gt; &amp;values) override</td></tr>
+<tr class="memdesc:a91932cb72d24daa49121ae03d97f122c"><td class="mdescLeft">&#160;</td><td class="mdescRight">добавить пользователя в таблицу  <a href="classSqliteDatabase.html#a91932cb72d24daa49121ae03d97f122c">More...</a><br /></td></tr>
+<tr class="separator:a91932cb72d24daa49121ae03d97f122c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab3b0294e80d9cdb511f8ed8dca6ec16b"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqliteDatabase.html#ab3b0294e80d9cdb511f8ed8dca6ec16b">getUserId</a> (const std::string &amp;login, int &amp;result) override</td></tr>
 <tr class="separator:ab3b0294e80d9cdb511f8ed8dca6ec16b"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a04a2fb2a1d2ff0d64f0f3f3972a353f6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqliteDatabase.html#a04a2fb2a1d2ff0d64f0f3f3972a353f6">getUserPassword</a> (const int id, std::string &amp;result) override</td></tr>
 <tr class="separator:a04a2fb2a1d2ff0d64f0f3f3972a353f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa826789e552199983f902fa2df3659f6"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqliteDatabase.html#aa826789e552199983f902fa2df3659f6">getUserData</a> (const std::string &amp;ids, std::string &amp;result) override</td></tr>
-<tr class="separator:aa826789e552199983f902fa2df3659f6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a84f3e0a7f4a00ba7637986f5362384b7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqliteDatabase.html#a84f3e0a7f4a00ba7637986f5362384b7">getAllUsersData</a> (std::vector&lt; std::tuple&lt; std::string, std::string &gt; &gt; &amp;result) override</td></tr>
-<tr class="separator:a84f3e0a7f4a00ba7637986f5362384b7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aac2318d386a3b0fd062876de4a00a812"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqliteDatabase.html#aac2318d386a3b0fd062876de4a00a812">getUsername</a> (const int id, std::string &amp;result) override</td></tr>
+<tr class="separator:aac2318d386a3b0fd062876de4a00a812"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f6da8c99f39d6d985e480c8940603b0"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqliteDatabase.html#a0f6da8c99f39d6d985e480c8940603b0">getAllUsers</a> (std::vector&lt; <a class="el" href="structUserInfo.html">UserInfo</a> &gt; &amp;result) override</td></tr>
+<tr class="separator:a0f6da8c99f39d6d985e480c8940603b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a882338262af7ba59f580afea3ab9ab69"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqliteDatabase.html#a882338262af7ba59f580afea3ab9ab69">insertMessage</a> (int sender, int recipient, const std::string &amp;text) override</td></tr>
+<tr class="separator:a882338262af7ba59f580afea3ab9ab69"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af84e3c646d7c6750a4a818f3ceccbbd8"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqliteDatabase.html#af84e3c646d7c6750a4a818f3ceccbbd8">getMessages</a> (int user_1, int user_2, int lastId, std::vector&lt; <a class="el" href="structMessageInfo.html">MessageInfo</a> &gt; &amp;result) override</td></tr>
+<tr class="separator:af84e3c646d7c6750a4a818f3ceccbbd8"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classIDatabase"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classIDatabase')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classIDatabase.html">IDatabase</a></td></tr>
 <tr class="memitem:aeca95478f1091eebb28139a28c33cf50 inherit pub_methods_classIDatabase"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIDatabase.html#aeca95478f1091eebb28139a28c33cf50">IDatabase</a> ()=default</td></tr>
 <tr class="separator:aeca95478f1091eebb28139a28c33cf50 inherit pub_methods_classIDatabase"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -130,23 +133,21 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a69c11073bfa2635fb5c6548ea829b2c7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqliteDatabase.html#a69c11073bfa2635fb5c6548ea829b2c7">exec</a> (const std::string &amp;query, sqlite3_callback <a class="el" href="classSqliteDatabase.html#a37d670d335a01f2bd899d51238351db7">callback</a>=nullptr, void *context=nullptr)</td></tr>
+<tr class="memitem:a69c11073bfa2635fb5c6548ea829b2c7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqliteDatabase.html#a69c11073bfa2635fb5c6548ea829b2c7">exec</a> (const std::string &amp;query, sqlite3_callback callback=nullptr, void *context=nullptr)</td></tr>
 <tr class="memdesc:a69c11073bfa2635fb5c6548ea829b2c7"><td class="mdescLeft">&#160;</td><td class="mdescRight">выполнить запрос в базу  <a href="classSqliteDatabase.html#a69c11073bfa2635fb5c6548ea829b2c7">More...</a><br /></td></tr>
 <tr class="separator:a69c11073bfa2635fb5c6548ea829b2c7"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5d9e9accefa8f4f2605f8320f1f4c24b"><td class="memItemLeft" align="right" valign="top">int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqliteDatabase.html#a5d9e9accefa8f4f2605f8320f1f4c24b">maxId</a> (const std::string &amp;table, const std::string &amp;id=&quot;id&quot;)</td></tr>
+<tr class="memdesc:a5d9e9accefa8f4f2605f8320f1f4c24b"><td class="mdescLeft">&#160;</td><td class="mdescRight">последний id (если автоинкремент)  <a href="classSqliteDatabase.html#a5d9e9accefa8f4f2605f8320f1f4c24b">More...</a><br /></td></tr>
 <tr class="separator:a5d9e9accefa8f4f2605f8320f1f4c24b"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a08a5c9fca5fc27cdb28be73df9001555"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqliteDatabase.html#a08a5c9fca5fc27cdb28be73df9001555">value</a> (const std::string &amp;query, std::string &amp;value)</td></tr>
-<tr class="separator:a08a5c9fca5fc27cdb28be73df9001555"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:af0a318d54eacca34ccb10ab97780b3bf"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqliteDatabase.html#af0a318d54eacca34ccb10ab97780b3bf">sqlTable</a> (const std::string &amp;query, std::vector&lt; <a class="el" href="classSqlRec.html">SqlRec</a> &gt; &amp;recs)</td></tr>
-<tr class="separator:af0a318d54eacca34ccb10ab97780b3bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
-</table><table class="memberdecls">
-<tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-static-methods"></a>
-Static Private Member Functions</h2></td></tr>
-<tr class="memitem:a37d670d335a01f2bd899d51238351db7"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqliteDatabase.html#a37d670d335a01f2bd899d51238351db7">callback</a> (void *context, int columns, char **data, char **)</td></tr>
-<tr class="memdesc:a37d670d335a01f2bd899d51238351db7"><td class="mdescLeft">&#160;</td><td class="mdescRight">заполняет context результатом выборки  <a href="classSqliteDatabase.html#a37d670d335a01f2bd899d51238351db7">More...</a><br /></td></tr>
-<tr class="separator:a37d670d335a01f2bd899d51238351db7"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a9246e7786c8375b40c0c816af57c86ab"><td class="memItemLeft" align="right" valign="top">static int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqliteDatabase.html#a9246e7786c8375b40c0c816af57c86ab">callback_2</a> (void *context, int columns, char **data, char **names)</td></tr>
-<tr class="separator:a9246e7786c8375b40c0c816af57c86ab"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a593be9e2a9e91f563369096a95e56110"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqliteDatabase.html#a593be9e2a9e91f563369096a95e56110">sqlValue</a> (const std::string &amp;query, const std::string &amp;target, std::string &amp;result)</td></tr>
+<tr class="memdesc:a593be9e2a9e91f563369096a95e56110"><td class="mdescLeft">&#160;</td><td class="mdescRight">получить одно значение  <a href="classSqliteDatabase.html#a593be9e2a9e91f563369096a95e56110">More...</a><br /></td></tr>
+<tr class="separator:a593be9e2a9e91f563369096a95e56110"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af166c05e64e9980b9ecdef564e8fdab7"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqliteDatabase.html#af166c05e64e9980b9ecdef564e8fdab7">sqlRecord</a> (const std::string &amp;query, <a class="el" href="classSqlRec.html">SqlRec</a> &amp;result)</td></tr>
+<tr class="memdesc:af166c05e64e9980b9ecdef564e8fdab7"><td class="mdescLeft">&#160;</td><td class="mdescRight">получить запись  <a href="classSqliteDatabase.html#af166c05e64e9980b9ecdef564e8fdab7">More...</a><br /></td></tr>
+<tr class="separator:af166c05e64e9980b9ecdef564e8fdab7"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aec2766774049bf334c1b1b38aff98367"><td class="memItemLeft" align="right" valign="top">bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSqliteDatabase.html#aec2766774049bf334c1b1b38aff98367">sqlTable</a> (const std::string &amp;query, std::vector&lt; <a class="el" href="classSqlRec.html">SqlRec</a> &gt; &amp;result)</td></tr>
+<tr class="memdesc:aec2766774049bf334c1b1b38aff98367"><td class="mdescLeft">&#160;</td><td class="mdescRight">получить набор записей  <a href="classSqliteDatabase.html#aec2766774049bf334c1b1b38aff98367">More...</a><br /></td></tr>
+<tr class="separator:aec2766774049bf334c1b1b38aff98367"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -196,104 +197,6 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a37d670d335a01f2bd899d51238351db7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a37d670d335a01f2bd899d51238351db7">&#9670;&nbsp;</a></span>callback()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int SqliteDatabase::callback </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>columns</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname">&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-<p>заполняет context результатом выборки </p>
-
-</div>
-</div>
-<a id="a9246e7786c8375b40c0c816af57c86ab"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a9246e7786c8375b40c0c816af57c86ab">&#9670;&nbsp;</a></span>callback_2()</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">int SqliteDatabase::callback_2 </td>
-          <td>(</td>
-          <td class="paramtype">void *&#160;</td>
-          <td class="paramname"><em>context</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>columns</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>data</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">char **&#160;</td>
-          <td class="paramname"><em>names</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">static</span><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
 <a id="a5634ae17f2aef2d07991025c9baf981d"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a5634ae17f2aef2d07991025c9baf981d">&#9670;&nbsp;</a></span>create()</h2>
 
@@ -367,8 +270,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a84f3e0a7f4a00ba7637986f5362384b7"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a84f3e0a7f4a00ba7637986f5362384b7">&#9670;&nbsp;</a></span>getAllUsersData()</h2>
+<a id="a0f6da8c99f39d6d985e480c8940603b0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f6da8c99f39d6d985e480c8940603b0">&#9670;&nbsp;</a></span>getAllUsers()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -377,9 +280,9 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool SqliteDatabase::getAllUsersData </td>
+          <td class="memname">bool SqliteDatabase::getAllUsers </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; std::tuple&lt; std::string, std::string &gt; &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structUserInfo.html">UserInfo</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>result</em></td><td>)</td>
           <td></td>
         </tr>
@@ -391,12 +294,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classIDatabase.html#ae5f1ab977c64e3b8c973e0325c302319">IDatabase</a>.</p>
+<p>Implements <a class="el" href="classIDatabase.html#ac939053331f82600d81e94096f69e2f1">IDatabase</a>.</p>
 
 </div>
 </div>
-<a id="aa826789e552199983f902fa2df3659f6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa826789e552199983f902fa2df3659f6">&#9670;&nbsp;</a></span>getUserData()</h2>
+<a id="af84e3c646d7c6750a4a818f3ceccbbd8"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af84e3c646d7c6750a4a818f3ceccbbd8">&#9670;&nbsp;</a></span>getMessages()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -405,15 +308,27 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool SqliteDatabase::getUserData </td>
+          <td class="memname">bool SqliteDatabase::getMessages </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>ids</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>user_1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>user_2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lastId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structMessageInfo.html">MessageInfo</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>result</em>&#160;</td>
         </tr>
         <tr>
@@ -429,7 +344,7 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classIDatabase.html#a12f0ac82d911f2afd3af8cb9004b704d">IDatabase</a>.</p>
+<p>Implements <a class="el" href="classIDatabase.html#afb235e092fa57d45744933a71739aee0">IDatabase</a>.</p>
 
 </div>
 </div>
@@ -471,6 +386,44 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="aac2318d386a3b0fd062876de4a00a812"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aac2318d386a3b0fd062876de4a00a812">&#9670;&nbsp;</a></span>getUsername()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SqliteDatabase::getUsername </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implements <a class="el" href="classIDatabase.html#a866ed9fd6b5d04752bf73834681e4198">IDatabase</a>.</p>
+
+</div>
+</div>
 <a id="a04a2fb2a1d2ff0d64f0f3f3972a353f6"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#a04a2fb2a1d2ff0d64f0f3f3972a353f6">&#9670;&nbsp;</a></span>getUserPassword()</h2>
 
@@ -509,8 +462,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a492bbd12b21012dfdf1ca1c16018c00c"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a492bbd12b21012dfdf1ca1c16018c00c">&#9670;&nbsp;</a></span>insertUser()</h2>
+<a id="a882338262af7ba59f580afea3ab9ab69"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a882338262af7ba59f580afea3ab9ab69">&#9670;&nbsp;</a></span>insertMessage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -519,16 +472,22 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">int SqliteDatabase::insertUser </td>
+          <td class="memname">int SqliteDatabase::insertMessage </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>login</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>recipient</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>password</em>&#160;</td>
+          <td class="paramname"><em>text</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -543,10 +502,38 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>Implements <a class="el" href="classIDatabase.html#ae9830095e82d8b7e83ee0e0848882c83">IDatabase</a>.</p>
+
+</div>
+</div>
+<a id="a91932cb72d24daa49121ae03d97f122c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a91932cb72d24daa49121ae03d97f122c">&#9670;&nbsp;</a></span>insertUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">int SqliteDatabase::insertUser </td>
+          <td>(</td>
+          <td class="paramtype">const std::pair&lt; std::string, std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>values</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">override</span><span class="mlabel">virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
 <p>добавить пользователя в таблицу </p>
 <dl class="section return"><dt>Returns</dt><dd>id нового пользователя </dd></dl>
 
-<p>Implements <a class="el" href="classIDatabase.html#afafe86842f4441bad9bd72207e54fd17">IDatabase</a>.</p>
+<p>Implements <a class="el" href="classIDatabase.html#a6012bf338f81864b4879d59bc0852a63">IDatabase</a>.</p>
 
 </div>
 </div>
@@ -611,6 +598,8 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>последний id (если автоинкремент) </p>
+
 </div>
 </div>
 <a id="a415ef2639513fce4d753be17c391a931"></a>
@@ -642,8 +631,46 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="af0a318d54eacca34ccb10ab97780b3bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#af0a318d54eacca34ccb10ab97780b3bf">&#9670;&nbsp;</a></span>sqlTable()</h2>
+<a id="af166c05e64e9980b9ecdef564e8fdab7"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af166c05e64e9980b9ecdef564e8fdab7">&#9670;&nbsp;</a></span>sqlRecord()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">bool SqliteDatabase::sqlRecord </td>
+          <td>(</td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>query</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype"><a class="el" href="classSqlRec.html">SqlRec</a> &amp;&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">private</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>получить запись </p>
+
+</div>
+</div>
+<a id="aec2766774049bf334c1b1b38aff98367"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aec2766774049bf334c1b1b38aff98367">&#9670;&nbsp;</a></span>sqlTable()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -661,7 +688,7 @@ Private Attributes</h2></td></tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">std::vector&lt; <a class="el" href="classSqlRec.html">SqlRec</a> &gt; &amp;&#160;</td>
-          <td class="paramname"><em>recs</em>&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -676,10 +703,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
+<p>получить набор записей </p>
+
 </div>
 </div>
-<a id="a08a5c9fca5fc27cdb28be73df9001555"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a08a5c9fca5fc27cdb28be73df9001555">&#9670;&nbsp;</a></span>value()</h2>
+<a id="a593be9e2a9e91f563369096a95e56110"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a593be9e2a9e91f563369096a95e56110">&#9670;&nbsp;</a></span>sqlValue()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -688,7 +717,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">bool SqliteDatabase::value </td>
+          <td class="memname">bool SqliteDatabase::sqlValue </td>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>query</em>, </td>
@@ -696,8 +725,14 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
+          <td class="paramtype">const std::string &amp;&#160;</td>
+          <td class="paramname"><em>target</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
           <td class="paramtype">std::string &amp;&#160;</td>
-          <td class="paramname"><em>value</em>&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -711,6 +746,8 @@ Private Attributes</h2></td></tr>
   </tr>
 </table>
 </div><div class="memdoc">
+
+<p>получить одно значение </p>
 
 </div>
 </div>
@@ -782,8 +819,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <hr/>The documentation for this class was generated from the following files:<ul>
-<li>src_server/database/<a class="el" href="Database_8h_source.html">Database.h</a></li>
-<li>src_server/database/<a class="el" href="Database_8cpp.html">Database.cpp</a></li>
+<li>src_server/database/<a class="el" href="SqliteDatabase_8h_source.html">SqliteDatabase.h</a></li>
+<li>src_server/database/<a class="el" href="SqliteDatabase_8cpp.html">SqliteDatabase.cpp</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

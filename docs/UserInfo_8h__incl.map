@@ -1,5 +1,4 @@
-<map id="src_client/client_processor/UserInfo.h" name="src_client/client_processor/UserInfo.h">
-<area shape="rect" id="node1" title=" " alt="" coords="6,5,201,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="5,95,100,121"/>
-<area shape="rect" id="node3" title=" " alt="" coords="125,95,183,121"/>
+<map id="src_shared/UserInfo.h" name="src_shared/UserInfo.h">
+<area shape="rect" id="node1" title=" " alt="" coords="5,5,168,32"/>
+<area shape="rect" id="node2" title=" " alt="" coords="57,80,116,107"/>
 </map>

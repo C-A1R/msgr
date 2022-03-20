@@ -5,7 +5,7 @@
 <meta http-equiv="X-UA-Compatible" content="IE=9"/>
 <meta name="generator" content="Doxygen 1.8.17"/>
 <meta name="viewport" content="width=device-width, initial-scale=1"/>
-<title>msgr: src_client/main_window/ChatWidget.cpp File Reference</title>
+<title>msgr: src_client/main_window/messenger_widget/ChatWidget.cpp File Reference</title>
 <link href="tabs.css" rel="stylesheet" type="text/css"/>
 <script type="text/javascript" src="jquery.js"></script>
 <script type="text/javascript" src="dynsections.js"></script>
@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.15</span>
+   &#160;<span id="projectnumber">0.0.16</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -63,7 +63,7 @@ $(function() {
 
 <div id="nav-path" class="navpath">
   <ul>
-<li class="navelem"><a class="el" href="dir_0d67b69969b779fe24aa14056cfaeefd.html">src_client</a></li><li class="navelem"><a class="el" href="dir_087782aee0821a6f068f5a12299a88b8.html">main_window</a></li>  </ul>
+<li class="navelem"><a class="el" href="dir_0d67b69969b779fe24aa14056cfaeefd.html">src_client</a></li><li class="navelem"><a class="el" href="dir_087782aee0821a6f068f5a12299a88b8.html">main_window</a></li><li class="navelem"><a class="el" href="dir_f8387968caf7da1502c357c3ce0f183d.html">messenger_widget</a></li>  </ul>
 </div>
 </div><!-- top -->
 <div class="header">
@@ -72,42 +72,38 @@ $(function() {
 </div><!--header-->
 <div class="contents">
 <div class="textblock"><code>#include &quot;<a class="el" href="ChatWidget_8h_source.html">ChatWidget.h</a>&quot;</code><br />
-<code>#include &lt;QListWidget&gt;</code><br />
+<code>#include &quot;<a class="el" href="UserInfo_8h_source.html">../../../src_shared/UserInfo.h</a>&quot;</code><br />
+<code>#include &quot;<a class="el" href="MessageInfo_8h_source.html">../../../src_shared/MessageInfo.h</a>&quot;</code><br />
 <code>#include &lt;QTextEdit&gt;</code><br />
 <code>#include &lt;QLineEdit&gt;</code><br />
 <code>#include &lt;QPushButton&gt;</code><br />
 <code>#include &lt;QHBoxLayout&gt;</code><br />
 <code>#include &lt;QVBoxLayout&gt;</code><br />
-<code>#include &lt;QSplitter&gt;</code><br />
-<code>#include &lt;QString&gt;</code><br />
 <code>#include &lt;QShortcut&gt;</code><br />
+<code>#include &lt;QTextFrame&gt;</code><br />
+<code>#include &lt;QTextFormat&gt;</code><br />
 <code>#include &lt;iostream&gt;</code><br />
 </div><div class="textblock"><div class="dynheader">
 Include dependency graph for ChatWidget.cpp:</div>
 <div class="dyncontent">
-<div class="center"><img src="ChatWidget_8cpp__incl.png" border="0" usemap="#src__client_2main__window_2ChatWidget_8cpp" alt=""/></div>
-<map name="src__client_2main__window_2ChatWidget_8cpp" id="src__client_2main__window_2ChatWidget_8cpp">
-<area shape="rect" title=" " alt="" coords="712,5,891,47"/>
-<area shape="rect" href="ChatWidget_8h.html" title=" " alt="" coords="137,95,247,121"/>
-<area shape="rect" title=" " alt="" coords="272,95,373,121"/>
-<area shape="rect" title=" " alt="" coords="398,95,482,121"/>
-<area shape="rect" title=" " alt="" coords="506,95,590,121"/>
-<area shape="rect" title=" " alt="" coords="615,95,721,121"/>
-<area shape="rect" title=" " alt="" coords="746,95,857,121"/>
-<area shape="rect" title=" " alt="" coords="881,95,991,121"/>
-<area shape="rect" title=" " alt="" coords="1015,95,1094,121"/>
-<area shape="rect" title=" " alt="" coords="1118,95,1189,121"/>
-<area shape="rect" title=" " alt="" coords="1213,95,1299,121"/>
-<area shape="rect" title=" " alt="" coords="1324,95,1404,121"/>
-<area shape="rect" title=" " alt="" coords="61,169,139,196"/>
-<area shape="rect" href="ClientProcessor_8h.html" title=" " alt="" coords="163,169,407,196"/>
-<area shape="rect" href="IClientProcessor_8h.html" title=" " alt="" coords="5,251,144,278"/>
-<area shape="rect" href="UserInfo_8h.html" title=" " alt="" coords="169,251,258,278"/>
-<area shape="rect" title=" " alt="" coords="282,244,433,285"/>
-<area shape="rect" title=" " alt="" coords="457,251,535,278"/>
-<area shape="rect" title=" " alt="" coords="37,333,112,360"/>
-<area shape="rect" title=" " alt="" coords="151,333,246,360"/>
-<area shape="rect" title=" " alt="" coords="271,333,329,360"/>
+<div class="center"><img src="ChatWidget_8cpp__incl.png" border="0" usemap="#src__client_2main__window_2messenger__widget_2ChatWidget_8cpp" alt=""/></div>
+<map name="src__client_2main__window_2messenger__widget_2ChatWidget_8cpp" id="src__client_2main__window_2messenger__widget_2ChatWidget_8cpp">
+<area shape="rect" title=" " alt="" coords="663,5,919,47"/>
+<area shape="rect" href="ChatWidget_8h.html" title=" " alt="" coords="15,102,125,129"/>
+<area shape="rect" href="UserInfo_8h.html" title=" " alt="" coords="150,95,278,136"/>
+<area shape="rect" href="MessageInfo_8h.html" title=" " alt="" coords="302,95,430,136"/>
+<area shape="rect" title=" " alt="" coords="455,102,539,129"/>
+<area shape="rect" title=" " alt="" coords="563,102,647,129"/>
+<area shape="rect" title=" " alt="" coords="671,102,778,129"/>
+<area shape="rect" title=" " alt="" coords="803,102,913,129"/>
+<area shape="rect" title=" " alt="" coords="937,102,1048,129"/>
+<area shape="rect" title=" " alt="" coords="1072,102,1159,129"/>
+<area shape="rect" title=" " alt="" coords="1183,102,1283,129"/>
+<area shape="rect" title=" " alt="" coords="1307,102,1412,129"/>
+<area shape="rect" title=" " alt="" coords="1435,102,1515,129"/>
+<area shape="rect" title=" " alt="" coords="5,184,84,211"/>
+<area shape="rect" title=" " alt="" coords="109,184,186,211"/>
+<area shape="rect" title=" " alt="" coords="273,184,331,211"/>
 </map>
 </div>
 </div></div><!-- contents -->

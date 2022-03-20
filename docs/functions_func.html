@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.15</span>
+   &#160;<span id="projectnumber">0.0.16</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -66,6 +66,12 @@ $(function() {
 &#160;
 
 <h3><a id="index_a"></a>- a -</h3><ul>
+<li>addChat()
+: <a class="el" href="classStackedChatWidget.html#afa50c69659ab18449e65729f3388c662">StackedChatWidget</a>
+</li>
+<li>addContact()
+: <a class="el" href="classMessengerWidget.html#a4020b87ed96f65f34abb7fdf46826d31">MessengerWidget</a>
+</li>
 <li>addSession()
 : <a class="el" href="classSessionManager.html#a2dc27e5ac7432acbd27e382ea4addb50">SessionManager</a>
 </li>
@@ -79,14 +85,8 @@ $(function() {
 
 
 <h3><a id="index_c"></a>- c -</h3><ul>
-<li>callback()
-: <a class="el" href="classSqliteDatabase.html#a37d670d335a01f2bd899d51238351db7">SqliteDatabase</a>
-</li>
-<li>callback_2()
-: <a class="el" href="classSqliteDatabase.html#a9246e7786c8375b40c0c816af57c86ab">SqliteDatabase</a>
-</li>
 <li>ChatWidget()
-: <a class="el" href="classChatWidget.html#afd9895c0d2c1158cbb49d6e94b3d82dc">ChatWidget</a>
+: <a class="el" href="classChatWidget.html#a0dc3f6afa163153f0eade67ddc104db8">ChatWidget</a>
 </li>
 <li>Client()
 : <a class="el" href="classClient.html#a38aacc9eda023eff7dc44d9b8cd530fe">Client</a>
@@ -105,9 +105,9 @@ $(function() {
 : <a class="el" href="classAuthorizationWidget.html#abc75cda0961edadb794aec4b6f873616">AuthorizationWidget</a>
 , <a class="el" href="classRegistrationWidget.html#a9e3934ab8e9a03470edca839e040ab4e">RegistrationWidget</a>
 </li>
-<li>currentLogin()
-: <a class="el" href="classClientProcessor.html#add0c6f2208cbb2eb394367a6fe25d9d2">ClientProcessor</a>
-, <a class="el" href="classIClientProcessor.html#a3e9ed8f0ad86dfe5973e293560844a63">IClientProcessor</a>
+<li>currentUser()
+: <a class="el" href="classClientProcessor.html#a135c1b3d1f723923a9f187ca1d5eaa92">ClientProcessor</a>
+, <a class="el" href="classIClientProcessor.html#a3887cb536b5c7d271532ea26eb05e325">IClientProcessor</a>
 </li>
 </ul>
 
@@ -141,17 +141,26 @@ $(function() {
 
 
 <h3><a id="index_g"></a>- g -</h3><ul>
-<li>getAllUsersData()
-: <a class="el" href="classIDatabase.html#ae5f1ab977c64e3b8c973e0325c302319">IDatabase</a>
-, <a class="el" href="classSqliteDatabase.html#a84f3e0a7f4a00ba7637986f5362384b7">SqliteDatabase</a>
+<li>getAllUsers()
+: <a class="el" href="classIDatabase.html#ac939053331f82600d81e94096f69e2f1">IDatabase</a>
+, <a class="el" href="classSqliteDatabase.html#a0f6da8c99f39d6d985e480c8940603b0">SqliteDatabase</a>
 </li>
-<li>getUserData()
-: <a class="el" href="classIDatabase.html#a12f0ac82d911f2afd3af8cb9004b704d">IDatabase</a>
-, <a class="el" href="classSqliteDatabase.html#aa826789e552199983f902fa2df3659f6">SqliteDatabase</a>
+<li>getMessages()
+: <a class="el" href="classIDatabase.html#afb235e092fa57d45744933a71739aee0">IDatabase</a>
+, <a class="el" href="classServerProcessor.html#ad25a970edfd19bec803fb467813da291">ServerProcessor</a>
+, <a class="el" href="classSqliteDatabase.html#af84e3c646d7c6750a4a818f3ceccbbd8">SqliteDatabase</a>
+</li>
+<li>getMessages_request()
+: <a class="el" href="classClientProcessor.html#a6308cfeba54e9245dda3b662f6b45e0e">ClientProcessor</a>
+, <a class="el" href="classIClientProcessor.html#aa7254291e2a357b8457f4a2049054cb5">IClientProcessor</a>
 </li>
 <li>getUserId()
 : <a class="el" href="classIDatabase.html#a133cbda0cb91cb37822c3aa62e6c1c19">IDatabase</a>
 , <a class="el" href="classSqliteDatabase.html#ab3b0294e80d9cdb511f8ed8dca6ec16b">SqliteDatabase</a>
+</li>
+<li>getUsername()
+: <a class="el" href="classIDatabase.html#a866ed9fd6b5d04752bf73834681e4198">IDatabase</a>
+, <a class="el" href="classSqliteDatabase.html#aac2318d386a3b0fd062876de4a00a812">SqliteDatabase</a>
 </li>
 <li>getUserPassword()
 : <a class="el" href="classIDatabase.html#aca5ad5e1716b3d6787194caf659c15b0">IDatabase</a>
@@ -179,20 +188,26 @@ $(function() {
 : <a class="el" href="classAuthorizationWidget.html#a90fd0d68e19f3021e730b6a77a286c45">AuthorizationWidget</a>
 , <a class="el" href="classChatWidget.html#a707ded9289b2266b8103f28d2225d202">ChatWidget</a>
 , <a class="el" href="classMainWindow.html#a2368bc1f69099fac3a2c5c8a951f8e1b">MainWindow</a>
+, <a class="el" href="classMessengerWidget.html#a7dbf3b3897e529a7a2332a54550aaa32">MessengerWidget</a>
+, <a class="el" href="classStackedChatWidget.html#ab6ca51bd78b60bfc308176d402fd5276">StackedChatWidget</a>
 </li>
 <li>inputMessage()
 : <a class="el" href="classServerProcessor.html#abc1d66ba574bb7e879168194bd8b1241">ServerProcessor</a>
 </li>
 <li>inputMessage_response()
-: <a class="el" href="classClientProcessor.html#a40f859b7fcc7f2b97ded0ac7ccb7ebd2">ClientProcessor</a>
-, <a class="el" href="classIClientProcessor.html#af2f744ea15e6277123681996f55437fd">IClientProcessor</a>
+: <a class="el" href="classClientProcessor.html#a03ec0200a343798616fa249efae1706d">ClientProcessor</a>
+, <a class="el" href="classIClientProcessor.html#a0a6efee2d223e8a4841a0e81843a9f9f">IClientProcessor</a>
 </li>
 <li>insert()
 : <a class="el" href="classSqlRec.html#aae9eb2fc7d114fa06dcd2f813ec25dad">SqlRec</a>
 </li>
+<li>insertMessage()
+: <a class="el" href="classIDatabase.html#ae9830095e82d8b7e83ee0e0848882c83">IDatabase</a>
+, <a class="el" href="classSqliteDatabase.html#a882338262af7ba59f580afea3ab9ab69">SqliteDatabase</a>
+</li>
 <li>insertUser()
-: <a class="el" href="classIDatabase.html#afafe86842f4441bad9bd72207e54fd17">IDatabase</a>
-, <a class="el" href="classSqliteDatabase.html#a492bbd12b21012dfdf1ca1c16018c00c">SqliteDatabase</a>
+: <a class="el" href="classIDatabase.html#a6012bf338f81864b4879d59bc0852a63">IDatabase</a>
+, <a class="el" href="classSqliteDatabase.html#a91932cb72d24daa49121ae03d97f122c">SqliteDatabase</a>
 </li>
 <li>invalidId()
 : <a class="el" href="classIDatabase.html#a41c9b8a6c57bd25a2b6a5c635de94074">IDatabase</a>
@@ -207,12 +222,26 @@ $(function() {
 </ul>
 
 
+<h3><a id="index_l"></a>- l -</h3><ul>
+<li>lastMessageId()
+: <a class="el" href="classChatWidget.html#a5c4d213f5edc8b55a39849508adba40e">ChatWidget</a>
+, <a class="el" href="classStackedChatWidget.html#a79b7fbf077d72cba827b904cc3b1a805">StackedChatWidget</a>
+</li>
+</ul>
+
+
 <h3><a id="index_m"></a>- m -</h3><ul>
 <li>MainWindow()
 : <a class="el" href="classMainWindow.html#a996c5a2b6f77944776856f08ec30858d">MainWindow</a>
 </li>
 <li>maxId()
 : <a class="el" href="classSqliteDatabase.html#a5d9e9accefa8f4f2605f8320f1f4c24b">SqliteDatabase</a>
+</li>
+<li>MessageInfo()
+: <a class="el" href="structMessageInfo.html#af43742e72cc2fccac6f742034af2b9e2">MessageInfo</a>
+</li>
+<li>MessengerWidget()
+: <a class="el" href="classMessengerWidget.html#ac781029796bbc1d47ce3afff8498ca50">MessengerWidget</a>
 </li>
 </ul>
 
@@ -226,8 +255,8 @@ $(function() {
 : <a class="el" href="classServerProcessor.html#aca620908d42450b0c7c16bd67c0eca64">ServerProcessor</a>
 </li>
 <li>outputMessage_request()
-: <a class="el" href="classClientProcessor.html#aef9d55cd91fd7bc6392f2e00cfeb429c">ClientProcessor</a>
-, <a class="el" href="classIClientProcessor.html#a5c4b696f3670834b17c9eabdd70a3e08">IClientProcessor</a>
+: <a class="el" href="classClientProcessor.html#a58043e9c40feabe21177c0167e379563">ClientProcessor</a>
+, <a class="el" href="classIClientProcessor.html#a98388f58a52e5001be3755fe85d938de">IClientProcessor</a>
 </li>
 </ul>
 
@@ -265,6 +294,9 @@ $(function() {
 <li>send()
 : <a class="el" href="classClient.html#ac7d9620a16e8df07778a80beb7c880cd">Client</a>
 </li>
+<li>sendToAll()
+: <a class="el" href="classSessionManager.html#aa7cf852942b31dcbe62625dce8b3264b">SessionManager</a>
+</li>
 <li>sendToUser()
 : <a class="el" href="classSessionManager.html#addc5e4a836fde99721d78a0b31c2869e">SessionManager</a>
 </li>
@@ -283,20 +315,29 @@ $(function() {
 <li>setProcessor()
 : <a class="el" href="classSession.html#a580c6f1982d1f247b8e2e89014790a00">Session</a>
 </li>
+<li>showChat()
+: <a class="el" href="classStackedChatWidget.html#ac3d838ef4be5ae947f46138f38f4f3ba">StackedChatWidget</a>
+</li>
 <li>showError()
 : <a class="el" href="classAuthorizationWidget.html#ad3dfe2fc09a18c8b6a21117e37a429f0">AuthorizationWidget</a>
 </li>
 <li>signal_changeSign()
 : <a class="el" href="classAuthorizationWidget.html#a01f709cfd6d0c1f8fcdc9e66a4196362">AuthorizationWidget</a>
 </li>
+<li>signal_getMessagesResponse()
+: <a class="el" href="classIClientProcessor.html#a64f4396cd5fe4583af2fe7a2677ee04e">IClientProcessor</a>
+</li>
 <li>signal_getUsersResponse()
-: <a class="el" href="classIClientProcessor.html#a171712c901e2052a58b93bc99425ca28">IClientProcessor</a>
+: <a class="el" href="classIClientProcessor.html#ab009ecd42da4a8579cba790e2cc38d0b">IClientProcessor</a>
 </li>
 <li>signal_inputMessageRequest()
-: <a class="el" href="classIClientProcessor.html#a01f84cc450d9aaac2976e80bf74f6c96">IClientProcessor</a>
+: <a class="el" href="classIClientProcessor.html#ae5cb3c4959b6a69a3ee32722954d847b">IClientProcessor</a>
+</li>
+<li>signal_newUserRegistered()
+: <a class="el" href="classIClientProcessor.html#acbdad22d8c7e776ae4482a903791ecea">IClientProcessor</a>
 </li>
 <li>signal_outputMessageResponse()
-: <a class="el" href="classIClientProcessor.html#a67f0c6ac1df5c98f856bdb9cac218831">IClientProcessor</a>
+: <a class="el" href="classIClientProcessor.html#a18b9f39fe69c4672839f97c142d738ad">IClientProcessor</a>
 </li>
 <li>signal_recieved()
 : <a class="el" href="classClient.html#abc7198b7314baa54b9f4f1b48bfd244e">Client</a>
@@ -320,6 +361,10 @@ $(function() {
 <li>signal_updateContactList()
 : <a class="el" href="classMainWindow.html#aa1fb0c075969a0e4c9887036ecf4fac1">MainWindow</a>
 </li>
+<li>signalSendMessage()
+: <a class="el" href="classChatWidget.html#a0af762b81c52387195693ab6be23954b">ChatWidget</a>
+, <a class="el" href="classStackedChatWidget.html#aba500101e27b9308237fa97cd4dae9e8">StackedChatWidget</a>
+</li>
 <li>signIn()
 : <a class="el" href="classServerProcessor.html#ac82a19184feae89d3f11ad7fe8f5c224">ServerProcessor</a>
 </li>
@@ -328,7 +373,7 @@ $(function() {
 , <a class="el" href="classIClientProcessor.html#a991f00877afa2b83c8085f4eff279a7b">IClientProcessor</a>
 </li>
 <li>signOut()
-: <a class="el" href="classServerProcessor.html#a16d031931d7e242d568b6e96ceaba7b0">ServerProcessor</a>
+: <a class="el" href="classServerProcessor.html#a901bcca7f6f6eb37ca9cba16d565e497">ServerProcessor</a>
 </li>
 <li>signOut_request()
 : <a class="el" href="classClientProcessor.html#a3848d483e48638c952b484ea1e0c9c10">ClientProcessor</a>
@@ -341,20 +386,29 @@ $(function() {
 : <a class="el" href="classClientProcessor.html#ab1e2acd6e43c1dc5e88ede8095e31d93">ClientProcessor</a>
 , <a class="el" href="classIClientProcessor.html#ab53f39c0b24105051bd2869a26e7a999">IClientProcessor</a>
 </li>
+<li>slot_changeChat()
+: <a class="el" href="classMessengerWidget.html#a21e7b44c80fadb1f85bf9b617f5d9daa">MessengerWidget</a>
+</li>
 <li>slot_changeWidget()
 : <a class="el" href="classMainWindow.html#a3079bf880221d9aa2716715509bd453c">MainWindow</a>
 </li>
+<li>slot_getMessagesResponse()
+: <a class="el" href="classMessengerWidget.html#a45d6a0a55cd0d017de49c4656a12ba5a">MessengerWidget</a>
+</li>
 <li>slot_getUsersResponse()
-: <a class="el" href="classChatWidget.html#ab3c73828b183fc3e4d07bca6ee6e5bcb">ChatWidget</a>
+: <a class="el" href="classMessengerWidget.html#af20c09b58a2f4767e4d299ce5ec1df30">MessengerWidget</a>
 </li>
 <li>slot_inputMessageRequest()
-: <a class="el" href="classChatWidget.html#ae9e3c753ed85c5ceac5198fc2a8d8da4">ChatWidget</a>
+: <a class="el" href="classMessengerWidget.html#ad8407380ac5eeb7711b69297fd5659b3">MessengerWidget</a>
+</li>
+<li>slot_newUserRegistered()
+: <a class="el" href="classMessengerWidget.html#a835beda41004f6f1a74cb8c40ea87b8f">MessengerWidget</a>
 </li>
 <li>slot_outputMessageRequest()
-: <a class="el" href="classChatWidget.html#afbf7238ef286c4e6cc79cc06ba184067">ChatWidget</a>
+: <a class="el" href="classMessengerWidget.html#a0ebcc4870464078411ad3db2eefe4a1d">MessengerWidget</a>
 </li>
 <li>slot_outputMessageResponse()
-: <a class="el" href="classChatWidget.html#ab335e68df7bf00a50c2172ab3bea0ca2">ChatWidget</a>
+: <a class="el" href="classMessengerWidget.html#a1711f14a2bc76f165b36d5069dd61fc4">MessengerWidget</a>
 </li>
 <li>slot_parseRecieved()
 : <a class="el" href="classClientProcessor.html#a33c1ea22e193e33a3cee79a66424d2eb">ClientProcessor</a>
@@ -362,6 +416,9 @@ $(function() {
 </li>
 <li>slot_send()
 : <a class="el" href="classClientThread.html#a745563ad2482806e3c21239759e2c966">ClientThread</a>
+</li>
+<li>slot_sendMessage()
+: <a class="el" href="classChatWidget.html#ad3300694a4135e58c1470bc7292cd150">ChatWidget</a>
 </li>
 <li>slot_sign_pBtn_clicked()
 : <a class="el" href="classAuthorizationWidget.html#a712c95c59f73f5da3a6a2ffcea091ef7">AuthorizationWidget</a>
@@ -388,8 +445,17 @@ $(function() {
 <li>SqlRec()
 : <a class="el" href="classSqlRec.html#abe3b0b7fafc20da0c3da5dfbc52d93a0">SqlRec</a>
 </li>
+<li>sqlRecord()
+: <a class="el" href="classSqliteDatabase.html#af166c05e64e9980b9ecdef564e8fdab7">SqliteDatabase</a>
+</li>
 <li>sqlTable()
-: <a class="el" href="classSqliteDatabase.html#af0a318d54eacca34ccb10ab97780b3bf">SqliteDatabase</a>
+: <a class="el" href="classSqliteDatabase.html#aec2766774049bf334c1b1b38aff98367">SqliteDatabase</a>
+</li>
+<li>sqlValue()
+: <a class="el" href="classSqliteDatabase.html#a593be9e2a9e91f563369096a95e56110">SqliteDatabase</a>
+</li>
+<li>StackedChatWidget()
+: <a class="el" href="classStackedChatWidget.html#a5bc6197c19e8b2d55e09874a959d8f71">StackedChatWidget</a>
 </li>
 <li>start()
 : <a class="el" href="classClient.html#a97cc70503b3e7b504afc77d797cf2f2c">Client</a>
@@ -402,18 +468,17 @@ $(function() {
 
 <h3><a id="index_u"></a>- u -</h3><ul>
 <li>updateContactList()
-: <a class="el" href="classChatWidget.html#a77b872efabd40a2850a25d323dc82322">ChatWidget</a>
+: <a class="el" href="classMessengerWidget.html#ab7b095684256b573b8998a53827d5972">MessengerWidget</a>
 </li>
 <li>UserInfo()
-: <a class="el" href="structUserInfo.html#a09502ffcb6666734cb80af49a8145baf">UserInfo</a>
+: <a class="el" href="structUserInfo.html#a45a5e129d7d3c237ec3e3a891f0b37c4">UserInfo</a>
 </li>
 </ul>
 
 
 <h3><a id="index_v"></a>- v -</h3><ul>
 <li>value()
-: <a class="el" href="classSqliteDatabase.html#a08a5c9fca5fc27cdb28be73df9001555">SqliteDatabase</a>
-, <a class="el" href="classSqlRec.html#a5cea6c311f5c22e841d7550dc3eded44">SqlRec</a>
+: <a class="el" href="classSqlRec.html#a5cea6c311f5c22e841d7550dc3eded44">SqlRec</a>
 </li>
 </ul>
 
@@ -422,13 +487,18 @@ $(function() {
 <li>write()
 : <a class="el" href="classSession.html#a41315ad3804a881ddf5cb99c52dd4a65">Session</a>
 </li>
+<li>writeInputMessage()
+: <a class="el" href="classChatWidget.html#a11d7396fa8060f493fe9af460585a5d1">ChatWidget</a>
+, <a class="el" href="classStackedChatWidget.html#a28b071d157584782d64b69e79fb6db15">StackedChatWidget</a>
+</li>
+<li>writeOutputMessage()
+: <a class="el" href="classChatWidget.html#ad2815c2155156d6d580b489c3ce1d8c6">ChatWidget</a>
+, <a class="el" href="classStackedChatWidget.html#a4ef9df248f4d23a05608b2bd294952c8">StackedChatWidget</a>
+</li>
 </ul>
 
 
 <h3><a id="index__7E"></a>- ~ -</h3><ul>
-<li>~ChatWidget()
-: <a class="el" href="classChatWidget.html#a167206aa0dbd376e56b692b3a0c7a434">ChatWidget</a>
-</li>
 <li>~ClientProcessor()
 : <a class="el" href="classClientProcessor.html#aa8c0ec510246a394c389d657c5c02e41">ClientProcessor</a>
 </li>
@@ -443,6 +513,9 @@ $(function() {
 </li>
 <li>~IServerProcessor()
 : <a class="el" href="classIServerProcessor.html#a69e3473d80b74c905a51ff5433317bf6">IServerProcessor</a>
+</li>
+<li>~MessengerWidget()
+: <a class="el" href="classMessengerWidget.html#a00cbf89450d85fe5d05c06d3eaaec37b">MessengerWidget</a>
 </li>
 <li>~SqliteDatabase()
 : <a class="el" href="classSqliteDatabase.html#a3226ec058994b2b134ac5448bd534f1d">SqliteDatabase</a>

@@ -267,30 +267,6 @@ SessionManager.cpp.s:
 	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/SessionManager.cpp.s
 .PHONY : SessionManager.cpp.s
 
-database/Database.o: database/Database.cpp.o
-.PHONY : database/Database.o
-
-# target to build an object file
-database/Database.cpp.o:
-	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/database/Database.cpp.o
-.PHONY : database/Database.cpp.o
-
-database/Database.i: database/Database.cpp.i
-.PHONY : database/Database.i
-
-# target to preprocess a source file
-database/Database.cpp.i:
-	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/database/Database.cpp.i
-.PHONY : database/Database.cpp.i
-
-database/Database.s: database/Database.cpp.s
-.PHONY : database/Database.s
-
-# target to generate assembly for a file
-database/Database.cpp.s:
-	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/database/Database.cpp.s
-.PHONY : database/Database.cpp.s
-
 database/SqlRec.o: database/SqlRec.cpp.o
 .PHONY : database/SqlRec.o
 
@@ -314,6 +290,30 @@ database/SqlRec.s: database/SqlRec.cpp.s
 database/SqlRec.cpp.s:
 	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/database/SqlRec.cpp.s
 .PHONY : database/SqlRec.cpp.s
+
+database/SqliteDatabase.o: database/SqliteDatabase.cpp.o
+.PHONY : database/SqliteDatabase.o
+
+# target to build an object file
+database/SqliteDatabase.cpp.o:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/database/SqliteDatabase.cpp.o
+.PHONY : database/SqliteDatabase.cpp.o
+
+database/SqliteDatabase.i: database/SqliteDatabase.cpp.i
+.PHONY : database/SqliteDatabase.i
+
+# target to preprocess a source file
+database/SqliteDatabase.cpp.i:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/database/SqliteDatabase.cpp.i
+.PHONY : database/SqliteDatabase.cpp.i
+
+database/SqliteDatabase.s: database/SqliteDatabase.cpp.s
+.PHONY : database/SqliteDatabase.s
+
+# target to generate assembly for a file
+database/SqliteDatabase.cpp.s:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/database/SqliteDatabase.cpp.s
+.PHONY : database/SqliteDatabase.cpp.s
 
 database/sqlite/sqlite3.o: database/sqlite/sqlite3.c.o
 .PHONY : database/sqlite/sqlite3.o
@@ -411,12 +411,12 @@ help:
 	@echo "... SessionManager.o"
 	@echo "... SessionManager.i"
 	@echo "... SessionManager.s"
-	@echo "... database/Database.o"
-	@echo "... database/Database.i"
-	@echo "... database/Database.s"
 	@echo "... database/SqlRec.o"
 	@echo "... database/SqlRec.i"
 	@echo "... database/SqlRec.s"
+	@echo "... database/SqliteDatabase.o"
+	@echo "... database/SqliteDatabase.i"
+	@echo "... database/SqliteDatabase.s"
 	@echo "... database/sqlite/sqlite3.o"
 	@echo "... database/sqlite/sqlite3.i"
 	@echo "... database/sqlite/sqlite3.s"

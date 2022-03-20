@@ -329,30 +329,6 @@ main_window/AuthorizationWidget.cpp.s:
 	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/AuthorizationWidget.cpp.s
 .PHONY : main_window/AuthorizationWidget.cpp.s
 
-main_window/ChatWidget.o: main_window/ChatWidget.cpp.o
-.PHONY : main_window/ChatWidget.o
-
-# target to build an object file
-main_window/ChatWidget.cpp.o:
-	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.o
-.PHONY : main_window/ChatWidget.cpp.o
-
-main_window/ChatWidget.i: main_window/ChatWidget.cpp.i
-.PHONY : main_window/ChatWidget.i
-
-# target to preprocess a source file
-main_window/ChatWidget.cpp.i:
-	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.i
-.PHONY : main_window/ChatWidget.cpp.i
-
-main_window/ChatWidget.s: main_window/ChatWidget.cpp.s
-.PHONY : main_window/ChatWidget.s
-
-# target to generate assembly for a file
-main_window/ChatWidget.cpp.s:
-	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.s
-.PHONY : main_window/ChatWidget.cpp.s
-
 main_window/MainWindow.o: main_window/MainWindow.cpp.o
 .PHONY : main_window/MainWindow.o
 
@@ -400,6 +376,78 @@ main_window/RegistrationWidget.s: main_window/RegistrationWidget.cpp.s
 main_window/RegistrationWidget.cpp.s:
 	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/RegistrationWidget.cpp.s
 .PHONY : main_window/RegistrationWidget.cpp.s
+
+main_window/messenger_widget/ChatWidget.o: main_window/messenger_widget/ChatWidget.cpp.o
+.PHONY : main_window/messenger_widget/ChatWidget.o
+
+# target to build an object file
+main_window/messenger_widget/ChatWidget.cpp.o:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/ChatWidget.cpp.o
+.PHONY : main_window/messenger_widget/ChatWidget.cpp.o
+
+main_window/messenger_widget/ChatWidget.i: main_window/messenger_widget/ChatWidget.cpp.i
+.PHONY : main_window/messenger_widget/ChatWidget.i
+
+# target to preprocess a source file
+main_window/messenger_widget/ChatWidget.cpp.i:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/ChatWidget.cpp.i
+.PHONY : main_window/messenger_widget/ChatWidget.cpp.i
+
+main_window/messenger_widget/ChatWidget.s: main_window/messenger_widget/ChatWidget.cpp.s
+.PHONY : main_window/messenger_widget/ChatWidget.s
+
+# target to generate assembly for a file
+main_window/messenger_widget/ChatWidget.cpp.s:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/ChatWidget.cpp.s
+.PHONY : main_window/messenger_widget/ChatWidget.cpp.s
+
+main_window/messenger_widget/MessengerWidget.o: main_window/messenger_widget/MessengerWidget.cpp.o
+.PHONY : main_window/messenger_widget/MessengerWidget.o
+
+# target to build an object file
+main_window/messenger_widget/MessengerWidget.cpp.o:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/MessengerWidget.cpp.o
+.PHONY : main_window/messenger_widget/MessengerWidget.cpp.o
+
+main_window/messenger_widget/MessengerWidget.i: main_window/messenger_widget/MessengerWidget.cpp.i
+.PHONY : main_window/messenger_widget/MessengerWidget.i
+
+# target to preprocess a source file
+main_window/messenger_widget/MessengerWidget.cpp.i:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/MessengerWidget.cpp.i
+.PHONY : main_window/messenger_widget/MessengerWidget.cpp.i
+
+main_window/messenger_widget/MessengerWidget.s: main_window/messenger_widget/MessengerWidget.cpp.s
+.PHONY : main_window/messenger_widget/MessengerWidget.s
+
+# target to generate assembly for a file
+main_window/messenger_widget/MessengerWidget.cpp.s:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/MessengerWidget.cpp.s
+.PHONY : main_window/messenger_widget/MessengerWidget.cpp.s
+
+main_window/messenger_widget/StackedChatWidget.o: main_window/messenger_widget/StackedChatWidget.cpp.o
+.PHONY : main_window/messenger_widget/StackedChatWidget.o
+
+# target to build an object file
+main_window/messenger_widget/StackedChatWidget.cpp.o:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/StackedChatWidget.cpp.o
+.PHONY : main_window/messenger_widget/StackedChatWidget.cpp.o
+
+main_window/messenger_widget/StackedChatWidget.i: main_window/messenger_widget/StackedChatWidget.cpp.i
+.PHONY : main_window/messenger_widget/StackedChatWidget.i
+
+# target to preprocess a source file
+main_window/messenger_widget/StackedChatWidget.cpp.i:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/StackedChatWidget.cpp.i
+.PHONY : main_window/messenger_widget/StackedChatWidget.cpp.i
+
+main_window/messenger_widget/StackedChatWidget.s: main_window/messenger_widget/StackedChatWidget.cpp.s
+.PHONY : main_window/messenger_widget/StackedChatWidget.s
+
+# target to generate assembly for a file
+main_window/messenger_widget/StackedChatWidget.cpp.s:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/StackedChatWidget.cpp.s
+.PHONY : main_window/messenger_widget/StackedChatWidget.cpp.s
 
 msgr_client_autogen/mocs_compilation.o: msgr_client_autogen/mocs_compilation.cpp.o
 .PHONY : msgr_client_autogen/mocs_compilation.o
@@ -456,15 +504,21 @@ help:
 	@echo "... main_window/AuthorizationWidget.o"
 	@echo "... main_window/AuthorizationWidget.i"
 	@echo "... main_window/AuthorizationWidget.s"
-	@echo "... main_window/ChatWidget.o"
-	@echo "... main_window/ChatWidget.i"
-	@echo "... main_window/ChatWidget.s"
 	@echo "... main_window/MainWindow.o"
 	@echo "... main_window/MainWindow.i"
 	@echo "... main_window/MainWindow.s"
 	@echo "... main_window/RegistrationWidget.o"
 	@echo "... main_window/RegistrationWidget.i"
 	@echo "... main_window/RegistrationWidget.s"
+	@echo "... main_window/messenger_widget/ChatWidget.o"
+	@echo "... main_window/messenger_widget/ChatWidget.i"
+	@echo "... main_window/messenger_widget/ChatWidget.s"
+	@echo "... main_window/messenger_widget/MessengerWidget.o"
+	@echo "... main_window/messenger_widget/MessengerWidget.i"
+	@echo "... main_window/messenger_widget/MessengerWidget.s"
+	@echo "... main_window/messenger_widget/StackedChatWidget.o"
+	@echo "... main_window/messenger_widget/StackedChatWidget.i"
+	@echo "... main_window/messenger_widget/StackedChatWidget.s"
 	@echo "... msgr_client_autogen/mocs_compilation.o"
 	@echo "... msgr_client_autogen/mocs_compilation.i"
 	@echo "... msgr_client_autogen/mocs_compilation.s"

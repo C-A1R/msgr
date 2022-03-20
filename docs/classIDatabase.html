@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.15</span>
+   &#160;<span id="projectnumber">0.0.16</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -97,16 +97,20 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:a759676714eba7f36ab763898f0358b55"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a41c9b8a6c57bd25a2b6a5c635de94074"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIDatabase.html#a41c9b8a6c57bd25a2b6a5c635de94074">invalidId</a> () const =0</td></tr>
 <tr class="separator:a41c9b8a6c57bd25a2b6a5c635de94074"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:afafe86842f4441bad9bd72207e54fd17"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIDatabase.html#afafe86842f4441bad9bd72207e54fd17">insertUser</a> (const std::string &amp;login, const std::string &amp;password)=0</td></tr>
-<tr class="separator:afafe86842f4441bad9bd72207e54fd17"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6012bf338f81864b4879d59bc0852a63"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIDatabase.html#a6012bf338f81864b4879d59bc0852a63">insertUser</a> (const std::pair&lt; std::string, std::string &gt; &amp;values)=0</td></tr>
+<tr class="separator:a6012bf338f81864b4879d59bc0852a63"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a133cbda0cb91cb37822c3aa62e6c1c19"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIDatabase.html#a133cbda0cb91cb37822c3aa62e6c1c19">getUserId</a> (const std::string &amp;login, int &amp;result)=0</td></tr>
 <tr class="separator:a133cbda0cb91cb37822c3aa62e6c1c19"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aca5ad5e1716b3d6787194caf659c15b0"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIDatabase.html#aca5ad5e1716b3d6787194caf659c15b0">getUserPassword</a> (const int id, std::string &amp;result)=0</td></tr>
 <tr class="separator:aca5ad5e1716b3d6787194caf659c15b0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a12f0ac82d911f2afd3af8cb9004b704d"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIDatabase.html#a12f0ac82d911f2afd3af8cb9004b704d">getUserData</a> (const std::string &amp;ids, std::string &amp;result)=0</td></tr>
-<tr class="separator:a12f0ac82d911f2afd3af8cb9004b704d"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ae5f1ab977c64e3b8c973e0325c302319"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIDatabase.html#ae5f1ab977c64e3b8c973e0325c302319">getAllUsersData</a> (std::vector&lt; std::tuple&lt; std::string, std::string &gt; &gt; &amp;result)=0</td></tr>
-<tr class="separator:ae5f1ab977c64e3b8c973e0325c302319"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a866ed9fd6b5d04752bf73834681e4198"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIDatabase.html#a866ed9fd6b5d04752bf73834681e4198">getUsername</a> (const int id, std::string &amp;result)=0</td></tr>
+<tr class="separator:a866ed9fd6b5d04752bf73834681e4198"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ac939053331f82600d81e94096f69e2f1"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIDatabase.html#ac939053331f82600d81e94096f69e2f1">getAllUsers</a> (std::vector&lt; <a class="el" href="structUserInfo.html">UserInfo</a> &gt; &amp;result)=0</td></tr>
+<tr class="separator:ac939053331f82600d81e94096f69e2f1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ae9830095e82d8b7e83ee0e0848882c83"><td class="memItemLeft" align="right" valign="top">virtual int&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIDatabase.html#ae9830095e82d8b7e83ee0e0848882c83">insertMessage</a> (int sender, int recipient, const std::string &amp;text)=0</td></tr>
+<tr class="separator:ae9830095e82d8b7e83ee0e0848882c83"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:afb235e092fa57d45744933a71739aee0"><td class="memItemLeft" align="right" valign="top">virtual bool&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIDatabase.html#afb235e092fa57d45744933a71739aee0">getMessages</a> (int user_1, int user_2, int lastId, std::vector&lt; <a class="el" href="structMessageInfo.html">MessageInfo</a> &gt; &amp;result)=0</td></tr>
+<tr class="separator:afb235e092fa57d45744933a71739aee0"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>через этот класс происходит работа с базой </p>
@@ -189,8 +193,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="ae5f1ab977c64e3b8c973e0325c302319"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ae5f1ab977c64e3b8c973e0325c302319">&#9670;&nbsp;</a></span>getAllUsersData()</h2>
+<a id="ac939053331f82600d81e94096f69e2f1"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ac939053331f82600d81e94096f69e2f1">&#9670;&nbsp;</a></span>getAllUsers()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -199,9 +203,9 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool IDatabase::getAllUsersData </td>
+          <td class="memname">virtual bool IDatabase::getAllUsers </td>
           <td>(</td>
-          <td class="paramtype">std::vector&lt; std::tuple&lt; std::string, std::string &gt; &gt; &amp;&#160;</td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structUserInfo.html">UserInfo</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>result</em></td><td>)</td>
           <td></td>
         </tr>
@@ -213,12 +217,12 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classSqliteDatabase.html#a84f3e0a7f4a00ba7637986f5362384b7">SqliteDatabase</a>.</p>
+<p>Implemented in <a class="el" href="classSqliteDatabase.html#a0f6da8c99f39d6d985e480c8940603b0">SqliteDatabase</a>.</p>
 
 </div>
 </div>
-<a id="a12f0ac82d911f2afd3af8cb9004b704d"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a12f0ac82d911f2afd3af8cb9004b704d">&#9670;&nbsp;</a></span>getUserData()</h2>
+<a id="afb235e092fa57d45744933a71739aee0"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#afb235e092fa57d45744933a71739aee0">&#9670;&nbsp;</a></span>getMessages()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -227,15 +231,27 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual bool IDatabase::getUserData </td>
+          <td class="memname">virtual bool IDatabase::getMessages </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>ids</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>user_1</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
-          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>user_2</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>lastId</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::vector&lt; <a class="el" href="structMessageInfo.html">MessageInfo</a> &gt; &amp;&#160;</td>
           <td class="paramname"><em>result</em>&#160;</td>
         </tr>
         <tr>
@@ -251,7 +267,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classSqliteDatabase.html#aa826789e552199983f902fa2df3659f6">SqliteDatabase</a>.</p>
+<p>Implemented in <a class="el" href="classSqliteDatabase.html#af84e3c646d7c6750a4a818f3ceccbbd8">SqliteDatabase</a>.</p>
 
 </div>
 </div>
@@ -293,6 +309,44 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a866ed9fd6b5d04752bf73834681e4198"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a866ed9fd6b5d04752bf73834681e4198">&#9670;&nbsp;</a></span>getUsername()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual bool IDatabase::getUsername </td>
+          <td>(</td>
+          <td class="paramtype">const int&#160;</td>
+          <td class="paramname"><em>id</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">std::string &amp;&#160;</td>
+          <td class="paramname"><em>result</em>&#160;</td>
+        </tr>
+        <tr>
+          <td></td>
+          <td>)</td>
+          <td></td><td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classSqliteDatabase.html#aac2318d386a3b0fd062876de4a00a812">SqliteDatabase</a>.</p>
+
+</div>
+</div>
 <a id="aca5ad5e1716b3d6787194caf659c15b0"></a>
 <h2 class="memtitle"><span class="permalink"><a href="#aca5ad5e1716b3d6787194caf659c15b0">&#9670;&nbsp;</a></span>getUserPassword()</h2>
 
@@ -331,8 +385,8 @@ Public Member Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="afafe86842f4441bad9bd72207e54fd17"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#afafe86842f4441bad9bd72207e54fd17">&#9670;&nbsp;</a></span>insertUser()</h2>
+<a id="ae9830095e82d8b7e83ee0e0848882c83"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ae9830095e82d8b7e83ee0e0848882c83">&#9670;&nbsp;</a></span>insertMessage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -341,16 +395,22 @@ Public Member Functions</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">virtual int IDatabase::insertUser </td>
+          <td class="memname">virtual int IDatabase::insertMessage </td>
           <td>(</td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>login</em>, </td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>sender</em>, </td>
+        </tr>
+        <tr>
+          <td class="paramkey"></td>
+          <td></td>
+          <td class="paramtype">int&#160;</td>
+          <td class="paramname"><em>recipient</em>, </td>
         </tr>
         <tr>
           <td class="paramkey"></td>
           <td></td>
           <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>password</em>&#160;</td>
+          <td class="paramname"><em>text</em>&#160;</td>
         </tr>
         <tr>
           <td></td>
@@ -365,7 +425,35 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classSqliteDatabase.html#a492bbd12b21012dfdf1ca1c16018c00c">SqliteDatabase</a>.</p>
+<p>Implemented in <a class="el" href="classSqliteDatabase.html#a882338262af7ba59f580afea3ab9ab69">SqliteDatabase</a>.</p>
+
+</div>
+</div>
+<a id="a6012bf338f81864b4879d59bc0852a63"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6012bf338f81864b4879d59bc0852a63">&#9670;&nbsp;</a></span>insertUser()</h2>
+
+<div class="memitem">
+<div class="memproto">
+<table class="mlabels">
+  <tr>
+  <td class="mlabels-left">
+      <table class="memname">
+        <tr>
+          <td class="memname">virtual int IDatabase::insertUser </td>
+          <td>(</td>
+          <td class="paramtype">const std::pair&lt; std::string, std::string &gt; &amp;&#160;</td>
+          <td class="paramname"><em>values</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+  </td>
+  <td class="mlabels-right">
+<span class="mlabels"><span class="mlabel">pure virtual</span></span>  </td>
+  </tr>
+</table>
+</div><div class="memdoc">
+
+<p>Implemented in <a class="el" href="classSqliteDatabase.html#a91932cb72d24daa49121ae03d97f122c">SqliteDatabase</a>.</p>
 
 </div>
 </div>

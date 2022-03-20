@@ -25,13 +25,16 @@ set(HEADERS
     main_window/MainWindow.h
     main_window/RegistrationWidget.h
     main_window/AuthorizationWidget.h
-    main_window/ChatWidget.h
+    main_window/messenger_widget/MessengerWidget.h
+    main_window/messenger_widget/ChatWidget.h
+    main_window/messenger_widget/StackedChatWidget.h
     main_window/MainWidgets.h
     client/Client.h
     client/ClientThread.h
     client_processor/IClientProcessor.h
     client_processor/ClientProcessor.h
-    client_processor/UserInfo.h
+    ../src_shared/UserInfo.h
+    ../src_shared/MessageInfo.h
 )
 
 set(SOURCES
@@ -39,7 +42,9 @@ set(SOURCES
     main_window/MainWindow.cpp
     main_window/RegistrationWidget.cpp
     main_window/AuthorizationWidget.cpp
-    main_window/ChatWidget.cpp
+    main_window/messenger_widget/MessengerWidget.cpp
+    main_window/messenger_widget/ChatWidget.cpp
+    main_window/messenger_widget/StackedChatWidget.cpp
     client/Client.cpp
     client/ClientThread.cpp
     client_processor/ClientProcessor.cpp

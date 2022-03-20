@@ -139,24 +139,52 @@ src_client/CMakeFiles/msgr_client.dir/main_window/AuthorizationWidget.cpp.s: cma
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/msgr_client.dir/main_window/AuthorizationWidget.cpp.s"
 	cd /home/runner/work/msgr/msgr/src_client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/msgr/msgr/src_client/main_window/AuthorizationWidget.cpp -o CMakeFiles/msgr_client.dir/main_window/AuthorizationWidget.cpp.s
 
-src_client/CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.o: src_client/CMakeFiles/msgr_client.dir/flags.make
-src_client/CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.o: src_client/main_window/ChatWidget.cpp
-src_client/CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.o: src_client/CMakeFiles/msgr_client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/msgr/msgr/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src_client/CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.o"
-	cd /home/runner/work/msgr/msgr/src_client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src_client/CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.o -MF CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.o.d -o CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.o -c /home/runner/work/msgr/msgr/src_client/main_window/ChatWidget.cpp
+src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/MessengerWidget.cpp.o: src_client/CMakeFiles/msgr_client.dir/flags.make
+src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/MessengerWidget.cpp.o: src_client/main_window/messenger_widget/MessengerWidget.cpp
+src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/MessengerWidget.cpp.o: src_client/CMakeFiles/msgr_client.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/msgr/msgr/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/MessengerWidget.cpp.o"
+	cd /home/runner/work/msgr/msgr/src_client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/MessengerWidget.cpp.o -MF CMakeFiles/msgr_client.dir/main_window/messenger_widget/MessengerWidget.cpp.o.d -o CMakeFiles/msgr_client.dir/main_window/messenger_widget/MessengerWidget.cpp.o -c /home/runner/work/msgr/msgr/src_client/main_window/messenger_widget/MessengerWidget.cpp
 
-src_client/CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.i"
-	cd /home/runner/work/msgr/msgr/src_client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/msgr/msgr/src_client/main_window/ChatWidget.cpp > CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.i
+src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/MessengerWidget.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/msgr_client.dir/main_window/messenger_widget/MessengerWidget.cpp.i"
+	cd /home/runner/work/msgr/msgr/src_client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/msgr/msgr/src_client/main_window/messenger_widget/MessengerWidget.cpp > CMakeFiles/msgr_client.dir/main_window/messenger_widget/MessengerWidget.cpp.i
 
-src_client/CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.s"
-	cd /home/runner/work/msgr/msgr/src_client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/msgr/msgr/src_client/main_window/ChatWidget.cpp -o CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.s
+src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/MessengerWidget.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/msgr_client.dir/main_window/messenger_widget/MessengerWidget.cpp.s"
+	cd /home/runner/work/msgr/msgr/src_client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/msgr/msgr/src_client/main_window/messenger_widget/MessengerWidget.cpp -o CMakeFiles/msgr_client.dir/main_window/messenger_widget/MessengerWidget.cpp.s
+
+src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/ChatWidget.cpp.o: src_client/CMakeFiles/msgr_client.dir/flags.make
+src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/ChatWidget.cpp.o: src_client/main_window/messenger_widget/ChatWidget.cpp
+src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/ChatWidget.cpp.o: src_client/CMakeFiles/msgr_client.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/msgr/msgr/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/ChatWidget.cpp.o"
+	cd /home/runner/work/msgr/msgr/src_client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/ChatWidget.cpp.o -MF CMakeFiles/msgr_client.dir/main_window/messenger_widget/ChatWidget.cpp.o.d -o CMakeFiles/msgr_client.dir/main_window/messenger_widget/ChatWidget.cpp.o -c /home/runner/work/msgr/msgr/src_client/main_window/messenger_widget/ChatWidget.cpp
+
+src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/ChatWidget.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/msgr_client.dir/main_window/messenger_widget/ChatWidget.cpp.i"
+	cd /home/runner/work/msgr/msgr/src_client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/msgr/msgr/src_client/main_window/messenger_widget/ChatWidget.cpp > CMakeFiles/msgr_client.dir/main_window/messenger_widget/ChatWidget.cpp.i
+
+src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/ChatWidget.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/msgr_client.dir/main_window/messenger_widget/ChatWidget.cpp.s"
+	cd /home/runner/work/msgr/msgr/src_client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/msgr/msgr/src_client/main_window/messenger_widget/ChatWidget.cpp -o CMakeFiles/msgr_client.dir/main_window/messenger_widget/ChatWidget.cpp.s
+
+src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/StackedChatWidget.cpp.o: src_client/CMakeFiles/msgr_client.dir/flags.make
+src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/StackedChatWidget.cpp.o: src_client/main_window/messenger_widget/StackedChatWidget.cpp
+src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/StackedChatWidget.cpp.o: src_client/CMakeFiles/msgr_client.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/msgr/msgr/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/StackedChatWidget.cpp.o"
+	cd /home/runner/work/msgr/msgr/src_client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/StackedChatWidget.cpp.o -MF CMakeFiles/msgr_client.dir/main_window/messenger_widget/StackedChatWidget.cpp.o.d -o CMakeFiles/msgr_client.dir/main_window/messenger_widget/StackedChatWidget.cpp.o -c /home/runner/work/msgr/msgr/src_client/main_window/messenger_widget/StackedChatWidget.cpp
+
+src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/StackedChatWidget.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/msgr_client.dir/main_window/messenger_widget/StackedChatWidget.cpp.i"
+	cd /home/runner/work/msgr/msgr/src_client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/msgr/msgr/src_client/main_window/messenger_widget/StackedChatWidget.cpp > CMakeFiles/msgr_client.dir/main_window/messenger_widget/StackedChatWidget.cpp.i
+
+src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/StackedChatWidget.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/msgr_client.dir/main_window/messenger_widget/StackedChatWidget.cpp.s"
+	cd /home/runner/work/msgr/msgr/src_client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/msgr/msgr/src_client/main_window/messenger_widget/StackedChatWidget.cpp -o CMakeFiles/msgr_client.dir/main_window/messenger_widget/StackedChatWidget.cpp.s
 
 src_client/CMakeFiles/msgr_client.dir/client/Client.cpp.o: src_client/CMakeFiles/msgr_client.dir/flags.make
 src_client/CMakeFiles/msgr_client.dir/client/Client.cpp.o: src_client/client/Client.cpp
 src_client/CMakeFiles/msgr_client.dir/client/Client.cpp.o: src_client/CMakeFiles/msgr_client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/msgr/msgr/CMakeFiles --progress-num=$(CMAKE_PROGRESS_7) "Building CXX object src_client/CMakeFiles/msgr_client.dir/client/Client.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/msgr/msgr/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src_client/CMakeFiles/msgr_client.dir/client/Client.cpp.o"
 	cd /home/runner/work/msgr/msgr/src_client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src_client/CMakeFiles/msgr_client.dir/client/Client.cpp.o -MF CMakeFiles/msgr_client.dir/client/Client.cpp.o.d -o CMakeFiles/msgr_client.dir/client/Client.cpp.o -c /home/runner/work/msgr/msgr/src_client/client/Client.cpp
 
 src_client/CMakeFiles/msgr_client.dir/client/Client.cpp.i: cmake_force
@@ -170,7 +198,7 @@ src_client/CMakeFiles/msgr_client.dir/client/Client.cpp.s: cmake_force
 src_client/CMakeFiles/msgr_client.dir/client/ClientThread.cpp.o: src_client/CMakeFiles/msgr_client.dir/flags.make
 src_client/CMakeFiles/msgr_client.dir/client/ClientThread.cpp.o: src_client/client/ClientThread.cpp
 src_client/CMakeFiles/msgr_client.dir/client/ClientThread.cpp.o: src_client/CMakeFiles/msgr_client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/msgr/msgr/CMakeFiles --progress-num=$(CMAKE_PROGRESS_8) "Building CXX object src_client/CMakeFiles/msgr_client.dir/client/ClientThread.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/msgr/msgr/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Building CXX object src_client/CMakeFiles/msgr_client.dir/client/ClientThread.cpp.o"
 	cd /home/runner/work/msgr/msgr/src_client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src_client/CMakeFiles/msgr_client.dir/client/ClientThread.cpp.o -MF CMakeFiles/msgr_client.dir/client/ClientThread.cpp.o.d -o CMakeFiles/msgr_client.dir/client/ClientThread.cpp.o -c /home/runner/work/msgr/msgr/src_client/client/ClientThread.cpp
 
 src_client/CMakeFiles/msgr_client.dir/client/ClientThread.cpp.i: cmake_force
@@ -184,7 +212,7 @@ src_client/CMakeFiles/msgr_client.dir/client/ClientThread.cpp.s: cmake_force
 src_client/CMakeFiles/msgr_client.dir/client_processor/ClientProcessor.cpp.o: src_client/CMakeFiles/msgr_client.dir/flags.make
 src_client/CMakeFiles/msgr_client.dir/client_processor/ClientProcessor.cpp.o: src_client/client_processor/ClientProcessor.cpp
 src_client/CMakeFiles/msgr_client.dir/client_processor/ClientProcessor.cpp.o: src_client/CMakeFiles/msgr_client.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/msgr/msgr/CMakeFiles --progress-num=$(CMAKE_PROGRESS_9) "Building CXX object src_client/CMakeFiles/msgr_client.dir/client_processor/ClientProcessor.cpp.o"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/msgr/msgr/CMakeFiles --progress-num=$(CMAKE_PROGRESS_11) "Building CXX object src_client/CMakeFiles/msgr_client.dir/client_processor/ClientProcessor.cpp.o"
 	cd /home/runner/work/msgr/msgr/src_client && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src_client/CMakeFiles/msgr_client.dir/client_processor/ClientProcessor.cpp.o -MF CMakeFiles/msgr_client.dir/client_processor/ClientProcessor.cpp.o.d -o CMakeFiles/msgr_client.dir/client_processor/ClientProcessor.cpp.o -c /home/runner/work/msgr/msgr/src_client/client_processor/ClientProcessor.cpp
 
 src_client/CMakeFiles/msgr_client.dir/client_processor/ClientProcessor.cpp.i: cmake_force
@@ -202,7 +230,9 @@ msgr_client_OBJECTS = \
 "CMakeFiles/msgr_client.dir/main_window/MainWindow.cpp.o" \
 "CMakeFiles/msgr_client.dir/main_window/RegistrationWidget.cpp.o" \
 "CMakeFiles/msgr_client.dir/main_window/AuthorizationWidget.cpp.o" \
-"CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.o" \
+"CMakeFiles/msgr_client.dir/main_window/messenger_widget/MessengerWidget.cpp.o" \
+"CMakeFiles/msgr_client.dir/main_window/messenger_widget/ChatWidget.cpp.o" \
+"CMakeFiles/msgr_client.dir/main_window/messenger_widget/StackedChatWidget.cpp.o" \
 "CMakeFiles/msgr_client.dir/client/Client.cpp.o" \
 "CMakeFiles/msgr_client.dir/client/ClientThread.cpp.o" \
 "CMakeFiles/msgr_client.dir/client_processor/ClientProcessor.cpp.o"
@@ -215,7 +245,9 @@ src_client/msgr_client: src_client/CMakeFiles/msgr_client.dir/main.cpp.o
 src_client/msgr_client: src_client/CMakeFiles/msgr_client.dir/main_window/MainWindow.cpp.o
 src_client/msgr_client: src_client/CMakeFiles/msgr_client.dir/main_window/RegistrationWidget.cpp.o
 src_client/msgr_client: src_client/CMakeFiles/msgr_client.dir/main_window/AuthorizationWidget.cpp.o
-src_client/msgr_client: src_client/CMakeFiles/msgr_client.dir/main_window/ChatWidget.cpp.o
+src_client/msgr_client: src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/MessengerWidget.cpp.o
+src_client/msgr_client: src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/ChatWidget.cpp.o
+src_client/msgr_client: src_client/CMakeFiles/msgr_client.dir/main_window/messenger_widget/StackedChatWidget.cpp.o
 src_client/msgr_client: src_client/CMakeFiles/msgr_client.dir/client/Client.cpp.o
 src_client/msgr_client: src_client/CMakeFiles/msgr_client.dir/client/ClientThread.cpp.o
 src_client/msgr_client: src_client/CMakeFiles/msgr_client.dir/client_processor/ClientProcessor.cpp.o
@@ -224,7 +256,7 @@ src_client/msgr_client: /usr/lib/x86_64-linux-gnu/libQt5Widgets.so.5.12.8
 src_client/msgr_client: /usr/lib/x86_64-linux-gnu/libQt5Gui.so.5.12.8
 src_client/msgr_client: /usr/lib/x86_64-linux-gnu/libQt5Core.so.5.12.8
 src_client/msgr_client: src_client/CMakeFiles/msgr_client.dir/link.txt
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/runner/work/msgr/msgr/CMakeFiles --progress-num=$(CMAKE_PROGRESS_10) "Linking CXX executable msgr_client"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --bold --progress-dir=/home/runner/work/msgr/msgr/CMakeFiles --progress-num=$(CMAKE_PROGRESS_12) "Linking CXX executable msgr_client"
 	cd /home/runner/work/msgr/msgr/src_client && $(CMAKE_COMMAND) -E cmake_link_script CMakeFiles/msgr_client.dir/link.txt --verbose=$(VERBOSE)
 
 # Rule to build all files generated by this target.

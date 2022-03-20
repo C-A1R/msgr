@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['max_5flength_445',['max_length',['../classSession.html#a9251d35017dc98d7e0531db8ce4eadfba91789f09a8674b8daa03927e3ceb7df4',1,'Session']]]
+  ['registration_520',['Registration',['../MainWidgets_8h.html#adcd5eb519932c561d0b8dd950adde10aa0f98b7f230f3c91292f0de4c99e263f2',1,'MainWidgets.h']]]
 ];

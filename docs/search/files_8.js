@@ -1,7 +1,25 @@
 var searchData=
 [
-  ['readme_2emd_277',['README.md',['../README_8md.html',1,'']]],
-  ['registrationwidget_2ecpp_278',['RegistrationWidget.cpp',['../RegistrationWidget_8cpp.html',1,'']]],
-  ['registrationwidget_2ecpp_2eo_2ed_279',['RegistrationWidget.cpp.o.d',['../RegistrationWidget_8cpp_8o_8d.html',1,'']]],
-  ['registrationwidget_2eh_280',['RegistrationWidget.h',['../RegistrationWidget_8h.html',1,'']]]
+  ['server_2ecpp_321',['Server.cpp',['../Server_8cpp.html',1,'']]],
+  ['server_2ecpp_2eo_2ed_322',['Server.cpp.o.d',['../Server_8cpp_8o_8d.html',1,'']]],
+  ['server_2eh_323',['Server.h',['../Server_8h.html',1,'']]],
+  ['serverprocessor_2ecpp_324',['ServerProcessor.cpp',['../ServerProcessor_8cpp.html',1,'']]],
+  ['serverprocessor_2ecpp_2eo_2ed_325',['ServerProcessor.cpp.o.d',['../ServerProcessor_8cpp_8o_8d.html',1,'']]],
+  ['serverprocessor_2eh_326',['ServerProcessor.h',['../ServerProcessor_8h.html',1,'']]],
+  ['session_2ecpp_327',['Session.cpp',['../Session_8cpp.html',1,'']]],
+  ['session_2ecpp_2eo_2ed_328',['Session.cpp.o.d',['../Session_8cpp_8o_8d.html',1,'']]],
+  ['session_2eh_329',['Session.h',['../Session_8h.html',1,'']]],
+  ['sessionmanager_2ecpp_330',['SessionManager.cpp',['../SessionManager_8cpp.html',1,'']]],
+  ['sessionmanager_2ecpp_2eo_2ed_331',['SessionManager.cpp.o.d',['../SessionManager_8cpp_8o_8d.html',1,'']]],
+  ['sessionmanager_2eh_332',['SessionManager.h',['../SessionManager_8h.html',1,'']]],
+  ['sqlite3_2ec_2eo_2ed_333',['sqlite3.c.o.d',['../sqlite3_8c_8o_8d.html',1,'']]],
+  ['sqlitedatabase_2ecpp_334',['SqliteDatabase.cpp',['../SqliteDatabase_8cpp.html',1,'']]],
+  ['sqlitedatabase_2ecpp_2eo_2ed_335',['SqliteDatabase.cpp.o.d',['../SqliteDatabase_8cpp_8o_8d.html',1,'']]],
+  ['sqlitedatabase_2eh_336',['SqliteDatabase.h',['../SqliteDatabase_8h.html',1,'']]],
+  ['sqlrec_2ecpp_337',['SqlRec.cpp',['../SqlRec_8cpp.html',1,'']]],
+  ['sqlrec_2ecpp_2eo_2ed_338',['SqlRec.cpp.o.d',['../SqlRec_8cpp_8o_8d.html',1,'']]],
+  ['sqlrec_2eh_339',['SqlRec.h',['../SqlRec_8h.html',1,'']]],
+  ['stackedchatwidget_2ecpp_340',['StackedChatWidget.cpp',['../StackedChatWidget_8cpp.html',1,'']]],
+  ['stackedchatwidget_2ecpp_2eo_2ed_341',['StackedChatWidget.cpp.o.d',['../StackedChatWidget_8cpp_8o_8d.html',1,'']]],
+  ['stackedchatwidget_2eh_342',['StackedChatWidget.h',['../StackedChatWidget_8h.html',1,'']]]
 ];

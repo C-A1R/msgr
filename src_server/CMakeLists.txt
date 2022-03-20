@@ -15,10 +15,12 @@ set(HEADERS
     SessionManager.h
     database/sqlite/sqlite3.h
     database/IDatabase.h
-    database/Database.h
+    database/SqliteDatabase.h
     database/SqlRec.h
     server_processor/IServerProcessor.h
     server_processor/ServerProcessor.h
+    ../src_shared/UserInfo.h
+    ../src_shared/MessageInfo.h
 )
 
 set(SOURCES
@@ -27,7 +29,7 @@ set(SOURCES
     Session.cpp
     SessionManager.cpp
     database/sqlite/sqlite3.c
-    database/Database.cpp
+    database/SqliteDatabase.cpp
     database/SqlRec.cpp
     server_processor/ServerProcessor.cpp
 )

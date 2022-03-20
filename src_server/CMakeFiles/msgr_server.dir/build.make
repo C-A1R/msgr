@@ -139,19 +139,19 @@ src_server/CMakeFiles/msgr_server.dir/database/sqlite/sqlite3.c.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling C source to assembly CMakeFiles/msgr_server.dir/database/sqlite/sqlite3.c.s"
 	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/cc $(C_DEFINES) $(C_INCLUDES) $(C_FLAGS) -S /home/runner/work/msgr/msgr/src_server/database/sqlite/sqlite3.c -o CMakeFiles/msgr_server.dir/database/sqlite/sqlite3.c.s
 
-src_server/CMakeFiles/msgr_server.dir/database/Database.cpp.o: src_server/CMakeFiles/msgr_server.dir/flags.make
-src_server/CMakeFiles/msgr_server.dir/database/Database.cpp.o: src_server/database/Database.cpp
-src_server/CMakeFiles/msgr_server.dir/database/Database.cpp.o: src_server/CMakeFiles/msgr_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/msgr/msgr/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src_server/CMakeFiles/msgr_server.dir/database/Database.cpp.o"
-	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src_server/CMakeFiles/msgr_server.dir/database/Database.cpp.o -MF CMakeFiles/msgr_server.dir/database/Database.cpp.o.d -o CMakeFiles/msgr_server.dir/database/Database.cpp.o -c /home/runner/work/msgr/msgr/src_server/database/Database.cpp
+src_server/CMakeFiles/msgr_server.dir/database/SqliteDatabase.cpp.o: src_server/CMakeFiles/msgr_server.dir/flags.make
+src_server/CMakeFiles/msgr_server.dir/database/SqliteDatabase.cpp.o: src_server/database/SqliteDatabase.cpp
+src_server/CMakeFiles/msgr_server.dir/database/SqliteDatabase.cpp.o: src_server/CMakeFiles/msgr_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/msgr/msgr/CMakeFiles --progress-num=$(CMAKE_PROGRESS_6) "Building CXX object src_server/CMakeFiles/msgr_server.dir/database/SqliteDatabase.cpp.o"
+	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src_server/CMakeFiles/msgr_server.dir/database/SqliteDatabase.cpp.o -MF CMakeFiles/msgr_server.dir/database/SqliteDatabase.cpp.o.d -o CMakeFiles/msgr_server.dir/database/SqliteDatabase.cpp.o -c /home/runner/work/msgr/msgr/src_server/database/SqliteDatabase.cpp
 
-src_server/CMakeFiles/msgr_server.dir/database/Database.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/msgr_server.dir/database/Database.cpp.i"
-	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/msgr/msgr/src_server/database/Database.cpp > CMakeFiles/msgr_server.dir/database/Database.cpp.i
+src_server/CMakeFiles/msgr_server.dir/database/SqliteDatabase.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/msgr_server.dir/database/SqliteDatabase.cpp.i"
+	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/msgr/msgr/src_server/database/SqliteDatabase.cpp > CMakeFiles/msgr_server.dir/database/SqliteDatabase.cpp.i
 
-src_server/CMakeFiles/msgr_server.dir/database/Database.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/msgr_server.dir/database/Database.cpp.s"
-	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/msgr/msgr/src_server/database/Database.cpp -o CMakeFiles/msgr_server.dir/database/Database.cpp.s
+src_server/CMakeFiles/msgr_server.dir/database/SqliteDatabase.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/msgr_server.dir/database/SqliteDatabase.cpp.s"
+	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/msgr/msgr/src_server/database/SqliteDatabase.cpp -o CMakeFiles/msgr_server.dir/database/SqliteDatabase.cpp.s
 
 src_server/CMakeFiles/msgr_server.dir/database/SqlRec.cpp.o: src_server/CMakeFiles/msgr_server.dir/flags.make
 src_server/CMakeFiles/msgr_server.dir/database/SqlRec.cpp.o: src_server/database/SqlRec.cpp
@@ -188,7 +188,7 @@ msgr_server_OBJECTS = \
 "CMakeFiles/msgr_server.dir/Session.cpp.o" \
 "CMakeFiles/msgr_server.dir/SessionManager.cpp.o" \
 "CMakeFiles/msgr_server.dir/database/sqlite/sqlite3.c.o" \
-"CMakeFiles/msgr_server.dir/database/Database.cpp.o" \
+"CMakeFiles/msgr_server.dir/database/SqliteDatabase.cpp.o" \
 "CMakeFiles/msgr_server.dir/database/SqlRec.cpp.o" \
 "CMakeFiles/msgr_server.dir/server_processor/ServerProcessor.cpp.o"
 
@@ -200,7 +200,7 @@ src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/Server.cpp.o
 src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/Session.cpp.o
 src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/SessionManager.cpp.o
 src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/database/sqlite/sqlite3.c.o
-src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/database/Database.cpp.o
+src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/database/SqliteDatabase.cpp.o
 src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/database/SqlRec.cpp.o
 src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/server_processor/ServerProcessor.cpp.o
 src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/build.make

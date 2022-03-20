@@ -2,7 +2,7 @@
 
 #include "AuthorizationWidget.h"
 #include "RegistrationWidget.h"
-#include "ChatWidget.h"
+#include "messenger_widget/MessengerWidget.h"
 
 #include <QStackedWidget>
 #include <QDebug>
@@ -13,7 +13,6 @@ MainWindow::MainWindow(QWidget *parent)
 {
     std::locale::global(std::locale(""));
     qRegisterMetaType<MainWidgets>();
-
 
     auto processor = std::make_shared<ClientProcessor>();
     initUi(processor);
@@ -39,9 +38,9 @@ void MainWindow::initUi(const std::shared_ptr<IClientProcessor> &msgProcessor)
             this, &MainWindow::slot_changeWidget);
     main_widget->insertWidget(static_cast<int>(MainWidgets::Registration), registrationWidget);
 
-    auto chatWidget = new ChatWidget(msgProcessor, main_widget);
-    connect(this, &MainWindow::signal_updateContactList, chatWidget, &ChatWidget::updateContactList);
-    main_widget->insertWidget(static_cast<int>(MainWidgets::Chat), chatWidget);
+    auto chatWidget = new MessengerWidget(msgProcessor, main_widget);
+    connect(this, &MainWindow::signal_updateContactList, chatWidget, &MessengerWidget::updateContactList);
+    main_widget->insertWidget(static_cast<int>(MainWidgets::Messenger), chatWidget);
 
     setCentralWidget(main_widget);
 }
@@ -49,7 +48,7 @@ void MainWindow::initUi(const std::shared_ptr<IClientProcessor> &msgProcessor)
 void MainWindow::slot_changeWidget(MainWidgets wgt)
 {
     main_widget->setCurrentIndex(static_cast<int>(wgt));
-    if (wgt == MainWidgets::Chat)
+    if (wgt == MainWidgets::Messenger)
     {
         emit signal_updateContactList();
     }

@@ -1,10 +1,7 @@
 <map id="src_client/client_processor/ClientProcessor.h" name="src_client/client_processor/ClientProcessor.h">
-<area shape="rect" id="node1" title=" " alt="" coords="188,5,383,47"/>
-<area shape="rect" id="node2" href="$IClientProcessor_8h.html" title=" " alt="" coords="5,102,144,129"/>
-<area shape="rect" id="node4" href="$UserInfo_8h.html" title=" " alt="" coords="169,102,258,129"/>
-<area shape="rect" id="node7" title=" " alt="" coords="282,95,433,136"/>
-<area shape="rect" id="node8" title=" " alt="" coords="457,102,535,129"/>
-<area shape="rect" id="node3" title=" " alt="" coords="37,184,112,211"/>
-<area shape="rect" id="node5" title=" " alt="" coords="151,184,246,211"/>
-<area shape="rect" id="node6" title=" " alt="" coords="271,184,329,211"/>
+<area shape="rect" id="node1" title=" " alt="" coords="79,5,273,47"/>
+<area shape="rect" id="node2" href="$IClientProcessor_8h.html" title=" " alt="" coords="23,102,161,129"/>
+<area shape="rect" id="node5" title=" " alt="" coords="186,95,337,136"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,184,80,211"/>
+<area shape="rect" id="node4" title=" " alt="" coords="104,184,181,211"/>
 </map>

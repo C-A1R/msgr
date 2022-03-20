@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.15</span>
+   &#160;<span id="projectnumber">0.0.16</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -74,38 +74,35 @@ $(function() {
 <a href="Server_8h.html">Go to the documentation of this file.</a><div class="fragment"><div class="line"><a name="l00001"></a><span class="lineno">    1</span>&#160;<span class="preprocessor">#ifndef SERVER_H</span></div>
 <div class="line"><a name="l00002"></a><span class="lineno">    2</span>&#160;<span class="preprocessor">#define SERVER_H</span></div>
 <div class="line"><a name="l00003"></a><span class="lineno">    3</span>&#160; </div>
-<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;<a class="code" href="Database_8h.html">database/Database.h</a>&quot;</span></div>
+<div class="line"><a name="l00004"></a><span class="lineno">    4</span>&#160;<span class="preprocessor">#include &quot;boost/asio.hpp&quot;</span></div>
 <div class="line"><a name="l00005"></a><span class="lineno">    5</span>&#160; </div>
-<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="preprocessor">#include &quot;boost/asio.hpp&quot;</span></div>
+<div class="line"><a name="l00006"></a><span class="lineno">    6</span>&#160;<span class="keyword">using</span> boost::asio::ip::tcp;</div>
 <div class="line"><a name="l00007"></a><span class="lineno">    7</span>&#160; </div>
-<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="preprocessor">#include &lt;map&gt;</span></div>
-<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160; </div>
-<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160;<span class="keyword">using</span> boost::asio::ip::tcp;</div>
-<div class="line"><a name="l00011"></a><span class="lineno">   11</span>&#160; </div>
-<div class="line"><a name="l00012"></a><span class="lineno">   12</span>&#160;<span class="keyword">class </span><a class="code" href="classSessionManager.html">SessionManager</a>;</div>
-<div class="line"><a name="l00013"></a><span class="lineno">   13</span>&#160; </div>
-<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classServer.html">   17</a></span>&#160;<span class="keyword">class </span><a class="code" href="classServer.html">Server</a></div>
-<div class="line"><a name="l00018"></a><span class="lineno">   18</span>&#160;{</div>
-<div class="line"><a name="l00019"></a><span class="lineno"><a class="line" href="classServer.html#ad8976754c66aa5ce5d91f5ccbeb19fc2">   19</a></span>&#160;    tcp::acceptor <a class="code" href="classServer.html#ad8976754c66aa5ce5d91f5ccbeb19fc2">_acceptor</a>;</div>
-<div class="line"><a name="l00020"></a><span class="lineno"><a class="line" href="classServer.html#a6151193b7807bb932fbc3e4b6ed6a437">   20</a></span>&#160;    std::shared_ptr&lt;IDatabase&gt; <a class="code" href="classServer.html#a6151193b7807bb932fbc3e4b6ed6a437">_db</a>{<span class="keyword">nullptr</span>};</div>
-<div class="line"><a name="l00021"></a><span class="lineno"><a class="line" href="classServer.html#a3403c086af0c9f5ae290b4d14e07be21">   21</a></span>&#160;    std::shared_ptr&lt;SessionManager&gt; <a class="code" href="classServer.html#a3403c086af0c9f5ae290b4d14e07be21">_sessionManager</a>;</div>
-<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160; </div>
-<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;<span class="keyword">public</span>:</div>
-<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;    <a class="code" href="classServer.html#a486a04867d8f44f04763c2c8f6064aa3">Server</a>(boost::asio::io_context&amp; io_context, <span class="keywordtype">int</span> port);</div>
-<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160;<span class="keyword">private</span>:</div>
-<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classServer.html#a252cdcc7aee5252ed8cf9491e0dec9c2">do_accept</a>();</div>
-<div class="line"><a name="l00027"></a><span class="lineno">   27</span>&#160;};</div>
-<div class="line"><a name="l00028"></a><span class="lineno">   28</span>&#160; </div>
-<div class="line"><a name="l00029"></a><span class="lineno">   29</span>&#160;<span class="preprocessor">#endif //SERVER_H</span></div>
+<div class="line"><a name="l00008"></a><span class="lineno">    8</span>&#160;<span class="keyword">class </span><a class="code" href="classSessionManager.html">SessionManager</a>;</div>
+<div class="line"><a name="l00009"></a><span class="lineno">    9</span>&#160;<span class="keyword">class </span><a class="code" href="classIDatabase.html">IDatabase</a>;</div>
+<div class="line"><a name="l00010"></a><span class="lineno">   10</span>&#160; </div>
+<div class="line"><a name="l00014"></a><span class="lineno"><a class="line" href="classServer.html">   14</a></span>&#160;<span class="keyword">class </span><a class="code" href="classServer.html">Server</a></div>
+<div class="line"><a name="l00015"></a><span class="lineno">   15</span>&#160;{</div>
+<div class="line"><a name="l00016"></a><span class="lineno"><a class="line" href="classServer.html#ad8976754c66aa5ce5d91f5ccbeb19fc2">   16</a></span>&#160;    tcp::acceptor <a class="code" href="classServer.html#ad8976754c66aa5ce5d91f5ccbeb19fc2">_acceptor</a>;</div>
+<div class="line"><a name="l00017"></a><span class="lineno"><a class="line" href="classServer.html#a6151193b7807bb932fbc3e4b6ed6a437">   17</a></span>&#160;    std::shared_ptr&lt;IDatabase&gt; <a class="code" href="classServer.html#a6151193b7807bb932fbc3e4b6ed6a437">_db</a>{<span class="keyword">nullptr</span>};</div>
+<div class="line"><a name="l00018"></a><span class="lineno"><a class="line" href="classServer.html#a3403c086af0c9f5ae290b4d14e07be21">   18</a></span>&#160;    std::shared_ptr&lt;SessionManager&gt; <a class="code" href="classServer.html#a3403c086af0c9f5ae290b4d14e07be21">_sessionManager</a>;</div>
+<div class="line"><a name="l00019"></a><span class="lineno">   19</span>&#160; </div>
+<div class="line"><a name="l00020"></a><span class="lineno">   20</span>&#160;<span class="keyword">public</span>:</div>
+<div class="line"><a name="l00021"></a><span class="lineno">   21</span>&#160;    <a class="code" href="classServer.html#a486a04867d8f44f04763c2c8f6064aa3">Server</a>(boost::asio::io_context&amp; io_context, <span class="keywordtype">int</span> port);</div>
+<div class="line"><a name="l00022"></a><span class="lineno">   22</span>&#160;<span class="keyword">private</span>:</div>
+<div class="line"><a name="l00023"></a><span class="lineno">   23</span>&#160;    <span class="keywordtype">void</span> <a class="code" href="classServer.html#a252cdcc7aee5252ed8cf9491e0dec9c2">do_accept</a>();</div>
+<div class="line"><a name="l00024"></a><span class="lineno">   24</span>&#160;};</div>
+<div class="line"><a name="l00025"></a><span class="lineno">   25</span>&#160; </div>
+<div class="line"><a name="l00026"></a><span class="lineno">   26</span>&#160;<span class="preprocessor">#endif //SERVER_H</span></div>
 </div><!-- fragment --></div><!-- contents -->
-<div class="ttc" id="aclassServer_html_a486a04867d8f44f04763c2c8f6064aa3"><div class="ttname"><a href="classServer.html#a486a04867d8f44f04763c2c8f6064aa3">Server::Server</a></div><div class="ttdeci">Server(boost::asio::io_context &amp;io_context, int port)</div><div class="ttdef"><b>Definition:</b> Server.cpp:10</div></div>
-<div class="ttc" id="aclassServer_html_ad8976754c66aa5ce5d91f5ccbeb19fc2"><div class="ttname"><a href="classServer.html#ad8976754c66aa5ce5d91f5ccbeb19fc2">Server::_acceptor</a></div><div class="ttdeci">tcp::acceptor _acceptor</div><div class="ttdef"><b>Definition:</b> Server.h:19</div></div>
-<div class="ttc" id="aclassServer_html_a3403c086af0c9f5ae290b4d14e07be21"><div class="ttname"><a href="classServer.html#a3403c086af0c9f5ae290b4d14e07be21">Server::_sessionManager</a></div><div class="ttdeci">std::shared_ptr&lt; SessionManager &gt; _sessionManager</div><div class="ttdef"><b>Definition:</b> Server.h:21</div></div>
+<div class="ttc" id="aclassServer_html_a486a04867d8f44f04763c2c8f6064aa3"><div class="ttname"><a href="classServer.html#a486a04867d8f44f04763c2c8f6064aa3">Server::Server</a></div><div class="ttdeci">Server(boost::asio::io_context &amp;io_context, int port)</div><div class="ttdef"><b>Definition:</b> Server.cpp:11</div></div>
+<div class="ttc" id="aclassServer_html_ad8976754c66aa5ce5d91f5ccbeb19fc2"><div class="ttname"><a href="classServer.html#ad8976754c66aa5ce5d91f5ccbeb19fc2">Server::_acceptor</a></div><div class="ttdeci">tcp::acceptor _acceptor</div><div class="ttdef"><b>Definition:</b> Server.h:16</div></div>
+<div class="ttc" id="aclassServer_html_a3403c086af0c9f5ae290b4d14e07be21"><div class="ttname"><a href="classServer.html#a3403c086af0c9f5ae290b4d14e07be21">Server::_sessionManager</a></div><div class="ttdeci">std::shared_ptr&lt; SessionManager &gt; _sessionManager</div><div class="ttdef"><b>Definition:</b> Server.h:18</div></div>
 <div class="ttc" id="aclassSessionManager_html"><div class="ttname"><a href="classSessionManager.html">SessionManager</a></div><div class="ttdoc">учет и взаимодействие подключенных пользователей</div><div class="ttdef"><b>Definition:</b> SessionManager.h:12</div></div>
-<div class="ttc" id="aclassServer_html_a252cdcc7aee5252ed8cf9491e0dec9c2"><div class="ttname"><a href="classServer.html#a252cdcc7aee5252ed8cf9491e0dec9c2">Server::do_accept</a></div><div class="ttdeci">void do_accept()</div><div class="ttdef"><b>Definition:</b> Server.cpp:30</div></div>
-<div class="ttc" id="aDatabase_8h_html"><div class="ttname"><a href="Database_8h.html">Database.h</a></div></div>
-<div class="ttc" id="aclassServer_html_a6151193b7807bb932fbc3e4b6ed6a437"><div class="ttname"><a href="classServer.html#a6151193b7807bb932fbc3e4b6ed6a437">Server::_db</a></div><div class="ttdeci">std::shared_ptr&lt; IDatabase &gt; _db</div><div class="ttdef"><b>Definition:</b> Server.h:20</div></div>
-<div class="ttc" id="aclassServer_html"><div class="ttname"><a href="classServer.html">Server</a></div><div class="ttdoc">асинхронный сервер</div><div class="ttdef"><b>Definition:</b> Server.h:17</div></div>
+<div class="ttc" id="aclassServer_html_a252cdcc7aee5252ed8cf9491e0dec9c2"><div class="ttname"><a href="classServer.html#a252cdcc7aee5252ed8cf9491e0dec9c2">Server::do_accept</a></div><div class="ttdeci">void do_accept()</div><div class="ttdef"><b>Definition:</b> Server.cpp:31</div></div>
+<div class="ttc" id="aclassIDatabase_html"><div class="ttname"><a href="classIDatabase.html">IDatabase</a></div><div class="ttdoc">через этот класс происходит работа с базой</div><div class="ttdef"><b>Definition:</b> IDatabase.h:13</div></div>
+<div class="ttc" id="aclassServer_html_a6151193b7807bb932fbc3e4b6ed6a437"><div class="ttname"><a href="classServer.html#a6151193b7807bb932fbc3e4b6ed6a437">Server::_db</a></div><div class="ttdeci">std::shared_ptr&lt; IDatabase &gt; _db</div><div class="ttdef"><b>Definition:</b> Server.h:17</div></div>
+<div class="ttc" id="aclassServer_html"><div class="ttname"><a href="classServer.html">Server</a></div><div class="ttdoc">асинхронный сервер</div><div class="ttdef"><b>Definition:</b> Server.h:14</div></div>
 <!-- start footer part -->
 <hr class="footer"/><address class="footer"><small>
 Generated by &#160;<a href="http://www.doxygen.org/index.html">

@@ -1,13 +1,11 @@
 var searchData=
 [
-  ['callback_302',['callback',['../classSqliteDatabase.html#a37d670d335a01f2bd899d51238351db7',1,'SqliteDatabase']]],
-  ['callback_5f2_303',['callback_2',['../classSqliteDatabase.html#a9246e7786c8375b40c0c816af57c86ab',1,'SqliteDatabase']]],
-  ['chatwidget_304',['ChatWidget',['../classChatWidget.html#afd9895c0d2c1158cbb49d6e94b3d82dc',1,'ChatWidget']]],
-  ['client_305',['Client',['../classClient.html#a38aacc9eda023eff7dc44d9b8cd530fe',1,'Client']]],
-  ['clientprocessor_306',['ClientProcessor',['../classClientProcessor.html#a10ba4ceeda91db15f13fd52dac353b54',1,'ClientProcessor']]],
-  ['clientthread_307',['ClientThread',['../classClientThread.html#a1afcb2ba5bb43e097c24943c7ed146b5',1,'ClientThread']]],
-  ['cmake_5fminimum_5frequired_308',['cmake_minimum_required',['../CMakeLists_8txt.html#a8ffb36274f785a4d0a2fd51cb9945730',1,'cmake_minimum_required(VERSION 3.2) set(PATCH_VERSION &quot;1&quot; CACHE INTERNAL &quot;Patch version&quot;) set(PROJECT_VESRION 0.0.$:&#160;CMakeLists.txt'],['../src__client_2CMakeLists_8txt.html#a8ffb36274f785a4d0a2fd51cb9945730',1,'cmake_minimum_required(VERSION 3.2) set(PATCH_VERSION &quot;1&quot; CACHE INTERNAL &quot;Patch version&quot;) set(PROJECT_VESRION 0.0.$:&#160;CMakeLists.txt'],['../src__server_2CMakeLists_8txt.html#a8ffb36274f785a4d0a2fd51cb9945730',1,'cmake_minimum_required(VERSION 3.2) set(PATCH_VERSION &quot;1&quot; CACHE INTERNAL &quot;Patch version&quot;) set(PROJECT_VESRION 0.0.$:&#160;CMakeLists.txt']]],
-  ['create_309',['create',['../classSqliteDatabase.html#a5634ae17f2aef2d07991025c9baf981d',1,'SqliteDatabase::create()'],['../classIDatabase.html#aebd11d2f2264e876051ca57c0b0b604e',1,'IDatabase::create()']]],
-  ['createconfirmline_310',['createConfirmLine',['../classAuthorizationWidget.html#abc75cda0961edadb794aec4b6f873616',1,'AuthorizationWidget::createConfirmLine()'],['../classRegistrationWidget.html#a9e3934ab8e9a03470edca839e040ab4e',1,'RegistrationWidget::createConfirmLine()']]],
-  ['currentlogin_311',['currentLogin',['../classClientProcessor.html#add0c6f2208cbb2eb394367a6fe25d9d2',1,'ClientProcessor::currentLogin()'],['../classIClientProcessor.html#a3e9ed8f0ad86dfe5973e293560844a63',1,'IClientProcessor::currentLogin()']]]
+  ['chatwidget_350',['ChatWidget',['../classChatWidget.html#a0dc3f6afa163153f0eade67ddc104db8',1,'ChatWidget']]],
+  ['client_351',['Client',['../classClient.html#a38aacc9eda023eff7dc44d9b8cd530fe',1,'Client']]],
+  ['clientprocessor_352',['ClientProcessor',['../classClientProcessor.html#a10ba4ceeda91db15f13fd52dac353b54',1,'ClientProcessor']]],
+  ['clientthread_353',['ClientThread',['../classClientThread.html#a1afcb2ba5bb43e097c24943c7ed146b5',1,'ClientThread']]],
+  ['cmake_5fminimum_5frequired_354',['cmake_minimum_required',['../CMakeLists_8txt.html#a8ffb36274f785a4d0a2fd51cb9945730',1,'cmake_minimum_required(VERSION 3.2) set(PATCH_VERSION &quot;1&quot; CACHE INTERNAL &quot;Patch version&quot;) set(PROJECT_VESRION 0.0.$:&#160;CMakeLists.txt'],['../src__client_2CMakeLists_8txt.html#a8ffb36274f785a4d0a2fd51cb9945730',1,'cmake_minimum_required(VERSION 3.2) set(PATCH_VERSION &quot;1&quot; CACHE INTERNAL &quot;Patch version&quot;) set(PROJECT_VESRION 0.0.$:&#160;CMakeLists.txt'],['../src__server_2CMakeLists_8txt.html#a8ffb36274f785a4d0a2fd51cb9945730',1,'cmake_minimum_required(VERSION 3.2) set(PATCH_VERSION &quot;1&quot; CACHE INTERNAL &quot;Patch version&quot;) set(PROJECT_VESRION 0.0.$:&#160;CMakeLists.txt']]],
+  ['create_355',['create',['../classIDatabase.html#aebd11d2f2264e876051ca57c0b0b604e',1,'IDatabase::create()'],['../classSqliteDatabase.html#a5634ae17f2aef2d07991025c9baf981d',1,'SqliteDatabase::create()']]],
+  ['createconfirmline_356',['createConfirmLine',['../classAuthorizationWidget.html#abc75cda0961edadb794aec4b6f873616',1,'AuthorizationWidget::createConfirmLine()'],['../classRegistrationWidget.html#a9e3934ab8e9a03470edca839e040ab4e',1,'RegistrationWidget::createConfirmLine()']]],
+  ['currentuser_357',['currentUser',['../classClientProcessor.html#a135c1b3d1f723923a9f187ca1d5eaa92',1,'ClientProcessor::currentUser()'],['../classIClientProcessor.html#a3887cb536b5c7d271532ea26eb05e325',1,'IClientProcessor::currentUser()']]]
 ];

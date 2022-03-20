@@ -57,7 +57,7 @@ void RegistrationWidget::slot_signUpResponse(const std::string &status)
 {
     if (status == "ok")
     {
-        emit signal_changeSign(MainWidgets::Chat);
+        emit signal_changeSign(MainWidgets::Messenger);
     }
     else if (status == "login_exists")
     {

@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.15</span>
+   &#160;<span id="projectnumber">0.0.16</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -78,8 +78,6 @@ $(function() {
 Public Member Functions</h2></td></tr>
 <tr class="memitem:a45a5e129d7d3c237ec3e3a891f0b37c4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structUserInfo.html#a45a5e129d7d3c237ec3e3a891f0b37c4">UserInfo</a> ()=default</td></tr>
 <tr class="separator:a45a5e129d7d3c237ec3e3a891f0b37c4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a09502ffcb6666734cb80af49a8145baf"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structUserInfo.html#a09502ffcb6666734cb80af49a8145baf">UserInfo</a> (int <a class="el" href="structUserInfo.html#a782c91e3af7e6ed09eb1a949767e3b92">id</a>, const std::string &amp;<a class="el" href="structUserInfo.html#ab2f091d188e0e804a8ec6956f55102d1">login</a>)</td></tr>
-<tr class="separator:a09502ffcb6666734cb80af49a8145baf"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-attribs"></a>
 Public Attributes</h2></td></tr>
@@ -87,10 +85,12 @@ Public Attributes</h2></td></tr>
 <tr class="separator:a782c91e3af7e6ed09eb1a949767e3b92"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:ab2f091d188e0e804a8ec6956f55102d1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structUserInfo.html#ab2f091d188e0e804a8ec6956f55102d1">login</a></td></tr>
 <tr class="separator:ab2f091d188e0e804a8ec6956f55102d1"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a080c9e0ddc13388199a67d6e02b2d8e4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="structUserInfo.html#a080c9e0ddc13388199a67d6e02b2d8e4">name</a></td></tr>
+<tr class="separator:a080c9e0ddc13388199a67d6e02b2d8e4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
 <a id="a45a5e129d7d3c237ec3e3a891f0b37c4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a45a5e129d7d3c237ec3e3a891f0b37c4">&#9670;&nbsp;</a></span>UserInfo() <span class="overload">[1/2]</span></h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a45a5e129d7d3c237ec3e3a891f0b37c4">&#9670;&nbsp;</a></span>UserInfo()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -108,42 +108,6 @@ Public Attributes</h2></td></tr>
   </td>
   <td class="mlabels-right">
 <span class="mlabels"><span class="mlabel">default</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="a09502ffcb6666734cb80af49a8145baf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a09502ffcb6666734cb80af49a8145baf">&#9670;&nbsp;</a></span>UserInfo() <span class="overload">[2/2]</span></h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">UserInfo::UserInfo </td>
-          <td>(</td>
-          <td class="paramtype">int&#160;</td>
-          <td class="paramname"><em>id</em>, </td>
-        </tr>
-        <tr>
-          <td class="paramkey"></td>
-          <td></td>
-          <td class="paramtype">const std::string &amp;&#160;</td>
-          <td class="paramname"><em>login</em>&#160;</td>
-        </tr>
-        <tr>
-          <td></td>
-          <td>)</td>
-          <td></td><td></td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">inline</span></span>  </td>
   </tr>
 </table>
 </div><div class="memdoc">
@@ -179,8 +143,22 @@ Public Attributes</h2></td></tr>
 
 </div>
 </div>
+<a id="a080c9e0ddc13388199a67d6e02b2d8e4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a080c9e0ddc13388199a67d6e02b2d8e4">&#9670;&nbsp;</a></span>name</h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">std::string UserInfo::name</td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <hr/>The documentation for this struct was generated from the following file:<ul>
-<li>src_client/client_processor/<a class="el" href="UserInfo_8h_source.html">UserInfo.h</a></li>
+<li>src_shared/<a class="el" href="UserInfo_8h_source.html">UserInfo.h</a></li>
 </ul>
 </div><!-- contents -->
 <!-- start footer part -->

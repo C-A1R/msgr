@@ -1,6 +1,8 @@
 var searchData=
 [
-  ['open_338',['open',['../classSqliteDatabase.html#a415ef2639513fce4d753be17c391a931',1,'SqliteDatabase::open()'],['../classIDatabase.html#a759676714eba7f36ab763898f0358b55',1,'IDatabase::open()']]],
-  ['outputmessage_339',['outputMessage',['../classServerProcessor.html#aca620908d42450b0c7c16bd67c0eca64',1,'ServerProcessor']]],
-  ['outputmessage_5frequest_340',['outputMessage_request',['../classClientProcessor.html#aef9d55cd91fd7bc6392f2e00cfeb429c',1,'ClientProcessor::outputMessage_request()'],['../classIClientProcessor.html#a5c4b696f3670834b17c9eabdd70a3e08',1,'IClientProcessor::outputMessage_request()']]]
+  ['main_385',['main',['../CMakeCCompilerId_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCXXCompilerId.cpp'],['../src__client_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../src__server_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp']]],
+  ['mainwindow_386',['MainWindow',['../classMainWindow.html#a996c5a2b6f77944776856f08ec30858d',1,'MainWindow']]],
+  ['maxid_387',['maxId',['../classSqliteDatabase.html#a5d9e9accefa8f4f2605f8320f1f4c24b',1,'SqliteDatabase']]],
+  ['messageinfo_388',['MessageInfo',['../structMessageInfo.html#af43742e72cc2fccac6f742034af2b9e2',1,'MessageInfo']]],
+  ['messengerwidget_389',['MessengerWidget',['../classMessengerWidget.html#ac781029796bbc1d47ce3afff8498ca50',1,'MessengerWidget']]]
 ];
