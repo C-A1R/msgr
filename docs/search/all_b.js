@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['main_117',['main',['../CMakeCCompilerId_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCXXCompilerId.cpp'],['../src__client_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../src__server_2main_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;main.cpp']]],
+  ['main_117',['main',['../CMakeCCompilerId_8c.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#a0ddf1224851353fc92bfbff6f499fa97',1,'main(int argc, char *argv[]):&#160;CMakeCXXCompilerId.cpp'],['../src__client_2main_8cpp.html#a3c04138a5bfe5d72780bb7e82a18e627',1,'main(int argc, char **argv):&#160;main.cpp'],['../src__server_2main_8cpp.html#a81ce304348a420752ee080480d2b3095',1,'main(int, char *[]):&#160;main.cpp']]],
   ['main_2ecpp_118',['main.cpp',['../src__client_2main_8cpp.html',1,'(Global Namespace)'],['../src__server_2main_8cpp.html',1,'(Global Namespace)']]],
   ['main_2ecpp_2eo_2ed_119',['main.cpp.o.d',['../src__client_2CMakeFiles_2msgr__client_8dir_2main_8cpp_8o_8d.html',1,'(Global Namespace)'],['../src__server_2CMakeFiles_2msgr__server_8dir_2main_8cpp_8o_8d.html',1,'(Global Namespace)']]],
   ['main_5fwidget_120',['main_widget',['../classMainWindow.html#a4c37b8281e29b946992c30ddd23633ea',1,'MainWindow']]],
