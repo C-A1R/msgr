@@ -19,7 +19,7 @@ public:
     void removeSession(int userId);
     bool isUserOnline(int userId) const;
     void sendToUser(int userId, const std::string &msg);
-//    std::string onlineIds() const;
+    void sendToAll(const std::string &msg);
 };
 
 #endif // SESSIONMANAGER_H

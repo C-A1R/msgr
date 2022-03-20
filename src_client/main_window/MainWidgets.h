@@ -7,7 +7,7 @@ enum class MainWidgets
 {
     Authorization,
     Registration,
-    Chat
+    Messenger
 };
 
 Q_DECLARE_METATYPE(MainWidgets)

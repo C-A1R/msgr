@@ -3,6 +3,7 @@
 #include "Session.h"
 #include "SessionManager.h"
 #include "server_processor/ServerProcessor.h"
+#include "database/SqliteDatabase.h"
 
 #include <filesystem>
 #include <iostream>

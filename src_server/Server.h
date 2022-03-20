@@ -1,15 +1,12 @@
 #ifndef SERVER_H
 #define SERVER_H
 
-#include "database/Database.h"
-
 #include "boost/asio.hpp"
-
-#include <map>
 
 using boost::asio::ip::tcp;
 
 class SessionManager;
+class IDatabase;
 
 /**
  * @brief асинхронный сервер

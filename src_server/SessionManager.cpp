@@ -36,13 +36,10 @@ void SessionManager::sendToUser(int userId, const std::string &msg)
     }
 }
 
-
-//std::string SessionManager::onlineIds() const
-//{
-//    std::string result;
-//    std::transform(_sessions.cbegin(), _sessions.cend(), std::back_inserter(result), [](const std::pair<int, std::shared_ptr<Session> > &pair)
-//    {
-//        return std::to_string(pair.first) + ",";
-//    });
-//    return result;
-//}
+void SessionManager::sendToAll(const std::string &msg)
+{
+    for (const auto &session : _sessions)
+    {
+        session.second->write(msg);
+    }
+}
