@@ -3,8 +3,6 @@
 
 #include "boost/asio.hpp"
 
-using boost::asio::ip::tcp;
-
 class SessionManager;
 class IDatabase;
 
@@ -13,7 +11,7 @@ class IDatabase;
  */
 class Server
 {
-    tcp::acceptor _acceptor;
+    boost::asio::ip::tcp::acceptor _acceptor;
     std::shared_ptr<IDatabase> _db{nullptr};
     std::shared_ptr<SessionManager> _sessionManager;
 

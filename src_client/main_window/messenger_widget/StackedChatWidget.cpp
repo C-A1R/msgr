@@ -1,7 +1,7 @@
 #include "StackedChatWidget.h"
 #include "ChatWidget.h"
-#include "../../../src_shared/UserInfo.h"
-#include "../../../src_shared/MessageInfo.h"
+#include "UserInfo.h"
+#include "MessageInfo.h"
 
 #include <QLabel>
 #include <QStackedWidget>

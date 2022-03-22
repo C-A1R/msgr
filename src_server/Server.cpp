@@ -7,6 +7,9 @@
 
 #include <filesystem>
 #include <iostream>
+#include <exception>
+
+using boost::asio::ip::tcp;
 
 Server::Server(boost::asio::io_context& io_context, int port)
     : _acceptor{io_context, tcp::endpoint(tcp::v4(), port)}
@@ -18,11 +21,11 @@ Server::Server(boost::asio::io_context& io_context, int port)
 
     if (!_db->open())
     {
-        return;
+        throw std::runtime_error("database is not opened");
     }
     if (!baseCreated && !_db->create())
     {
-        return;
+        throw std::runtime_error("database tables are not created");
     }
     _sessionManager = std::make_shared<SessionManager>();
     do_accept();

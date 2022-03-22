@@ -2,6 +2,8 @@
 
 #include <iostream>
 
+using boost::asio::ip::tcp;
+
 Client::Client(boost::asio::io_context &io_context)
     : _socket{io_context}, _resolver{io_context}
 {

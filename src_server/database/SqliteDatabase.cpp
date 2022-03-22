@@ -1,7 +1,7 @@
 #include "SqliteDatabase.h"
 #include "SqlRec.h"
-#include "../../src_shared/UserInfo.h"
-#include "../../src_shared/MessageInfo.h"
+#include "UserInfo.h"
+#include "MessageInfo.h"
 
 #include <iostream>
 #include <memory>

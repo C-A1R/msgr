@@ -3,7 +3,7 @@
 #include <iostream>
 #include <string>
 
-Session::Session(tcp::socket socket)
+Session::Session(boost::asio::ip::tcp::socket socket)
     : _socket{std::move(socket)}
 {
 }
