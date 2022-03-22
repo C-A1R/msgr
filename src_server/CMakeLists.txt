@@ -9,6 +9,10 @@ project(${PROJECT_NAME})
 
 # find_package(Boost COMPONENTS unit_test_framework REQUIRED)
 
+include_directories(${CMAKE_CURRENT_SOURCE_DIR}
+    ../src_shared
+)
+
 set(HEADERS
     Server.h
     Session.h

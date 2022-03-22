@@ -1,7 +1,7 @@
 var searchData=
 [
   ['_5f_5fhas_5finclude_0',['__has_include',['../CMakeCCompilerId_8c.html#ae5510d82e4946f1656f4969911c54736',1,'__has_include():&#160;CMakeCCompilerId.c'],['../CMakeCXXCompilerId_8cpp.html#ae5510d82e4946f1656f4969911c54736',1,'__has_include():&#160;CMakeCXXCompilerId.cpp']]],
-  ['_5facceptor_1',['_acceptor',['../classServer.html#ad8976754c66aa5ce5d91f5ccbeb19fc2',1,'Server']]],
+  ['_5facceptor_1',['_acceptor',['../classServer.html#ab5adb6e10fbfeedcf34d0807b16413ca',1,'Server']]],
   ['_5fbuffer_2',['_buffer',['../classClient.html#a765a8244e9e1603732dc79e97e42facc',1,'Client::_buffer()'],['../classSession.html#a77742a163c1ae6425f3e2893adac0cb9',1,'Session::_buffer()']]],
   ['_5fbufferlarge_3',['_bufferLarge',['../classClient.html#ab6623b31face1a6a99b2f891f51232ea',1,'Client::_bufferLarge()'],['../classSession.html#abf9a3b12db64697ed5adb2ac6453a6c1',1,'Session::_bufferLarge()']]],
   ['_5fclient_4',['_client',['../classClientThread.html#a5998ae5933f60cd0c7645e3f9216fde0',1,'ClientThread']]],
@@ -17,10 +17,10 @@ var searchData=
   ['_5fmtx_14',['_mtx',['../classSqliteDatabase.html#ac93d7855668dff94944f66c99785303c',1,'SqliteDatabase']]],
   ['_5fmutex_15',['_mutex',['../classSessionManager.html#a05d87c5c88d86aa2852d0e4778275273',1,'SessionManager']]],
   ['_5fprocessor_16',['_processor',['../classAuthorizationWidget.html#adf1fb420589bc8ce730e8ddd74017867',1,'AuthorizationWidget::_processor()'],['../classMessengerWidget.html#a495e7ecca19a16650fa9ad34da3e141f',1,'MessengerWidget::_processor()'],['../classSession.html#a15700fd3247b8ccbf88c094ed75c957c',1,'Session::_processor()']]],
-  ['_5fresolver_17',['_resolver',['../classClient.html#ac73e4aacd6538436deaafeab9bc7bbfa',1,'Client']]],
+  ['_5fresolver_17',['_resolver',['../classClient.html#a1241bb16dd83f42dec38c5224a21cecb',1,'Client']]],
   ['_5fsessionmanager_18',['_sessionManager',['../classServer.html#a3403c086af0c9f5ae290b4d14e07be21',1,'Server']]],
   ['_5fsessionmgr_19',['_sessionMgr',['../classServerProcessor.html#a9d0d058ff5e6c84569ea3ae16aa24108',1,'ServerProcessor']]],
   ['_5fsessions_20',['_sessions',['../classSessionManager.html#a5e5d10bc958785713e45e6b03cb2a8d0',1,'SessionManager']]],
-  ['_5fsocket_21',['_socket',['../classClient.html#a146a008c9dc1b156f29821c8405dae12',1,'Client::_socket()'],['../classSession.html#ab18d5bb8dd24f1c3031a1c77049055a3',1,'Session::_socket()']]],
+  ['_5fsocket_21',['_socket',['../classClient.html#a606ecfc7c7f1875b8774c81834e45f1b',1,'Client::_socket()'],['../classSession.html#a0f710a8484985a6f23fd978acc6e692f',1,'Session::_socket()']]],
   ['_5fstack_22',['_stack',['../classStackedChatWidget.html#a6e046d8477ab4561d4c3ef89af761634',1,'StackedChatWidget']]]
 ];

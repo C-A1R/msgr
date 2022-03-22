@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['registrationwidget_271',['RegistrationWidget',['../classRegistrationWidget.html',1,'']]]
+  ['registrationwidget_272',['RegistrationWidget',['../classRegistrationWidget.html',1,'']]]
 ];

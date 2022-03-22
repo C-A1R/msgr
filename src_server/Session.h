@@ -5,20 +5,18 @@
 
 #include "server_processor/ServerProcessor.h"
 
-using boost::asio::ip::tcp;
-
 /**
  * @brief сессия пользователя
  */
 class Session : public std::enable_shared_from_this<Session>
 {
-    tcp::socket _socket;
+    boost::asio::ip::tcp::socket _socket;
     enum {max_length = 1024};
     char _buffer[max_length];
     std::string _bufferLarge;
     std::unique_ptr<IServerProcessor> _processor;
 public:
-    Session(tcp::socket socket);
+    Session(boost::asio::ip::tcp::socket socket);
     void setProcessor(std::unique_ptr<IServerProcessor> processor);
     void start();
     void write(const std::string &msg);

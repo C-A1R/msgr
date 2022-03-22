@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.19</span>
+   &#160;<span id="projectnumber">0.0.20</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -72,12 +72,14 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8ffb36274f785a4d0a2fd51cb9945730"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src__server_2CMakeLists_8txt.html#a8ffb36274f785a4d0a2fd51cb9945730">cmake_minimum_required</a> (VERSION 3.2) <a class="el" href="src__server_2CMakeLists_8txt.html#a91f59a660c8f793914e201dcf84596d4">set</a>(PATCH_VERSION &quot;1&quot; CACHE INTERNAL &quot;Patch version&quot;) set(PROJECT_VESRION 0.0.$</td></tr>
+<tr class="memitem:a8ffb36274f785a4d0a2fd51cb9945730"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src__server_2CMakeLists_8txt.html#a8ffb36274f785a4d0a2fd51cb9945730">cmake_minimum_required</a> (VERSION 3.2) <a class="el" href="src__server_2CMakeLists_8txt.html#a32c4ebe98f12eb154102eb856d21b3b4">set</a>(PATCH_VERSION &quot;1&quot; CACHE INTERNAL &quot;Patch version&quot;) set(PROJECT_VESRION 0.0.$</td></tr>
 <tr class="separator:a8ffb36274f785a4d0a2fd51cb9945730"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91f59a660c8f793914e201dcf84596d4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src__server_2CMakeLists_8txt.html#a91f59a660c8f793914e201dcf84596d4">set</a> (PROJECT_NAME msgr_server VERSION ${PROJECT_VESRION} LANGUAGES CXX) set(CMAKE_CXX_FLAGS &quot;$</td></tr>
 <tr class="separator:a91f59a660c8f793914e201dcf84596d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a4e8d224a4ec486173c8ef5053e49db21"><td class="memItemLeft" align="right" valign="top">pthread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src__server_2CMakeLists_8txt.html#a4e8d224a4ec486173c8ef5053e49db21">project</a> (${PROJECT_NAME}) <a class="el" href="src__server_2CMakeLists_8txt.html#a91f59a660c8f793914e201dcf84596d4">set</a>(HEADERS Server.h Session.h SessionManager.h database/sqlite/sqlite3.h database/IDatabase.h database/SqliteDatabase.h database/SqlRec.h server_processor/IServerProcessor.h server_processor/ServerProcessor.h ../src_shared/UserInfo.h ../src_shared/MessageInfo.h) <a class="el" href="src__server_2CMakeLists_8txt.html#a91f59a660c8f793914e201dcf84596d4">set</a>(SOURCES main.cpp Server.cpp Session.cpp SessionManager.cpp database/sqlite/sqlite3.c database/SqliteDatabase.cpp database/SqlRec.cpp server_processor/ServerProcessor.cpp) add_executable(msgr_server $</td></tr>
-<tr class="separator:a4e8d224a4ec486173c8ef5053e49db21"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:aa68e78fe9a0e1003d0b1af0f93702828"><td class="memItemLeft" align="right" valign="top">pthread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src__server_2CMakeLists_8txt.html#aa68e78fe9a0e1003d0b1af0f93702828">project</a> (${PROJECT_NAME}) <a class="el" href="src__client_2CMakeLists_8txt.html#a2c6e46cd8c7f4718c813f53d32bac796">include_directories</a>($</td></tr>
+<tr class="separator:aa68e78fe9a0e1003d0b1af0f93702828"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a32c4ebe98f12eb154102eb856d21b3b4"><td class="memItemLeft" align="right" valign="top">src_shared&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src__server_2CMakeLists_8txt.html#a32c4ebe98f12eb154102eb856d21b3b4">set</a> (HEADERS Server.h Session.h SessionManager.h database/sqlite/sqlite3.h database/IDatabase.h database/SqliteDatabase.h database/SqlRec.h server_processor/IServerProcessor.h server_processor/ServerProcessor.h ../src_shared/UserInfo.h ../src_shared/MessageInfo.h) set(SOURCES main.cpp Server.cpp Session.cpp SessionManager.cpp database/sqlite/sqlite3.c database/SqliteDatabase.cpp database/SqlRec.cpp server_processor/ServerProcessor.cpp) add_executable(msgr_server $</td></tr>
+<tr class="separator:a32c4ebe98f12eb154102eb856d21b3b4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a8ffb36274f785a4d0a2fd51cb9945730"></a>
@@ -98,8 +100,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a4e8d224a4ec486173c8ef5053e49db21"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a4e8d224a4ec486173c8ef5053e49db21">&#9670;&nbsp;</a></span>project()</h2>
+<a id="aa68e78fe9a0e1003d0b1af0f93702828"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#aa68e78fe9a0e1003d0b1af0f93702828">&#9670;&nbsp;</a></span>project()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -116,8 +118,26 @@ Functions</h2></td></tr>
 
 </div>
 </div>
+<a id="a32c4ebe98f12eb154102eb856d21b3b4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a32c4ebe98f12eb154102eb856d21b3b4">&#9670;&nbsp;</a></span>set() <span class="overload">[1/2]</span></h2>
+
+<div class="memitem">
+<div class="memproto">
+      <table class="memname">
+        <tr>
+          <td class="memname">src_shared set </td>
+          <td>(</td>
+          <td class="paramtype">HEADERS Server.h Session.h SessionManager.h database/sqlite/sqlite3.h database/IDatabase.h database/SqliteDatabase.h database/SqlRec.h server_processor/IServerProcessor.h server_processor/ServerProcessor.h ../src_shared/UserInfo.h ../src_shared/MessageInfo.&#160;</td>
+          <td class="paramname"><em>h</em></td><td>)</td>
+          <td></td>
+        </tr>
+      </table>
+</div><div class="memdoc">
+
+</div>
+</div>
 <a id="a91f59a660c8f793914e201dcf84596d4"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a91f59a660c8f793914e201dcf84596d4">&#9670;&nbsp;</a></span>set()</h2>
+<h2 class="memtitle"><span class="permalink"><a href="#a91f59a660c8f793914e201dcf84596d4">&#9670;&nbsp;</a></span>set() <span class="overload">[2/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">

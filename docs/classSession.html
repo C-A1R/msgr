@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.19</span>
+   &#160;<span id="projectnumber">0.0.20</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -99,8 +99,8 @@ Collaboration diagram for Session:</div>
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pub-methods"></a>
 Public Member Functions</h2></td></tr>
-<tr class="memitem:a936fb78d44e9593395f873e388cc1b85"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#a936fb78d44e9593395f873e388cc1b85">Session</a> (tcp::socket socket)</td></tr>
-<tr class="separator:a936fb78d44e9593395f873e388cc1b85"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a88d71461f1203f0ae3d1eece46c9466c"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#a88d71461f1203f0ae3d1eece46c9466c">Session</a> (boost::asio::ip::tcp::socket socket)</td></tr>
+<tr class="separator:a88d71461f1203f0ae3d1eece46c9466c"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a580c6f1982d1f247b8e2e89014790a00"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#a580c6f1982d1f247b8e2e89014790a00">setProcessor</a> (std::unique_ptr&lt; <a class="el" href="classIServerProcessor.html">IServerProcessor</a> &gt; processor)</td></tr>
 <tr class="separator:a580c6f1982d1f247b8e2e89014790a00"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a47baf956cead0046fcbac45c572c70d3"><td class="memItemLeft" align="right" valign="top">void&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#a47baf956cead0046fcbac45c572c70d3">start</a> ()</td></tr>
@@ -125,8 +125,8 @@ Private Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
-<tr class="memitem:ab18d5bb8dd24f1c3031a1c77049055a3"><td class="memItemLeft" align="right" valign="top">tcp::socket&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#ab18d5bb8dd24f1c3031a1c77049055a3">_socket</a></td></tr>
-<tr class="separator:ab18d5bb8dd24f1c3031a1c77049055a3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0f710a8484985a6f23fd978acc6e692f"><td class="memItemLeft" align="right" valign="top">boost::asio::ip::tcp::socket&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#a0f710a8484985a6f23fd978acc6e692f">_socket</a></td></tr>
+<tr class="separator:a0f710a8484985a6f23fd978acc6e692f"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a77742a163c1ae6425f3e2893adac0cb9"><td class="memItemLeft" align="right" valign="top">char&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#a77742a163c1ae6425f3e2893adac0cb9">_buffer</a> [<a class="el" href="classSession.html#a1c1e665c9a689e9224fea0332e737e49a91789f09a8674b8daa03927e3ceb7df4">max_length</a>]</td></tr>
 <tr class="separator:a77742a163c1ae6425f3e2893adac0cb9"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:abf9a3b12db64697ed5adb2ac6453a6c1"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classSession.html#abf9a3b12db64697ed5adb2ac6453a6c1">_bufferLarge</a></td></tr>
@@ -163,8 +163,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Constructor &amp; Destructor Documentation</h2>
-<a id="a936fb78d44e9593395f873e388cc1b85"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a936fb78d44e9593395f873e388cc1b85">&#9670;&nbsp;</a></span>Session()</h2>
+<a id="a88d71461f1203f0ae3d1eece46c9466c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a88d71461f1203f0ae3d1eece46c9466c">&#9670;&nbsp;</a></span>Session()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -172,7 +172,7 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">Session::Session </td>
           <td>(</td>
-          <td class="paramtype">tcp::socket&#160;</td>
+          <td class="paramtype">boost::asio::ip::tcp::socket&#160;</td>
           <td class="paramname"><em>socket</em></td><td>)</td>
           <td></td>
         </tr>
@@ -379,8 +379,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ab18d5bb8dd24f1c3031a1c77049055a3"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ab18d5bb8dd24f1c3031a1c77049055a3">&#9670;&nbsp;</a></span>_socket</h2>
+<a id="a0f710a8484985a6f23fd978acc6e692f"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0f710a8484985a6f23fd978acc6e692f">&#9670;&nbsp;</a></span>_socket</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -389,7 +389,7 @@ Private Attributes</h2></td></tr>
   <td class="mlabels-left">
       <table class="memname">
         <tr>
-          <td class="memname">tcp::socket Session::_socket</td>
+          <td class="memname">boost::asio::ip::tcp::socket Session::_socket</td>
         </tr>
       </table>
   </td>

@@ -1,9 +1,9 @@
 #include "ServerProcessor.h"
-#include "../Session.h"
-#include "../SessionManager.h"
-#include "../database/SqliteDatabase.h"
-#include "../../src_shared/UserInfo.h"
-#include "../../src_shared/MessageInfo.h"
+#include "Session.h"
+#include "SessionManager.h"
+#include "database/SqliteDatabase.h"
+#include "UserInfo.h"
+#include "MessageInfo.h"
 
 #include <boost/property_tree/json_parser.hpp>
 

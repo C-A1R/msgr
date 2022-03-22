@@ -5,13 +5,13 @@
 # compile CXX with /usr/bin/c++
 C_DEFINES = 
 
-C_INCLUDES = 
+C_INCLUDES = -I/home/runner/work/msgr/msgr/src_server -I/home/runner/work/msgr/msgr/src_server/../src_shared
 
 C_FLAGS = -Wall -Wextra -pedantic -Werror
 
 CXX_DEFINES = 
 
-CXX_INCLUDES = 
+CXX_INCLUDES = -I/home/runner/work/msgr/msgr/src_server -I/home/runner/work/msgr/msgr/src_server/../src_shared
 
 CXX_FLAGS =  -pthread -Wall -Wextra -pedantic -Werror -std=gnu++17
 

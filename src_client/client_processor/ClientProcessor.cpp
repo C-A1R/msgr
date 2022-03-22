@@ -1,7 +1,7 @@
 #include "ClientProcessor.h"
 #include "client/ClientThread.h"
-#include "../../src_shared/UserInfo.h"
-#include "../../src_shared/MessageInfo.h"
+#include "UserInfo.h"
+#include "MessageInfo.h"
 
 #include <boost/property_tree/json_parser.hpp>
 
