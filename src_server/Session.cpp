@@ -1,6 +1,5 @@
 #include "Session.h"
 
-#include <iostream>
 #include <string>
 
 Session::Session(boost::asio::ip::tcp::socket socket)
@@ -55,7 +54,6 @@ void Session::do_write(const std::string &msg)
     }
     else
     {
-        std::cout << "### / do_write " << msg << std::endl;
         _socket.async_write_some(boost::asio::buffer(msg),
                                  [this, self](const boost::system::error_code &ec, std::size_t /*bytes*/)
         {
@@ -76,7 +74,6 @@ void Session::do_write_large(std::string msg)
         return;
     }
 
-    std::this_thread::sleep_for(std::chrono::milliseconds(10));
     while (msg.length() > max_length)
     {
         _socket.write_some(boost::asio::buffer(msg.substr(0, max_length)));

@@ -24,8 +24,7 @@ bool SqliteDatabase::create()
               "CREATE TABLE IF NOT EXISTS messages (id INTEGER PRIMARY KEY AUTOINCREMENT, "
                                                    "id_sender INTEGER, "
                                                    "id_recipient INTEGER, "
-                                                   "text TEXT, "
-                                                   "delivered BOOL);"))
+                                                   "text TEXT);"))
     {
         std::cout << "DB_ERR: tables are not created " << sqlite3_errmsg(_handler) << std::endl;
         return false;

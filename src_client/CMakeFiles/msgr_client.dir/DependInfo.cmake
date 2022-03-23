@@ -8,6 +8,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
+  "/home/runner/work/msgr/msgr/src_shared/Notification.cpp" "src_client/CMakeFiles/msgr_client.dir/__/src_shared/Notification.cpp.o" "gcc" "src_client/CMakeFiles/msgr_client.dir/__/src_shared/Notification.cpp.o.d"
   "/home/runner/work/msgr/msgr/src_client/client/Client.cpp" "src_client/CMakeFiles/msgr_client.dir/client/Client.cpp.o" "gcc" "src_client/CMakeFiles/msgr_client.dir/client/Client.cpp.o.d"
   "/home/runner/work/msgr/msgr/src_client/client/ClientThread.cpp" "src_client/CMakeFiles/msgr_client.dir/client/ClientThread.cpp.o" "gcc" "src_client/CMakeFiles/msgr_client.dir/client/ClientThread.cpp.o.d"
   "/home/runner/work/msgr/msgr/src_client/client_processor/ClientProcessor.cpp" "src_client/CMakeFiles/msgr_client.dir/client_processor/ClientProcessor.cpp.o" "gcc" "src_client/CMakeFiles/msgr_client.dir/client_processor/ClientProcessor.cpp.o.d"

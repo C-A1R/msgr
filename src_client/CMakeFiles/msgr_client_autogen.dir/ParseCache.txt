@@ -5,13 +5,12 @@
  mmc:Q_OBJECT
 /home/runner/work/msgr/msgr/src_client/main_window/RegistrationWidget.h
  mmc:Q_OBJECT
-/home/runner/work/msgr/msgr/src_client/main_window/AuthorizationWidget.h
- mmc:Q_OBJECT
 /home/runner/work/msgr/msgr/src_client/client/Client.h
  mmc:Q_OBJECT
 /home/runner/work/msgr/msgr/src_client/main_window/messenger_widget/ChatWidget.h
  mmc:Q_OBJECT
 /home/runner/work/msgr/msgr/src_client/client_processor/ClientProcessor.h
+/home/runner/work/msgr/msgr/src_shared/Notification.cpp
 /home/runner/work/msgr/msgr/src_client/main_window/messenger_widget/StackedChatWidget.h
  mmc:Q_OBJECT
 /home/runner/work/msgr/msgr/src_client/main_window/MainWidgets.h
@@ -22,6 +21,11 @@
  mmc:Q_OBJECT
 /home/runner/work/msgr/msgr/src_client/client/Client.cpp
 /home/runner/work/msgr/msgr/src_client/main_window/AuthorizationWidget.cpp
+/home/runner/work/msgr/msgr/src_client/main_window/messenger_widget/MessengerWidget.cpp
+/home/runner/work/msgr/msgr/src_shared/MessageInfo.h
+/home/runner/work/msgr/msgr/src_client/main_window/AuthorizationWidget.h
+ mmc:Q_OBJECT
+/home/runner/work/msgr/msgr/src_shared/Notification.h
 /home/runner/work/msgr/msgr/src_client/main_window/messenger_widget/StackedChatWidget.cpp
 /home/runner/work/msgr/msgr/src_client/client/ClientThread.cpp
 /home/runner/work/msgr/msgr/src_client/main_window/messenger_widget/ChatWidget.cpp
@@ -29,5 +33,3 @@
 /home/runner/work/msgr/msgr/src_client/main_window/RegistrationWidget.cpp
 /home/runner/work/msgr/msgr/src_client/main.cpp
 /home/runner/work/msgr/msgr/src_client/main_window/MainWindow.cpp
-/home/runner/work/msgr/msgr/src_shared/MessageInfo.h
-/home/runner/work/msgr/msgr/src_client/main_window/messenger_widget/MessengerWidget.cpp

@@ -267,6 +267,30 @@ SessionManager.cpp.s:
 	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/SessionManager.cpp.s
 .PHONY : SessionManager.cpp.s
 
+__/src_shared/Notification.o: __/src_shared/Notification.cpp.o
+.PHONY : __/src_shared/Notification.o
+
+# target to build an object file
+__/src_shared/Notification.cpp.o:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/__/src_shared/Notification.cpp.o
+.PHONY : __/src_shared/Notification.cpp.o
+
+__/src_shared/Notification.i: __/src_shared/Notification.cpp.i
+.PHONY : __/src_shared/Notification.i
+
+# target to preprocess a source file
+__/src_shared/Notification.cpp.i:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/__/src_shared/Notification.cpp.i
+.PHONY : __/src_shared/Notification.cpp.i
+
+__/src_shared/Notification.s: __/src_shared/Notification.cpp.s
+.PHONY : __/src_shared/Notification.s
+
+# target to generate assembly for a file
+__/src_shared/Notification.cpp.s:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/__/src_shared/Notification.cpp.s
+.PHONY : __/src_shared/Notification.cpp.s
+
 database/SqlRec.o: database/SqlRec.cpp.o
 .PHONY : database/SqlRec.o
 
@@ -411,6 +435,9 @@ help:
 	@echo "... SessionManager.o"
 	@echo "... SessionManager.i"
 	@echo "... SessionManager.s"
+	@echo "... __/src_shared/Notification.o"
+	@echo "... __/src_shared/Notification.i"
+	@echo "... __/src_shared/Notification.s"
 	@echo "... database/SqlRec.o"
 	@echo "... database/SqlRec.i"
 	@echo "... database/SqlRec.s"

@@ -209,6 +209,30 @@ msgr_client_autogen/fast:
 	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client_autogen.dir/build.make src_client/CMakeFiles/msgr_client_autogen.dir/build
 .PHONY : msgr_client_autogen/fast
 
+__/src_shared/Notification.o: __/src_shared/Notification.cpp.o
+.PHONY : __/src_shared/Notification.o
+
+# target to build an object file
+__/src_shared/Notification.cpp.o:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/__/src_shared/Notification.cpp.o
+.PHONY : __/src_shared/Notification.cpp.o
+
+__/src_shared/Notification.i: __/src_shared/Notification.cpp.i
+.PHONY : __/src_shared/Notification.i
+
+# target to preprocess a source file
+__/src_shared/Notification.cpp.i:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/__/src_shared/Notification.cpp.i
+.PHONY : __/src_shared/Notification.cpp.i
+
+__/src_shared/Notification.s: __/src_shared/Notification.cpp.s
+.PHONY : __/src_shared/Notification.s
+
+# target to generate assembly for a file
+__/src_shared/Notification.cpp.s:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/__/src_shared/Notification.cpp.s
+.PHONY : __/src_shared/Notification.cpp.s
+
 client/Client.o: client/Client.cpp.o
 .PHONY : client/Client.o
 
@@ -489,6 +513,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... msgr_client_autogen"
 	@echo "... msgr_client"
+	@echo "... __/src_shared/Notification.o"
+	@echo "... __/src_shared/Notification.i"
+	@echo "... __/src_shared/Notification.s"
 	@echo "... client/Client.o"
 	@echo "... client/Client.i"
 	@echo "... client/Client.s"

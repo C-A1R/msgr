@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.20</span>
+   &#160;<span id="projectnumber">0.0.21</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -79,8 +79,8 @@ $(function() {
   <tr class="even"><td class="entry"><a class="el" href="classIClientProcessor.html#a45ff21f6cba1504ef84fb512db532bb0">IClientProcessor</a>()=default</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"></td></tr>
   <tr><td class="entry"><a class="el" href="classClientProcessor.html#a03ec0200a343798616fa249efae1706d">inputMessage_response</a>(const std::shared_ptr&lt; MessageInfo &gt; &amp;message) override</td><td class="entry"><a class="el" href="classClientProcessor.html">ClientProcessor</a></td><td class="entry"><span class="mlabel">private</span><span class="mlabel">virtual</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classClientProcessor.html#a58043e9c40feabe21177c0167e379563">outputMessage_request</a>(int contactId, const std::string &amp;msg) override</td><td class="entry"><a class="el" href="classClientProcessor.html">ClientProcessor</a></td><td class="entry"><span class="mlabel">virtual</span></td></tr>
-  <tr><td class="entry"><a class="el" href="classClientProcessor.html#a3f64fe6133ea6c7bec4c9fb792578bda">parseRequest</a>(const ptree &amp;root)</td><td class="entry"><a class="el" href="classClientProcessor.html">ClientProcessor</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
-  <tr class="even"><td class="entry"><a class="el" href="classClientProcessor.html#a28bf87214c068382e0cb41a9a90f022c">parseResponse</a>(const ptree &amp;root)</td><td class="entry"><a class="el" href="classClientProcessor.html">ClientProcessor</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr><td class="entry"><a class="el" href="classClientProcessor.html#a3238b7069ae0a8b35f741a9b4b0249c4">parseRequest</a>(const Request &amp;request)</td><td class="entry"><a class="el" href="classClientProcessor.html">ClientProcessor</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
+  <tr class="even"><td class="entry"><a class="el" href="classClientProcessor.html#a6171fef8b8dfc7b6ebf7bceeafdd33f8">parseResponse</a>(const Response &amp;response)</td><td class="entry"><a class="el" href="classClientProcessor.html">ClientProcessor</a></td><td class="entry"><span class="mlabel">private</span></td></tr>
   <tr><td class="entry"><a class="el" href="classIClientProcessor.html#a64f4396cd5fe4583af2fe7a2677ee04e">signal_getMessagesResponse</a>(const std::vector&lt; std::shared_ptr&lt; MessageInfo &gt; &gt; &amp;)</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
   <tr class="even"><td class="entry"><a class="el" href="classIClientProcessor.html#ab009ecd42da4a8579cba790e2cc38d0b">signal_getUsersResponse</a>(const std::vector&lt; std::shared_ptr&lt; UserInfo &gt; &gt; &amp;)</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>
   <tr><td class="entry"><a class="el" href="classIClientProcessor.html#ae5cb3c4959b6a69a3ee32722954d847b">signal_inputMessageRequest</a>(const std::shared_ptr&lt; MessageInfo &gt; &amp;)</td><td class="entry"><a class="el" href="classIClientProcessor.html">IClientProcessor</a></td><td class="entry"><span class="mlabel">signal</span></td></tr>

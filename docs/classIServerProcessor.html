@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.20</span>
+   &#160;<span id="projectnumber">0.0.21</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -91,8 +91,8 @@ Public Member Functions</h2></td></tr>
 <tr class="separator:aee941c856cdeaf5ac7fa4808fc7e8dfe"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a69e3473d80b74c905a51ff5433317bf6"><td class="memItemLeft" align="right" valign="top">virtual&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIServerProcessor.html#a69e3473d80b74c905a51ff5433317bf6">~IServerProcessor</a> ()=default</td></tr>
 <tr class="separator:a69e3473d80b74c905a51ff5433317bf6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:add294e88af3b73572920e8e3ba1fa4bf"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIServerProcessor.html#add294e88af3b73572920e8e3ba1fa4bf">parseClientMessage</a> (const std::string &amp;request)=0</td></tr>
-<tr class="separator:add294e88af3b73572920e8e3ba1fa4bf"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a0fde0f0782edf729f7cb5eb454fcc3c5"><td class="memItemLeft" align="right" valign="top">virtual std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIServerProcessor.html#a0fde0f0782edf729f7cb5eb454fcc3c5">parseClientMessage</a> (const std::string &amp;request) const =0</td></tr>
+<tr class="separator:a0fde0f0782edf729f7cb5eb454fcc3c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>интерфейс обработчика запросов/ответов от клиента </p>
@@ -148,8 +148,8 @@ Public Member Functions</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="add294e88af3b73572920e8e3ba1fa4bf"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#add294e88af3b73572920e8e3ba1fa4bf">&#9670;&nbsp;</a></span>parseClientMessage()</h2>
+<a id="a0fde0f0782edf729f7cb5eb454fcc3c5"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a0fde0f0782edf729f7cb5eb454fcc3c5">&#9670;&nbsp;</a></span>parseClientMessage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -162,7 +162,7 @@ Public Member Functions</h2></td></tr>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>request</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -172,7 +172,7 @@ Public Member Functions</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implemented in <a class="el" href="classServerProcessor.html#a46161fa012cacf9c1bd09703f21ffc7a">ServerProcessor</a>.</p>
+<p>Implemented in <a class="el" href="classServerProcessor.html#af2413a1f004b7b25bbe7cc24628e8c34">ServerProcessor</a>.</p>
 
 </div>
 </div>

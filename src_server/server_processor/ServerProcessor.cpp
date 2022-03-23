@@ -4,6 +4,7 @@
 #include "database/SqliteDatabase.h"
 #include "UserInfo.h"
 #include "MessageInfo.h"
+#include "Notification.h"
 
 #include <boost/property_tree/json_parser.hpp>
 
@@ -16,7 +17,7 @@ ServerProcessor::ServerProcessor(const std::shared_ptr<IDatabase> &db,
 {
 }
 
-std::string ServerProcessor::parseClientMessage(const std::string &msg)
+std::string ServerProcessor::parseClientMessage(const std::string &msg) const
 {
     std::cout << "msg " << msg;
     if (msg == "#ping\n")
@@ -28,35 +29,33 @@ std::string ServerProcessor::parseClientMessage(const std::string &msg)
         return msg;
     }
 
-    std::stringstream stream(msg);
-    ptree root;
-    boost::property_tree::read_json(stream, root);
+    auto notificationType = Notification::readNotificationType(msg);
+    if (notificationType == NotificationType::type_request)
+    {
+        return parseRequest(Request::fromJson(msg));
+    }
+    else if (notificationType == NotificationType::type_response)
+    {
+        return parseResponse(Response::fromJson(msg));
+    }
 
-    if (root.count("request_type") > 0)
-    {
-        return parseRequest(root);
-    }
-    else if (root.count("response_type") > 0)
-    {
-        return parseResponse(root);
-    }
     return std::string();
 }
 
-std::string ServerProcessor::parseRequest(const ptree &root)
+std::string ServerProcessor::parseRequest(const Request &request) const
 {
-    std::string requestType = root.get<std::string>("request_type");
+    const auto requestType = request.type();
     if (requestType == "sign_up")
     {
-        return signUp(root);
+        return signUp(request);
     }
     else if (requestType == "sign_in")
     {
-        return signIn(root);
+        return signIn(request);
     }
     else if (requestType == "sign_out")
     {
-        return signOut(root);
+        return signOut(request);
     }
     else if (requestType == "get_all_users")
     {
@@ -64,268 +63,186 @@ std::string ServerProcessor::parseRequest(const ptree &root)
     }
     else if (requestType == "output_message")
     {
-        return outputMessage(root);
+        return outputMessage(request);
     }
     else if (requestType == "get_messages")
     {
-        return getMessages(root);
+        return getMessages(request);
     }
-    return errResponse;
+    return Response::errResponse();
 }
 
-std::string ServerProcessor::parseResponse(const ptree &root)
+std::string ServerProcessor::parseResponse(const Response &response) const
 {
-    std::string responseType = root.get<std::string>("response_type");
+    const auto responseType = response.type();
     if (responseType == "input_message")
     {
-        return inputMessage(root);
+        return inputMessage(response);
     }
-    return errResponse;
+    return Response::errResponse();
 }
 
-std::string ServerProcessor::signUp(const ptree &requestRoot)
+std::string ServerProcessor::signUp(const Request &request) const
 {
-    auto login = requestRoot.get<std::string>("user.login");
-    auto password = requestRoot.get<std::string>("user.password");
+    std::string login, password;
+    std::tie(login, password) = request.readSignUser();
     int userId = _db->invalidId();
     _db->getUserId(login, userId);
     if (userId != _db->invalidId())
     {
         //логин занят
-        ptree responseRoot;
-        responseRoot.put("response_type", "sign_up");
-        responseRoot.put("status", "login_exists");
-        std::stringstream responseStream;
-        boost::property_tree::write_json(responseStream, responseRoot);
-        return responseStream.str() + "\n";
+        return Response("sign_up")
+                .writeStatus("login_exists")
+                .toJson();
     }
 
     userId = _db->insertUser(std::make_pair(login, password));
     if (userId == _db->invalidId())
     {
-        return errResponse;
+        return Response::errResponse();
     }
 
-    {
-        //сообщим всем о новом пользователе
-        ptree root;
-        root.put("request_type", "new_user_registered");
-        root.put("user.id", userId);
-        root.put("user.login", login);
-        root.put("user.name", "");
-        std::stringstream stream;
-        boost::property_tree::write_json(stream, root);
-        _sessionMgr->sendToAll(stream.str() + "\n");
-    }
-
+    //сообщим всем о новом пользователе
+    _sessionMgr->sendToAll(Request("new_user_registered")
+                           .writeUser(userId, login, "")
+                           .toJson());
     _sessionMgr->addSession(userId, _currentSession);
-    ptree responseRoot;
-    responseRoot.put("response_type", "sign_up");
-    responseRoot.put("status", "ok");
-    responseRoot.put("user.id", userId);
-    responseRoot.put("user.login", login);
-    responseRoot.put("user.name", "");
-    std::stringstream responseStream;
-    boost::property_tree::write_json(responseStream, responseRoot);
-    return responseStream.str() + "\n";
+
+    return Response("sign_up")
+            .writeStatusOk()
+            .writeUser(userId, login, "")
+            .toJson();
 }
 
-std::string ServerProcessor::signIn(const ptree &requestRoot)
+std::string ServerProcessor::signIn(const Request &request) const
 {
-    auto login = requestRoot.get<std::string>("user.login");
-    auto password = requestRoot.get<std::string>("user.password");
+    std::string login, password;
+    std::tie(login, password) = request.readSignUser();
     int userId = _db->invalidId();
 
     _db->getUserId(login, userId);
     if (userId == _db->invalidId())
     {
-        ptree responseRoot;
-        responseRoot.put("response_type", "sign_in");
-        responseRoot.put("status", "login_not_exists");
-        std::stringstream responseStream;
-        boost::property_tree::write_json(responseStream, responseRoot);
-        return responseStream.str() + "\n";
+        return Response("sign_in")
+                .writeStatus("login_not_exists")
+                .toJson();
     }
 
     std::string realPassword;
     if (!_db->getUserPassword(userId, realPassword))
     {
-        return errResponse;
+        return Response::errResponse();
     }
     if (password != realPassword)
     {
-        ptree responseRoot;
-        responseRoot.put("response_type", "sign_in");
-        responseRoot.put("status", "password_incorrect");
-        std::stringstream responseStream;
-        boost::property_tree::write_json(responseStream, responseRoot);
-        return responseStream.str() + "\n";
+        return Response("sign_in")
+                .writeStatus("password_incorrect")
+                .toJson();
     }
 
     if (_sessionMgr->isUserOnline(userId))
     {
-        ptree responseRoot;
-        responseRoot.put("response_type", "sign_in");
-        responseRoot.put("status", "already_signed");
-        std::stringstream responseStream;
-        boost::property_tree::write_json(responseStream, responseRoot);
-        return responseStream.str() + "\n";
+        return Response("sign_in")
+                .writeStatus("already_signed")
+                .toJson();
     }
 
     std::string username;
     _db->getUsername(userId, username);
 
     _sessionMgr->addSession(userId, _currentSession);
-    ptree responseRoot;
-    responseRoot.put("response_type", "sign_in");
-    responseRoot.put("status", "ok");
-    responseRoot.put("user.id", userId);
-    responseRoot.put("user.login", login);
-    responseRoot.put("user.name", username);
-    std::stringstream responseStream;
-    boost::property_tree::write_json(responseStream, responseRoot);
-    return responseStream.str() + "\n";
+    return Response("sign_in")
+            .writeStatusOk()
+            .writeUser(userId, login, username)
+            .toJson();
 }
 
-std::string ServerProcessor::signOut(const ptree &root)
+std::string ServerProcessor::signOut(const Request &request) const
 {
-    _sessionMgr->removeSession(root.get<int>("user_id"));
+    _sessionMgr->removeSession(request.readValue<int>("user_id"));
     return std::string();
 }
 
-std::string ServerProcessor::allUsers()
+std::string ServerProcessor::allUsers() const
 {
     std::vector<UserInfo> users;
     if (!_db->getAllUsers(users))
     {
-        return errResponse;
+        return Response::errResponse();
     }
     if (!users.size())
     {
-        ptree responseRoot;
-        responseRoot.put("response_type", "get_all_users");
-        responseRoot.put("status", "empty");
-        std::stringstream responseStream;
-        boost::property_tree::write_json(responseStream, responseRoot);
-        return responseStream.str() + "\n";
+        return Response("get_all_users")
+                .writeStatus("empty")
+                .toJson();
     }
 
-    ptree responseRoot;
-    responseRoot.put("response_type", "get_all_users");
-    responseRoot.put("status", "ok");
-    ptree children;
-    for (const auto &user : users)
-    {
-        ptree child;
-        child.put("id", user.id);
-        child.put("login", user.login);
-        child.put("name", user.name);
-        children.push_back(std::make_pair("", child));
-    }
-    responseRoot.add_child("users", children);
-    std::stringstream responseStream;
-    boost::property_tree::write_json(responseStream, responseRoot);
-    return responseStream.str() + "\n";
+    return Response("get_all_users")
+            .writeStatusOk()
+            .writeUsers(users)
+            .toJson();
 }
 
-std::string ServerProcessor::outputMessage(const ptree &root)
+std::string ServerProcessor::outputMessage(const Request &request) const
 {
-    auto id_sender = root.get<int>("message.sender");
-    auto id_recipient = root.get<int>("message.recipient");
-    auto text = root.get<std::string>("message.text");
+    auto message = request.readMessage();
 
     ///@todo экранировать кавычки и тд в тексте
-    auto msgId = _db->insertMessage(id_sender, id_recipient, text);
+    auto msgId = _db->insertMessage(message->senderId, message->recipientId, message->text);
     if (msgId == _db->invalidId())
     {
-        return errResponse;
+        return Response::errResponse();
     }
+    message->id = msgId;
 
-    if (_sessionMgr->isUserOnline(id_recipient))
+    if (_sessionMgr->isUserOnline(message->recipientId))
     {
         //отправим входящее сообщение адресату
-        ptree requestRoot;
-        requestRoot.put("request_type", "input_message");
-        requestRoot.put("message.id", msgId);
-        requestRoot.put("message.sender", id_sender);
-        requestRoot.put("message.recipient", id_recipient);
-        requestRoot.put("message.text", text);
-        std::stringstream stream;
-        boost::property_tree::write_json(stream, requestRoot);
-        _sessionMgr->sendToUser(id_recipient, stream.str() + "\n");
+        _sessionMgr->sendToUser(message->recipientId, Request("input_message")
+                                                       .writeMessage(message)
+                                                       .toJson());
         return std::string();
     }
 
-    ptree responseRoot;
-    responseRoot.put("response_type", "output_message");
-    responseRoot.put("status", "ok");
-    responseRoot.put("message.id", msgId);
-    responseRoot.put("message.sender", id_sender);
-    responseRoot.put("message.recipient", id_recipient);
-    responseRoot.put("message.text", text);
-    std::stringstream responseStream;
-    boost::property_tree::write_json(responseStream, responseRoot);
-    return responseStream.str() + "\n";
+    return Response("output_message")
+            .writeStatusOk()
+            .writeMessage(message)
+            .toJson();
 }
 
-std::string ServerProcessor::inputMessage(const ptree &root)
+std::string ServerProcessor::inputMessage(const Response &response) const
 {
-    auto status = root.get<std::string>("status");
-    auto id_msg = root.get<int>("message.id");
-    auto id_sender = root.get<int>("message.sender");
-    auto id_recipient = root.get<int>("message.recipient");
-    auto text = root.get<std::string>("message.text");
+    const auto status = response.status();
+    const auto msg = response.readMessage();
 
     //отправим ответ отправителю на его исходящее сообщение
-    ptree responseRoot;
-    responseRoot.put("response_type", "output_message");
-    responseRoot.put("status", status);
-    responseRoot.put("message.id", id_msg);
-    responseRoot.put("message.sender", id_sender);
-    responseRoot.put("message.recipient", id_recipient);
-    responseRoot.put("message.text", text);
-    std::stringstream responseStream;
-    boost::property_tree::write_json(responseStream, responseRoot);
-    _sessionMgr->sendToUser(id_sender, responseStream.str() + "\n");
+    _sessionMgr->sendToUser(msg->senderId, Response("output_message")
+                                            .writeStatus(status)
+                                            .writeMessage(msg)
+                                            .toJson());
     return std::string();
 }
 
-std::string ServerProcessor::getMessages(const boost::property_tree::ptree &requestRoot)
+std::string ServerProcessor::getMessages(const Request &request) const
 {
-    auto user_1 = requestRoot.get<int>("user_1");
-    auto user_2 = requestRoot.get<int>("user_2");
-    auto lastId = requestRoot.get<int>("last_message");
+    auto user_1 = request.readValue<int>("user_1");
+    auto user_2 = request.readValue<int>("user_2");
+    auto lastId = request.readValue<int>("last_message");
 
     std::vector<MessageInfo> messages;
     if (!_db->getMessages(user_1, user_2, lastId, messages))
     {
-        return errResponse;
+        return Response::errResponse();
     }
     if (!messages.size())
     {
-        ptree responseRoot;
-        responseRoot.put("response_type", "get_messages");
-        responseRoot.put("status", "empty");
-        std::stringstream responseStream;
-        boost::property_tree::write_json(responseStream, responseRoot);
-        return responseStream.str() + "\n";
+        return Response("get_messages")
+                .writeStatus("empty")
+                .toJson();
     }
 
-    ptree responseRoot;
-    responseRoot.put("response_type", "get_messages");
-    responseRoot.put("status", "ok");
-    ptree children;
-    for (const auto &msg : messages)
-    {
-        ptree child;
-        child.put("id", msg.id);
-        child.put("sender", msg.senderId);
-        child.put("recipient", msg.recipientId);
-        child.put("text", msg.text);
-        children.push_back(std::make_pair("", child));
-    }
-    responseRoot.add_child("messages", children);
-    std::stringstream responseStream;
-    boost::property_tree::write_json(responseStream, responseRoot);
-    return responseStream.str() + "\n";
+    return Response("get_messages")
+            .writeStatusOk()
+            .writeMessages(messages)
+            .toJson();
 }

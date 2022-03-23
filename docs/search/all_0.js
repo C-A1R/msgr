@@ -18,9 +18,10 @@ var searchData=
   ['_5fmutex_15',['_mutex',['../classSessionManager.html#a05d87c5c88d86aa2852d0e4778275273',1,'SessionManager']]],
   ['_5fprocessor_16',['_processor',['../classAuthorizationWidget.html#adf1fb420589bc8ce730e8ddd74017867',1,'AuthorizationWidget::_processor()'],['../classMessengerWidget.html#a495e7ecca19a16650fa9ad34da3e141f',1,'MessengerWidget::_processor()'],['../classSession.html#a15700fd3247b8ccbf88c094ed75c957c',1,'Session::_processor()']]],
   ['_5fresolver_17',['_resolver',['../classClient.html#a1241bb16dd83f42dec38c5224a21cecb',1,'Client']]],
-  ['_5fsessionmanager_18',['_sessionManager',['../classServer.html#a3403c086af0c9f5ae290b4d14e07be21',1,'Server']]],
-  ['_5fsessionmgr_19',['_sessionMgr',['../classServerProcessor.html#a9d0d058ff5e6c84569ea3ae16aa24108',1,'ServerProcessor']]],
-  ['_5fsessions_20',['_sessions',['../classSessionManager.html#a5e5d10bc958785713e45e6b03cb2a8d0',1,'SessionManager']]],
-  ['_5fsocket_21',['_socket',['../classClient.html#a606ecfc7c7f1875b8774c81834e45f1b',1,'Client::_socket()'],['../classSession.html#a0f710a8484985a6f23fd978acc6e692f',1,'Session::_socket()']]],
-  ['_5fstack_22',['_stack',['../classStackedChatWidget.html#a6e046d8477ab4561d4c3ef89af761634',1,'StackedChatWidget']]]
+  ['_5froot_18',['_root',['../classNotification.html#a97556f34e53b4ded1a13006b79c87e9c',1,'Notification']]],
+  ['_5fsessionmanager_19',['_sessionManager',['../classServer.html#a3403c086af0c9f5ae290b4d14e07be21',1,'Server']]],
+  ['_5fsessionmgr_20',['_sessionMgr',['../classServerProcessor.html#a9d0d058ff5e6c84569ea3ae16aa24108',1,'ServerProcessor']]],
+  ['_5fsessions_21',['_sessions',['../classSessionManager.html#a5e5d10bc958785713e45e6b03cb2a8d0',1,'SessionManager']]],
+  ['_5fsocket_22',['_socket',['../classClient.html#a606ecfc7c7f1875b8774c81834e45f1b',1,'Client::_socket()'],['../classSession.html#a0f710a8484985a6f23fd978acc6e692f',1,'Session::_socket()']]],
+  ['_5fstack_23',['_stack',['../classStackedChatWidget.html#a6e046d8477ab4561d4c3ef89af761634',1,'StackedChatWidget']]]
 ];

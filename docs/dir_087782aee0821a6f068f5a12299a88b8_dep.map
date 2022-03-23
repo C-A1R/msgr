@@ -1,12 +1,12 @@
 <map id="src_client/main_window" name="src_client/main_window">
 <area shape="rect" id="node2" href="dir_f8387968caf7da1502c357c3ce0f183d.html" title="messenger_widget" alt="" coords="38,159,183,207"/>
-<area shape="rect" id="edge2-headlabel" href="dir_000019_000020.html" title="1" alt="" coords="118,134,127,149"/>
+<area shape="rect" id="edge2-headlabel" href="dir_000023_000024.html" title="1" alt="" coords="118,134,127,149"/>
 <area shape="rect" id="node4" href="dir_2c44bb2c761173c8ce5c4a0d62d3b335.html" title="client_processor" alt="" coords="148,255,276,303"/>
-<area shape="rect" id="edge1-headlabel" href="dir_000019_000008.html" title="2" alt="" coords="217,229,226,244"/>
+<area shape="rect" id="edge1-headlabel" href="dir_000023_000008.html" title="2" alt="" coords="217,229,226,244"/>
 <area shape="rect" id="node3" href="dir_61153ebaceb64abaa1887c6579d6d959.html" title="src_shared" alt="" coords="115,351,207,399"/>
-<area shape="rect" id="edge4-headlabel" href="dir_000020_000026.html" title="6" alt="" coords="149,323,158,337"/>
-<area shape="rect" id="edge5-headlabel" href="dir_000020_000008.html" title="1" alt="" coords="175,229,184,243"/>
-<area shape="rect" id="edge3-headlabel" href="dir_000008_000026.html" title="2" alt="" coords="185,331,194,346"/>
+<area shape="rect" id="edge4-headlabel" href="dir_000024_000030.html" title="6" alt="" coords="149,323,158,337"/>
+<area shape="rect" id="edge5-headlabel" href="dir_000024_000008.html" title="1" alt="" coords="175,229,184,243"/>
+<area shape="rect" id="edge3-headlabel" href="dir_000008_000030.html" title="3" alt="" coords="185,331,194,346"/>
 <area shape="rect" id="clust2" href="dir_087782aee0821a6f068f5a12299a88b8.html" alt="" coords="27,52,195,217"/>
 <area shape="rect" id="clust1" href="dir_0d67b69969b779fe24aa14056cfaeefd.html" title="src_client" alt="" coords="16,16,205,228"/>
 </map>

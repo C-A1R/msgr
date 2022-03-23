@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.20</span>
+   &#160;<span id="projectnumber">0.0.21</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -100,8 +100,8 @@ Collaboration diagram for ServerProcessor:</div>
 Public Member Functions</h2></td></tr>
 <tr class="memitem:ad1481956d2b21d716460cc49d7785604"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#ad1481956d2b21d716460cc49d7785604">ServerProcessor</a> (const std::shared_ptr&lt; <a class="el" href="classIDatabase.html">IDatabase</a> &gt; &amp;db, const std::shared_ptr&lt; <a class="el" href="classSessionManager.html">SessionManager</a> &gt; &amp;sessionMgr, const std::shared_ptr&lt; <a class="el" href="classSession.html">Session</a> &gt; &amp;currentSession)</td></tr>
 <tr class="separator:ad1481956d2b21d716460cc49d7785604"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a46161fa012cacf9c1bd09703f21ffc7a"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a46161fa012cacf9c1bd09703f21ffc7a">parseClientMessage</a> (const std::string &amp;msg) override</td></tr>
-<tr class="separator:a46161fa012cacf9c1bd09703f21ffc7a"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:af2413a1f004b7b25bbe7cc24628e8c34"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#af2413a1f004b7b25bbe7cc24628e8c34">parseClientMessage</a> (const std::string &amp;msg) const override</td></tr>
+<tr class="separator:af2413a1f004b7b25bbe7cc24628e8c34"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="inherit_header pub_methods_classIServerProcessor"><td colspan="2" onclick="javascript:toggleInherit('pub_methods_classIServerProcessor')"><img src="closed.png" alt="-"/>&#160;Public Member Functions inherited from <a class="el" href="classIServerProcessor.html">IServerProcessor</a></td></tr>
 <tr class="memitem:aee941c856cdeaf5ac7fa4808fc7e8dfe inherit pub_methods_classIServerProcessor"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classIServerProcessor.html#aee941c856cdeaf5ac7fa4808fc7e8dfe">IServerProcessor</a> ()=default</td></tr>
 <tr class="separator:aee941c856cdeaf5ac7fa4808fc7e8dfe inherit pub_methods_classIServerProcessor"><td class="memSeparator" colspan="2">&#160;</td></tr>
@@ -110,33 +110,33 @@ Public Member Functions</h2></td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-methods"></a>
 Private Member Functions</h2></td></tr>
-<tr class="memitem:a971173c278bda06ec3d8f8ef83b8a503"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a971173c278bda06ec3d8f8ef83b8a503">parseRequest</a> (const ptree &amp;root)</td></tr>
-<tr class="memdesc:a971173c278bda06ec3d8f8ef83b8a503"><td class="mdescLeft">&#160;</td><td class="mdescRight">обработка запросов от клиента  <a href="classServerProcessor.html#a971173c278bda06ec3d8f8ef83b8a503">More...</a><br /></td></tr>
-<tr class="separator:a971173c278bda06ec3d8f8ef83b8a503"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a583d0dc7619900659aa427752cbf2f58"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a583d0dc7619900659aa427752cbf2f58">parseResponse</a> (const ptree &amp;root)</td></tr>
-<tr class="memdesc:a583d0dc7619900659aa427752cbf2f58"><td class="mdescLeft">&#160;</td><td class="mdescRight">обработка ответов от клиента  <a href="classServerProcessor.html#a583d0dc7619900659aa427752cbf2f58">More...</a><br /></td></tr>
-<tr class="separator:a583d0dc7619900659aa427752cbf2f58"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a52d869a5756e38434b081fe6dd8b9ae0"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a52d869a5756e38434b081fe6dd8b9ae0">signUp</a> (const ptree &amp;requestRoot)</td></tr>
-<tr class="memdesc:a52d869a5756e38434b081fe6dd8b9ae0"><td class="mdescLeft">&#160;</td><td class="mdescRight">регистрация  <a href="classServerProcessor.html#a52d869a5756e38434b081fe6dd8b9ae0">More...</a><br /></td></tr>
-<tr class="separator:a52d869a5756e38434b081fe6dd8b9ae0"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ac82a19184feae89d3f11ad7fe8f5c224"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#ac82a19184feae89d3f11ad7fe8f5c224">signIn</a> (const ptree &amp;requestRoot)</td></tr>
-<tr class="memdesc:ac82a19184feae89d3f11ad7fe8f5c224"><td class="mdescLeft">&#160;</td><td class="mdescRight">вход  <a href="classServerProcessor.html#ac82a19184feae89d3f11ad7fe8f5c224">More...</a><br /></td></tr>
-<tr class="separator:ac82a19184feae89d3f11ad7fe8f5c224"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a901bcca7f6f6eb37ca9cba16d565e497"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a901bcca7f6f6eb37ca9cba16d565e497">signOut</a> (const ptree &amp;root)</td></tr>
-<tr class="memdesc:a901bcca7f6f6eb37ca9cba16d565e497"><td class="mdescLeft">&#160;</td><td class="mdescRight">выход  <a href="classServerProcessor.html#a901bcca7f6f6eb37ca9cba16d565e497">More...</a><br /></td></tr>
-<tr class="separator:a901bcca7f6f6eb37ca9cba16d565e497"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a68760193cc4e9c77f897792d835e4de6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a68760193cc4e9c77f897792d835e4de6">allUsers</a> ()</td></tr>
-<tr class="memdesc:a68760193cc4e9c77f897792d835e4de6"><td class="mdescLeft">&#160;</td><td class="mdescRight">достать всех пользователей  <a href="classServerProcessor.html#a68760193cc4e9c77f897792d835e4de6">More...</a><br /></td></tr>
-<tr class="separator:a68760193cc4e9c77f897792d835e4de6"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aca620908d42450b0c7c16bd67c0eca64"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#aca620908d42450b0c7c16bd67c0eca64">outputMessage</a> (const ptree &amp;root)</td></tr>
-<tr class="memdesc:aca620908d42450b0c7c16bd67c0eca64"><td class="mdescLeft">&#160;</td><td class="mdescRight">исходящее сообщение от клиента  <a href="classServerProcessor.html#aca620908d42450b0c7c16bd67c0eca64">More...</a><br /></td></tr>
-<tr class="separator:aca620908d42450b0c7c16bd67c0eca64"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:abc1d66ba574bb7e879168194bd8b1241"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#abc1d66ba574bb7e879168194bd8b1241">inputMessage</a> (const ptree &amp;root)</td></tr>
-<tr class="memdesc:abc1d66ba574bb7e879168194bd8b1241"><td class="mdescLeft">&#160;</td><td class="mdescRight">входящее сообщение клиенту  <a href="classServerProcessor.html#abc1d66ba574bb7e879168194bd8b1241">More...</a><br /></td></tr>
-<tr class="separator:abc1d66ba574bb7e879168194bd8b1241"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:ad25a970edfd19bec803fb467813da291"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#ad25a970edfd19bec803fb467813da291">getMessages</a> (const ptree &amp;requestRoot)</td></tr>
-<tr class="memdesc:ad25a970edfd19bec803fb467813da291"><td class="mdescLeft">&#160;</td><td class="mdescRight">получить переписку двух пользователей  <a href="classServerProcessor.html#ad25a970edfd19bec803fb467813da291">More...</a><br /></td></tr>
-<tr class="separator:ad25a970edfd19bec803fb467813da291"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a94ed0375494588fcb52ea33a2d32c578"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a94ed0375494588fcb52ea33a2d32c578">parseRequest</a> (const <a class="el" href="classRequest.html">Request</a> &amp;request) const</td></tr>
+<tr class="memdesc:a94ed0375494588fcb52ea33a2d32c578"><td class="mdescLeft">&#160;</td><td class="mdescRight">обработка запросов от клиента  <a href="classServerProcessor.html#a94ed0375494588fcb52ea33a2d32c578">More...</a><br /></td></tr>
+<tr class="separator:a94ed0375494588fcb52ea33a2d32c578"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad53e56a99489ae475e6cb232cb69b5f4"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#ad53e56a99489ae475e6cb232cb69b5f4">parseResponse</a> (const <a class="el" href="classResponse.html">Response</a> &amp;response) const</td></tr>
+<tr class="memdesc:ad53e56a99489ae475e6cb232cb69b5f4"><td class="mdescLeft">&#160;</td><td class="mdescRight">обработка ответов от клиента  <a href="classServerProcessor.html#ad53e56a99489ae475e6cb232cb69b5f4">More...</a><br /></td></tr>
+<tr class="separator:ad53e56a99489ae475e6cb232cb69b5f4"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ad257ccdda1f6621df50f3fc517036bbd"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#ad257ccdda1f6621df50f3fc517036bbd">signUp</a> (const <a class="el" href="classRequest.html">Request</a> &amp;request) const</td></tr>
+<tr class="memdesc:ad257ccdda1f6621df50f3fc517036bbd"><td class="mdescLeft">&#160;</td><td class="mdescRight">регистрация  <a href="classServerProcessor.html#ad257ccdda1f6621df50f3fc517036bbd">More...</a><br /></td></tr>
+<tr class="separator:ad257ccdda1f6621df50f3fc517036bbd"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a312a44c9f47fdf9f4cdab8229da02416"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a312a44c9f47fdf9f4cdab8229da02416">signIn</a> (const <a class="el" href="classRequest.html">Request</a> &amp;request) const</td></tr>
+<tr class="memdesc:a312a44c9f47fdf9f4cdab8229da02416"><td class="mdescLeft">&#160;</td><td class="mdescRight">вход  <a href="classServerProcessor.html#a312a44c9f47fdf9f4cdab8229da02416">More...</a><br /></td></tr>
+<tr class="separator:a312a44c9f47fdf9f4cdab8229da02416"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a6d4aae337f361139bdb4017d3e467bc9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a6d4aae337f361139bdb4017d3e467bc9">signOut</a> (const <a class="el" href="classRequest.html">Request</a> &amp;request) const</td></tr>
+<tr class="memdesc:a6d4aae337f361139bdb4017d3e467bc9"><td class="mdescLeft">&#160;</td><td class="mdescRight">выход  <a href="classServerProcessor.html#a6d4aae337f361139bdb4017d3e467bc9">More...</a><br /></td></tr>
+<tr class="separator:a6d4aae337f361139bdb4017d3e467bc9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a362e6fb75682b12b5fff1c5f597a04f3"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a362e6fb75682b12b5fff1c5f597a04f3">allUsers</a> () const</td></tr>
+<tr class="memdesc:a362e6fb75682b12b5fff1c5f597a04f3"><td class="mdescLeft">&#160;</td><td class="mdescRight">достать всех пользователей  <a href="classServerProcessor.html#a362e6fb75682b12b5fff1c5f597a04f3">More...</a><br /></td></tr>
+<tr class="separator:a362e6fb75682b12b5fff1c5f597a04f3"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adee846695f9819c648213f5ed11dd1f9"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#adee846695f9819c648213f5ed11dd1f9">outputMessage</a> (const <a class="el" href="classRequest.html">Request</a> &amp;request) const</td></tr>
+<tr class="memdesc:adee846695f9819c648213f5ed11dd1f9"><td class="mdescLeft">&#160;</td><td class="mdescRight">исходящее сообщение от клиента  <a href="classServerProcessor.html#adee846695f9819c648213f5ed11dd1f9">More...</a><br /></td></tr>
+<tr class="separator:adee846695f9819c648213f5ed11dd1f9"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:a2ca8700598832ca6ba443adc682c5f8c"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a2ca8700598832ca6ba443adc682c5f8c">inputMessage</a> (const <a class="el" href="classResponse.html">Response</a> &amp;response) const</td></tr>
+<tr class="memdesc:a2ca8700598832ca6ba443adc682c5f8c"><td class="mdescLeft">&#160;</td><td class="mdescRight">входящее сообщение клиенту  <a href="classServerProcessor.html#a2ca8700598832ca6ba443adc682c5f8c">More...</a><br /></td></tr>
+<tr class="separator:a2ca8700598832ca6ba443adc682c5f8c"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:adf811dc94bc881252e6ec6bfbb7036e6"><td class="memItemLeft" align="right" valign="top">std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#adf811dc94bc881252e6ec6bfbb7036e6">getMessages</a> (const <a class="el" href="classRequest.html">Request</a> &amp;request) const</td></tr>
+<tr class="memdesc:adf811dc94bc881252e6ec6bfbb7036e6"><td class="mdescLeft">&#160;</td><td class="mdescRight">получить переписку двух пользователей  <a href="classServerProcessor.html#adf811dc94bc881252e6ec6bfbb7036e6">More...</a><br /></td></tr>
+<tr class="separator:adf811dc94bc881252e6ec6bfbb7036e6"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table><table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="pri-attribs"></a>
 Private Attributes</h2></td></tr>
@@ -146,8 +146,6 @@ Private Attributes</h2></td></tr>
 <tr class="separator:a9d0d058ff5e6c84569ea3ae16aa24108"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a5b8f5e55942b5c34aecc598fefe0286c"><td class="memItemLeft" align="right" valign="top">std::shared_ptr&lt; <a class="el" href="classSession.html">Session</a> &gt;&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#a5b8f5e55942b5c34aecc598fefe0286c">_currentSession</a></td></tr>
 <tr class="separator:a5b8f5e55942b5c34aecc598fefe0286c"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:aa3a5b87044674d1605e300068d51fa58"><td class="memItemLeft" align="right" valign="top">const std::string&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="classServerProcessor.html#aa3a5b87044674d1605e300068d51fa58">errResponse</a> = &quot;{\n \&quot;response_type\&quot;: \&quot;error\&quot;\n}\n&quot;</td></tr>
-<tr class="separator:aa3a5b87044674d1605e300068d51fa58"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <a name="details" id="details"></a><h2 class="groupheader">Detailed Description</h2>
 <div class="textblock"><p>обработчик запросов/ответов от клиента </p>
@@ -187,8 +185,8 @@ Private Attributes</h2></td></tr>
 </div>
 </div>
 <h2 class="groupheader">Member Function Documentation</h2>
-<a id="a68760193cc4e9c77f897792d835e4de6"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a68760193cc4e9c77f897792d835e4de6">&#9670;&nbsp;</a></span>allUsers()</h2>
+<a id="a362e6fb75682b12b5fff1c5f597a04f3"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a362e6fb75682b12b5fff1c5f597a04f3">&#9670;&nbsp;</a></span>allUsers()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -200,7 +198,7 @@ Private Attributes</h2></td></tr>
           <td class="memname">std::string ServerProcessor::allUsers </td>
           <td>(</td>
           <td class="paramname"></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -214,8 +212,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ad25a970edfd19bec803fb467813da291"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ad25a970edfd19bec803fb467813da291">&#9670;&nbsp;</a></span>getMessages()</h2>
+<a id="adf811dc94bc881252e6ec6bfbb7036e6"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adf811dc94bc881252e6ec6bfbb7036e6">&#9670;&nbsp;</a></span>getMessages()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -226,9 +224,9 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">std::string ServerProcessor::getMessages </td>
           <td>(</td>
-          <td class="paramtype">const ptree &amp;&#160;</td>
-          <td class="paramname"><em>requestRoot</em></td><td>)</td>
-          <td></td>
+          <td class="paramtype">const <a class="el" href="classRequest.html">Request</a> &amp;&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -242,8 +240,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="abc1d66ba574bb7e879168194bd8b1241"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#abc1d66ba574bb7e879168194bd8b1241">&#9670;&nbsp;</a></span>inputMessage()</h2>
+<a id="a2ca8700598832ca6ba443adc682c5f8c"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a2ca8700598832ca6ba443adc682c5f8c">&#9670;&nbsp;</a></span>inputMessage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -254,9 +252,9 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">std::string ServerProcessor::inputMessage </td>
           <td>(</td>
-          <td class="paramtype">const ptree &amp;&#160;</td>
-          <td class="paramname"><em>root</em></td><td>)</td>
-          <td></td>
+          <td class="paramtype">const <a class="el" href="classResponse.html">Response</a> &amp;&#160;</td>
+          <td class="paramname"><em>response</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -270,8 +268,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="aca620908d42450b0c7c16bd67c0eca64"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aca620908d42450b0c7c16bd67c0eca64">&#9670;&nbsp;</a></span>outputMessage()</h2>
+<a id="adee846695f9819c648213f5ed11dd1f9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#adee846695f9819c648213f5ed11dd1f9">&#9670;&nbsp;</a></span>outputMessage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -282,9 +280,9 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">std::string ServerProcessor::outputMessage </td>
           <td>(</td>
-          <td class="paramtype">const ptree &amp;&#160;</td>
-          <td class="paramname"><em>root</em></td><td>)</td>
-          <td></td>
+          <td class="paramtype">const <a class="el" href="classRequest.html">Request</a> &amp;&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -299,8 +297,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a46161fa012cacf9c1bd09703f21ffc7a"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a46161fa012cacf9c1bd09703f21ffc7a">&#9670;&nbsp;</a></span>parseClientMessage()</h2>
+<a id="af2413a1f004b7b25bbe7cc24628e8c34"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#af2413a1f004b7b25bbe7cc24628e8c34">&#9670;&nbsp;</a></span>parseClientMessage()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -313,7 +311,7 @@ Private Attributes</h2></td></tr>
           <td>(</td>
           <td class="paramtype">const std::string &amp;&#160;</td>
           <td class="paramname"><em>msg</em></td><td>)</td>
-          <td></td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -323,12 +321,12 @@ Private Attributes</h2></td></tr>
 </table>
 </div><div class="memdoc">
 
-<p>Implements <a class="el" href="classIServerProcessor.html#add294e88af3b73572920e8e3ba1fa4bf">IServerProcessor</a>.</p>
+<p>Implements <a class="el" href="classIServerProcessor.html#a0fde0f0782edf729f7cb5eb454fcc3c5">IServerProcessor</a>.</p>
 
 </div>
 </div>
-<a id="a971173c278bda06ec3d8f8ef83b8a503"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a971173c278bda06ec3d8f8ef83b8a503">&#9670;&nbsp;</a></span>parseRequest()</h2>
+<a id="a94ed0375494588fcb52ea33a2d32c578"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a94ed0375494588fcb52ea33a2d32c578">&#9670;&nbsp;</a></span>parseRequest()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -339,9 +337,9 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">std::string ServerProcessor::parseRequest </td>
           <td>(</td>
-          <td class="paramtype">const ptree &amp;&#160;</td>
-          <td class="paramname"><em>root</em></td><td>)</td>
-          <td></td>
+          <td class="paramtype">const <a class="el" href="classRequest.html">Request</a> &amp;&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -355,8 +353,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a583d0dc7619900659aa427752cbf2f58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a583d0dc7619900659aa427752cbf2f58">&#9670;&nbsp;</a></span>parseResponse()</h2>
+<a id="ad53e56a99489ae475e6cb232cb69b5f4"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad53e56a99489ae475e6cb232cb69b5f4">&#9670;&nbsp;</a></span>parseResponse()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -367,9 +365,9 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">std::string ServerProcessor::parseResponse </td>
           <td>(</td>
-          <td class="paramtype">const ptree &amp;&#160;</td>
-          <td class="paramname"><em>root</em></td><td>)</td>
-          <td></td>
+          <td class="paramtype">const <a class="el" href="classResponse.html">Response</a> &amp;&#160;</td>
+          <td class="paramname"><em>response</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -383,8 +381,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="ac82a19184feae89d3f11ad7fe8f5c224"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#ac82a19184feae89d3f11ad7fe8f5c224">&#9670;&nbsp;</a></span>signIn()</h2>
+<a id="a312a44c9f47fdf9f4cdab8229da02416"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a312a44c9f47fdf9f4cdab8229da02416">&#9670;&nbsp;</a></span>signIn()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -395,9 +393,9 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">std::string ServerProcessor::signIn </td>
           <td>(</td>
-          <td class="paramtype">const ptree &amp;&#160;</td>
-          <td class="paramname"><em>requestRoot</em></td><td>)</td>
-          <td></td>
+          <td class="paramtype">const <a class="el" href="classRequest.html">Request</a> &amp;&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -411,8 +409,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a901bcca7f6f6eb37ca9cba16d565e497"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a901bcca7f6f6eb37ca9cba16d565e497">&#9670;&nbsp;</a></span>signOut()</h2>
+<a id="a6d4aae337f361139bdb4017d3e467bc9"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#a6d4aae337f361139bdb4017d3e467bc9">&#9670;&nbsp;</a></span>signOut()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -423,9 +421,9 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">std::string ServerProcessor::signOut </td>
           <td>(</td>
-          <td class="paramtype">const ptree &amp;&#160;</td>
-          <td class="paramname"><em>root</em></td><td>)</td>
-          <td></td>
+          <td class="paramtype">const <a class="el" href="classRequest.html">Request</a> &amp;&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -439,8 +437,8 @@ Private Attributes</h2></td></tr>
 
 </div>
 </div>
-<a id="a52d869a5756e38434b081fe6dd8b9ae0"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a52d869a5756e38434b081fe6dd8b9ae0">&#9670;&nbsp;</a></span>signUp()</h2>
+<a id="ad257ccdda1f6621df50f3fc517036bbd"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ad257ccdda1f6621df50f3fc517036bbd">&#9670;&nbsp;</a></span>signUp()</h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -451,9 +449,9 @@ Private Attributes</h2></td></tr>
         <tr>
           <td class="memname">std::string ServerProcessor::signUp </td>
           <td>(</td>
-          <td class="paramtype">const ptree &amp;&#160;</td>
-          <td class="paramname"><em>requestRoot</em></td><td>)</td>
-          <td></td>
+          <td class="paramtype">const <a class="el" href="classRequest.html">Request</a> &amp;&#160;</td>
+          <td class="paramname"><em>request</em></td><td>)</td>
+          <td> const</td>
         </tr>
       </table>
   </td>
@@ -523,28 +521,6 @@ Private Attributes</h2></td></tr>
       <table class="memname">
         <tr>
           <td class="memname">std::shared_ptr&lt;<a class="el" href="classSessionManager.html">SessionManager</a>&gt; ServerProcessor::_sessionMgr</td>
-        </tr>
-      </table>
-  </td>
-  <td class="mlabels-right">
-<span class="mlabels"><span class="mlabel">private</span></span>  </td>
-  </tr>
-</table>
-</div><div class="memdoc">
-
-</div>
-</div>
-<a id="aa3a5b87044674d1605e300068d51fa58"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#aa3a5b87044674d1605e300068d51fa58">&#9670;&nbsp;</a></span>errResponse</h2>
-
-<div class="memitem">
-<div class="memproto">
-<table class="mlabels">
-  <tr>
-  <td class="mlabels-left">
-      <table class="memname">
-        <tr>
-          <td class="memname">const std::string ServerProcessor::errResponse = &quot;{\n \&quot;response_type\&quot;: \&quot;error\&quot;\n}\n&quot;</td>
         </tr>
       </table>
   </td>

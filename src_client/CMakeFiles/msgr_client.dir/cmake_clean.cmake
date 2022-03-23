@@ -2,6 +2,8 @@ file(REMOVE_RECURSE
   "CMakeFiles/msgr_client_autogen.dir/AutogenUsed.txt"
   "CMakeFiles/msgr_client_autogen.dir/ParseCache.txt"
   "msgr_client_autogen"
+  "CMakeFiles/msgr_client.dir/__/src_shared/Notification.cpp.o"
+  "CMakeFiles/msgr_client.dir/__/src_shared/Notification.cpp.o.d"
   "CMakeFiles/msgr_client.dir/client/Client.cpp.o"
   "CMakeFiles/msgr_client.dir/client/Client.cpp.o.d"
   "CMakeFiles/msgr_client.dir/client/ClientThread.cpp.o"

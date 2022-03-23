@@ -70,6 +70,8 @@ void MessengerWidget::slot_getUsersResponse(const std::vector<std::shared_ptr<Us
     contacts_listWidget->clear();
     for (const auto &contact : contacts)
     {
+        if (contact->id == _processor->currentUser()->id)
+            continue;
         addContact(contact);
     }
     if (contacts_listWidget->count())
@@ -80,6 +82,10 @@ void MessengerWidget::slot_getUsersResponse(const std::vector<std::shared_ptr<Us
 
 void MessengerWidget::slot_newUserRegistered(const std::shared_ptr<UserInfo> &contact)
 {
+    if (!contacts_listWidget || contact->id == _processor->currentUser()->id)
+    {
+        return;
+    }
     addContact(contact);
     if (contacts_listWidget->count())
     {

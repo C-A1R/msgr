@@ -3,12 +3,10 @@
 
 #include "IClientProcessor.h"
 
-#include <boost/property_tree/ptree.hpp>
-
 class UserInfo;
+class Request;
+class Response;
 class ClientThread;
-
-using boost::property_tree::ptree;
 
 /**
  * @brief обработчик запросов/ответов от клиента
@@ -36,9 +34,9 @@ private:
     void inputMessage_response(const std::shared_ptr<MessageInfo> &message) override;
 
     ///обработка запросов от сервера
-    void parseRequest(const ptree &root);
+    void parseRequest(const Request &request);
     ///обработка ответов от сервера
-    void parseResponse(const ptree &root);
+    void parseResponse(const Response &response);
 
 private slots:
     void slot_parseRecieved(const std::string &msg) override;

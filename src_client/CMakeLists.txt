@@ -18,8 +18,7 @@ set(CMAKE_AUTORCC ON)
 set(CMAKE_CXX_STANDARD 11)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 
-find_package(QT NAMES Qt6 Qt5 COMPONENTS Widgets REQUIRED)
-find_package(Qt${QT_VERSION_MAJOR} COMPONENTS Widgets REQUIRED)
+find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
 include_directories(../src_shared)
 
@@ -37,6 +36,7 @@ set(HEADERS
     client_processor/ClientProcessor.h
     ../src_shared/UserInfo.h
     ../src_shared/MessageInfo.h
+    ../src_shared/Notification.h
 )
 
 set(SOURCES
@@ -50,6 +50,7 @@ set(SOURCES
     client/Client.cpp
     client/ClientThread.cpp
     client_processor/ClientProcessor.cpp
+    ../src_shared/Notification.cpp
 )
 
 add_executable(msgr_client
@@ -64,13 +65,9 @@ set_target_properties(msgr_client PROPERTIES
 )
 
 target_link_libraries(msgr_client
-    PRIVATE Qt${QT_VERSION_MAJOR}::Widgets
+    PRIVATE Qt5::Widgets
     ${Boost_LIBRARIES}
 )
-
-if(QT_VERSION_MAJOR EQUAL 6)
-    qt_finalize_executable(msgr_client)
-endif()
 
 if (MSVC)
     target_compile_options(msgr_client PRIVATE

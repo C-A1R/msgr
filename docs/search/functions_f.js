@@ -1,6 +1,6 @@
 var searchData=
 [
-  ['write_466',['write',['../classSession.html#a41315ad3804a881ddf5cb99c52dd4a65',1,'Session']]],
-  ['writeinputmessage_467',['writeInputMessage',['../classChatWidget.html#a11d7396fa8060f493fe9af460585a5d1',1,'ChatWidget::writeInputMessage()'],['../classStackedChatWidget.html#a28b071d157584782d64b69e79fb6db15',1,'StackedChatWidget::writeInputMessage()']]],
-  ['writeoutputmessage_468',['writeOutputMessage',['../classChatWidget.html#ad2815c2155156d6d580b489c3ce1d8c6',1,'ChatWidget::writeOutputMessage()'],['../classStackedChatWidget.html#a4ef9df248f4d23a05608b2bd294952c8',1,'StackedChatWidget::writeOutputMessage()']]]
+  ['updatecontactlist_516',['updateContactList',['../classMessengerWidget.html#ab7b095684256b573b8998a53827d5972',1,'MessengerWidget']]],
+  ['userinfo_517',['UserInfo',['../structUserInfo.html#a45a5e129d7d3c237ec3e3a891f0b37c4',1,'UserInfo']]],
+  ['username_518',['username',['../structUserInfo.html#a737f39be1ec575c6c8a4870522ed057d',1,'UserInfo']]]
 ];
