@@ -22,7 +22,7 @@
  <tr style="height: 56px;">
   <td id="projectalign" style="padding-left: 0.5em;">
    <div id="projectname">msgr
-   &#160;<span id="projectnumber">0.0.21</span>
+   &#160;<span id="projectnumber">0.0.22</span>
    </div>
    <div id="projectbrief">сервер + клиент</div>
   </td>
@@ -72,14 +72,14 @@ $(function() {
 <table class="memberdecls">
 <tr class="heading"><td colspan="2"><h2 class="groupheader"><a name="func-members"></a>
 Functions</h2></td></tr>
-<tr class="memitem:a8ffb36274f785a4d0a2fd51cb9945730"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src__server_2CMakeLists_8txt.html#a8ffb36274f785a4d0a2fd51cb9945730">cmake_minimum_required</a> (VERSION 3.2) <a class="el" href="src__server_2CMakeLists_8txt.html#a98065ff6f65f176cb93505633d92b3c5">set</a>(PATCH_VERSION &quot;1&quot; CACHE INTERNAL &quot;Patch version&quot;) set(PROJECT_VESRION 0.0.$</td></tr>
+<tr class="memitem:a8ffb36274f785a4d0a2fd51cb9945730"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src__server_2CMakeLists_8txt.html#a8ffb36274f785a4d0a2fd51cb9945730">cmake_minimum_required</a> (VERSION 3.2) <a class="el" href="src__server_2CMakeLists_8txt.html#ab0158634ad3df6fe41a60305d5be9bbb">set</a>(PATCH_VERSION &quot;1&quot; CACHE INTERNAL &quot;Patch version&quot;) set(PROJECT_VESRION 0.0.$</td></tr>
 <tr class="separator:a8ffb36274f785a4d0a2fd51cb9945730"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:a91f59a660c8f793914e201dcf84596d4"><td class="memItemLeft" align="right" valign="top">&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src__server_2CMakeLists_8txt.html#a91f59a660c8f793914e201dcf84596d4">set</a> (PROJECT_NAME msgr_server VERSION ${PROJECT_VESRION} LANGUAGES CXX) set(CMAKE_CXX_FLAGS &quot;$</td></tr>
 <tr class="separator:a91f59a660c8f793914e201dcf84596d4"><td class="memSeparator" colspan="2">&#160;</td></tr>
 <tr class="memitem:aa68e78fe9a0e1003d0b1af0f93702828"><td class="memItemLeft" align="right" valign="top">pthread&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src__server_2CMakeLists_8txt.html#aa68e78fe9a0e1003d0b1af0f93702828">project</a> (${PROJECT_NAME}) include_directories($</td></tr>
 <tr class="separator:aa68e78fe9a0e1003d0b1af0f93702828"><td class="memSeparator" colspan="2">&#160;</td></tr>
-<tr class="memitem:a98065ff6f65f176cb93505633d92b3c5"><td class="memItemLeft" align="right" valign="top">src_shared&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src__server_2CMakeLists_8txt.html#a98065ff6f65f176cb93505633d92b3c5">set</a> (HEADERS Server.h Session.h SessionManager.h database/sqlite/sqlite3.h database/IDatabase.h database/SqliteDatabase.h database/SqlRec.h server_processor/IServerProcessor.h server_processor/ServerProcessor.h ../src_shared/UserInfo.h ../src_shared/MessageInfo.h ../src_shared/Notification.h) set(SOURCES main.cpp Server.cpp Session.cpp SessionManager.cpp database/sqlite/sqlite3.c database/SqliteDatabase.cpp database/SqlRec.cpp server_processor/ServerProcessor.cpp ../src_shared/Notification.cpp) add_executable(msgr_server $</td></tr>
-<tr class="separator:a98065ff6f65f176cb93505633d92b3c5"><td class="memSeparator" colspan="2">&#160;</td></tr>
+<tr class="memitem:ab0158634ad3df6fe41a60305d5be9bbb"><td class="memItemLeft" align="right" valign="top">src_shared&#160;</td><td class="memItemRight" valign="bottom"><a class="el" href="src__server_2CMakeLists_8txt.html#ab0158634ad3df6fe41a60305d5be9bbb">set</a> (HEADERS Server.h session/Session.h session/SessionManager.h database/sqlite/sqlite3.h database/IDatabase.h database/SqliteDatabase.h database/SqlRec.h server_processor/IServerProcessor.h server_processor/ServerProcessor.h ../src_shared/UserInfo.h ../src_shared/MessageInfo.h ../src_shared/Notification.h) set(SOURCES main.cpp Server.cpp session/Session.cpp session/SessionManager.cpp database/sqlite/sqlite3.c database/SqliteDatabase.cpp database/SqlRec.cpp server_processor/ServerProcessor.cpp ../src_shared/Notification.cpp) add_executable(msgr_server $</td></tr>
+<tr class="separator:ab0158634ad3df6fe41a60305d5be9bbb"><td class="memSeparator" colspan="2">&#160;</td></tr>
 </table>
 <h2 class="groupheader">Function Documentation</h2>
 <a id="a8ffb36274f785a4d0a2fd51cb9945730"></a>
@@ -118,8 +118,8 @@ Functions</h2></td></tr>
 
 </div>
 </div>
-<a id="a98065ff6f65f176cb93505633d92b3c5"></a>
-<h2 class="memtitle"><span class="permalink"><a href="#a98065ff6f65f176cb93505633d92b3c5">&#9670;&nbsp;</a></span>set() <span class="overload">[1/2]</span></h2>
+<a id="ab0158634ad3df6fe41a60305d5be9bbb"></a>
+<h2 class="memtitle"><span class="permalink"><a href="#ab0158634ad3df6fe41a60305d5be9bbb">&#9670;&nbsp;</a></span>set() <span class="overload">[1/2]</span></h2>
 
 <div class="memitem">
 <div class="memproto">
@@ -127,7 +127,7 @@ Functions</h2></td></tr>
         <tr>
           <td class="memname">src_shared set </td>
           <td>(</td>
-          <td class="paramtype">HEADERS Server.h Session.h SessionManager.h database/sqlite/sqlite3.h database/IDatabase.h database/SqliteDatabase.h database/SqlRec.h server_processor/IServerProcessor.h server_processor/ServerProcessor.h ../src_shared/UserInfo.h ../src_shared/MessageInfo.h ../src_shared/Notification.&#160;</td>
+          <td class="paramtype">HEADERS Server.h session/Session.h session/SessionManager.h database/sqlite/sqlite3.h database/IDatabase.h database/SqliteDatabase.h database/SqlRec.h server_processor/IServerProcessor.h server_processor/ServerProcessor.h ../src_shared/UserInfo.h ../src_shared/MessageInfo.h ../src_shared/Notification.&#160;</td>
           <td class="paramname"><em>h</em></td><td>)</td>
           <td></td>
         </tr>

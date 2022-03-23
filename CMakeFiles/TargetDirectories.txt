@@ -7,6 +7,7 @@
 /home/runner/work/msgr/msgr/CMakeFiles/install.dir
 /home/runner/work/msgr/msgr/CMakeFiles/install/local.dir
 /home/runner/work/msgr/msgr/CMakeFiles/install/strip.dir
+/home/runner/work/msgr/msgr/src_client/CMakeFiles/msgr_client_lib.dir
 /home/runner/work/msgr/msgr/src_client/CMakeFiles/msgr_client.dir
 /home/runner/work/msgr/msgr/src_client/CMakeFiles/package.dir
 /home/runner/work/msgr/msgr/src_client/CMakeFiles/package_source.dir
@@ -16,6 +17,7 @@
 /home/runner/work/msgr/msgr/src_client/CMakeFiles/install.dir
 /home/runner/work/msgr/msgr/src_client/CMakeFiles/install/local.dir
 /home/runner/work/msgr/msgr/src_client/CMakeFiles/install/strip.dir
+/home/runner/work/msgr/msgr/src_client/CMakeFiles/msgr_client_lib_autogen.dir
 /home/runner/work/msgr/msgr/src_client/CMakeFiles/msgr_client_autogen.dir
 /home/runner/work/msgr/msgr/src_server/CMakeFiles/msgr_server.dir
 /home/runner/work/msgr/msgr/src_server/CMakeFiles/package.dir

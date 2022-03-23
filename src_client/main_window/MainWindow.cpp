@@ -5,8 +5,6 @@
 #include "messenger_widget/MessengerWidget.h"
 
 #include <QStackedWidget>
-#include <QDebug>
-#include <QThread>
 
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)

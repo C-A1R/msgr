@@ -1,5 +1,7 @@
-<map id="src_client/client/ClientThread.h" name="src_client/client/ClientThread.h">
-<area shape="rect" id="node1" title=" " alt="" coords="108,5,275,47"/>
-<area shape="rect" id="node2" href="$ClientThread_8cpp.html" title=" " alt="" coords="5,95,172,136"/>
-<area shape="rect" id="node3" href="$ClientProcessor_8cpp.html" title=" " alt="" coords="197,95,391,136"/>
+<map id="src_client/client_lib/client/ClientThread.h" name="src_client/client_lib/client/ClientThread.h">
+<area shape="rect" id="node1" title=" " alt="" coords="257,5,418,47"/>
+<area shape="rect" id="node2" href="$ClientThread_8cpp.html" title=" " alt="" coords="5,102,181,143"/>
+<area shape="rect" id="node3" href="$ClientProcessor_8cpp.html" title=" " alt="" coords="206,102,469,143"/>
+<area shape="rect" id="node4" href="$moc__ClientThread_8cpp.html" title=" " alt="" coords="493,95,691,151"/>
+<area shape="rect" id="node5" href="$mocs__compilation_8cpp.html" title=" " alt="" coords="465,199,719,240"/>
 </map>

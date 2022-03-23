@@ -195,6 +195,19 @@ doc_doxygen/fast:
 .PHONY : doc_doxygen/fast
 
 #=============================================================================
+# Target rules for targets named msgr_client_lib
+
+# Build rule for target.
+msgr_client_lib: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 msgr_client_lib
+.PHONY : msgr_client_lib
+
+# fast build rule for target.
+msgr_client_lib/fast:
+	$(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client_lib.dir/build.make src_client/CMakeFiles/msgr_client_lib.dir/build
+.PHONY : msgr_client_lib/fast
+
+#=============================================================================
 # Target rules for targets named msgr_client
 
 # Build rule for target.
@@ -206,6 +219,19 @@ msgr_client: cmake_check_build_system
 msgr_client/fast:
 	$(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/build
 .PHONY : msgr_client/fast
+
+#=============================================================================
+# Target rules for targets named msgr_client_lib_autogen
+
+# Build rule for target.
+msgr_client_lib_autogen: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 msgr_client_lib_autogen
+.PHONY : msgr_client_lib_autogen
+
+# fast build rule for target.
+msgr_client_lib_autogen/fast:
+	$(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client_lib_autogen.dir/build.make src_client/CMakeFiles/msgr_client_lib_autogen.dir/build
+.PHONY : msgr_client_lib_autogen/fast
 
 #=============================================================================
 # Target rules for targets named msgr_client_autogen
@@ -249,7 +275,9 @@ help:
 	@echo "... rebuild_cache"
 	@echo "... doc_doxygen"
 	@echo "... msgr_client_autogen"
+	@echo "... msgr_client_lib_autogen"
 	@echo "... msgr_client"
+	@echo "... msgr_client_lib"
 	@echo "... msgr_server"
 .PHONY : help
 

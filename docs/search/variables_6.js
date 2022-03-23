@@ -1,4 +1,5 @@
 var searchData=
 [
-  ['name_579',['name',['../structUserInfo.html#a080c9e0ddc13388199a67d6e02b2d8e4',1,'UserInfo']]]
+  ['main_5fwidget_996',['main_widget',['../classMainWindow.html#a4c37b8281e29b946992c30ddd23633ea',1,'MainWindow']]],
+  ['msg_5fledit_997',['msg_lEdit',['../classChatWidget.html#aa33a1d50ca344d55313d180c23b1b420',1,'ChatWidget']]]
 ];

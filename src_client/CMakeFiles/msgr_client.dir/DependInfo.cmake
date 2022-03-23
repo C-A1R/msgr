@@ -8,10 +8,6 @@ set(CMAKE_DEPENDS_LANGUAGES
 
 # The set of dependency files which are needed:
 set(CMAKE_DEPENDS_DEPENDENCY_FILES
-  "/home/runner/work/msgr/msgr/src_shared/Notification.cpp" "src_client/CMakeFiles/msgr_client.dir/__/src_shared/Notification.cpp.o" "gcc" "src_client/CMakeFiles/msgr_client.dir/__/src_shared/Notification.cpp.o.d"
-  "/home/runner/work/msgr/msgr/src_client/client/Client.cpp" "src_client/CMakeFiles/msgr_client.dir/client/Client.cpp.o" "gcc" "src_client/CMakeFiles/msgr_client.dir/client/Client.cpp.o.d"
-  "/home/runner/work/msgr/msgr/src_client/client/ClientThread.cpp" "src_client/CMakeFiles/msgr_client.dir/client/ClientThread.cpp.o" "gcc" "src_client/CMakeFiles/msgr_client.dir/client/ClientThread.cpp.o.d"
-  "/home/runner/work/msgr/msgr/src_client/client_processor/ClientProcessor.cpp" "src_client/CMakeFiles/msgr_client.dir/client_processor/ClientProcessor.cpp.o" "gcc" "src_client/CMakeFiles/msgr_client.dir/client_processor/ClientProcessor.cpp.o.d"
   "/home/runner/work/msgr/msgr/src_client/main.cpp" "src_client/CMakeFiles/msgr_client.dir/main.cpp.o" "gcc" "src_client/CMakeFiles/msgr_client.dir/main.cpp.o.d"
   "/home/runner/work/msgr/msgr/src_client/main_window/AuthorizationWidget.cpp" "src_client/CMakeFiles/msgr_client.dir/main_window/AuthorizationWidget.cpp.o" "gcc" "src_client/CMakeFiles/msgr_client.dir/main_window/AuthorizationWidget.cpp.o.d"
   "/home/runner/work/msgr/msgr/src_client/main_window/MainWindow.cpp" "src_client/CMakeFiles/msgr_client.dir/main_window/MainWindow.cpp.o" "gcc" "src_client/CMakeFiles/msgr_client.dir/main_window/MainWindow.cpp.o.d"
@@ -24,6 +20,7 @@ set(CMAKE_DEPENDS_DEPENDENCY_FILES
 
 # Targets to which this target links.
 set(CMAKE_TARGET_LINKED_INFO_FILES
+  "/home/runner/work/msgr/msgr/src_client/CMakeFiles/msgr_client_lib.dir/DependInfo.cmake"
   )
 
 # Fortran module output directory.

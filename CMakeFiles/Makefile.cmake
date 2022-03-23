@@ -166,6 +166,7 @@ set(CMAKE_MAKEFILE_PRODUCTS
   "CMakeFiles/CMakeDirectoryInformation.cmake"
   "CPackConfig.cmake"
   "CPackSourceConfig.cmake"
+  "src_client/CMakeFiles/msgr_client_lib_autogen.dir/AutogenInfo.json"
   "src_client/CMakeFiles/msgr_client_autogen.dir/AutogenInfo.json"
   "src_client/CMakeFiles/CMakeDirectoryInformation.cmake"
   "CPackConfig.cmake"
@@ -176,7 +177,9 @@ set(CMAKE_MAKEFILE_PRODUCTS
 # Dependency information for all targets:
 set(CMAKE_DEPEND_INFO_FILES
   "CMakeFiles/doc_doxygen.dir/DependInfo.cmake"
+  "src_client/CMakeFiles/msgr_client_lib.dir/DependInfo.cmake"
   "src_client/CMakeFiles/msgr_client.dir/DependInfo.cmake"
+  "src_client/CMakeFiles/msgr_client_lib_autogen.dir/DependInfo.cmake"
   "src_client/CMakeFiles/msgr_client_autogen.dir/DependInfo.cmake"
   "src_server/CMakeFiles/msgr_server.dir/DependInfo.cmake"
   )

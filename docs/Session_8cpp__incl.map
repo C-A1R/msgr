@@ -1,10 +1,10 @@
-<map id="src_server/Session.cpp" name="src_server/Session.cpp">
-<area shape="rect" id="node1" title=" " alt="" coords="295,5,465,32"/>
-<area shape="rect" id="node2" href="$Session_8h.html" title=" " alt="" coords="231,80,315,107"/>
-<area shape="rect" id="node6" title=" " alt="" coords="240,319,299,345"/>
-<area shape="rect" id="node3" title=" " alt="" coords="5,155,123,181"/>
-<area shape="rect" id="node4" href="$ServerProcessor_8h.html" title=" " alt="" coords="147,155,400,181"/>
-<area shape="rect" id="node5" href="$IServerProcessor_8h.html" title=" " alt="" coords="6,237,149,263"/>
-<area shape="rect" id="node7" title=" " alt="" coords="173,229,323,271"/>
-<area shape="rect" id="node8" title=" " alt="" coords="348,237,425,263"/>
+<map id="src_server/session/Session.cpp" name="src_server/session/Session.cpp">
+<area shape="rect" id="node1" title=" " alt="" coords="309,5,451,47"/>
+<area shape="rect" id="node2" href="$Session_8h.html" title=" " alt="" coords="231,95,315,121"/>
+<area shape="rect" id="node6" title=" " alt="" coords="240,333,299,360"/>
+<area shape="rect" id="node3" title=" " alt="" coords="5,169,123,196"/>
+<area shape="rect" id="node4" href="$ServerProcessor_8h.html" title=" " alt="" coords="147,169,400,196"/>
+<area shape="rect" id="node5" href="$IServerProcessor_8h.html" title=" " alt="" coords="6,251,149,278"/>
+<area shape="rect" id="node7" title=" " alt="" coords="173,244,323,285"/>
+<area shape="rect" id="node8" title=" " alt="" coords="348,251,425,278"/>
 </map>

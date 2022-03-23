@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['password_5fledit_580',['password_lEdit',['../classAuthorizationWidget.html#ae7484d9d6d837e6405b45b33eb2bbd51',1,'AuthorizationWidget']]]
+  ['name_998',['name',['../structUserInfo.html#a080c9e0ddc13388199a67d6e02b2d8e4',1,'UserInfo']]]
 ];

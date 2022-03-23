@@ -3,7 +3,7 @@
 
 #include <QWidget>
 
-#include "client_processor/ClientProcessor.h"
+#include "client_lib/client_processor/ClientProcessor.h"
 #include "MainWidgets.h"
 
 class QLabel;

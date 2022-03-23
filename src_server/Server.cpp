@@ -1,7 +1,7 @@
 #include "Server.h"
 
-#include "Session.h"
-#include "SessionManager.h"
+#include "session/Session.h"
+#include "session/SessionManager.h"
 #include "server_processor/ServerProcessor.h"
 #include "database/SqliteDatabase.h"
 

@@ -1,8 +1,8 @@
 <map id="src_client/main_window/messenger_widget/MessengerWidget.h" name="src_client/main_window/messenger_widget/MessengerWidget.h">
 <area shape="rect" id="node1" title=" " alt="" coords="5,5,288,47"/>
-<area shape="rect" id="node2" title=" " alt="" coords="15,95,94,121"/>
-<area shape="rect" id="node3" href="$ClientProcessor_8h.html" title=" " alt="" coords="118,95,362,121"/>
-<area shape="rect" id="node4" href="$IClientProcessor_8h.html" title=" " alt="" coords="171,169,309,196"/>
-<area shape="rect" id="node5" title=" " alt="" coords="153,244,228,271"/>
-<area shape="rect" id="node6" title=" " alt="" coords="252,244,329,271"/>
+<area shape="rect" id="node2" title=" " alt="" coords="29,102,107,129"/>
+<area shape="rect" id="node3" href="$ClientProcessor_8h.html" title=" " alt="" coords="131,95,322,136"/>
+<area shape="rect" id="node4" href="$IClientProcessor_8h.html" title=" " alt="" coords="157,184,296,211"/>
+<area shape="rect" id="node5" title=" " alt="" coords="140,259,215,285"/>
+<area shape="rect" id="node6" title=" " alt="" coords="239,259,316,285"/>
 </map>

@@ -219,54 +219,6 @@ Server.cpp.s:
 	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/Server.cpp.s
 .PHONY : Server.cpp.s
 
-Session.o: Session.cpp.o
-.PHONY : Session.o
-
-# target to build an object file
-Session.cpp.o:
-	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/Session.cpp.o
-.PHONY : Session.cpp.o
-
-Session.i: Session.cpp.i
-.PHONY : Session.i
-
-# target to preprocess a source file
-Session.cpp.i:
-	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/Session.cpp.i
-.PHONY : Session.cpp.i
-
-Session.s: Session.cpp.s
-.PHONY : Session.s
-
-# target to generate assembly for a file
-Session.cpp.s:
-	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/Session.cpp.s
-.PHONY : Session.cpp.s
-
-SessionManager.o: SessionManager.cpp.o
-.PHONY : SessionManager.o
-
-# target to build an object file
-SessionManager.cpp.o:
-	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/SessionManager.cpp.o
-.PHONY : SessionManager.cpp.o
-
-SessionManager.i: SessionManager.cpp.i
-.PHONY : SessionManager.i
-
-# target to preprocess a source file
-SessionManager.cpp.i:
-	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/SessionManager.cpp.i
-.PHONY : SessionManager.cpp.i
-
-SessionManager.s: SessionManager.cpp.s
-.PHONY : SessionManager.s
-
-# target to generate assembly for a file
-SessionManager.cpp.s:
-	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/SessionManager.cpp.s
-.PHONY : SessionManager.cpp.s
-
 __/src_shared/Notification.o: __/src_shared/Notification.cpp.o
 .PHONY : __/src_shared/Notification.o
 
@@ -411,6 +363,54 @@ server_processor/ServerProcessor.cpp.s:
 	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/server_processor/ServerProcessor.cpp.s
 .PHONY : server_processor/ServerProcessor.cpp.s
 
+session/Session.o: session/Session.cpp.o
+.PHONY : session/Session.o
+
+# target to build an object file
+session/Session.cpp.o:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/session/Session.cpp.o
+.PHONY : session/Session.cpp.o
+
+session/Session.i: session/Session.cpp.i
+.PHONY : session/Session.i
+
+# target to preprocess a source file
+session/Session.cpp.i:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/session/Session.cpp.i
+.PHONY : session/Session.cpp.i
+
+session/Session.s: session/Session.cpp.s
+.PHONY : session/Session.s
+
+# target to generate assembly for a file
+session/Session.cpp.s:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/session/Session.cpp.s
+.PHONY : session/Session.cpp.s
+
+session/SessionManager.o: session/SessionManager.cpp.o
+.PHONY : session/SessionManager.o
+
+# target to build an object file
+session/SessionManager.cpp.o:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/session/SessionManager.cpp.o
+.PHONY : session/SessionManager.cpp.o
+
+session/SessionManager.i: session/SessionManager.cpp.i
+.PHONY : session/SessionManager.i
+
+# target to preprocess a source file
+session/SessionManager.cpp.i:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/session/SessionManager.cpp.i
+.PHONY : session/SessionManager.cpp.i
+
+session/SessionManager.s: session/SessionManager.cpp.s
+.PHONY : session/SessionManager.s
+
+# target to generate assembly for a file
+session/SessionManager.cpp.s:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_server/CMakeFiles/msgr_server.dir/build.make src_server/CMakeFiles/msgr_server.dir/session/SessionManager.cpp.s
+.PHONY : session/SessionManager.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -429,12 +429,6 @@ help:
 	@echo "... Server.o"
 	@echo "... Server.i"
 	@echo "... Server.s"
-	@echo "... Session.o"
-	@echo "... Session.i"
-	@echo "... Session.s"
-	@echo "... SessionManager.o"
-	@echo "... SessionManager.i"
-	@echo "... SessionManager.s"
 	@echo "... __/src_shared/Notification.o"
 	@echo "... __/src_shared/Notification.i"
 	@echo "... __/src_shared/Notification.s"
@@ -453,6 +447,12 @@ help:
 	@echo "... server_processor/ServerProcessor.o"
 	@echo "... server_processor/ServerProcessor.i"
 	@echo "... server_processor/ServerProcessor.s"
+	@echo "... session/Session.o"
+	@echo "... session/Session.i"
+	@echo "... session/Session.s"
+	@echo "... session/SessionManager.o"
+	@echo "... session/SessionManager.i"
+	@echo "... session/SessionManager.s"
 .PHONY : help
 
 

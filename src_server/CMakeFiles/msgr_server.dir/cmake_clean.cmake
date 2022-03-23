@@ -1,10 +1,6 @@
 file(REMOVE_RECURSE
   "CMakeFiles/msgr_server.dir/Server.cpp.o"
   "CMakeFiles/msgr_server.dir/Server.cpp.o.d"
-  "CMakeFiles/msgr_server.dir/Session.cpp.o"
-  "CMakeFiles/msgr_server.dir/Session.cpp.o.d"
-  "CMakeFiles/msgr_server.dir/SessionManager.cpp.o"
-  "CMakeFiles/msgr_server.dir/SessionManager.cpp.o.d"
   "CMakeFiles/msgr_server.dir/__/src_shared/Notification.cpp.o"
   "CMakeFiles/msgr_server.dir/__/src_shared/Notification.cpp.o.d"
   "CMakeFiles/msgr_server.dir/database/SqlRec.cpp.o"
@@ -17,6 +13,10 @@ file(REMOVE_RECURSE
   "CMakeFiles/msgr_server.dir/main.cpp.o.d"
   "CMakeFiles/msgr_server.dir/server_processor/ServerProcessor.cpp.o"
   "CMakeFiles/msgr_server.dir/server_processor/ServerProcessor.cpp.o.d"
+  "CMakeFiles/msgr_server.dir/session/Session.cpp.o"
+  "CMakeFiles/msgr_server.dir/session/Session.cpp.o.d"
+  "CMakeFiles/msgr_server.dir/session/SessionManager.cpp.o"
+  "CMakeFiles/msgr_server.dir/session/SessionManager.cpp.o.d"
   "msgr_server"
   "msgr_server.pdb"
 )

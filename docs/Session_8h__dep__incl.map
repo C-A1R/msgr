@@ -1,8 +1,8 @@
-<map id="src_server/Session.h" name="src_server/Session.h">
-<area shape="rect" id="node1" title=" " alt="" coords="298,5,453,32"/>
-<area shape="rect" id="node2" href="$Server_8cpp.html" title=" " alt="" coords="5,162,167,189"/>
-<area shape="rect" id="node3" href="$SessionManager_8h.html" title=" " alt="" coords="199,80,410,107"/>
-<area shape="rect" id="node4" href="$ServerProcessor_8cpp.html" title=" " alt="" coords="443,155,647,196"/>
-<area shape="rect" id="node6" href="$Session_8cpp.html" title=" " alt="" coords="485,80,655,107"/>
-<area shape="rect" id="node5" href="$SessionManager_8cpp.html" title=" " alt="" coords="191,162,418,189"/>
+<map id="src_server/session/Session.h" name="src_server/session/Session.h">
+<area shape="rect" id="node1" title=" " alt="" coords="253,5,396,47"/>
+<area shape="rect" id="node2" href="$Server_8cpp.html" title=" " alt="" coords="5,191,167,218"/>
+<area shape="rect" id="node3" href="$SessionManager_8h.html" title=" " alt="" coords="198,95,342,136"/>
+<area shape="rect" id="node4" href="$ServerProcessor_8cpp.html" title=" " alt="" coords="373,184,577,225"/>
+<area shape="rect" id="node6" href="$Session_8cpp.html" title=" " alt="" coords="417,95,560,136"/>
+<area shape="rect" id="node5" href="$SessionManager_8cpp.html" title=" " alt="" coords="191,184,349,225"/>
 </map>

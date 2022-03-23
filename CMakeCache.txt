@@ -148,7 +148,7 @@ CMAKE_PROJECT_HOMEPAGE_URL:STATIC=
 CMAKE_PROJECT_NAME:STATIC=msgr
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION:STATIC=0.0.21
+CMAKE_PROJECT_VERSION:STATIC=0.0.22
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
@@ -157,7 +157,7 @@ CMAKE_PROJECT_VERSION_MAJOR:STATIC=0
 CMAKE_PROJECT_VERSION_MINOR:STATIC=0
 
 //Value Computed by CMake
-CMAKE_PROJECT_VERSION_PATCH:STATIC=21
+CMAKE_PROJECT_VERSION_PATCH:STATIC=22
 
 //Value Computed by CMake
 CMAKE_PROJECT_VERSION_TWEAK:STATIC=
@@ -277,6 +277,9 @@ msgr_client_IS_TOP_LEVEL:STATIC=OFF
 
 //Value Computed by CMake
 msgr_client_SOURCE_DIR:STATIC=/home/runner/work/msgr/msgr/src_client
+
+//Dependencies for the target
+msgr_client_lib_LIB_DEPENDS:STATIC=general;Qt5::Widgets;
 
 //Value Computed by CMake
 msgr_server_BINARY_DIR:STATIC=/home/runner/work/msgr/msgr/src_server

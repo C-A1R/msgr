@@ -1,6 +1,5 @@
 var searchData=
 [
-  ['send_5fpbtn_582',['send_pBtn',['../classChatWidget.html#a4341b86df37647b25a69b8a8edb6dd22',1,'ChatWidget']]],
-  ['senderid_583',['senderId',['../structMessageInfo.html#a1695d06bf4998e764b0d53f501ec537d',1,'MessageInfo']]],
-  ['sign_5fpbtn_584',['sign_pBtn',['../classAuthorizationWidget.html#a2c0c3949af25fc102a6e7cb49a62190f',1,'AuthorizationWidget']]]
+  ['recipientid_1000',['recipientId',['../structMessageInfo.html#a66d2410405d12f13029d5f041b692357',1,'MessageInfo']]],
+  ['rpath_1001',['rpath',['../src__client_2CMakeFiles_2msgr__client_8dir_2link_8txt.html#a8b6ce91d77d8c2f1e145f70008c7d90c',1,'link.txt']]]
 ];

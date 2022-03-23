@@ -182,6 +182,20 @@ depend:
 .PHONY : depend
 
 # Convenience name for target.
+src_client/CMakeFiles/msgr_client_lib.dir/rule:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src_client/CMakeFiles/msgr_client_lib.dir/rule
+.PHONY : src_client/CMakeFiles/msgr_client_lib.dir/rule
+
+# Convenience name for target.
+msgr_client_lib: src_client/CMakeFiles/msgr_client_lib.dir/rule
+.PHONY : msgr_client_lib
+
+# fast build rule for target.
+msgr_client_lib/fast:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client_lib.dir/build.make src_client/CMakeFiles/msgr_client_lib.dir/build
+.PHONY : msgr_client_lib/fast
+
+# Convenience name for target.
 src_client/CMakeFiles/msgr_client.dir/rule:
 	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src_client/CMakeFiles/msgr_client.dir/rule
 .PHONY : src_client/CMakeFiles/msgr_client.dir/rule
@@ -194,6 +208,20 @@ msgr_client: src_client/CMakeFiles/msgr_client.dir/rule
 msgr_client/fast:
 	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/build
 .PHONY : msgr_client/fast
+
+# Convenience name for target.
+src_client/CMakeFiles/msgr_client_lib_autogen.dir/rule:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f CMakeFiles/Makefile2 src_client/CMakeFiles/msgr_client_lib_autogen.dir/rule
+.PHONY : src_client/CMakeFiles/msgr_client_lib_autogen.dir/rule
+
+# Convenience name for target.
+msgr_client_lib_autogen: src_client/CMakeFiles/msgr_client_lib_autogen.dir/rule
+.PHONY : msgr_client_lib_autogen
+
+# fast build rule for target.
+msgr_client_lib_autogen/fast:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client_lib_autogen.dir/build.make src_client/CMakeFiles/msgr_client_lib_autogen.dir/build
+.PHONY : msgr_client_lib_autogen/fast
 
 # Convenience name for target.
 src_client/CMakeFiles/msgr_client_autogen.dir/rule:
@@ -214,7 +242,7 @@ __/src_shared/Notification.o: __/src_shared/Notification.cpp.o
 
 # target to build an object file
 __/src_shared/Notification.cpp.o:
-	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/__/src_shared/Notification.cpp.o
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client_lib.dir/build.make src_client/CMakeFiles/msgr_client_lib.dir/__/src_shared/Notification.cpp.o
 .PHONY : __/src_shared/Notification.cpp.o
 
 __/src_shared/Notification.i: __/src_shared/Notification.cpp.i
@@ -222,7 +250,7 @@ __/src_shared/Notification.i: __/src_shared/Notification.cpp.i
 
 # target to preprocess a source file
 __/src_shared/Notification.cpp.i:
-	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/__/src_shared/Notification.cpp.i
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client_lib.dir/build.make src_client/CMakeFiles/msgr_client_lib.dir/__/src_shared/Notification.cpp.i
 .PHONY : __/src_shared/Notification.cpp.i
 
 __/src_shared/Notification.s: __/src_shared/Notification.cpp.s
@@ -230,80 +258,80 @@ __/src_shared/Notification.s: __/src_shared/Notification.cpp.s
 
 # target to generate assembly for a file
 __/src_shared/Notification.cpp.s:
-	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/__/src_shared/Notification.cpp.s
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client_lib.dir/build.make src_client/CMakeFiles/msgr_client_lib.dir/__/src_shared/Notification.cpp.s
 .PHONY : __/src_shared/Notification.cpp.s
 
-client/Client.o: client/Client.cpp.o
-.PHONY : client/Client.o
+client_lib/client/Client.o: client_lib/client/Client.cpp.o
+.PHONY : client_lib/client/Client.o
 
 # target to build an object file
-client/Client.cpp.o:
-	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/client/Client.cpp.o
-.PHONY : client/Client.cpp.o
+client_lib/client/Client.cpp.o:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client_lib.dir/build.make src_client/CMakeFiles/msgr_client_lib.dir/client_lib/client/Client.cpp.o
+.PHONY : client_lib/client/Client.cpp.o
 
-client/Client.i: client/Client.cpp.i
-.PHONY : client/Client.i
+client_lib/client/Client.i: client_lib/client/Client.cpp.i
+.PHONY : client_lib/client/Client.i
 
 # target to preprocess a source file
-client/Client.cpp.i:
-	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/client/Client.cpp.i
-.PHONY : client/Client.cpp.i
+client_lib/client/Client.cpp.i:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client_lib.dir/build.make src_client/CMakeFiles/msgr_client_lib.dir/client_lib/client/Client.cpp.i
+.PHONY : client_lib/client/Client.cpp.i
 
-client/Client.s: client/Client.cpp.s
-.PHONY : client/Client.s
+client_lib/client/Client.s: client_lib/client/Client.cpp.s
+.PHONY : client_lib/client/Client.s
 
 # target to generate assembly for a file
-client/Client.cpp.s:
-	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/client/Client.cpp.s
-.PHONY : client/Client.cpp.s
+client_lib/client/Client.cpp.s:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client_lib.dir/build.make src_client/CMakeFiles/msgr_client_lib.dir/client_lib/client/Client.cpp.s
+.PHONY : client_lib/client/Client.cpp.s
 
-client/ClientThread.o: client/ClientThread.cpp.o
-.PHONY : client/ClientThread.o
+client_lib/client/ClientThread.o: client_lib/client/ClientThread.cpp.o
+.PHONY : client_lib/client/ClientThread.o
 
 # target to build an object file
-client/ClientThread.cpp.o:
-	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/client/ClientThread.cpp.o
-.PHONY : client/ClientThread.cpp.o
+client_lib/client/ClientThread.cpp.o:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client_lib.dir/build.make src_client/CMakeFiles/msgr_client_lib.dir/client_lib/client/ClientThread.cpp.o
+.PHONY : client_lib/client/ClientThread.cpp.o
 
-client/ClientThread.i: client/ClientThread.cpp.i
-.PHONY : client/ClientThread.i
+client_lib/client/ClientThread.i: client_lib/client/ClientThread.cpp.i
+.PHONY : client_lib/client/ClientThread.i
 
 # target to preprocess a source file
-client/ClientThread.cpp.i:
-	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/client/ClientThread.cpp.i
-.PHONY : client/ClientThread.cpp.i
+client_lib/client/ClientThread.cpp.i:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client_lib.dir/build.make src_client/CMakeFiles/msgr_client_lib.dir/client_lib/client/ClientThread.cpp.i
+.PHONY : client_lib/client/ClientThread.cpp.i
 
-client/ClientThread.s: client/ClientThread.cpp.s
-.PHONY : client/ClientThread.s
+client_lib/client/ClientThread.s: client_lib/client/ClientThread.cpp.s
+.PHONY : client_lib/client/ClientThread.s
 
 # target to generate assembly for a file
-client/ClientThread.cpp.s:
-	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/client/ClientThread.cpp.s
-.PHONY : client/ClientThread.cpp.s
+client_lib/client/ClientThread.cpp.s:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client_lib.dir/build.make src_client/CMakeFiles/msgr_client_lib.dir/client_lib/client/ClientThread.cpp.s
+.PHONY : client_lib/client/ClientThread.cpp.s
 
-client_processor/ClientProcessor.o: client_processor/ClientProcessor.cpp.o
-.PHONY : client_processor/ClientProcessor.o
+client_lib/client_processor/ClientProcessor.o: client_lib/client_processor/ClientProcessor.cpp.o
+.PHONY : client_lib/client_processor/ClientProcessor.o
 
 # target to build an object file
-client_processor/ClientProcessor.cpp.o:
-	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/client_processor/ClientProcessor.cpp.o
-.PHONY : client_processor/ClientProcessor.cpp.o
+client_lib/client_processor/ClientProcessor.cpp.o:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client_lib.dir/build.make src_client/CMakeFiles/msgr_client_lib.dir/client_lib/client_processor/ClientProcessor.cpp.o
+.PHONY : client_lib/client_processor/ClientProcessor.cpp.o
 
-client_processor/ClientProcessor.i: client_processor/ClientProcessor.cpp.i
-.PHONY : client_processor/ClientProcessor.i
+client_lib/client_processor/ClientProcessor.i: client_lib/client_processor/ClientProcessor.cpp.i
+.PHONY : client_lib/client_processor/ClientProcessor.i
 
 # target to preprocess a source file
-client_processor/ClientProcessor.cpp.i:
-	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/client_processor/ClientProcessor.cpp.i
-.PHONY : client_processor/ClientProcessor.cpp.i
+client_lib/client_processor/ClientProcessor.cpp.i:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client_lib.dir/build.make src_client/CMakeFiles/msgr_client_lib.dir/client_lib/client_processor/ClientProcessor.cpp.i
+.PHONY : client_lib/client_processor/ClientProcessor.cpp.i
 
-client_processor/ClientProcessor.s: client_processor/ClientProcessor.cpp.s
-.PHONY : client_processor/ClientProcessor.s
+client_lib/client_processor/ClientProcessor.s: client_lib/client_processor/ClientProcessor.cpp.s
+.PHONY : client_lib/client_processor/ClientProcessor.s
 
 # target to generate assembly for a file
-client_processor/ClientProcessor.cpp.s:
-	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/client_processor/ClientProcessor.cpp.s
-.PHONY : client_processor/ClientProcessor.cpp.s
+client_lib/client_processor/ClientProcessor.cpp.s:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client_lib.dir/build.make src_client/CMakeFiles/msgr_client_lib.dir/client_lib/client_processor/ClientProcessor.cpp.s
+.PHONY : client_lib/client_processor/ClientProcessor.cpp.s
 
 main.o: main.cpp.o
 .PHONY : main.o
@@ -497,6 +525,30 @@ msgr_client_autogen/mocs_compilation.cpp.s:
 	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client.dir/build.make src_client/CMakeFiles/msgr_client.dir/msgr_client_autogen/mocs_compilation.cpp.s
 .PHONY : msgr_client_autogen/mocs_compilation.cpp.s
 
+msgr_client_lib_autogen/mocs_compilation.o: msgr_client_lib_autogen/mocs_compilation.cpp.o
+.PHONY : msgr_client_lib_autogen/mocs_compilation.o
+
+# target to build an object file
+msgr_client_lib_autogen/mocs_compilation.cpp.o:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client_lib.dir/build.make src_client/CMakeFiles/msgr_client_lib.dir/msgr_client_lib_autogen/mocs_compilation.cpp.o
+.PHONY : msgr_client_lib_autogen/mocs_compilation.cpp.o
+
+msgr_client_lib_autogen/mocs_compilation.i: msgr_client_lib_autogen/mocs_compilation.cpp.i
+.PHONY : msgr_client_lib_autogen/mocs_compilation.i
+
+# target to preprocess a source file
+msgr_client_lib_autogen/mocs_compilation.cpp.i:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client_lib.dir/build.make src_client/CMakeFiles/msgr_client_lib.dir/msgr_client_lib_autogen/mocs_compilation.cpp.i
+.PHONY : msgr_client_lib_autogen/mocs_compilation.cpp.i
+
+msgr_client_lib_autogen/mocs_compilation.s: msgr_client_lib_autogen/mocs_compilation.cpp.s
+.PHONY : msgr_client_lib_autogen/mocs_compilation.s
+
+# target to generate assembly for a file
+msgr_client_lib_autogen/mocs_compilation.cpp.s:
+	cd /home/runner/work/msgr/msgr && $(MAKE) $(MAKESILENT) -f src_client/CMakeFiles/msgr_client_lib.dir/build.make src_client/CMakeFiles/msgr_client_lib.dir/msgr_client_lib_autogen/mocs_compilation.cpp.s
+.PHONY : msgr_client_lib_autogen/mocs_compilation.cpp.s
+
 # Help Target
 help:
 	@echo "The following are some of the valid targets for this Makefile:"
@@ -512,19 +564,21 @@ help:
 	@echo "... package_source"
 	@echo "... rebuild_cache"
 	@echo "... msgr_client_autogen"
+	@echo "... msgr_client_lib_autogen"
 	@echo "... msgr_client"
+	@echo "... msgr_client_lib"
 	@echo "... __/src_shared/Notification.o"
 	@echo "... __/src_shared/Notification.i"
 	@echo "... __/src_shared/Notification.s"
-	@echo "... client/Client.o"
-	@echo "... client/Client.i"
-	@echo "... client/Client.s"
-	@echo "... client/ClientThread.o"
-	@echo "... client/ClientThread.i"
-	@echo "... client/ClientThread.s"
-	@echo "... client_processor/ClientProcessor.o"
-	@echo "... client_processor/ClientProcessor.i"
-	@echo "... client_processor/ClientProcessor.s"
+	@echo "... client_lib/client/Client.o"
+	@echo "... client_lib/client/Client.i"
+	@echo "... client_lib/client/Client.s"
+	@echo "... client_lib/client/ClientThread.o"
+	@echo "... client_lib/client/ClientThread.i"
+	@echo "... client_lib/client/ClientThread.s"
+	@echo "... client_lib/client_processor/ClientProcessor.o"
+	@echo "... client_lib/client_processor/ClientProcessor.i"
+	@echo "... client_lib/client_processor/ClientProcessor.s"
 	@echo "... main.o"
 	@echo "... main.i"
 	@echo "... main.s"
@@ -549,6 +603,9 @@ help:
 	@echo "... msgr_client_autogen/mocs_compilation.o"
 	@echo "... msgr_client_autogen/mocs_compilation.i"
 	@echo "... msgr_client_autogen/mocs_compilation.s"
+	@echo "... msgr_client_lib_autogen/mocs_compilation.o"
+	@echo "... msgr_client_lib_autogen/mocs_compilation.i"
+	@echo "... msgr_client_lib_autogen/mocs_compilation.s"
 .PHONY : help
 
 

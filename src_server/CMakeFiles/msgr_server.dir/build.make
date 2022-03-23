@@ -97,33 +97,33 @@ src_server/CMakeFiles/msgr_server.dir/Server.cpp.s: cmake_force
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/msgr_server.dir/Server.cpp.s"
 	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/msgr/msgr/src_server/Server.cpp -o CMakeFiles/msgr_server.dir/Server.cpp.s
 
-src_server/CMakeFiles/msgr_server.dir/Session.cpp.o: src_server/CMakeFiles/msgr_server.dir/flags.make
-src_server/CMakeFiles/msgr_server.dir/Session.cpp.o: src_server/Session.cpp
-src_server/CMakeFiles/msgr_server.dir/Session.cpp.o: src_server/CMakeFiles/msgr_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/msgr/msgr/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src_server/CMakeFiles/msgr_server.dir/Session.cpp.o"
-	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src_server/CMakeFiles/msgr_server.dir/Session.cpp.o -MF CMakeFiles/msgr_server.dir/Session.cpp.o.d -o CMakeFiles/msgr_server.dir/Session.cpp.o -c /home/runner/work/msgr/msgr/src_server/Session.cpp
+src_server/CMakeFiles/msgr_server.dir/session/Session.cpp.o: src_server/CMakeFiles/msgr_server.dir/flags.make
+src_server/CMakeFiles/msgr_server.dir/session/Session.cpp.o: src_server/session/Session.cpp
+src_server/CMakeFiles/msgr_server.dir/session/Session.cpp.o: src_server/CMakeFiles/msgr_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/msgr/msgr/CMakeFiles --progress-num=$(CMAKE_PROGRESS_3) "Building CXX object src_server/CMakeFiles/msgr_server.dir/session/Session.cpp.o"
+	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src_server/CMakeFiles/msgr_server.dir/session/Session.cpp.o -MF CMakeFiles/msgr_server.dir/session/Session.cpp.o.d -o CMakeFiles/msgr_server.dir/session/Session.cpp.o -c /home/runner/work/msgr/msgr/src_server/session/Session.cpp
 
-src_server/CMakeFiles/msgr_server.dir/Session.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/msgr_server.dir/Session.cpp.i"
-	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/msgr/msgr/src_server/Session.cpp > CMakeFiles/msgr_server.dir/Session.cpp.i
+src_server/CMakeFiles/msgr_server.dir/session/Session.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/msgr_server.dir/session/Session.cpp.i"
+	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/msgr/msgr/src_server/session/Session.cpp > CMakeFiles/msgr_server.dir/session/Session.cpp.i
 
-src_server/CMakeFiles/msgr_server.dir/Session.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/msgr_server.dir/Session.cpp.s"
-	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/msgr/msgr/src_server/Session.cpp -o CMakeFiles/msgr_server.dir/Session.cpp.s
+src_server/CMakeFiles/msgr_server.dir/session/Session.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/msgr_server.dir/session/Session.cpp.s"
+	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/msgr/msgr/src_server/session/Session.cpp -o CMakeFiles/msgr_server.dir/session/Session.cpp.s
 
-src_server/CMakeFiles/msgr_server.dir/SessionManager.cpp.o: src_server/CMakeFiles/msgr_server.dir/flags.make
-src_server/CMakeFiles/msgr_server.dir/SessionManager.cpp.o: src_server/SessionManager.cpp
-src_server/CMakeFiles/msgr_server.dir/SessionManager.cpp.o: src_server/CMakeFiles/msgr_server.dir/compiler_depend.ts
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/msgr/msgr/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src_server/CMakeFiles/msgr_server.dir/SessionManager.cpp.o"
-	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src_server/CMakeFiles/msgr_server.dir/SessionManager.cpp.o -MF CMakeFiles/msgr_server.dir/SessionManager.cpp.o.d -o CMakeFiles/msgr_server.dir/SessionManager.cpp.o -c /home/runner/work/msgr/msgr/src_server/SessionManager.cpp
+src_server/CMakeFiles/msgr_server.dir/session/SessionManager.cpp.o: src_server/CMakeFiles/msgr_server.dir/flags.make
+src_server/CMakeFiles/msgr_server.dir/session/SessionManager.cpp.o: src_server/session/SessionManager.cpp
+src_server/CMakeFiles/msgr_server.dir/session/SessionManager.cpp.o: src_server/CMakeFiles/msgr_server.dir/compiler_depend.ts
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green --progress-dir=/home/runner/work/msgr/msgr/CMakeFiles --progress-num=$(CMAKE_PROGRESS_4) "Building CXX object src_server/CMakeFiles/msgr_server.dir/session/SessionManager.cpp.o"
+	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -MD -MT src_server/CMakeFiles/msgr_server.dir/session/SessionManager.cpp.o -MF CMakeFiles/msgr_server.dir/session/SessionManager.cpp.o.d -o CMakeFiles/msgr_server.dir/session/SessionManager.cpp.o -c /home/runner/work/msgr/msgr/src_server/session/SessionManager.cpp
 
-src_server/CMakeFiles/msgr_server.dir/SessionManager.cpp.i: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/msgr_server.dir/SessionManager.cpp.i"
-	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/msgr/msgr/src_server/SessionManager.cpp > CMakeFiles/msgr_server.dir/SessionManager.cpp.i
+src_server/CMakeFiles/msgr_server.dir/session/SessionManager.cpp.i: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Preprocessing CXX source to CMakeFiles/msgr_server.dir/session/SessionManager.cpp.i"
+	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -E /home/runner/work/msgr/msgr/src_server/session/SessionManager.cpp > CMakeFiles/msgr_server.dir/session/SessionManager.cpp.i
 
-src_server/CMakeFiles/msgr_server.dir/SessionManager.cpp.s: cmake_force
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/msgr_server.dir/SessionManager.cpp.s"
-	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/msgr/msgr/src_server/SessionManager.cpp -o CMakeFiles/msgr_server.dir/SessionManager.cpp.s
+src_server/CMakeFiles/msgr_server.dir/session/SessionManager.cpp.s: cmake_force
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --green "Compiling CXX source to assembly CMakeFiles/msgr_server.dir/session/SessionManager.cpp.s"
+	cd /home/runner/work/msgr/msgr/src_server && /usr/bin/c++ $(CXX_DEFINES) $(CXX_INCLUDES) $(CXX_FLAGS) -S /home/runner/work/msgr/msgr/src_server/session/SessionManager.cpp -o CMakeFiles/msgr_server.dir/session/SessionManager.cpp.s
 
 src_server/CMakeFiles/msgr_server.dir/database/sqlite/sqlite3.c.o: src_server/CMakeFiles/msgr_server.dir/flags.make
 src_server/CMakeFiles/msgr_server.dir/database/sqlite/sqlite3.c.o: src_server/database/sqlite/sqlite3.c
@@ -199,8 +199,8 @@ src_server/CMakeFiles/msgr_server.dir/__/src_shared/Notification.cpp.s: cmake_fo
 msgr_server_OBJECTS = \
 "CMakeFiles/msgr_server.dir/main.cpp.o" \
 "CMakeFiles/msgr_server.dir/Server.cpp.o" \
-"CMakeFiles/msgr_server.dir/Session.cpp.o" \
-"CMakeFiles/msgr_server.dir/SessionManager.cpp.o" \
+"CMakeFiles/msgr_server.dir/session/Session.cpp.o" \
+"CMakeFiles/msgr_server.dir/session/SessionManager.cpp.o" \
 "CMakeFiles/msgr_server.dir/database/sqlite/sqlite3.c.o" \
 "CMakeFiles/msgr_server.dir/database/SqliteDatabase.cpp.o" \
 "CMakeFiles/msgr_server.dir/database/SqlRec.cpp.o" \
@@ -212,8 +212,8 @@ msgr_server_EXTERNAL_OBJECTS =
 
 src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/main.cpp.o
 src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/Server.cpp.o
-src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/Session.cpp.o
-src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/SessionManager.cpp.o
+src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/session/Session.cpp.o
+src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/session/SessionManager.cpp.o
 src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/database/sqlite/sqlite3.c.o
 src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/database/SqliteDatabase.cpp.o
 src_server/msgr_server: src_server/CMakeFiles/msgr_server.dir/database/SqlRec.cpp.o

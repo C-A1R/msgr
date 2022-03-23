@@ -1,5 +1,6 @@
 var searchData=
 [
-  ['main_5fwidget_577',['main_widget',['../classMainWindow.html#a4c37b8281e29b946992c30ddd23633ea',1,'MainWindow']]],
-  ['msg_5fledit_578',['msg_lEdit',['../classChatWidget.html#aa33a1d50ca344d55313d180c23b1b420',1,'ChatWidget']]]
+  ['lastmessage_993',['lastMessage',['../classChatWidget.html#ad1e18fb20700174f3595be213d348a9c',1,'ChatWidget']]],
+  ['login_994',['login',['../structUserInfo.html#ab2f091d188e0e804a8ec6956f55102d1',1,'UserInfo']]],
+  ['login_5fledit_995',['login_lEdit',['../classAuthorizationWidget.html#a2464597c709c0d437f5263cd61853e83',1,'AuthorizationWidget']]]
 ];

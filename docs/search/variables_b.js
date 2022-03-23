@@ -1,4 +1,4 @@
 var searchData=
 [
-  ['values_586',['values',['../classSqlRec.html#a9c41a7dd269e482ab21644c6ba6b2867',1,'SqlRec']]]
+  ['text_1007',['text',['../structMessageInfo.html#afaaf5331218dcc2746f6e0d533b645c1',1,'MessageInfo']]]
 ];
