@@ -12,7 +12,7 @@ public:
     IServerProcessor() = default;
     virtual ~IServerProcessor() = default;
 
-    virtual std::string parseClientMessage(const std::string &request) = 0;
+    virtual std::string parseClientMessage(const std::string &request) const = 0;
 };
 
 #endif // ISERVERPROCESSOR_H

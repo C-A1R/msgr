@@ -25,6 +25,7 @@ set(HEADERS
     server_processor/ServerProcessor.h
     ../src_shared/UserInfo.h
     ../src_shared/MessageInfo.h
+    ../src_shared/Notification.h
 )
 
 set(SOURCES
@@ -36,6 +37,7 @@ set(SOURCES
     database/SqliteDatabase.cpp
     database/SqlRec.cpp
     server_processor/ServerProcessor.cpp
+    ../src_shared/Notification.cpp
 )
 
 add_executable(msgr_server
@@ -43,21 +45,7 @@ add_executable(msgr_server
     ${HEADERS}
 )
 
-# add_executable(test_ICommand 
-#     src/_tests/test_ICommand.cpp 
-#     src/command/Cmd.cpp 
-#     src/command/MacroCmd.cpp
-# )
-# add_executable(test_ICommandQueue
-#     src/_tests/test_ICommandQueue.cpp 
-#     src/command_queue/CmdQueue.cpp 
-#     src/command/Cmd.cpp 
-#     src/command/MacroCmd.cpp
-# )
-
 set_target_properties(msgr_server 
-    # test_ICommand 
-    # test_ICommandQueue
 PROPERTIES
     CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON
@@ -69,33 +57,14 @@ target_link_libraries(msgr_server
     dl
 )
 
-# target_link_libraries(test_ICommand
-#     ${Boost_LIBRARIES}
-# )
-# target_link_libraries(test_ICommandQueue
-#     ${Boost_LIBRARIES}
-# )
-
 if (MSVC)
     target_compile_options(msgr_server PRIVATE
         /W4
     )
-    # target_compile_options(test_ICommand PRIVATE
-    #     /W4
-    # )
-    # target_compile_options(test_ICommandQueue PRIVATE
-    #     /W4
-    # )
 else ()
     target_compile_options(msgr_server PRIVATE
         -Wall -Wextra -pedantic -Werror
     )
-    # target_compile_options(test_ICommand PRIVATE
-    #     -Wall -Wextra -pedantic -Werror
-    # )
-    # target_compile_options(test_ICommandQueue PRIVATE
-    #     -Wall -Wextra -pedantic -Werror
-    # )
 endif()
 
 
@@ -112,7 +81,3 @@ set(CPACK_PACKAGE_CONTACT example@example.com)
 include(CPack)
 
 # enable_testing()
-
-# add_test(test_Version test_Version)
-# add_test(test_ICommand test_ICommand)
-# add_test(test_ICommandQueue test_ICommandQueue)
