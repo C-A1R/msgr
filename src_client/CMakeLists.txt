@@ -22,6 +22,46 @@ find_package(Qt5 COMPONENTS Widgets REQUIRED)
 
 include_directories(../src_shared)
 
+
+#LIB
+
+set(SOURCES_LIB
+    client_lib/client/Client.cpp
+    client_lib/client/ClientThread.cpp
+    client_lib/client_processor/ClientProcessor.cpp
+    ../src_shared/Notification.cpp
+)
+set(HEADERS_LIB
+    client_lib/client/Client.h
+    client_lib/client/ClientThread.h
+    client_lib/client_processor/IClientProcessor.h
+    client_lib/client_processor/ClientProcessor.h
+    ../src_shared/UserInfo.h
+    ../src_shared/MessageInfo.h
+    ../src_shared/Notification.h
+)
+
+add_library(${PROJECT_NAME}_lib SHARED
+    ${HEADERS_LIB}
+    ${SOURCES_LIB}
+)
+target_include_directories(${PROJECT_NAME}_lib
+    PUBLIC
+        ${PROJECT_SOURCE_DIR}
+)
+target_link_libraries(${PROJECT_NAME}_lib
+    PRIVATE
+        Qt5::Widgets
+        ${Boost_LIBRARIES}
+)
+set_target_properties(${PROJECT_NAME}_lib PROPERTIES
+    CXX_STANDARD 17
+    CXX_STANDARD_REQUIRED ON
+)
+
+
+#BIN
+
 set(HEADERS
     main_window/MainWindow.h
     main_window/RegistrationWidget.h
@@ -30,15 +70,7 @@ set(HEADERS
     main_window/messenger_widget/ChatWidget.h
     main_window/messenger_widget/StackedChatWidget.h
     main_window/MainWidgets.h
-    client/Client.h
-    client/ClientThread.h
-    client_processor/IClientProcessor.h
-    client_processor/ClientProcessor.h
-    ../src_shared/UserInfo.h
-    ../src_shared/MessageInfo.h
-    ../src_shared/Notification.h
 )
-
 set(SOURCES
     main.cpp
     main_window/MainWindow.cpp
@@ -47,26 +79,22 @@ set(SOURCES
     main_window/messenger_widget/MessengerWidget.cpp
     main_window/messenger_widget/ChatWidget.cpp
     main_window/messenger_widget/StackedChatWidget.cpp
-    client/Client.cpp
-    client/ClientThread.cpp
-    client_processor/ClientProcessor.cpp
-    ../src_shared/Notification.cpp
 )
 
 add_executable(msgr_client
-    ${SOURCES}
     ${HEADERS}
+    ${SOURCES}
 )
-
 set_target_properties(msgr_client PROPERTIES
     CXX_STANDARD 17
     CXX_STANDARD_REQUIRED ON
     WIN32_EXECUTABLE TRUE
 )
-
 target_link_libraries(msgr_client
-    PRIVATE Qt5::Widgets
-    ${Boost_LIBRARIES}
+    PRIVATE
+        Qt5::Widgets
+        ${Boost_LIBRARIES}
+        ${PROJECT_NAME}_lib
 )
 
 if (MSVC)

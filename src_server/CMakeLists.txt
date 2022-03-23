@@ -15,8 +15,8 @@ include_directories(${CMAKE_CURRENT_SOURCE_DIR}
 
 set(HEADERS
     Server.h
-    Session.h
-    SessionManager.h
+    session/Session.h
+    session/SessionManager.h
     database/sqlite/sqlite3.h
     database/IDatabase.h
     database/SqliteDatabase.h
@@ -31,8 +31,8 @@ set(HEADERS
 set(SOURCES
     main.cpp
     Server.cpp
-    Session.cpp
-    SessionManager.cpp
+    session/Session.cpp
+    session/SessionManager.cpp
     database/sqlite/sqlite3.c
     database/SqliteDatabase.cpp
     database/SqlRec.cpp

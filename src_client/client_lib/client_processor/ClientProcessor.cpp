@@ -1,5 +1,5 @@
 #include "ClientProcessor.h"
-#include "client/ClientThread.h"
+#include "client_lib/client/ClientThread.h"
 #include "UserInfo.h"
 #include "MessageInfo.h"
 #include "Notification.h"
